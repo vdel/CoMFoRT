@@ -1,0 +1,219 @@
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+Adapted by Anne-Laure Mouly for CoMFoRT project
+*/
+
+@charset "utf-8";
+@import url(../common/wiki.css);
+
+/* general*/ 
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    display: block;
+  margin: 21px auto;
+  padding: 10px auto;
+  background: #333333 url(images/img01.gif) repeat-x;
+  text-align: justify;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  color: #666666;
+} 
+
+/* titles */
+
+.title {
+  margin: -13px 10px 10px; /* pour éviter des bandes noires */
+}
+
+div.titlepage h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+}
+
+div.titlepage h1 {
+    color: #FFFFFF;
+  font-size: 2em;
+}
+
+div.titlepage h2 {
+  font-size: 1.6em;
+  padding: 15px 0 5px 0;
+  margin-bottom: 0;
+}
+
+div.titlepage h3 {
+  font-size: 1.2em;
+  padding: 10px 0 0 0;
+}
+
+div.titlepage h4 {
+  font-size: 1em;
+  padding: 20px 0 0 0;
+}
+
+div.titlepage h5 {
+  font-size: 0.9em;
+  padding: 23px 0 0 0;
+}
+
+div.titlepage h6 {
+  font-size: 0.8em;
+  padding: 25px 0 0 0;
+}
+
+
+/* bullets and links */
+
+ul {
+  list-style-image: url(images/img07.gif);
+}
+
+a {
+  color: #333333;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #000000;
+}
+
+
+/* Header */
+
+.sitename {
+    float: left;
+  width: 600px;
+  height: 35px;
+  margin: 0 auto;
+  color: #FFFFFF;
+  padding-left: 110px;
+  font-size: 150%;
+}
+
+/* Menu */
+
+#Menu {
+  width: 778px;
+  height: 45px;
+  margin: 0 auto;
+  background: #F6F6F6 url(images/img02.gif) no-repeat;
+}
+
+#Menu ul {
+  margin: 0;
+  padding: 5px 0 0 14px;
+  list-style: none;
+}
+
+#Menu li {
+  display: inline;
+}
+
+#Menu a {
+  float: left;
+  height: 29px;
+  padding: 11px 10px 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #333333;
+}
+
+#Menu a:hover {
+  text-decoration: underline;
+  color: #000000;
+}
+
+
+/* Page */
+
+
+.sect1, .footnotes {
+  display: block;
+  width: 750px;
+  margin: 0 auto;
+  background: #FFFFFF url(images/img03.gif) repeat-y;
+  /* la règle ci-dessous ne marchait pas (et ne devait pas marcher ?) à cause
+   * d'une typo... si on la met, ça casse tout*/
+  /*padding: 0 15px 0 15px;*/
+}
+
+.sect1 p, ol {
+    padding: 0 15px 0 15px;
+}
+
+/*
+#sidebar {
+  float: right;
+  width: 230px;
+  padding-right: 20px;
+}
+
+#sidebar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#sidebar li {
+}
+
+#sidebar li ul {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+#sidebar li li {
+  padding: 5px 20px 5px 35px;
+  background: url(images/img07.gif) no-repeat 20px 50%;
+  border-bottom: 1px solid #F3F3F3;
+}
+
+#sidebar h2 {
+  margin: 0;
+  padding: 24px 0 3px 20px;
+  border-bottom: 1px solid #E7E7E7;
+  letter-spacing: -1px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+#sidebar a {
+  text-decoration: none;
+}
+
+#sidebar a:hover {
+  text-decoration: underline;
+}*/
+
+/* Footer */
+
+.feet {
+  width: 750px;
+  margin: -13px auto; /* pour éviter des bandes noires */
+  padding: 20px 0;
+  text-align: center;
+  background: url(images/img08.gif) no-repeat;
+}
+
+
+.feet a, .comfort a {
+  color: #666666;
+}
+
+/* tables */
+
+table {
+  margin: 5px 5px 5px 20px;
+  border-style:solid; 
+  border-width:1px; 
+  border-color:#8cacbb;
+  border-collapse:collapse;
+}
+
+

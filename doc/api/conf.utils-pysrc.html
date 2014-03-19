@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>conf.utils</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://graal.ens-lyon.fr/comfort/">CoMFoRT</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="conf-module.html">Package&nbsp;conf</a> ::
+        Module&nbsp;utils
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="conf.utils-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="conf.utils-module.html">Module conf.utils</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment"># -*- encoding: utf-8 -*-</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-keyword">import</tt> <tt class="py-name">os</tt><tt class="py-op">,</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">sys</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">htmlentitydefs</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt id="link-0" class="py-name" targets="Module conf.confstatic=conf.confstatic-module.html"><a title="conf.confstatic" class="py-name" href="#" onclick="return doclink('link-0', 'confstatic', 'link-0');">confstatic</a></tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line">  <tt class="py-keyword">import</tt> <tt class="py-name">conf_general</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-keyword">except</tt><tt class="py-op">:</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line">  <tt class="py-keyword">pass</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"> </tt>
+<a name="import_gettext"></a><div id="import_gettext-def"><a name="L12"></a><tt class="py-lineno"> 12</tt> <a class="py-toggle" href="#" id="import_gettext-toggle" onclick="return toggle('import_gettext');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="conf.utils-module.html#import_gettext">import_gettext</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="import_gettext-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="import_gettext-expanded"><a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line">  <tt class="py-docstring">"""Initialise gettext avec les fichiers PO d&#233;finis dans confstatic"""</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line">  <tt class="py-keyword">import</tt> <tt class="py-name">gettext</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line">  <tt class="py-name">gettext</tt><tt class="py-op">.</tt><tt class="py-name">bindtextdomain</tt><tt class="py-op">(</tt><tt id="link-1" class="py-name"><a title="conf.confstatic" class="py-name" href="#" onclick="return doclink('link-1', 'confstatic', 'link-0');">confstatic</a></tt><tt class="py-op">.</tt><tt id="link-2" class="py-name" targets="Variable conf.confstatic.gettext_domain=conf.confstatic-module.html#gettext_domain"><a title="conf.confstatic.gettext_domain" class="py-name" href="#" onclick="return doclink('link-2', 'gettext_domain', 'link-2');">gettext_domain</a></tt><tt class="py-op">,</tt> <tt id="link-3" class="py-name"><a title="conf.confstatic" class="py-name" href="#" onclick="return doclink('link-3', 'confstatic', 'link-0');">confstatic</a></tt><tt class="py-op">.</tt><tt id="link-4" class="py-name" targets="Variable conf.confstatic.gettext_localedir=conf.confstatic-module.html#gettext_localedir"><a title="conf.confstatic.gettext_localedir" class="py-name" href="#" onclick="return doclink('link-4', 'gettext_localedir', 'link-4');">gettext_localedir</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line">  <tt class="py-name">gettext</tt><tt class="py-op">.</tt><tt class="py-name">textdomain</tt><tt class="py-op">(</tt><tt id="link-5" class="py-name"><a title="conf.confstatic" class="py-name" href="#" onclick="return doclink('link-5', 'confstatic', 'link-0');">confstatic</a></tt><tt class="py-op">.</tt><tt id="link-6" class="py-name"><a title="conf.confstatic.gettext_domain" class="py-name" href="#" onclick="return doclink('link-6', 'gettext_domain', 'link-2');">gettext_domain</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line">  <tt class="py-name">gettext</tt><tt class="py-op">.</tt><tt class="py-name">install</tt><tt class="py-op">(</tt><tt id="link-7" class="py-name"><a title="conf.confstatic" class="py-name" href="#" onclick="return doclink('link-7', 'confstatic', 'link-0');">confstatic</a></tt><tt class="py-op">.</tt><tt id="link-8" class="py-name"><a title="conf.confstatic.gettext_domain" class="py-name" href="#" onclick="return doclink('link-8', 'gettext_domain', 'link-2');">gettext_domain</a></tt><tt class="py-op">,</tt> <tt id="link-9" class="py-name"><a title="conf.confstatic" class="py-name" href="#" onclick="return doclink('link-9', 'confstatic', 'link-0');">confstatic</a></tt><tt class="py-op">.</tt><tt id="link-10" class="py-name"><a title="conf.confstatic.gettext_localedir" class="py-name" href="#" onclick="return doclink('link-10', 'gettext_localedir', 'link-4');">gettext_localedir</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"> </tt>
+<a name="init_cgi"></a><div id="init_cgi-def"><a name="L19"></a><tt class="py-lineno"> 19</tt> <a class="py-toggle" href="#" id="init_cgi-toggle" onclick="return toggle('init_cgi');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="conf.utils-module.html#init_cgi">init_cgi</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="init_cgi-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="init_cgi-expanded"><a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line">  <tt class="py-docstring">"""Fait tous les imports n&#233;cessaires pour le CGI, envoie les headers, et fait</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"><tt class="py-docstring">  une redirection si jamais confort n'est pas install&#233;"""</tt> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line">  <tt class="py-keyword">import</tt> <tt class="py-name">cgitb</tt> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line">  <tt class="py-name">cgitb</tt><tt class="py-op">.</tt><tt class="py-name">enable</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line">  <tt class="py-keyword">print</tt> <tt class="py-string">"Content-type: text/html"</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line">  <tt class="py-keyword">print</tt> </tt>
+</div><a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"> </tt>
+<a name="redir"></a><div id="redir-def"><a name="L28"></a><tt class="py-lineno"> 28</tt> <a class="py-toggle" href="#" id="redir-toggle" onclick="return toggle('redir');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="conf.utils-module.html#redir">redir</a><tt class="py-op">(</tt><tt class="py-param">page</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="redir-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="redir-expanded"><a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line">    <tt class="py-keyword">print</tt> <tt class="py-string">"""</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"><tt class="py-string">&lt;?xml version="1.0" encoding="utf-8" ?&gt;</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line"><tt class="py-string">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line"><tt class="py-string">   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line"><tt class="py-string">&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line"><tt class="py-string">&lt;head&gt;</tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line"><tt class="py-string">  &lt;title&gt;Index de CoMFoRT&lt;/title&gt;</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line"><tt class="py-string">  &lt;meta http-equiv="Content-type" content="text/html; charset=utf-8" /&gt;</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"><tt class="py-string">  &lt;meta http-equiv="Refresh" content="0; url='%s'" /&gt;</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line"><tt class="py-string">&lt;/head&gt;</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line"><tt class="py-string">&lt;body style="margin: 1em;"&gt;</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line"><tt class="py-string">"""</tt> <tt class="py-op">%</tt> <tt id="link-11" class="py-name" targets="Variable cgibin.handler.page=cgibin.handler-module.html#page"><a title="cgibin.handler.page" class="py-name" href="#" onclick="return doclink('link-11', 'page', 'link-11');">page</a></tt> <tt class="py-op">+</tt><tt id="link-12" class="py-name" targets="Variable modules.test._=modules.test-module.html#_"><a title="modules.test._" class="py-name" href="#" onclick="return doclink('link-12', '_', 'link-12');">_</a></tt><tt class="py-op">(</tt><tt class="py-string">"Si vous n'&#234;tes pas redirig&#233;, cliquez &lt;a href=\"%s\"&gt;ici&lt;/a&gt;."</tt><tt class="py-op">)</tt> <tt class="py-op">%</tt> <tt id="link-13" class="py-name"><a title="cgibin.handler.page" class="py-name" href="#" onclick="return doclink('link-13', 'page', 'link-11');">page</a></tt> <tt class="py-op">+</tt><tt class="py-string">"""</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line"><tt class="py-string">&lt;/body&gt;</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line"><tt class="py-string">&lt;/html&gt;"""</tt> </tt>
+</div><a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line"> </tt>
+<a name="error_page"></a><div id="error_page-def"><a name="L44"></a><tt class="py-lineno"> 44</tt> <a class="py-toggle" href="#" id="error_page-toggle" onclick="return toggle('error_page');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="conf.utils-module.html#error_page">error_page</a><tt class="py-op">(</tt><tt class="py-param">msg</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="error_page-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="error_page-expanded"><a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line">    <tt class="py-keyword">print</tt> <tt class="py-string">"""</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line"><tt class="py-string">&lt;?xml version="1.0" encoding="utf-8" ?&gt;</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line"><tt class="py-string">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line"><tt class="py-string">   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line"><tt class="py-string">&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line"><tt class="py-string">&lt;head&gt;</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line"><tt class="py-string">  &lt;title&gt;Index de CoMFoRT&lt;/title&gt;</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line"><tt class="py-string">  &lt;meta http-equiv="Content-type" content="text/html; charset=utf-8" /&gt;</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line"><tt class="py-string">&lt;/head&gt;</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line"><tt class="py-string">&lt;body style="margin: 1em;"&gt;</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line"><tt class="py-string">&lt;pre&gt;</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line"><tt class="py-string">%s</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line"><tt class="py-string">&lt;/pre&gt;</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"><tt class="py-string">&lt;/body&gt;</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line"><tt class="py-string">&lt;/html&gt;"""</tt> <tt class="py-op">%</tt> <tt class="py-name">msg</tt> </tt>
+</div><a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line"> </tt>
+<a name="check_installed"></a><div id="check_installed-def"><a name="L61"></a><tt class="py-lineno"> 61</tt> <a class="py-toggle" href="#" id="check_installed-toggle" onclick="return toggle('check_installed');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="conf.utils-module.html#check_installed">check_installed</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="check_installed-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="check_installed-expanded"><a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">  <tt class="py-docstring">"""Fait une redirection sur admin.py?id=install si jamais on n'a pas encore</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line"><tt class="py-docstring">  fait l'initialisation de CoMFoRT"""</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line">  <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">    <tt class="py-name">installed</tt> <tt class="py-op">=</tt> <tt class="py-name">conf_general</tt><tt class="py-op">.</tt><tt class="py-name">installed</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">  <tt class="py-keyword">except</tt><tt class="py-op">:</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">    <tt class="py-name">installed</tt> <tt class="py-op">=</tt> <tt class="py-number">0</tt>     </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">  <tt class="py-keyword">if</tt> <tt class="py-name">installed</tt> <tt class="py-op">==</tt> <tt class="py-number">0</tt><tt class="py-op">:</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">    <tt id="link-14" class="py-name" targets="Function conf.utils.redir()=conf.utils-module.html#redir"><a title="conf.utils.redir" class="py-name" href="#" onclick="return doclink('link-14', 'redir', 'link-14');">redir</a></tt><tt class="py-op">(</tt><tt class="py-string">"admin.py?id=install"</tt><tt class="py-op">)</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">    <tt class="py-name">sys</tt><tt class="py-op">.</tt><tt class="py-name">exit</tt><tt class="py-op">(</tt><tt class="py-number">0</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line"> </tt>
+<a name="select_mode"></a><div id="select_mode-def"><a name="L72"></a><tt class="py-lineno"> 72</tt> <a class="py-toggle" href="#" id="select_mode-toggle" onclick="return toggle('select_mode');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="conf.utils-module.html#select_mode">select_mode</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="select_mode-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="select_mode-expanded"><a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">  <tt class="py-docstring">"""Permet de mettre confstatic.mode &#224; jour, avec deux valeurs possibles :</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line"><tt class="py-docstring">  - local : on est sur le mini serveur en Python</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line"><tt class="py-docstring">  - dynamic : on est sur un vrai serveur, genre Apache</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line"><tt class="py-docstring">  """</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">  <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">getenv</tt><tt class="py-op">(</tt><tt class="py-string">"SERVER_SOFTWARE"</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">startswith</tt><tt class="py-op">(</tt><tt class="py-string">"SimpleHTTP"</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">      <tt id="link-15" class="py-name"><a title="conf.confstatic" class="py-name" href="#" onclick="return doclink('link-15', 'confstatic', 'link-0');">confstatic</a></tt><tt class="py-op">.</tt><tt id="link-16" class="py-name" targets="Variable conf.confstatic.mode=conf.confstatic-module.html#mode,Variable modules.module_interfaces.ComfortModule.mode=modules.module_interfaces.ComfortModule-class.html#mode,Variable modules.themodule_Calendars.TheModule.mode=modules.themodule_Calendars.TheModule-class.html#mode,Variable modules.themodule_Coord.TheModule.mode=modules.themodule_Coord.TheModule-class.html#mode,Variable modules.themodule_Credits.TheModule.mode=modules.themodule_Credits.TheModule-class.html#mode,Variable modules.themodule_Dummy.TheModule.mode=modules.themodule_Dummy.TheModule-class.html#mode,Variable modules.themodule_Educ.TheModule.mode=modules.themodule_Educ.TheModule-class.html#mode,Variable modules.themodule_Menu.TheModule.mode=modules.themodule_Menu.TheModule-class.html#mode,Variable modules.themodule_News.TheModule.mode=modules.themodule_News.TheModule-class.html#mode,Variable modules.themodule_Publi.TheModule.mode=modules.themodule_Publi.TheModule-class.html#mode,Variable modules.themodule_Wiki.TheModule.mode=modules.themodule_Wiki.TheModule-class.html#mode"><a title="conf.confstatic.mode
+modules.module_interfaces.ComfortModule.mode
+modules.themodule_Calendars.TheModule.mode
+modules.themodule_Coord.TheModule.mode
+modules.themodule_Credits.TheModule.mode
+modules.themodule_Dummy.TheModule.mode
+modules.themodule_Educ.TheModule.mode
+modules.themodule_Menu.TheModule.mode
+modules.themodule_News.TheModule.mode
+modules.themodule_Publi.TheModule.mode
+modules.themodule_Wiki.TheModule.mode" class="py-name" href="#" onclick="return doclink('link-16', 'mode', 'link-16');">mode</a></tt> <tt class="py-op">=</tt> <tt class="py-string">"local"</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">    <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">      <tt id="link-17" class="py-name"><a title="conf.confstatic" class="py-name" href="#" onclick="return doclink('link-17', 'confstatic', 'link-0');">confstatic</a></tt><tt class="py-op">.</tt><tt id="link-18" class="py-name"><a title="conf.confstatic.mode
+modules.module_interfaces.ComfortModule.mode
+modules.themodule_Calendars.TheModule.mode
+modules.themodule_Coord.TheModule.mode
+modules.themodule_Credits.TheModule.mode
+modules.themodule_Dummy.TheModule.mode
+modules.themodule_Educ.TheModule.mode
+modules.themodule_Menu.TheModule.mode
+modules.themodule_News.TheModule.mode
+modules.themodule_Publi.TheModule.mode
+modules.themodule_Wiki.TheModule.mode" class="py-name" href="#" onclick="return doclink('link-18', 'mode', 'link-16');">mode</a></tt> <tt class="py-op">=</tt> <tt class="py-string">"dynamic"</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">  <tt class="py-keyword">except</tt> <tt class="py-name">AttributeError</tt><tt class="py-op">:</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line">    <tt id="link-19" class="py-name"><a title="conf.confstatic" class="py-name" href="#" onclick="return doclink('link-19', 'confstatic', 'link-0');">confstatic</a></tt><tt class="py-op">.</tt><tt id="link-20" class="py-name"><a title="conf.confstatic.mode
+modules.module_interfaces.ComfortModule.mode
+modules.themodule_Calendars.TheModule.mode
+modules.themodule_Coord.TheModule.mode
+modules.themodule_Credits.TheModule.mode
+modules.themodule_Dummy.TheModule.mode
+modules.themodule_Educ.TheModule.mode
+modules.themodule_Menu.TheModule.mode
+modules.themodule_News.TheModule.mode
+modules.themodule_Publi.TheModule.mode
+modules.themodule_Wiki.TheModule.mode" class="py-name" href="#" onclick="return doclink('link-20', 'mode', 'link-16');">mode</a></tt> <tt class="py-op">=</tt> <tt class="py-string">"dynamic"</tt> </tt>
+</div><a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line"> </tt>
+<a name="parse_url"></a><div id="parse_url-def"><a name="L85"></a><tt class="py-lineno"> 85</tt> <a class="py-toggle" href="#" id="parse_url-toggle" onclick="return toggle('parse_url');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="conf.utils-module.html#parse_url">parse_url</a><tt class="py-op">(</tt><tt class="py-param">q_str</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="parse_url-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="parse_url-expanded"><a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">  <tt class="py-docstring">"""Petite fonction utilitaire pour d&#233;coder les param&#232;tres pass&#233;s dans l'URL</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line"><tt class="py-docstring">  sous la forme d'un dictionnaire"""</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">  <tt id="link-21" class="py-name" targets="Method db.db_interface.IDB.table()=db.db_interface.IDB-class.html#table,Method db.db_sql.SQL_DB.table()=db.db_sql.SQL_DB-class.html#table,Method db.db_xml.DBXML.table()=db.db_xml.DBXML-class.html#table,Variable db.test.table=db.test-module.html#table,Variable db.test_xml.table=db.test_xml-module.html#table"><a title="db.db_interface.IDB.table
+db.db_sql.SQL_DB.table
+db.db_xml.DBXML.table
+db.test.table
+db.test_xml.table" class="py-name" href="#" onclick="return doclink('link-21', 'table', 'link-21');">table</a></tt><tt class="py-op">=</tt><tt class="py-op">{</tt><tt class="py-op">}</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">  <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line">    <tt id="link-22" class="py-name" targets="Variable cgibin.admin.params=cgibin.admin-module.html#params,Variable cgibin.adminvalid.params=cgibin.adminvalid-module.html#params"><a title="cgibin.admin.params
+cgibin.adminvalid.params" class="py-name" href="#" onclick="return doclink('link-22', 'params', 'link-22');">params</a></tt><tt class="py-op">=</tt><tt class="py-name">q_str</tt><tt class="py-op">.</tt><tt class="py-name">split</tt><tt class="py-op">(</tt><tt class="py-string">"&amp;"</tt><tt class="py-op">)</tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt id="link-23" class="py-name" targets="Variable cgibin.admin.p=cgibin.admin-module.html#p,Variable cgibin.adminvalid.p=cgibin.adminvalid-module.html#p,Variable cgibin.handler.p=cgibin.handler-module.html#p,Variable cgibin.please_install.p=cgibin.please_install-module.html#p"><a title="cgibin.admin.p
+cgibin.adminvalid.p
+cgibin.handler.p
+cgibin.please_install.p" class="py-name" href="#" onclick="return doclink('link-23', 'p', 'link-23');">p</a></tt> <tt class="py-keyword">in</tt> <tt id="link-24" class="py-name"><a title="cgibin.admin.params
+cgibin.adminvalid.params" class="py-name" href="#" onclick="return doclink('link-24', 'params', 'link-22');">params</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">      <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">        <tt class="py-op">(</tt><tt class="py-name">key</tt><tt class="py-op">,</tt><tt class="py-name">value</tt><tt class="py-op">)</tt><tt class="py-op">=</tt><tt id="link-25" class="py-name"><a title="cgibin.admin.p
+cgibin.adminvalid.p
+cgibin.handler.p
+cgibin.please_install.p" class="py-name" href="#" onclick="return doclink('link-25', 'p', 'link-23');">p</a></tt><tt class="py-op">.</tt><tt class="py-name">split</tt><tt class="py-op">(</tt><tt class="py-string">"="</tt><tt class="py-op">)</tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">        <tt id="link-26" class="py-name"><a title="db.db_interface.IDB.table
+db.db_sql.SQL_DB.table
+db.db_xml.DBXML.table
+db.test.table
+db.test_xml.table" class="py-name" href="#" onclick="return doclink('link-26', 'table', 'link-21');">table</a></tt><tt class="py-op">[</tt><tt class="py-name">key</tt><tt class="py-op">]</tt><tt class="py-op">=</tt><tt class="py-name">value</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line">      <tt class="py-keyword">except</tt><tt class="py-op">:</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line">        <tt id="link-27" class="py-name"><a title="db.db_interface.IDB.table
+db.db_sql.SQL_DB.table
+db.db_xml.DBXML.table
+db.test.table
+db.test_xml.table" class="py-name" href="#" onclick="return doclink('link-27', 'table', 'link-21');">table</a></tt><tt class="py-op">[</tt><tt id="link-28" class="py-name"><a title="cgibin.admin.p
+cgibin.adminvalid.p
+cgibin.handler.p
+cgibin.please_install.p" class="py-name" href="#" onclick="return doclink('link-28', 'p', 'link-23');">p</a></tt><tt class="py-op">]</tt><tt class="py-op">=</tt><tt class="py-string">""</tt> <tt class="py-comment">#il faut que la cl&#233; existe quand m&#234;me</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt id="link-29" class="py-name"><a title="db.db_interface.IDB.table
+db.db_sql.SQL_DB.table
+db.db_xml.DBXML.table
+db.test.table
+db.test_xml.table" class="py-name" href="#" onclick="return doclink('link-29', 'table', 'link-21');">table</a></tt>    <tt class="py-comment">##Key existence is still required</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">  <tt class="py-keyword">except</tt><tt class="py-op">:</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt id="link-30" class="py-name"><a title="db.db_interface.IDB.table
+db.db_sql.SQL_DB.table
+db.db_xml.DBXML.table
+db.test.table
+db.test_xml.table" class="py-name" href="#" onclick="return doclink('link-30', 'table', 'link-21');">table</a></tt> </tt>
+</div><a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line"> </tt>
+<a name="java_ok"></a><div id="java_ok-def"><a name="L101"></a><tt class="py-lineno">101</tt> <a class="py-toggle" href="#" id="java_ok-toggle" onclick="return toggle('java_ok');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="conf.utils-module.html#java_ok">java_ok</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="java_ok-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="java_ok-expanded"><a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line">  <tt class="py-keyword">if</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">name</tt> <tt class="py-op">==</tt> <tt class="py-string">"nt"</tt><tt class="py-op">:</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt id="link-31" class="py-name"><a title="conf.confstatic" class="py-name" href="#" onclick="return doclink('link-31', 'confstatic', 'link-0');">confstatic</a></tt><tt class="py-op">.</tt><tt id="link-32" class="py-name" targets="Variable conf.confstatic.nt_has_java=conf.confstatic-module.html#nt_has_java"><a title="conf.confstatic.nt_has_java" class="py-name" href="#" onclick="return doclink('link-32', 'nt_has_java', 'link-32');">nt_has_java</a></tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line">  <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line">    <tt class="py-name">dirs</tt> <tt class="py-op">=</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">getenv</tt><tt class="py-op">(</tt><tt class="py-string">"PATH"</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">split</tt><tt class="py-op">(</tt><tt class="py-string">":"</tt><tt class="py-op">)</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt id="link-33" class="py-name" targets="Variable db.test.d=db.test-module.html#d,Variable db.test_xml.d=db.test_xml-module.html#d"><a title="db.test.d
+db.test_xml.d" class="py-name" href="#" onclick="return doclink('link-33', 'd', 'link-33');">d</a></tt> <tt class="py-keyword">in</tt> <tt class="py-name">dirs</tt><tt class="py-op">:</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">      <tt id="link-34" class="py-name"><a title="cgibin.admin.p
+cgibin.adminvalid.p
+cgibin.handler.p
+cgibin.please_install.p" class="py-name" href="#" onclick="return doclink('link-34', 'p', 'link-23');">p</a></tt> <tt class="py-op">=</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt id="link-35" class="py-name"><a title="db.test.d
+db.test_xml.d" class="py-name" href="#" onclick="return doclink('link-35', 'd', 'link-33');">d</a></tt><tt class="py-op">,</tt> <tt class="py-string">"java"</tt><tt class="py-op">)</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line">      <tt class="py-keyword">if</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">isfile</tt><tt class="py-op">(</tt><tt id="link-36" class="py-name"><a title="cgibin.admin.p
+cgibin.adminvalid.p
+cgibin.handler.p
+cgibin.please_install.p" class="py-name" href="#" onclick="return doclink('link-36', 'p', 'link-23');">p</a></tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt class="py-name">True</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">False</tt> </tt>
+</div><a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line"> </tt>
+<a name="pdf_ok"></a><div id="pdf_ok-def"><a name="L112"></a><tt class="py-lineno">112</tt> <a class="py-toggle" href="#" id="pdf_ok-toggle" onclick="return toggle('pdf_ok');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="conf.utils-module.html#pdf_ok">pdf_ok</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="pdf_ok-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="pdf_ok-expanded"><a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line">  <tt class="py-keyword">if</tt> <tt class="py-name">conf_general</tt><tt class="py-op">.</tt><tt class="py-name">pdfmode</tt> <tt class="py-op">==</tt> <tt class="py-string">"fop"</tt><tt class="py-op">:</tt> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt id="link-37" class="py-name" targets="Function conf.utils.java_ok()=conf.utils-module.html#java_ok"><a title="conf.utils.java_ok" class="py-name" href="#" onclick="return doclink('link-37', 'java_ok', 'link-37');">java_ok</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line">  <tt class="py-keyword">elif</tt> <tt class="py-name">conf_general</tt><tt class="py-op">.</tt><tt class="py-name">pdfmode</tt> <tt class="py-op">==</tt> <tt class="py-string">"latex"</tt><tt class="py-op">:</tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">isfile</tt><tt class="py-op">(</tt><tt id="link-38" class="py-name"><a title="conf.confstatic" class="py-name" href="#" onclick="return doclink('link-38', 'confstatic', 'link-0');">confstatic</a></tt><tt class="py-op">.</tt><tt id="link-39" class="py-name" targets="Function conf.confstatic.dblatex_path()=conf.confstatic-module.html#dblatex_path"><a title="conf.confstatic.dblatex_path" class="py-name" href="#" onclick="return doclink('link-39', 'dblatex_path', 'link-39');">dblatex_path</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line">  <tt class="py-keyword">elif</tt> <tt class="py-name">conf_general</tt><tt class="py-op">.</tt><tt class="py-name">pdfmode</tt> <tt class="py-op">==</tt> <tt class="py-string">"none"</tt><tt class="py-op">:</tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">False</tt> </tt>
+</div><a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line"> </tt>
+<a name="latex_colors"></a><div id="latex_colors-def"><a name="L120"></a><tt class="py-lineno">120</tt> <a class="py-toggle" href="#" id="latex_colors-toggle" onclick="return toggle('latex_colors');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="conf.utils-module.html#latex_colors">latex_colors</a><tt class="py-op">(</tt><tt class="py-param">chdir</tt><tt class="py-op">=</tt><tt class="py-name">None</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="latex_colors-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="latex_colors-expanded"><a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line">  <tt class="py-docstring">"""De quoi r&#233;cup&#233;rer un couple contenant #123456,#123456 repr&#233;sentant les</tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line"><tt class="py-docstring">  couleurs d'arri&#232;re-plan et d'avant-plan pour g&#233;n&#233;rer du latex. Renvoie blanc</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line"><tt class="py-docstring">  et noir sinon</tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line"><tt class="py-docstring">  @param chdir: facultatif, si pr&#233;sent, on change au dossier en question pour</tt> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line"><tt class="py-docstring">  &#234;tre de nouveau dans src. La fonction retourne en revenant au dossier d'o&#249;</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line"><tt class="py-docstring">  elle a &#233;t&#233; appel&#233;e</tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line"><tt class="py-docstring">  """</tt> </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line">  <tt class="py-name">cwd</tt> <tt class="py-op">=</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">getcwd</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line">  <tt class="py-keyword">if</tt> <tt class="py-name">chdir</tt><tt class="py-op">:</tt> </tt>
+<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line">    <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">chdir</tt><tt class="py-op">(</tt><tt class="py-name">chdir</tt><tt class="py-op">)</tt> </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line">  <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line">    <tt class="py-name">f</tt> <tt class="py-op">=</tt> <tt class="py-name">open</tt><tt class="py-op">(</tt><tt class="py-string">"styles/%s/latex.dat"</tt> <tt class="py-op">%</tt> <tt class="py-name">conf_general</tt><tt class="py-op">.</tt><tt class="py-name">style</tt><tt class="py-op">)</tt> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line">    <tt class="py-name">bg</tt> <tt class="py-op">=</tt> <tt class="py-name">f</tt><tt class="py-op">.</tt><tt class="py-name">readline</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-op">:</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">]</tt>  <tt class="py-comment">##to make the \n at end of line disappear</tt> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line">    <tt class="py-name">fg</tt> <tt class="py-op">=</tt> <tt class="py-name">f</tt><tt class="py-op">.</tt><tt class="py-name">readline</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-op">:</tt><tt class="py-op">-</tt><tt class="py-number">1</tt><tt class="py-op">]</tt>  <tt class="py-comment">#pour virer le \n en fin de cha&#238;ne</tt> </tt>
+<a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line">    <tt class="py-name">f</tt><tt class="py-op">.</tt><tt id="link-40" class="py-name" targets="Method db.db_sql.SQL_DB.close()=db.db_sql.SQL_DB-class.html#close"><a title="db.db_sql.SQL_DB.close" class="py-name" href="#" onclick="return doclink('link-40', 'close', 'link-40');">close</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line">    <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">chdir</tt><tt class="py-op">(</tt><tt class="py-name">cwd</tt><tt class="py-op">)</tt> </tt>
+<a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-op">(</tt><tt class="py-name">bg</tt><tt class="py-op">,</tt><tt class="py-name">fg</tt><tt class="py-op">)</tt> </tt>
+<a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line">  <tt class="py-keyword">except</tt><tt class="py-op">:</tt> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line">    <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">chdir</tt><tt class="py-op">(</tt><tt class="py-name">cwd</tt><tt class="py-op">)</tt> </tt>
+<a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-op">(</tt><tt class="py-string">"transparent"</tt><tt class="py-op">,</tt><tt class="py-string">"#000000"</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line"> </tt>
+<a name="htmlentities"></a><div id="htmlentities-def"><a name="L142"></a><tt class="py-lineno">142</tt> <a class="py-toggle" href="#" id="htmlentities-toggle" onclick="return toggle('htmlentities');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="conf.utils-module.html#htmlentities">htmlentities</a><tt class="py-op">(</tt><tt class="py-param">s</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="htmlentities-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="htmlentities-expanded"><a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line">  <tt class="py-docstring">"""Prend une cha&#238;ne en unicode (attention...) et la renvoie correctement</tt> </tt>
+<a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line"><tt class="py-docstring">  &#233;chapp&#233;e : faire donc utils.htmlentities(s.decode("utf-8"))"""</tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line">  <tt class="py-name">ret</tt> <tt class="py-op">=</tt> <tt class="py-string">""</tt> </tt>
+<a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line">  <tt class="py-name">c2n</tt> <tt class="py-op">=</tt> <tt class="py-name">htmlentitydefs</tt><tt class="py-op">.</tt><tt class="py-name">codepoint2name</tt> </tt>
+<a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line">  <tt class="py-keyword">for</tt> <tt class="py-name">i</tt> <tt class="py-keyword">in</tt> <tt class="py-name">range</tt><tt class="py-op">(</tt><tt class="py-number">0</tt><tt class="py-op">,</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">s</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line">    <tt class="py-name">n</tt> <tt class="py-op">=</tt> <tt class="py-name">ord</tt><tt class="py-op">(</tt><tt class="py-name">s</tt><tt class="py-op">[</tt><tt class="py-name">i</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line">    <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L150"></a><tt class="py-lineno">150</tt>  <tt class="py-line">      <tt class="py-name">ret</tt> <tt class="py-op">+=</tt> <tt class="py-string">"&amp;"</tt> <tt class="py-op">+</tt> <tt class="py-name">c2n</tt><tt class="py-op">[</tt><tt class="py-name">n</tt><tt class="py-op">]</tt> <tt class="py-op">+</tt> <tt class="py-string">";"</tt> </tt>
+<a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line">    <tt class="py-keyword">except</tt><tt class="py-op">:</tt> </tt>
+<a name="L152"></a><tt class="py-lineno">152</tt>  <tt class="py-line">      <tt class="py-name">ret</tt> <tt class="py-op">+=</tt> <tt class="py-name">s</tt><tt class="py-op">[</tt><tt class="py-name">i</tt><tt class="py-op">]</tt> </tt>
+<a name="L153"></a><tt class="py-lineno">153</tt>  <tt class="py-line">  <tt class="py-keyword">return</tt> <tt class="py-name">ret</tt> </tt>
+</div><a name="L154"></a><tt class="py-lineno">154</tt>  <tt class="py-line"> </tt>
+<a name="mkdirp"></a><div id="mkdirp-def"><a name="L155"></a><tt class="py-lineno">155</tt> <a class="py-toggle" href="#" id="mkdirp-toggle" onclick="return toggle('mkdirp');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="conf.utils-module.html#mkdirp">mkdirp</a><tt class="py-op">(</tt><tt class="py-param">dir</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="mkdirp-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="mkdirp-expanded"><a name="L156"></a><tt class="py-lineno">156</tt>  <tt class="py-line">  <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L157"></a><tt class="py-lineno">157</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">dir</tt> <tt class="py-op">!=</tt> <tt class="py-string">""</tt> <tt class="py-keyword">and</tt> <tt class="py-keyword">not</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">isdir</tt><tt class="py-op">(</tt><tt class="py-name">dir</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L158"></a><tt class="py-lineno">158</tt>  <tt class="py-line">      <tt id="link-41" class="py-name"><a title="cgibin.admin.p
+cgibin.adminvalid.p
+cgibin.handler.p
+cgibin.please_install.p" class="py-name" href="#" onclick="return doclink('link-41', 'p', 'link-23');">p</a></tt> <tt class="py-op">=</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">dirname</tt><tt class="py-op">(</tt><tt class="py-name">dir</tt><tt class="py-op">)</tt> </tt>
+<a name="L159"></a><tt class="py-lineno">159</tt>  <tt class="py-line">      <tt id="link-42" class="py-name" targets="Function conf.utils.mkdirp()=conf.utils-module.html#mkdirp"><a title="conf.utils.mkdirp" class="py-name" href="#" onclick="return doclink('link-42', 'mkdirp', 'link-42');">mkdirp</a></tt><tt class="py-op">(</tt><tt id="link-43" class="py-name"><a title="cgibin.admin.p
+cgibin.adminvalid.p
+cgibin.handler.p
+cgibin.please_install.p" class="py-name" href="#" onclick="return doclink('link-43', 'p', 'link-23');">p</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L160"></a><tt class="py-lineno">160</tt>  <tt class="py-line">      <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">mkdir</tt><tt class="py-op">(</tt><tt class="py-name">dir</tt><tt class="py-op">)</tt> </tt>
+<a name="L161"></a><tt class="py-lineno">161</tt>  <tt class="py-line">  <tt class="py-keyword">except</tt><tt class="py-op">:</tt> </tt>
+<a name="L162"></a><tt class="py-lineno">162</tt>  <tt class="py-line">    <tt class="py-keyword">pass</tt> </tt>
+</div><a name="L163"></a><tt class="py-lineno">163</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://graal.ens-lyon.fr/comfort/">CoMFoRT</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sun May 25 15:42:54 2008
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

@@ -1,0 +1,4 @@
+Pour tester le truc dans son état actuel :
+To launch Confort :
+% cd src/server
+% ./launch.py

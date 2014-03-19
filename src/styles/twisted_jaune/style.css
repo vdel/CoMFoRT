@@ -1,0 +1,158 @@
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+/* Elements */
+
+@import url(../common/wiki.css);
+
+body {
+  background: #efe689;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-size: small;
+  color: #7A2B39;
+}
+
+.titlepage {
+  background: #efe689;
+}
+
+div.titlepage h1 {
+  background: #efe689;
+  margin: 0;
+  padding: 0;
+}
+
+div.titlepage h2, h3,h4, h5, h6  {
+   background: #d89c5d;
+}
+
+div.titlepage h2, h3 {
+  margin-top: 0px;
+}
+
+div.titlepage h4, h5, h6 {
+}
+
+p, ol, ul, dl, blockquote {
+}
+
+a {
+  color: #7A2B39;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+
+/* Header */
+
+#ie6hack {
+  width: 600px;
+  height: 60px;
+  margin: 0px auto;
+  margin-bottom: -7px;
+  padding-top: 20px;
+}
+
+#ie6hack h1 {
+  float: right;
+  margin: 0;
+  border: 0;
+  margin-top: -1em;
+}
+
+.sitename {
+  font-size: 40px;
+  letter-spacing: -1px;
+}
+
+
+
+.sitename h2 {
+  float: right;
+  margin: 0px;
+  padding-top: 36px;
+  font-size: 15px;
+
+}
+
+.sitename a {
+  text-decoration: none;
+  color: #823C49;
+}
+
+/* Menu */
+
+#Menu {
+  width: 600px;
+  height: 150px;
+  background: url(images/img1.jpg) no-repeat center top;
+  margin-top: -10px;
+}
+
+#Menu ul {
+  margin: 0px 0px 0px 0px;
+  padding: 70px 0px 0px 100px;
+  list-style: none;
+  font-size: 17px;
+  text-transform: lowercase;
+}
+
+#Menu li {
+  display: inline;
+}
+
+#Menu a {
+  display: block;
+  float: left;
+  padding: 10px 10px 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  color: #EFE689;
+}
+
+#Menu a:hover {
+  color: #B87C3D;
+}
+
+/* Content */
+
+.sect1,.footnotes {
+    float: center;
+  width: 440px;
+  margin: 0px auto;
+}
+
+.article {
+    float: center;
+  background: url(images/img2.jpg) repeat-y center top;
+  width: 600px ;
+  margin: 0px auto;
+}
+
+/* Footer */
+
+.feet {
+  width: 700px;
+  background: url(images/img3.jpg) no-repeat;
+  height: 71px;
+  margin: auto;
+  margin-top: -13px;
+  padding: 3px 0px;
+  padding-top: 40px;
+  font-size: 10px;
+  text-align: center;
+}
+
+table {
+  border-style: solid;
+  margin: 10px 10px 10px 10px;
+  border-color: #7a2b39;
+  border-width:1px; 
+  border-collapse: collapse;
+}
+

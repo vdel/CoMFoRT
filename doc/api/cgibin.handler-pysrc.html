@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>cgibin.handler</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://graal.ens-lyon.fr/comfort/">CoMFoRT</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="cgibin-module.html">Package&nbsp;cgibin</a> ::
+        Module&nbsp;handler
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="cgibin.handler-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="cgibin.handler-module.html">Module cgibin.handler</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment">#! /usr/bin/python</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment"># -*- coding: utf-8 -*-</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-comment"></tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-comment">## IMPORTS ORDER</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">## 1) What is provided by Python librairies, and firstly what is used for the </tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">##    path</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">## 2) What is linked to configuring CoMFoRT</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">## 3) Modules, database, templates</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment"># ORDRE DES IMPORTS :</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment"># 1) ce qui est dans la lib standard python, avec en premier ce qui sert pour le</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#   path</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment"># 2) ce qui est de l'ordre de la configuration de comfort </tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment"># 3) modules, db, templates</tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-comment"></tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">sys</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">os</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt id="link-0" class="py-name" targets="Variable cgibin.admin.p=cgibin.admin-module.html#p,Variable cgibin.adminvalid.p=cgibin.adminvalid-module.html#p,Variable cgibin.handler.p=cgibin.handler-module.html#p,Variable cgibin.please_install.p=cgibin.please_install-module.html#p"><a title="cgibin.admin.p
+cgibin.adminvalid.p
+cgibin.handler.p
+cgibin.please_install.p" class="py-name" href="#" onclick="return doclink('link-0', 'p', 'link-0');">p</a></tt> <tt class="py-op">=</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">getenv</tt><tt class="py-op">(</tt><tt class="py-string">"COMFORTPATH"</tt><tt class="py-op">)</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-keyword">if</tt> <tt id="link-1" class="py-name"><a title="cgibin.admin.p
+cgibin.adminvalid.p
+cgibin.handler.p
+cgibin.please_install.p" class="py-name" href="#" onclick="return doclink('link-1', 'p', 'link-0');">p</a></tt> <tt class="py-op">!=</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line">  <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">chdir</tt><tt class="py-op">(</tt><tt id="link-2" class="py-name"><a title="cgibin.admin.p
+cgibin.adminvalid.p
+cgibin.handler.p
+cgibin.please_install.p" class="py-name" href="#" onclick="return doclink('link-2', 'p', 'link-0');">p</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"><tt class="py-name">sys</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">getcwd</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">cgi</tt> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">urllib</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-3" class="py-name" targets="Package conf=conf-module.html"><a title="conf" class="py-name" href="#" onclick="return doclink('link-3', 'conf', 'link-3');">conf</a></tt> <tt class="py-keyword">import</tt> <tt id="link-4" class="py-name" targets="Module conf.confstatic=conf.confstatic-module.html"><a title="conf.confstatic" class="py-name" href="#" onclick="return doclink('link-4', 'confstatic', 'link-4');">confstatic</a></tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"><tt class="py-name">sys</tt><tt class="py-op">.</tt><tt class="py-name">path</tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt id="link-5" class="py-name"><a title="conf.confstatic" class="py-name" href="#" onclick="return doclink('link-5', 'confstatic', 'link-4');">confstatic</a></tt><tt class="py-op">.</tt><tt id="link-6" class="py-name" targets="Variable conf.confstatic.config_path=conf.confstatic-module.html#config_path"><a title="conf.confstatic.config_path" class="py-name" href="#" onclick="return doclink('link-6', 'config_path', 'link-6');">config_path</a></tt><tt class="py-op">]</tt><tt class="py-op">+</tt><tt class="py-name">sys</tt><tt class="py-op">.</tt><tt class="py-name">path</tt> </tt>
+<a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"> </tt>
+<a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-7" class="py-name"><a title="conf" class="py-name" href="#" onclick="return doclink('link-7', 'conf', 'link-3');">conf</a></tt> <tt class="py-keyword">import</tt> <tt id="link-8" class="py-name" targets="Module conf.utils=conf.utils-module.html"><a title="conf.utils" class="py-name" href="#" onclick="return doclink('link-8', 'utils', 'link-8');">utils</a></tt> </tt>
+<a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"><tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line">  <tt class="py-keyword">import</tt> <tt class="py-name">conf_general</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line">  <tt class="py-keyword">import</tt> <tt class="py-name">conf_private</tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line"><tt class="py-keyword">except</tt><tt class="py-op">:</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">  <tt class="py-keyword">for</tt> <tt id="link-9" class="py-name" targets="Variable db.test.d=db.test-module.html#d,Variable db.test_xml.d=db.test_xml-module.html#d"><a title="db.test.d
+db.test_xml.d" class="py-name" href="#" onclick="return doclink('link-9', 'd', 'link-9');">d</a></tt> <tt class="py-keyword">in</tt> <tt class="py-op">[</tt><tt id="link-10" class="py-name"><a title="conf.confstatic" class="py-name" href="#" onclick="return doclink('link-10', 'confstatic', 'link-4');">confstatic</a></tt><tt class="py-op">.</tt><tt id="link-11" class="py-name"><a title="conf.confstatic.config_path" class="py-name" href="#" onclick="return doclink('link-11', 'config_path', 'link-6');">config_path</a></tt><tt class="py-op">,</tt> <tt id="link-12" class="py-name"><a title="conf.confstatic" class="py-name" href="#" onclick="return doclink('link-12', 'confstatic', 'link-4');">confstatic</a></tt><tt class="py-op">.</tt><tt id="link-13" class="py-name" targets="Variable conf.confstatic.perso_path=conf.confstatic-module.html#perso_path"><a title="conf.confstatic.perso_path" class="py-name" href="#" onclick="return doclink('link-13', 'perso_path', 'link-13');">perso_path</a></tt><tt class="py-op">,</tt> <tt id="link-14" class="py-name"><a title="conf.confstatic" class="py-name" href="#" onclick="return doclink('link-14', 'confstatic', 'link-4');">confstatic</a></tt><tt class="py-op">.</tt><tt id="link-15" class="py-name" targets="Variable conf.confstatic.pages_path=conf.confstatic-module.html#pages_path"><a title="conf.confstatic.pages_path" class="py-name" href="#" onclick="return doclink('link-15', 'pages_path', 'link-15');">pages_path</a></tt><tt class="py-op">,</tt> <tt id="link-16" class="py-name"><a title="conf.confstatic" class="py-name" href="#" onclick="return doclink('link-16', 'confstatic', 'link-4');">confstatic</a></tt><tt class="py-op">.</tt><tt id="link-17" class="py-name" targets="Variable conf.confstatic.docs_path=conf.confstatic-module.html#docs_path"><a title="conf.confstatic.docs_path" class="py-name" href="#" onclick="return doclink('link-17', 'docs_path', 'link-17');">docs_path</a></tt><tt class="py-op">,</tt> <tt class="py-op">]</tt><tt class="py-op">:</tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line">    <tt id="link-18" class="py-name"><a title="conf.utils" class="py-name" href="#" onclick="return doclink('link-18', 'utils', 'link-8');">utils</a></tt><tt class="py-op">.</tt><tt id="link-19" class="py-name" targets="Function conf.utils.mkdirp()=conf.utils-module.html#mkdirp"><a title="conf.utils.mkdirp" class="py-name" href="#" onclick="return doclink('link-19', 'mkdirp', 'link-19');">mkdirp</a></tt><tt class="py-op">(</tt><tt id="link-20" class="py-name"><a title="db.test.d
+db.test_xml.d" class="py-name" href="#" onclick="return doclink('link-20', 'd', 'link-9');">d</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line">  <tt class="py-name">open</tt><tt class="py-op">(</tt><tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt id="link-21" class="py-name"><a title="conf.confstatic" class="py-name" href="#" onclick="return doclink('link-21', 'confstatic', 'link-4');">confstatic</a></tt><tt class="py-op">.</tt><tt id="link-22" class="py-name"><a title="conf.confstatic.config_path" class="py-name" href="#" onclick="return doclink('link-22', 'config_path', 'link-6');">config_path</a></tt><tt class="py-op">,</tt> <tt class="py-string">'__init__.py'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-string">'w'</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-23" class="py-name" targets="Method db.db_sql.SQL_DB.close()=db.db_sql.SQL_DB-class.html#close"><a title="db.db_sql.SQL_DB.close" class="py-name" href="#" onclick="return doclink('link-23', 'close', 'link-23');">close</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line">  <tt id="link-24" class="py-name" targets="Variable cgibin.handler.fconf=cgibin.handler-module.html#fconf"><a title="cgibin.handler.fconf" class="py-name" href="#" onclick="return doclink('link-24', 'fconf', 'link-24');">fconf</a></tt> <tt class="py-op">=</tt> <tt class="py-name">open</tt><tt class="py-op">(</tt><tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt id="link-25" class="py-name"><a title="conf.confstatic" class="py-name" href="#" onclick="return doclink('link-25', 'confstatic', 'link-4');">confstatic</a></tt><tt class="py-op">.</tt><tt id="link-26" class="py-name"><a title="conf.confstatic.config_path" class="py-name" href="#" onclick="return doclink('link-26', 'config_path', 'link-6');">config_path</a></tt><tt class="py-op">,</tt> <tt class="py-string">"conf_general.py"</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-string">'w+'</tt><tt class="py-op">)</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">  <tt id="link-27" class="py-name"><a title="cgibin.handler.fconf" class="py-name" href="#" onclick="return doclink('link-27', 'fconf', 'link-24');">fconf</a></tt><tt class="py-op">.</tt><tt class="py-name">write</tt><tt class="py-op">(</tt><tt class="py-string">"# -*- encoding: utf-8 -*-\n\n#ATTENTION : Ce fichier est genere par interface/valid_form.py\n\n"</tt><tt class="py-op">)</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line">  <tt id="link-28" class="py-name"><a title="cgibin.handler.fconf" class="py-name" href="#" onclick="return doclink('link-28', 'fconf', 'link-24');">fconf</a></tt><tt class="py-op">.</tt><tt class="py-name">write</tt><tt class="py-op">(</tt><tt class="py-string">"title = \"\"\n"</tt><tt class="py-op">)</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line">  <tt id="link-29" class="py-name"><a title="cgibin.handler.fconf" class="py-name" href="#" onclick="return doclink('link-29', 'fconf', 'link-24');">fconf</a></tt><tt class="py-op">.</tt><tt class="py-name">write</tt><tt class="py-op">(</tt><tt class="py-string">"language = \"\"\n"</tt><tt class="py-op">)</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">  <tt id="link-30" class="py-name"><a title="cgibin.handler.fconf" class="py-name" href="#" onclick="return doclink('link-30', 'fconf', 'link-24');">fconf</a></tt><tt class="py-op">.</tt><tt class="py-name">write</tt><tt class="py-op">(</tt><tt class="py-string">"style = \"officiels_serious\"\n"</tt><tt class="py-op">)</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line">  <tt id="link-31" class="py-name"><a title="cgibin.handler.fconf" class="py-name" href="#" onclick="return doclink('link-31', 'fconf', 'link-24');">fconf</a></tt><tt class="py-op">.</tt><tt class="py-name">write</tt><tt class="py-op">(</tt><tt class="py-string">"\n"</tt><tt class="py-op">)</tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line">  <tt id="link-32" class="py-name"><a title="cgibin.handler.fconf" class="py-name" href="#" onclick="return doclink('link-32', 'fconf', 'link-24');">fconf</a></tt><tt class="py-op">.</tt><tt class="py-name">write</tt><tt class="py-op">(</tt><tt class="py-string">"installed = 0\n"</tt><tt class="py-op">)</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line">  <tt id="link-33" class="py-name"><a title="cgibin.handler.fconf" class="py-name" href="#" onclick="return doclink('link-33', 'fconf', 'link-24');">fconf</a></tt><tt class="py-op">.</tt><tt class="py-name">write</tt><tt class="py-op">(</tt><tt class="py-string">"pdfmode = \"none\"\n"</tt><tt class="py-op">)</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line">  <tt id="link-34" class="py-name"><a title="cgibin.handler.fconf" class="py-name" href="#" onclick="return doclink('link-34', 'fconf', 'link-24');">fconf</a></tt><tt class="py-op">.</tt><tt class="py-name">write</tt><tt class="py-op">(</tt><tt class="py-string">"adminstyle = \"admin.css\"\n"</tt><tt class="py-op">)</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">  <tt id="link-35" class="py-name"><a title="cgibin.handler.fconf" class="py-name" href="#" onclick="return doclink('link-35', 'fconf', 'link-24');">fconf</a></tt><tt class="py-op">.</tt><tt class="py-name">write</tt><tt class="py-op">(</tt><tt class="py-string">"display_logo = 0\n"</tt><tt class="py-op">)</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">  <tt id="link-36" class="py-name"><a title="cgibin.handler.fconf" class="py-name" href="#" onclick="return doclink('link-36', 'fconf', 'link-24');">fconf</a></tt><tt class="py-op">.</tt><tt id="link-37" class="py-name"><a title="db.db_sql.SQL_DB.close" class="py-name" href="#" onclick="return doclink('link-37', 'close', 'link-23');">close</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line"> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">  <tt id="link-38" class="py-name"><a title="cgibin.handler.fconf" class="py-name" href="#" onclick="return doclink('link-38', 'fconf', 'link-24');">fconf</a></tt> <tt class="py-op">=</tt> <tt class="py-name">open</tt><tt class="py-op">(</tt><tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt id="link-39" class="py-name"><a title="conf.confstatic" class="py-name" href="#" onclick="return doclink('link-39', 'confstatic', 'link-4');">confstatic</a></tt><tt class="py-op">.</tt><tt id="link-40" class="py-name"><a title="conf.confstatic.config_path" class="py-name" href="#" onclick="return doclink('link-40', 'config_path', 'link-6');">config_path</a></tt><tt class="py-op">,</tt> <tt class="py-string">"conf_private.py"</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-string">'w+'</tt><tt class="py-op">)</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">  <tt id="link-41" class="py-name"><a title="cgibin.handler.fconf" class="py-name" href="#" onclick="return doclink('link-41', 'fconf', 'link-24');">fconf</a></tt><tt class="py-op">.</tt><tt class="py-name">write</tt><tt class="py-op">(</tt><tt class="py-string">"# -*- encoding: utf-8 -*-\n\n#ATTENTION : Ce fichier est genere par interface/valid_form.py\n\n"</tt><tt class="py-op">)</tt> </tt>
+<a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line">  <tt id="link-42" class="py-name"><a title="cgibin.handler.fconf" class="py-name" href="#" onclick="return doclink('link-42', 'fconf', 'link-24');">fconf</a></tt><tt class="py-op">.</tt><tt class="py-name">write</tt><tt class="py-op">(</tt><tt class="py-string">"transfer_mode = \"FTP\"\n"</tt><tt class="py-op">)</tt> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">  <tt id="link-43" class="py-name"><a title="cgibin.handler.fconf" class="py-name" href="#" onclick="return doclink('link-43', 'fconf', 'link-24');">fconf</a></tt><tt class="py-op">.</tt><tt class="py-name">write</tt><tt class="py-op">(</tt><tt class="py-string">"\n"</tt><tt class="py-op">)</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">  <tt id="link-44" class="py-name"><a title="cgibin.handler.fconf" class="py-name" href="#" onclick="return doclink('link-44', 'fconf', 'link-24');">fconf</a></tt><tt class="py-op">.</tt><tt class="py-name">write</tt><tt class="py-op">(</tt><tt class="py-string">"server_ftp = \"\"\n"</tt><tt class="py-op">)</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line">  <tt id="link-45" class="py-name"><a title="cgibin.handler.fconf" class="py-name" href="#" onclick="return doclink('link-45', 'fconf', 'link-24');">fconf</a></tt><tt class="py-op">.</tt><tt class="py-name">write</tt><tt class="py-op">(</tt><tt class="py-string">"user_ftp = \"\"\n"</tt><tt class="py-op">)</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line">  <tt id="link-46" class="py-name"><a title="cgibin.handler.fconf" class="py-name" href="#" onclick="return doclink('link-46', 'fconf', 'link-24');">fconf</a></tt><tt class="py-op">.</tt><tt class="py-name">write</tt><tt class="py-op">(</tt><tt class="py-string">"pass_ftp = \"\"\n"</tt><tt class="py-op">)</tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line">  <tt id="link-47" class="py-name"><a title="cgibin.handler.fconf" class="py-name" href="#" onclick="return doclink('link-47', 'fconf', 'link-24');">fconf</a></tt><tt class="py-op">.</tt><tt class="py-name">write</tt><tt class="py-op">(</tt><tt class="py-string">"root_ftp = \"\"\n"</tt><tt class="py-op">)</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line">  <tt id="link-48" class="py-name"><a title="cgibin.handler.fconf" class="py-name" href="#" onclick="return doclink('link-48', 'fconf', 'link-24');">fconf</a></tt><tt class="py-op">.</tt><tt class="py-name">write</tt><tt class="py-op">(</tt><tt class="py-string">"\n"</tt><tt class="py-op">)</tt> </tt>
+<a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line">  <tt id="link-49" class="py-name"><a title="cgibin.handler.fconf" class="py-name" href="#" onclick="return doclink('link-49', 'fconf', 'link-24');">fconf</a></tt><tt class="py-op">.</tt><tt class="py-name">write</tt><tt class="py-op">(</tt><tt class="py-string">"server_ssh = \"\"\n"</tt><tt class="py-op">)</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">  <tt id="link-50" class="py-name"><a title="cgibin.handler.fconf" class="py-name" href="#" onclick="return doclink('link-50', 'fconf', 'link-24');">fconf</a></tt><tt class="py-op">.</tt><tt id="link-51" class="py-name"><a title="db.db_sql.SQL_DB.close" class="py-name" href="#" onclick="return doclink('link-51', 'close', 'link-23');">close</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line"> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line"> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line"><tt id="link-52" class="py-name"><a title="conf.utils" class="py-name" href="#" onclick="return doclink('link-52', 'utils', 'link-8');">utils</a></tt><tt class="py-op">.</tt><tt id="link-53" class="py-name" targets="Function conf.utils.init_cgi()=conf.utils-module.html#init_cgi"><a title="conf.utils.init_cgi" class="py-name" href="#" onclick="return doclink('link-53', 'init_cgi', 'link-53');">init_cgi</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line"><tt id="link-54" class="py-name"><a title="conf.utils" class="py-name" href="#" onclick="return doclink('link-54', 'utils', 'link-8');">utils</a></tt><tt class="py-op">.</tt><tt id="link-55" class="py-name" targets="Function conf.utils.import_gettext()=conf.utils-module.html#import_gettext"><a title="conf.utils.import_gettext" class="py-name" href="#" onclick="return doclink('link-55', 'import_gettext', 'link-55');">import_gettext</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line"><tt id="link-56" class="py-name"><a title="conf.utils" class="py-name" href="#" onclick="return doclink('link-56', 'utils', 'link-8');">utils</a></tt><tt class="py-op">.</tt><tt id="link-57" class="py-name" targets="Function conf.utils.check_installed()=conf.utils-module.html#check_installed"><a title="conf.utils.check_installed" class="py-name" href="#" onclick="return doclink('link-57', 'check_installed', 'link-57');">check_installed</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line"> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt id="link-58" class="py-name" targets="Module cgibin.check_db=cgibin.check_db-module.html"><a title="cgibin.check_db" class="py-name" href="#" onclick="return doclink('link-58', 'check_db', 'link-58');">check_db</a></tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line"> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line"><tt class="py-comment">## All the subparts that are to be gathered to generate the page</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#toutes les sous-parties qu'il faut assembler entre elles pour g&#233;n&#233;rer la page</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-keyword">from</tt> <tt id="link-59" class="py-name" targets="Package modules=modules-module.html"><a title="modules" class="py-name" href="#" onclick="return doclink('link-59', 'modules', 'link-59');">modules</a></tt> <tt class="py-keyword">import</tt> <tt id="link-60" class="py-name" targets="Module modules.module_manager=modules.module_manager-module.html"><a title="modules.module_manager" class="py-name" href="#" onclick="return doclink('link-60', 'module_manager', 'link-60');">module_manager</a></tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-61" class="py-name" targets="Variable cgibin.admin.db=cgibin.admin-module.html#db,Variable cgibin.adminvalid.db=cgibin.adminvalid-module.html#db,Variable cgibin.handler.db=cgibin.handler-module.html#db,Package db=db-module.html"><a title="cgibin.admin.db
+cgibin.adminvalid.db
+cgibin.handler.db
+db" class="py-name" href="#" onclick="return doclink('link-61', 'db', 'link-61');">db</a></tt> <tt class="py-keyword">import</tt> <tt id="link-62" class="py-name" targets="Module db.db_manager=db.db_manager-module.html"><a title="db.db_manager" class="py-name" href="#" onclick="return doclink('link-62', 'db_manager', 'link-62');">db_manager</a></tt> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-63" class="py-name" targets="Package templates=templates-module.html"><a title="templates" class="py-name" href="#" onclick="return doclink('link-63', 'templates', 'link-63');">templates</a></tt> <tt class="py-keyword">import</tt> <tt id="link-64" class="py-name" targets="Module templates.template_manager=templates.template_manager-module.html"><a title="templates.template_manager" class="py-name" href="#" onclick="return doclink('link-64', 'template_manager', 'link-64');">template_manager</a></tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line"> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line"><tt id="link-65" class="py-name" targets="Variable cgibin.handler.args=cgibin.handler-module.html#args"><a title="cgibin.handler.args" class="py-name" href="#" onclick="return doclink('link-65', 'args', 'link-65');">args</a></tt> <tt class="py-op">=</tt> <tt id="link-66" class="py-name"><a title="conf.utils" class="py-name" href="#" onclick="return doclink('link-66', 'utils', 'link-8');">utils</a></tt><tt class="py-op">.</tt><tt id="link-67" class="py-name" targets="Function conf.utils.parse_url()=conf.utils-module.html#parse_url"><a title="conf.utils.parse_url" class="py-name" href="#" onclick="return doclink('link-67', 'parse_url', 'link-67');">parse_url</a></tt><tt class="py-op">(</tt><tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">getenv</tt><tt class="py-op">(</tt><tt class="py-string">"QUERY_STRING"</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line"><tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">  <tt id="link-68" class="py-name" targets="Variable cgibin.handler.page=cgibin.handler-module.html#page"><a title="cgibin.handler.page" class="py-name" href="#" onclick="return doclink('link-68', 'page', 'link-68');">page</a></tt> <tt class="py-op">=</tt> <tt id="link-69" class="py-name"><a title="cgibin.handler.args" class="py-name" href="#" onclick="return doclink('link-69', 'args', 'link-65');">args</a></tt><tt class="py-op">[</tt><tt class="py-string">"page"</tt><tt class="py-op">]</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line">  <tt id="link-70" class="py-name"><a title="cgibin.handler.page" class="py-name" href="#" onclick="return doclink('link-70', 'page', 'link-68');">page</a></tt> <tt class="py-op">=</tt> <tt id="link-71" class="py-name"><a title="cgibin.handler.page" class="py-name" href="#" onclick="return doclink('link-71', 'page', 'link-68');">page</a></tt><tt class="py-op">[</tt><tt class="py-op">:</tt><tt id="link-72" class="py-name"><a title="cgibin.handler.page" class="py-name" href="#" onclick="return doclink('link-72', 'page', 'link-68');">page</a></tt><tt class="py-op">.</tt><tt class="py-name">rindex</tt><tt class="py-op">(</tt><tt class="py-string">"."</tt><tt class="py-op">)</tt><tt class="py-op">]</tt> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line"><tt class="py-keyword">except</tt><tt class="py-op">:</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">  <tt id="link-73" class="py-name"><a title="cgibin.handler.page" class="py-name" href="#" onclick="return doclink('link-73', 'page', 'link-68');">page</a></tt> <tt class="py-op">=</tt> <tt id="link-74" class="py-name"><a title="conf.confstatic" class="py-name" href="#" onclick="return doclink('link-74', 'confstatic', 'link-4');">confstatic</a></tt><tt class="py-op">.</tt><tt id="link-75" class="py-name" targets="Variable conf.confstatic.default_page_name=conf.confstatic-module.html#default_page_name"><a title="conf.confstatic.default_page_name" class="py-name" href="#" onclick="return doclink('link-75', 'default_page_name', 'link-75');">default_page_name</a></tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">  <tt id="link-76" class="py-name"><a title="cgibin.handler.args" class="py-name" href="#" onclick="return doclink('link-76', 'args', 'link-65');">args</a></tt><tt class="py-op">[</tt><tt class="py-string">"page"</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt id="link-77" class="py-name"><a title="cgibin.handler.page" class="py-name" href="#" onclick="return doclink('link-77', 'page', 'link-68');">page</a></tt><tt class="py-op">+</tt><tt class="py-string">".html"</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line"> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line"> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line"><tt id="link-78" class="py-name"><a title="conf.utils" class="py-name" href="#" onclick="return doclink('link-78', 'utils', 'link-8');">utils</a></tt><tt class="py-op">.</tt><tt id="link-79" class="py-name" targets="Function conf.utils.select_mode()=conf.utils-module.html#select_mode"><a title="conf.utils.select_mode" class="py-name" href="#" onclick="return doclink('link-79', 'select_mode', 'link-79');">select_mode</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line"><tt id="link-80" class="py-name"><a title="conf.confstatic" class="py-name" href="#" onclick="return doclink('link-80', 'confstatic', 'link-4');">confstatic</a></tt><tt class="py-op">.</tt><tt id="link-81" class="py-name" targets="Variable conf.confstatic.build_url=conf.confstatic-module.html#build_url"><a title="conf.confstatic.build_url" class="py-name" href="#" onclick="return doclink('link-81', 'build_url', 'link-81');">build_url</a></tt> <tt class="py-op">=</tt> <tt id="link-82" class="py-name"><a title="conf.confstatic" class="py-name" href="#" onclick="return doclink('link-82', 'confstatic', 'link-4');">confstatic</a></tt><tt class="py-op">.</tt><tt id="link-83" class="py-name" targets="Function conf.confstatic.build_url_standard()=conf.confstatic-module.html#build_url_standard"><a title="conf.confstatic.build_url_standard" class="py-name" href="#" onclick="return doclink('link-83', 'build_url_standard', 'link-83');">build_url_standard</a></tt>  </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line"> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line"><tt class="py-comment">##Modules manager initialization</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#on initialise le gestionnaire de modules</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt id="link-84" class="py-name" targets="Variable cgibin.admin.mm=cgibin.admin-module.html#mm,Variable cgibin.adminvalid.mm=cgibin.adminvalid-module.html#mm,Variable cgibin.handler.mm=cgibin.handler-module.html#mm,Variable modules.test.mm=modules.test-module.html#mm"><a title="cgibin.admin.mm
+cgibin.adminvalid.mm
+cgibin.handler.mm
+modules.test.mm" class="py-name" href="#" onclick="return doclink('link-84', 'mm', 'link-84');">mm</a></tt> <tt class="py-op">=</tt> <tt id="link-85" class="py-name"><a title="modules.module_manager" class="py-name" href="#" onclick="return doclink('link-85', 'module_manager', 'link-60');">module_manager</a></tt><tt class="py-op">.</tt><tt id="link-86" class="py-name" targets="Function modules.module_manager.ModuleManager()=modules.module_manager-module.html#ModuleManager"><a title="modules.module_manager.ModuleManager" class="py-name" href="#" onclick="return doclink('link-86', 'ModuleManager', 'link-86');">ModuleManager</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line"><tt id="link-87" class="py-name"><a title="cgibin.admin.mm
+cgibin.adminvalid.mm
+cgibin.handler.mm
+modules.test.mm" class="py-name" href="#" onclick="return doclink('link-87', 'mm', 'link-84');">mm</a></tt><tt class="py-op">.</tt><tt id="link-88" class="py-name" targets="Variable modules.module_manager._ModuleManager.modules_mode=modules.module_manager._ModuleManager-class.html#modules_mode"><a title="modules.module_manager._ModuleManager.modules_mode" class="py-name" href="#" onclick="return doclink('link-88', 'modules_mode', 'link-88');">modules_mode</a></tt> <tt class="py-op">=</tt> <tt id="link-89" class="py-name"><a title="conf.confstatic" class="py-name" href="#" onclick="return doclink('link-89', 'confstatic', 'link-4');">confstatic</a></tt><tt class="py-op">.</tt><tt id="link-90" class="py-name" targets="Variable conf.confstatic.mode=conf.confstatic-module.html#mode,Variable modules.module_interfaces.ComfortModule.mode=modules.module_interfaces.ComfortModule-class.html#mode,Variable modules.themodule_Calendars.TheModule.mode=modules.themodule_Calendars.TheModule-class.html#mode,Variable modules.themodule_Coord.TheModule.mode=modules.themodule_Coord.TheModule-class.html#mode,Variable modules.themodule_Credits.TheModule.mode=modules.themodule_Credits.TheModule-class.html#mode,Variable modules.themodule_Dummy.TheModule.mode=modules.themodule_Dummy.TheModule-class.html#mode,Variable modules.themodule_Educ.TheModule.mode=modules.themodule_Educ.TheModule-class.html#mode,Variable modules.themodule_Menu.TheModule.mode=modules.themodule_Menu.TheModule-class.html#mode,Variable modules.themodule_News.TheModule.mode=modules.themodule_News.TheModule-class.html#mode,Variable modules.themodule_Publi.TheModule.mode=modules.themodule_Publi.TheModule-class.html#mode,Variable modules.themodule_Wiki.TheModule.mode=modules.themodule_Wiki.TheModule-class.html#mode"><a title="conf.confstatic.mode
+modules.module_interfaces.ComfortModule.mode
+modules.themodule_Calendars.TheModule.mode
+modules.themodule_Coord.TheModule.mode
+modules.themodule_Credits.TheModule.mode
+modules.themodule_Dummy.TheModule.mode
+modules.themodule_Educ.TheModule.mode
+modules.themodule_Menu.TheModule.mode
+modules.themodule_News.TheModule.mode
+modules.themodule_Publi.TheModule.mode
+modules.themodule_Wiki.TheModule.mode" class="py-name" href="#" onclick="return doclink('link-90', 'mode', 'link-90');">mode</a></tt> </tt>
+<a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line"><tt id="link-91" class="py-name"><a title="cgibin.admin.mm
+cgibin.adminvalid.mm
+cgibin.handler.mm
+modules.test.mm" class="py-name" href="#" onclick="return doclink('link-91', 'mm', 'link-84');">mm</a></tt><tt class="py-op">.</tt><tt id="link-92" class="py-name" targets="Method modules.module_manager._ModuleManager.forward_lang()=modules.module_manager._ModuleManager-class.html#forward_lang"><a title="modules.module_manager._ModuleManager.forward_lang" class="py-name" href="#" onclick="return doclink('link-92', 'forward_lang', 'link-92');">forward_lang</a></tt><tt class="py-op">(</tt><tt class="py-name">conf_general</tt><tt class="py-op">.</tt><tt class="py-name">language</tt><tt class="py-op">)</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line"> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line"><tt class="py-comment">##Database initialization</tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#puis la base de donn&#233;es</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line">  <tt id="link-93" class="py-name"><a title="cgibin.admin.db
+cgibin.adminvalid.db
+cgibin.handler.db
+db" class="py-name" href="#" onclick="return doclink('link-93', 'db', 'link-61');">db</a></tt> <tt class="py-op">=</tt> <tt id="link-94" class="py-name"><a title="db.db_manager" class="py-name" href="#" onclick="return doclink('link-94', 'db_manager', 'link-62');">db_manager</a></tt><tt class="py-op">.</tt><tt id="link-95" class="py-name" targets="Class db.db_manager.DBManager=db.db_manager.DBManager-class.html"><a title="db.db_manager.DBManager" class="py-name" href="#" onclick="return doclink('link-95', 'DBManager', 'link-95');">DBManager</a></tt><tt class="py-op">(</tt><tt class="py-name">None</tt><tt class="py-op">)</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line"><tt class="py-keyword">except</tt> <tt id="link-96" class="py-name"><a title="db.db_manager" class="py-name" href="#" onclick="return doclink('link-96', 'db_manager', 'link-62');">db_manager</a></tt><tt class="py-op">.</tt><tt id="link-97" class="py-name" targets="Class db.db_manager.DBException=db.db_manager.DBException-class.html"><a title="db.db_manager.DBException" class="py-name" href="#" onclick="return doclink('link-97', 'DBException', 'link-97');">DBException</a></tt><tt class="py-op">,</tt> <tt class="py-name">e</tt><tt class="py-op">:</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">  <tt class="py-keyword">print</tt> <tt id="link-98" class="py-name" targets="Variable modules.test._=modules.test-module.html#_"><a title="modules.test._" class="py-name" href="#" onclick="return doclink('link-98', '_', 'link-98');">_</a></tt><tt class="py-op">(</tt><tt class="py-string">"Erreur d'initialisation de la base de donn&#233;es : %s"</tt><tt class="py-op">)</tt> <tt class="py-op">%</tt> <tt class="py-name">e</tt><tt class="py-op">.</tt><tt id="link-99" class="py-name" targets="Method modules.themodule_Publi.Bibtex_entry.__str__()=modules.themodule_Publi.Bibtex_entry-class.html#__str__"><a title="modules.themodule_Publi.Bibtex_entry.__str__" class="py-name" href="#" onclick="return doclink('link-99', '__str__', 'link-99');">__str__</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line">  <tt class="py-name">sys</tt><tt class="py-op">.</tt><tt class="py-name">exit</tt><tt class="py-op">(</tt><tt class="py-number">1</tt><tt class="py-op">)</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line"> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line"><tt class="py-comment">## we load all modules</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">## check_db checks that the DB contains</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">## all information concerning the ContentProvider modules</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment"># on charge tous les modules</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment"># check_db v&#233;rifie que la BDD contient les</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment"># informations relatives aux modules g&#233;n&#233;rateurs de contenu</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line"><tt class="py-comment"></tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line"><tt class="py-keyword">for</tt> <tt id="link-100" class="py-name" targets="Variable cgibin.adminvalid.module=cgibin.adminvalid-module.html#module"><a title="cgibin.adminvalid.module" class="py-name" href="#" onclick="return doclink('link-100', 'module', 'link-100');">module</a></tt> <tt class="py-keyword">in</tt> <tt id="link-101" class="py-name"><a title="cgibin.admin.mm
+cgibin.adminvalid.mm
+cgibin.handler.mm
+modules.test.mm" class="py-name" href="#" onclick="return doclink('link-101', 'mm', 'link-84');">mm</a></tt><tt class="py-op">.</tt><tt id="link-102" class="py-name" targets="Static Method modules.module_manager._ModuleManager.get_available_modules()=modules.module_manager._ModuleManager-class.html#get_available_modules"><a title="modules.module_manager._ModuleManager.get_available_modules" class="py-name" href="#" onclick="return doclink('link-102', 'get_available_modules', 'link-102');">get_available_modules</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">  <tt id="link-103" class="py-name"><a title="cgibin.admin.mm
+cgibin.adminvalid.mm
+cgibin.handler.mm
+modules.test.mm" class="py-name" href="#" onclick="return doclink('link-103', 'mm', 'link-84');">mm</a></tt><tt class="py-op">[</tt><tt id="link-104" class="py-name"><a title="cgibin.adminvalid.module" class="py-name" href="#" onclick="return doclink('link-104', 'module', 'link-100');">module</a></tt><tt class="py-op">]</tt><tt class="py-op">=</tt><tt id="link-105" class="py-name"><a title="cgibin.adminvalid.module" class="py-name" href="#" onclick="return doclink('link-105', 'module', 'link-100');">module</a></tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line">  <tt id="link-106" class="py-name"><a title="cgibin.admin.mm
+cgibin.adminvalid.mm
+cgibin.handler.mm
+modules.test.mm" class="py-name" href="#" onclick="return doclink('link-106', 'mm', 'link-84');">mm</a></tt><tt class="py-op">.</tt><tt id="link-107" class="py-name" targets="Method modules.module_manager._ModuleManager.forward_db_init()=modules.module_manager._ModuleManager-class.html#forward_db_init"><a title="modules.module_manager._ModuleManager.forward_db_init" class="py-name" href="#" onclick="return doclink('link-107', 'forward_db_init', 'link-107');">forward_db_init</a></tt><tt class="py-op">(</tt><tt id="link-108" class="py-name"><a title="cgibin.admin.db
+cgibin.adminvalid.db
+cgibin.handler.db
+db" class="py-name" href="#" onclick="return doclink('link-108', 'db', 'link-61');">db</a></tt><tt class="py-op">.</tt><tt class="py-name">instance</tt><tt class="py-op">)</tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line">   </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line"><tt id="link-109" class="py-name"><a title="cgibin.check_db" class="py-name" href="#" onclick="return doclink('link-109', 'check_db', 'link-58');">check_db</a></tt><tt class="py-op">.</tt><tt id="link-110" class="py-name" targets="Function cgibin.check_db.check()=cgibin.check_db-module.html#check,Method interface.valid_forms.Valideur.check()=interface.valid_forms.Valideur-class.html#check"><a title="cgibin.check_db.check
+interface.valid_forms.Valideur.check" class="py-name" href="#" onclick="return doclink('link-110', 'check', 'link-110');">check</a></tt><tt class="py-op">(</tt><tt id="link-111" class="py-name"><a title="cgibin.admin.db
+cgibin.adminvalid.db
+cgibin.handler.db
+db" class="py-name" href="#" onclick="return doclink('link-111', 'db', 'link-61');">db</a></tt><tt class="py-op">.</tt><tt class="py-name">instance</tt><tt class="py-op">,</tt><tt id="link-112" class="py-name"><a title="cgibin.admin.mm
+cgibin.adminvalid.mm
+cgibin.handler.mm
+modules.test.mm" class="py-name" href="#" onclick="return doclink('link-112', 'mm', 'link-84');">mm</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line"> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line"><tt class="py-comment">##Checks wether asked page exists</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#V&#233;rifie que la page demand&#233;e existe</tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line">  <tt id="link-113" class="py-name"><a title="cgibin.admin.db
+cgibin.adminvalid.db
+cgibin.handler.db
+db" class="py-name" href="#" onclick="return doclink('link-113', 'db', 'link-61');">db</a></tt><tt class="py-op">.</tt><tt class="py-name">instance</tt><tt class="py-op">.</tt><tt id="link-114" class="py-name" targets="Method db.db_interface.IDB.table()=db.db_interface.IDB-class.html#table,Method db.db_sql.SQL_DB.table()=db.db_sql.SQL_DB-class.html#table,Method db.db_xml.DBXML.table()=db.db_xml.DBXML-class.html#table,Variable db.test.table=db.test-module.html#table,Variable db.test_xml.table=db.test_xml-module.html#table"><a title="db.db_interface.IDB.table
+db.db_sql.SQL_DB.table
+db.db_xml.DBXML.table
+db.test.table
+db.test_xml.table" class="py-name" href="#" onclick="return doclink('link-114', 'table', 'link-114');">table</a></tt><tt class="py-op">(</tt><tt id="link-115" class="py-name"><a title="conf.confstatic" class="py-name" href="#" onclick="return doclink('link-115', 'confstatic', 'link-4');">confstatic</a></tt><tt class="py-op">.</tt><tt id="link-116" class="py-name" targets="Variable conf.confstatic.pages_database_prefix=conf.confstatic-module.html#pages_database_prefix"><a title="conf.confstatic.pages_database_prefix" class="py-name" href="#" onclick="return doclink('link-116', 'pages_database_prefix', 'link-116');">pages_database_prefix</a></tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-117" class="py-name" targets="Method db.db_interface.IDBTable.select()=db.db_interface.IDBTable-class.html#select,Method db.db_sql.SQL_Table.select()=db.db_sql.SQL_Table-class.html#select,Method db.db_xml.DBXMLTable.select()=db.db_xml.DBXMLTable-class.html#select"><a title="db.db_interface.IDBTable.select
+db.db_sql.SQL_Table.select
+db.db_xml.DBXMLTable.select" class="py-name" href="#" onclick="return doclink('link-117', 'select', 'link-117');">select</a></tt><tt class="py-op">(</tt><tt class="py-name">cond</tt><tt class="py-op">=</tt><tt class="py-op">[</tt><tt class="py-op">(</tt><tt class="py-string">"page_id"</tt><tt class="py-op">,</tt><tt class="py-string">"="</tt><tt class="py-op">,</tt><tt id="link-118" class="py-name"><a title="cgibin.handler.page" class="py-name" href="#" onclick="return doclink('link-118', 'page', 'link-68');">page</a></tt><tt class="py-op">)</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt id="link-119" class="py-name" targets="Method db.db_interface.IDBRecordSet.next()=db.db_interface.IDBRecordSet-class.html#next,Method db.db_sql.SQL_RecordSet.next()=db.db_sql.SQL_RecordSet-class.html#next,Method db.db_xml.DBXMLRecordSet.next()=db.db_xml.DBXMLRecordSet-class.html#next"><a title="db.db_interface.IDBRecordSet.next
+db.db_sql.SQL_RecordSet.next
+db.db_xml.DBXMLRecordSet.next" class="py-name" href="#" onclick="return doclink('link-119', 'next', 'link-119');">next</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line"><tt class="py-keyword">except</tt><tt class="py-op">:</tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line">  <tt id="link-120" class="py-name"><a title="cgibin.handler.page" class="py-name" href="#" onclick="return doclink('link-120', 'page', 'link-68');">page</a></tt> <tt class="py-op">=</tt> <tt id="link-121" class="py-name"><a title="conf.confstatic" class="py-name" href="#" onclick="return doclink('link-121', 'confstatic', 'link-4');">confstatic</a></tt><tt class="py-op">.</tt><tt id="link-122" class="py-name"><a title="conf.confstatic.default_page_name" class="py-name" href="#" onclick="return doclink('link-122', 'default_page_name', 'link-75');">default_page_name</a></tt> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line">  <tt id="link-123" class="py-name"><a title="cgibin.handler.args" class="py-name" href="#" onclick="return doclink('link-123', 'args', 'link-65');">args</a></tt><tt class="py-op">[</tt><tt class="py-string">"page"</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt id="link-124" class="py-name"><a title="cgibin.handler.page" class="py-name" href="#" onclick="return doclink('link-124', 'page', 'link-68');">page</a></tt><tt class="py-op">+</tt><tt class="py-string">".html"</tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line"> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line"><tt class="py-comment">## Templates manager that needs the database and the name of the wanted page to</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">## specify which modules to activate</tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#le gestionnaire de templates, qui a besoin de la base de donn&#233;es et du nom de</tt> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#la page demand&#233;e pour d&#233;terminer quels modules activer</tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line">  <tt id="link-125" class="py-name" targets="Variable cgibin.handler.tm=cgibin.handler-module.html#tm"><a title="cgibin.handler.tm" class="py-name" href="#" onclick="return doclink('link-125', 'tm', 'link-125');">tm</a></tt> <tt class="py-op">=</tt> <tt id="link-126" class="py-name"><a title="templates.template_manager" class="py-name" href="#" onclick="return doclink('link-126', 'template_manager', 'link-64');">template_manager</a></tt><tt class="py-op">.</tt><tt id="link-127" class="py-name" targets="Class templates.template_manager.TemplateManager=templates.template_manager.TemplateManager-class.html"><a title="templates.template_manager.TemplateManager" class="py-name" href="#" onclick="return doclink('link-127', 'TemplateManager', 'link-127');">TemplateManager</a></tt><tt class="py-op">(</tt><tt id="link-128" class="py-name"><a title="cgibin.admin.db
+cgibin.adminvalid.db
+cgibin.handler.db
+db" class="py-name" href="#" onclick="return doclink('link-128', 'db', 'link-61');">db</a></tt><tt class="py-op">.</tt><tt class="py-name">instance</tt><tt class="py-op">,</tt> <tt class="py-name">urllib</tt><tt class="py-op">.</tt><tt class="py-name">unquote</tt><tt class="py-op">(</tt><tt id="link-129" class="py-name"><a title="cgibin.handler.page" class="py-name" href="#" onclick="return doclink('link-129', 'page', 'link-68');">page</a></tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt id="link-130" class="py-name"><a title="cgibin.handler.args" class="py-name" href="#" onclick="return doclink('link-130', 'args', 'link-65');">args</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line">  <tt id="link-131" class="py-name"><a title="cgibin.handler.tm" class="py-name" href="#" onclick="return doclink('link-131', 'tm', 'link-125');">tm</a></tt><tt class="py-op">.</tt><tt id="link-132" class="py-name" targets="Method templates.template_manager.TemplateManager.setup_modules()=templates.template_manager.TemplateManager-class.html#setup_modules"><a title="templates.template_manager.TemplateManager.setup_modules" class="py-name" href="#" onclick="return doclink('link-132', 'setup_modules', 'link-132');">setup_modules</a></tt><tt class="py-op">(</tt><tt id="link-133" class="py-name"><a title="cgibin.admin.mm
+cgibin.adminvalid.mm
+cgibin.handler.mm
+modules.test.mm" class="py-name" href="#" onclick="return doclink('link-133', 'mm', 'link-84');">mm</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line"><tt class="py-keyword">except</tt> <tt id="link-134" class="py-name"><a title="templates.template_manager" class="py-name" href="#" onclick="return doclink('link-134', 'template_manager', 'link-64');">template_manager</a></tt><tt class="py-op">.</tt><tt id="link-135" class="py-name" targets="Class templates.template_manager.TMException=templates.template_manager.TMException-class.html"><a title="templates.template_manager.TMException" class="py-name" href="#" onclick="return doclink('link-135', 'TMException', 'link-135');">TMException</a></tt><tt class="py-op">,</tt> <tt class="py-name">e</tt><tt class="py-op">:</tt> </tt>
+<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line">  <tt class="py-keyword">print</tt> <tt id="link-136" class="py-name"><a title="modules.test._" class="py-name" href="#" onclick="return doclink('link-136', '_', 'link-98');">_</a></tt><tt class="py-op">(</tt><tt class="py-string">"Erreur d'initialisation du moteur de templates : %s"</tt><tt class="py-op">)</tt> <tt class="py-op">%</tt> <tt class="py-name">e</tt><tt class="py-op">.</tt><tt id="link-137" class="py-name"><a title="modules.themodule_Publi.Bibtex_entry.__str__" class="py-name" href="#" onclick="return doclink('link-137', '__str__', 'link-99');">__str__</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line">  <tt class="py-name">sys</tt><tt class="py-op">.</tt><tt class="py-name">exit</tt><tt class="py-op">(</tt><tt class="py-number">1</tt><tt class="py-op">)</tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line"> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line"><tt class="py-comment">## Forwards link to databade to modules that need it</tt> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#on fait suivre la connexion &#224; la base de donn&#233;es aux modules qui en ont besoin</tt> </tt>
+<a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt id="link-138" class="py-name"><a title="cgibin.admin.mm
+cgibin.adminvalid.mm
+cgibin.handler.mm
+modules.test.mm" class="py-name" href="#" onclick="return doclink('link-138', 'mm', 'link-84');">mm</a></tt><tt class="py-op">.</tt><tt id="link-139" class="py-name"><a title="modules.module_manager._ModuleManager.forward_db_init" class="py-name" href="#" onclick="return doclink('link-139', 'forward_db_init', 'link-107');">forward_db_init</a></tt><tt class="py-op">(</tt><tt id="link-140" class="py-name"><a title="cgibin.admin.db
+cgibin.adminvalid.db
+cgibin.handler.db
+db" class="py-name" href="#" onclick="return doclink('link-140', 'db', 'link-61');">db</a></tt><tt class="py-op">.</tt><tt class="py-name">instance</tt><tt class="py-op">)</tt> </tt>
+<a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line"> </tt>
+<a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line"><tt class="py-comment">## XHTML is generated</tt> </tt>
+<a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#et on g&#233;n&#232;re le XHTML</tt> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line">  <tt class="py-keyword">if</tt> <tt id="link-141" class="py-name"><a title="cgibin.handler.args" class="py-name" href="#" onclick="return doclink('link-141', 'args', 'link-65');">args</a></tt><tt class="py-op">[</tt><tt class="py-string">"pdf"</tt><tt class="py-op">]</tt> <tt class="py-op">==</tt> <tt class="py-string">"1"</tt><tt class="py-op">:</tt> </tt>
+<a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line">    <tt id="link-142" class="py-name"><a title="conf.confstatic" class="py-name" href="#" onclick="return doclink('link-142', 'confstatic', 'link-4');">confstatic</a></tt><tt class="py-op">.</tt><tt id="link-143" class="py-name"><a title="conf.confstatic.mode
+modules.module_interfaces.ComfortModule.mode
+modules.themodule_Calendars.TheModule.mode
+modules.themodule_Coord.TheModule.mode
+modules.themodule_Credits.TheModule.mode
+modules.themodule_Dummy.TheModule.mode
+modules.themodule_Educ.TheModule.mode
+modules.themodule_Menu.TheModule.mode
+modules.themodule_News.TheModule.mode
+modules.themodule_Publi.TheModule.mode
+modules.themodule_Wiki.TheModule.mode" class="py-name" href="#" onclick="return doclink('link-143', 'mode', 'link-90');">mode</a></tt> <tt class="py-op">=</tt> <tt class="py-string">"local"</tt> </tt>
+<a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line">    <tt id="link-144" class="py-name"><a title="conf.confstatic" class="py-name" href="#" onclick="return doclink('link-144', 'confstatic', 'link-4');">confstatic</a></tt><tt class="py-op">.</tt><tt id="link-145" class="py-name"><a title="conf.confstatic.build_url" class="py-name" href="#" onclick="return doclink('link-145', 'build_url', 'link-81');">build_url</a></tt> <tt class="py-op">=</tt> <tt id="link-146" class="py-name"><a title="conf.confstatic" class="py-name" href="#" onclick="return doclink('link-146', 'confstatic', 'link-4');">confstatic</a></tt><tt class="py-op">.</tt><tt id="link-147" class="py-name" targets="Function conf.confstatic.build_url_for_generation()=conf.confstatic-module.html#build_url_for_generation"><a title="conf.confstatic.build_url_for_generation" class="py-name" href="#" onclick="return doclink('link-147', 'build_url_for_generation', 'link-147');">build_url_for_generation</a></tt> </tt>
+<a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line">    <tt id="link-148" class="py-name"><a title="conf.confstatic" class="py-name" href="#" onclick="return doclink('link-148', 'confstatic', 'link-4');">confstatic</a></tt><tt class="py-op">.</tt><tt class="py-name">files_url</tt> <tt class="py-op">=</tt> <tt class="py-string">"../"</tt> </tt>
+<a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line">    <tt id="link-149" class="py-name"><a title="conf.confstatic" class="py-name" href="#" onclick="return doclink('link-149', 'confstatic', 'link-4');">confstatic</a></tt><tt class="py-op">.</tt><tt id="link-150" class="py-name" targets="Variable conf.confstatic.pictures_url=conf.confstatic-module.html#pictures_url"><a title="conf.confstatic.pictures_url" class="py-name" href="#" onclick="return doclink('link-150', 'pictures_url', 'link-150');">pictures_url</a></tt> <tt class="py-op">=</tt> <tt id="link-151" class="py-name"><a title="conf.confstatic" class="py-name" href="#" onclick="return doclink('link-151', 'confstatic', 'link-4');">confstatic</a></tt><tt class="py-op">.</tt><tt class="py-name">files_url</tt><tt class="py-op">+</tt><tt class="py-string">"pictures/"</tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line">    <tt id="link-152" class="py-name"><a title="conf.confstatic" class="py-name" href="#" onclick="return doclink('link-152', 'confstatic', 'link-4');">confstatic</a></tt><tt class="py-op">.</tt><tt id="link-153" class="py-name" targets="Variable conf.confstatic.pages_url=conf.confstatic-module.html#pages_url"><a title="conf.confstatic.pages_url" class="py-name" href="#" onclick="return doclink('link-153', 'pages_url', 'link-153');">pages_url</a></tt> <tt class="py-op">=</tt> <tt id="link-154" class="py-name"><a title="conf.confstatic" class="py-name" href="#" onclick="return doclink('link-154', 'confstatic', 'link-4');">confstatic</a></tt><tt class="py-op">.</tt><tt class="py-name">files_url</tt><tt class="py-op">+</tt><tt class="py-string">"pages/"</tt>     </tt>
+<a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line">    <tt id="link-155" class="py-name"><a title="conf.confstatic" class="py-name" href="#" onclick="return doclink('link-155', 'confstatic', 'link-4');">confstatic</a></tt><tt class="py-op">.</tt><tt class="py-name">doc_url</tt> <tt class="py-op">=</tt> <tt id="link-156" class="py-name"><a title="conf.confstatic" class="py-name" href="#" onclick="return doclink('link-156', 'confstatic', 'link-4');">confstatic</a></tt><tt class="py-op">.</tt><tt class="py-name">files_url</tt><tt class="py-op">+</tt><tt class="py-string">"docs/"</tt> </tt>
+<a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt id="link-157" class="py-name"><a title="conf.utils" class="py-name" href="#" onclick="return doclink('link-157', 'utils', 'link-8');">utils</a></tt><tt class="py-op">.</tt><tt id="link-158" class="py-name" targets="Function conf.utils.pdf_ok()=conf.utils-module.html#pdf_ok"><a title="conf.utils.pdf_ok" class="py-name" href="#" onclick="return doclink('link-158', 'pdf_ok', 'link-158');">pdf_ok</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line">      <tt id="link-159" class="py-name"><a title="cgibin.handler.tm" class="py-name" href="#" onclick="return doclink('link-159', 'tm', 'link-125');">tm</a></tt><tt class="py-op">.</tt><tt id="link-160" class="py-name" targets="Method templates.template_manager.TemplateManager.generate_pdf()=templates.template_manager.TemplateManager-class.html#generate_pdf"><a title="templates.template_manager.TemplateManager.generate_pdf" class="py-name" href="#" onclick="return doclink('link-160', 'generate_pdf', 'link-160');">generate_pdf</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line">    <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L150"></a><tt class="py-lineno">150</tt>  <tt class="py-line">      <tt class="py-keyword">print</tt> <tt id="link-161" class="py-name"><a title="modules.test._" class="py-name" href="#" onclick="return doclink('link-161', '_', 'link-98');">_</a></tt><tt class="py-op">(</tt><tt class="py-string">"Vous n'avez pas FOP d'install&#233; : veuillez vous r&#233;f&#233;rer au guide d'installation pour apprendre &#224; g&#233;n&#233;rer des fichiers PDF"</tt><tt class="py-op">)</tt> </tt>
+<a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line">  <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L152"></a><tt class="py-lineno">152</tt>  <tt class="py-line">    <tt class="py-keyword">print</tt> <tt id="link-162" class="py-name"><a title="cgibin.handler.tm" class="py-name" href="#" onclick="return doclink('link-162', 'tm', 'link-125');">tm</a></tt><tt class="py-op">.</tt><tt id="link-163" class="py-name" targets="Method templates.template_manager.TemplateManager.generate_xhtml()=templates.template_manager.TemplateManager-class.html#generate_xhtml"><a title="templates.template_manager.TemplateManager.generate_xhtml" class="py-name" href="#" onclick="return doclink('link-163', 'generate_xhtml', 'link-163');">generate_xhtml</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L153"></a><tt class="py-lineno">153</tt>  <tt class="py-line"><tt class="py-keyword">except</tt> <tt class="py-name">KeyError</tt><tt class="py-op">:</tt> </tt>
+<a name="L154"></a><tt class="py-lineno">154</tt>  <tt class="py-line">  <tt class="py-keyword">print</tt> <tt id="link-164" class="py-name"><a title="cgibin.handler.tm" class="py-name" href="#" onclick="return doclink('link-164', 'tm', 'link-125');">tm</a></tt><tt class="py-op">.</tt><tt id="link-165" class="py-name"><a title="templates.template_manager.TemplateManager.generate_xhtml" class="py-name" href="#" onclick="return doclink('link-165', 'generate_xhtml', 'link-163');">generate_xhtml</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L155"></a><tt class="py-lineno">155</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://graal.ens-lyon.fr/comfort/">CoMFoRT</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sun May 25 15:42:44 2008
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

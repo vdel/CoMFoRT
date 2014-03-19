@@ -1,0 +1,80 @@
+Écriture de scripts CGI :
+
+Pour écrire un script cgi python simple, faire un fichier mon_cgi.py
+dans le répertoire cgi-bin/ et commençant par :
+
+  #! /usr/bin/python
+  # -*- coding: utf-8 -*-
+
+  import cgi
+
+  print "Content-type: text/html"
+  print
+
+  form = cgi.FieldStorage()
+
+puis rendre le fichier executable :
+
+  % chmod +x mon_cgi.py
+
+ensuite on peut écrire du python parfaitement normal, lorqu'on fait
+print "<p>Coucou tout le monde !</p>"
+ça mettra un paragraphe "coucou tout le monde !" dans la page
+renvoyée au navigateur.
+
+Quelques précisions (de Jonathan):
+On voit parfois /usr/bin/env python en première ligne, ça marche aussi, pas
+d'inquiétude. La ligne form = cgi.FieldStorage() n'est nécessaire que s'il y a
+un formulaire qui a été envoyé vers le CGI. Sinon, ça n'est pas indispensable.
+
+Les principales fonctions utiles pour récupérer les données passées
+par un formulaire :
+- form.has_key("clef") : renvoie true ssi le champ "clef" du formulaire
+  a une valeur ;
+- form["clef"].value : valeur du champ "clef".
+Vous pouvez regarder affiche_nom.py comme exemple ou consulter la doc du
+module cgi de python si nécessaire : http://docs.python.org/lib/module-cgi.html.
+
+
+
+
+Writing CGI scripts
+
+To design a simple CGI Python script, create a file my_cgi.py in the folder
+cgi-bin/ beginning with:
+
+  #! /usr/bin/python
+  # -*- coding: utf-8 -*-
+
+  import cgi
+
+  print "Content-type: text/html"
+  print
+
+  form = cgi.FieldStorage()
+
+then make it executable:
+
+  % chmod +x mon_cgi.py
+
+then normal Python can be written as usual. When print "blabla" is asked, there
+will be a "blabla" paragraph in the page sent back to the browser.
+
+Some precisions (by Jonathan):
+The first line is sometimes 
+  #! /usr/bin/env python 
+instead of
+  #! /usr/bin/python
+Don't worry, it just works the same.
+
+  form = cgi.FieldStorage()
+is only useful if there is a form that will be sent back to the CGI. Else, it 
+is not compulsory.
+
+The main function used to catch data sent back by a form are :
+
+- form.has_key("key") : true if the "key" field has a value ;
+- form["clef"].value : value of the field "clef".
+You can see affiche_nom.py as an example, or read the python cgi module 
+documentation if necessary : http://docs.python.org/lib/module-cgi.html.
+

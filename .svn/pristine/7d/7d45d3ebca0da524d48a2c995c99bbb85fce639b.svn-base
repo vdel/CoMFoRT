@@ -1,0 +1,251 @@
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+/* GÉNÉRAL */
+
+@import url(../common/wiki.css);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #FBE8E8 url(images/img01.jpg);
+  text-align: justify;
+}
+
+body {
+  font: normal small Georgia, "Times New Roman", Times, serif;
+  color: #662C14;
+}
+
+h1, h2, h3 {
+  margin-bottom: 1em;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 2.2em;
+}
+
+h2 {
+  font-size: 1.7em;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  margin: 0;
+  padding-left: 12px;
+  background: url(images/img07.gif) no-repeat left 0.3em;
+}
+
+a {
+  color: #662C14;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* HEADER */
+
+#ie6hack {
+  width: 700px;
+  height: 203px;
+  margin: 0 auto;
+  background: url(images/img03.gif) no-repeat;
+  margin-top: 20px;
+}
+
+#ie6hack .title, #ie6hack .sitename {
+  margin: 0;
+}
+
+#ie6hack .sitename {
+  padding-top: 40px;
+  text-align: center;
+  font-size: 4em;
+}
+
+#ie6hack .title {
+  text-align: center;
+  font-size: 1em;
+  font-style: italic;
+}
+
+/* CORPS */
+
+.article {
+  width: 700px;
+  margin: 0 auto;
+  background-image: url(images/bg.png);
+  background-position: 0 180px;
+  background-repeat: no-repeat;
+  overflow:hidden;
+}
+
+
+.sect1, .footnotes {
+  margin: 0 auto;
+  overflow: auto;
+  float: right;
+  width: 424px;
+  padding: 20px 20px 0px 16px;
+  background: #f8e8e8 url(images/img04.gif) repeat;
+  background-position: -240px 0;
+}
+
+.sect1 > *:last-child {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  background: url(images/img08.gif) no-repeat center bottom;
+}
+
+div.titlepage h2 {
+  clear: none !important;
+  margin-bottom: 15px;
+  padding-left: 15px;
+  border-bottom: 1px solid #D3B6AF;
+  text-transform: uppercase;
+  font-size: small;
+  font-weight: bold;
+}
+
+
+/* MENU */
+
+#Menu {
+  float: left;
+  width: 204px;
+  padding: 50px 16px 0px 20px;
+  /*background: url(images/img05.gif) no-repeat;*/
+  background-position: 0 0;
+  margin-bottom: -100000px;
+  padding-bottom: 100000px;
+}
+
+#Menu ul {
+  font-weight: bold;
+}
+
+#Menu li {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+#Menu li li {
+  margin: 5px auto;
+}
+
+#Menu li li {
+  font-weight: normal;
+}
+
+/* FOOTER */
+
+.feet {
+  clear: both;
+  width: 700px;
+  margin: 0 auto; 
+  padding-top: 43px; 
+  background: url(images/img09.gif) no-repeat; 
+  padding: 50px 0; 
+  text-align: center;
+  font-size: x-small;
+}
+
+.feet a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.feet a:hover {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.feet img {
+  margin: 0 !important;
+}
+
+/* titres */
+
+div.titlepage h3 {
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+
+div.titlepage h4 {
+  font-size: 110%;
+  margin-left: .2em;
+}
+
+div.titlepage h5 {
+  font-size: 100%;
+  margin-left: .5em;
+}
+
+div.titlepage h6 {
+  font-size: 100%;
+  font-weight: lighter;
+  margin-left: 1em;
+}
+
+/* sections */
+
+div.sect2 {
+  margin-top: 1em;
+  margin-left: .2em;
+}
+
+div.sect3 {
+  margin-top: 1em;
+  margin-left: .4em;
+}
+
+div.sect4 {
+  margin-top: 1em;
+  margin-left: .6em;
+}
+
+div.sect5 {
+  margin-top: 1em;
+  margin-left: .8em;
+}
+
+.table {
+  margin-top: 1em;
+}
+
+table {
+  border-style: solid;
+  margin: 10px 10px 10px 10px;
+  border-collapse: collapse;
+  border-color: #662C14;
+}
+
+p { padding: .2em 0; }
+
+.comfort {
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: x-small;
+  background: #f8e8e8 url(images/img04.gif) repeat;
+}
+
+.comfort a {
+  text-decoration: none;
+}

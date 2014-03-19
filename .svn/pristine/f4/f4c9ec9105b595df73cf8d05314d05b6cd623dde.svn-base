@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>conf.confstatic</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://graal.ens-lyon.fr/comfort/">CoMFoRT</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="conf-module.html">Package&nbsp;conf</a> ::
+        Module&nbsp;confstatic
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="conf.confstatic-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="conf.confstatic-module.html">Module conf.confstatic</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment"># -*- encoding: utf-8 -*-</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-comment"></tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">os</tt><tt class="py-op">,</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line">  <tt class="py-keyword">import</tt> <tt class="py-name">hashlib</tt> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"><tt class="py-keyword">except</tt> <tt class="py-name">ImportError</tt><tt class="py-op">:</tt> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line">  <tt class="py-keyword">import</tt> <tt class="py-name">md5</tt> <tt class="py-keyword">as</tt> <tt class="py-name">hashlib</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">urllib</tt> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-comment">##localization</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt id="link-0" class="py-name" targets="Variable conf.confstatic.gettext_domain=conf.confstatic-module.html#gettext_domain"><a title="conf.confstatic.gettext_domain" class="py-name" href="#" onclick="return doclink('link-0', 'gettext_domain', 'link-0');">gettext_domain</a></tt> <tt class="py-op">=</tt> <tt class="py-string">'comfort_lang'</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt id="link-1" class="py-name" targets="Variable conf.confstatic.gettext_localedir=conf.confstatic-module.html#gettext_localedir"><a title="conf.confstatic.gettext_localedir" class="py-name" href="#" onclick="return doclink('link-1', 'gettext_localedir', 'link-1');">gettext_localedir</a></tt> <tt class="py-op">=</tt> <tt class="py-string">'../../locale'</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt id="link-2" class="py-name" targets="Variable conf.confstatic.mode=conf.confstatic-module.html#mode,Variable modules.module_interfaces.ComfortModule.mode=modules.module_interfaces.ComfortModule-class.html#mode,Variable modules.themodule_Calendars.TheModule.mode=modules.themodule_Calendars.TheModule-class.html#mode,Variable modules.themodule_Coord.TheModule.mode=modules.themodule_Coord.TheModule-class.html#mode,Variable modules.themodule_Credits.TheModule.mode=modules.themodule_Credits.TheModule-class.html#mode,Variable modules.themodule_Dummy.TheModule.mode=modules.themodule_Dummy.TheModule-class.html#mode,Variable modules.themodule_Educ.TheModule.mode=modules.themodule_Educ.TheModule-class.html#mode,Variable modules.themodule_Menu.TheModule.mode=modules.themodule_Menu.TheModule-class.html#mode,Variable modules.themodule_News.TheModule.mode=modules.themodule_News.TheModule-class.html#mode,Variable modules.themodule_Publi.TheModule.mode=modules.themodule_Publi.TheModule-class.html#mode,Variable modules.themodule_Wiki.TheModule.mode=modules.themodule_Wiki.TheModule-class.html#mode"><a title="conf.confstatic.mode
+modules.module_interfaces.ComfortModule.mode
+modules.themodule_Calendars.TheModule.mode
+modules.themodule_Coord.TheModule.mode
+modules.themodule_Credits.TheModule.mode
+modules.themodule_Dummy.TheModule.mode
+modules.themodule_Educ.TheModule.mode
+modules.themodule_Menu.TheModule.mode
+modules.themodule_News.TheModule.mode
+modules.themodule_Publi.TheModule.mode
+modules.themodule_Wiki.TheModule.mode" class="py-name" href="#" onclick="return doclink('link-2', 'mode', 'link-2');">mode</a></tt> <tt class="py-op">=</tt> <tt class="py-string">""</tt>    <tt class="py-comment">#local or dynamic</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt id="link-3" class="py-name" targets="Variable conf.confstatic.generating=conf.confstatic-module.html#generating"><a title="conf.confstatic.generating" class="py-name" href="#" onclick="return doclink('link-3', 'generating', 'link-3');">generating</a></tt> <tt class="py-op">=</tt> <tt class="py-name">False</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt id="link-4" class="py-name" targets="Variable conf.confstatic.build_url=conf.confstatic-module.html#build_url"><a title="conf.confstatic.build_url" class="py-name" href="#" onclick="return doclink('link-4', 'build_url', 'link-4');">build_url</a></tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"> </tt>
+<a name="build_url_standard"></a><div id="build_url_standard-def"><a name="L18"></a><tt class="py-lineno"> 18</tt> <a class="py-toggle" href="#" id="build_url_standard-toggle" onclick="return toggle('build_url_standard');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="conf.confstatic-module.html#build_url_standard">build_url_standard</a><tt class="py-op">(</tt><tt class="py-param">args</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="build_url_standard-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="build_url_standard-expanded"><a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line">  <tt id="link-5" class="py-name" targets="Variable cgibin.handler.args=cgibin.handler-module.html#args"><a title="cgibin.handler.args" class="py-name" href="#" onclick="return doclink('link-5', 'args', 'link-5');">args</a></tt> <tt class="py-op">=</tt> <tt id="link-6" class="py-name"><a title="cgibin.handler.args" class="py-name" href="#" onclick="return doclink('link-6', 'args', 'link-5');">args</a></tt><tt class="py-op">.</tt><tt class="py-name">copy</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line">  <tt class="py-name">s</tt> <tt class="py-op">=</tt> <tt class="py-string">"handler.py?page="</tt><tt class="py-op">+</tt><tt id="link-7" class="py-name"><a title="cgibin.handler.args" class="py-name" href="#" onclick="return doclink('link-7', 'args', 'link-5');">args</a></tt><tt class="py-op">[</tt><tt class="py-string">"page"</tt><tt class="py-op">]</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line">  <tt class="py-keyword">del</tt> <tt id="link-8" class="py-name"><a title="cgibin.handler.args" class="py-name" href="#" onclick="return doclink('link-8', 'args', 'link-5');">args</a></tt><tt class="py-op">[</tt><tt class="py-string">"page"</tt><tt class="py-op">]</tt> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line">  <tt class="py-name">k</tt> <tt class="py-op">=</tt> <tt id="link-9" class="py-name"><a title="cgibin.handler.args" class="py-name" href="#" onclick="return doclink('link-9', 'args', 'link-5');">args</a></tt><tt class="py-op">.</tt><tt class="py-name">keys</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line">  <tt class="py-name">k</tt><tt class="py-op">.</tt><tt class="py-name">sort</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line">  <tt class="py-keyword">for</tt> <tt class="py-name">key</tt> <tt class="py-keyword">in</tt> <tt class="py-name">k</tt><tt class="py-op">:</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line">    <tt class="py-name">s</tt> <tt class="py-op">+=</tt> <tt class="py-string">"&amp;amp;"</tt><tt class="py-op">+</tt><tt class="py-name">key</tt><tt class="py-op">+</tt><tt class="py-string">"="</tt><tt class="py-op">+</tt><tt id="link-10" class="py-name"><a title="cgibin.handler.args" class="py-name" href="#" onclick="return doclink('link-10', 'args', 'link-5');">args</a></tt><tt class="py-op">[</tt><tt class="py-name">key</tt><tt class="py-op">]</tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line">  <tt class="py-keyword">return</tt> <tt class="py-name">s</tt> </tt>
+</div><a name="L27"></a><tt class="py-lineno"> 27</tt>  <tt class="py-line"> </tt>
+<a name="build_url_for_generation"></a><div id="build_url_for_generation-def"><a name="L28"></a><tt class="py-lineno"> 28</tt> <a class="py-toggle" href="#" id="build_url_for_generation-toggle" onclick="return toggle('build_url_for_generation');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="conf.confstatic-module.html#build_url_for_generation">build_url_for_generation</a><tt class="py-op">(</tt><tt class="py-param">args2</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="build_url_for_generation-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="build_url_for_generation-expanded"><a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line">  <tt id="link-11" class="py-name"><a title="cgibin.handler.args" class="py-name" href="#" onclick="return doclink('link-11', 'args', 'link-5');">args</a></tt> <tt class="py-op">=</tt> <tt class="py-name">args2</tt><tt class="py-op">.</tt><tt class="py-name">copy</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line">  <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L31"></a><tt class="py-lineno"> 31</tt>  <tt class="py-line">    <tt class="py-name">s</tt> <tt class="py-op">=</tt> <tt id="link-12" class="py-name"><a title="cgibin.handler.args" class="py-name" href="#" onclick="return doclink('link-12', 'args', 'link-5');">args</a></tt><tt class="py-op">[</tt><tt class="py-string">"page"</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-op">:</tt><tt id="link-13" class="py-name"><a title="cgibin.handler.args" class="py-name" href="#" onclick="return doclink('link-13', 'args', 'link-5');">args</a></tt><tt class="py-op">[</tt><tt class="py-string">"page"</tt><tt class="py-op">]</tt><tt class="py-op">.</tt><tt class="py-name">rindex</tt><tt class="py-op">(</tt><tt class="py-string">"."</tt><tt class="py-op">)</tt><tt class="py-op">]</tt> </tt>
+<a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line">  <tt class="py-keyword">except</tt><tt class="py-op">:</tt> </tt>
+<a name="L33"></a><tt class="py-lineno"> 33</tt>  <tt class="py-line">    <tt class="py-name">s</tt> <tt class="py-op">=</tt> <tt id="link-14" class="py-name"><a title="cgibin.handler.args" class="py-name" href="#" onclick="return doclink('link-14', 'args', 'link-5');">args</a></tt><tt class="py-op">[</tt><tt class="py-string">"page"</tt><tt class="py-op">]</tt> </tt>
+<a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">  <tt class="py-keyword">del</tt> <tt id="link-15" class="py-name"><a title="cgibin.handler.args" class="py-name" href="#" onclick="return doclink('link-15', 'args', 'link-5');">args</a></tt><tt class="py-op">[</tt><tt class="py-string">"page"</tt><tt class="py-op">]</tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line">  <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt id="link-16" class="py-name"><a title="cgibin.handler.args" class="py-name" href="#" onclick="return doclink('link-16', 'args', 'link-5');">args</a></tt><tt class="py-op">[</tt><tt class="py-string">"pdf"</tt><tt class="py-op">]</tt> <tt class="py-op">==</tt> <tt class="py-string">"1"</tt><tt class="py-op">:</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line">      <tt class="py-name">ext</tt><tt class="py-op">=</tt><tt class="py-string">".pdf"</tt> </tt>
+<a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line">      <tt class="py-keyword">del</tt> <tt id="link-17" class="py-name"><a title="cgibin.handler.args" class="py-name" href="#" onclick="return doclink('link-17', 'args', 'link-5');">args</a></tt><tt class="py-op">[</tt><tt class="py-string">"pdf"</tt><tt class="py-op">]</tt> </tt>
+<a name="L39"></a><tt class="py-lineno"> 39</tt>  <tt class="py-line">    <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line">      <tt class="py-name">ext</tt><tt class="py-op">=</tt><tt class="py-string">".html"</tt> </tt>
+<a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line">  <tt class="py-keyword">except</tt><tt class="py-op">:</tt> </tt>
+<a name="L42"></a><tt class="py-lineno"> 42</tt>  <tt class="py-line">    <tt class="py-name">ext</tt><tt class="py-op">=</tt><tt class="py-string">".html"</tt> </tt>
+<a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line">  <tt class="py-name">k</tt> <tt class="py-op">=</tt> <tt id="link-18" class="py-name"><a title="cgibin.handler.args" class="py-name" href="#" onclick="return doclink('link-18', 'args', 'link-5');">args</a></tt><tt class="py-op">.</tt><tt class="py-name">keys</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line">  <tt class="py-keyword">if</tt> <tt class="py-name">len</tt><tt class="py-op">(</tt><tt class="py-name">k</tt><tt class="py-op">)</tt> <tt class="py-op">&gt;</tt> <tt class="py-number">0</tt><tt class="py-op">:</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line">    <tt class="py-name">k</tt><tt class="py-op">.</tt><tt class="py-name">sort</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line">    <tt class="py-name">m</tt> <tt class="py-op">=</tt> <tt class="py-name">hashlib</tt><tt class="py-op">.</tt><tt class="py-name">md5</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt class="py-name">key</tt> <tt class="py-keyword">in</tt> <tt class="py-name">k</tt><tt class="py-op">:</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">      <tt class="py-name">m</tt><tt class="py-op">.</tt><tt id="link-19" class="py-name" targets="Method db.db_interface.IDBTable.update()=db.db_interface.IDBTable-class.html#update,Method db.db_sql.SQL_Table.update()=db.db_sql.SQL_Table-class.html#update,Method db.db_xml.DBXMLTable.update()=db.db_xml.DBXMLTable-class.html#update"><a title="db.db_interface.IDBTable.update
+db.db_sql.SQL_Table.update
+db.db_xml.DBXMLTable.update" class="py-name" href="#" onclick="return doclink('link-19', 'update', 'link-19');">update</a></tt><tt class="py-op">(</tt><tt class="py-name">key</tt><tt class="py-op">+</tt><tt id="link-20" class="py-name"><a title="cgibin.handler.args" class="py-name" href="#" onclick="return doclink('link-20', 'args', 'link-5');">args</a></tt><tt class="py-op">[</tt><tt class="py-name">key</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">s</tt><tt class="py-op">+</tt><tt class="py-name">m</tt><tt class="py-op">.</tt><tt class="py-name">hexdigest</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-op">:</tt><tt class="py-number">10</tt><tt class="py-op">]</tt><tt class="py-op">+</tt><tt class="py-name">ext</tt> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">  <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">s</tt><tt class="py-op">+</tt><tt class="py-name">ext</tt> </tt>
+</div><a name="L52"></a><tt class="py-lineno"> 52</tt>  <tt class="py-line"> </tt>
+<a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line"><tt id="link-21" class="py-name" targets="Variable conf.confstatic.config_path=conf.confstatic-module.html#config_path"><a title="conf.confstatic.config_path" class="py-name" href="#" onclick="return doclink('link-21', 'config_path', 'link-21');">config_path</a></tt> <tt class="py-op">=</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">expanduser</tt><tt class="py-op">(</tt><tt class="py-string">"~"</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt class="py-string">".comfort"</tt><tt class="py-op">)</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line"><tt id="link-22" class="py-name" targets="Variable conf.confstatic.database_path=conf.confstatic-module.html#database_path"><a title="conf.confstatic.database_path" class="py-name" href="#" onclick="return doclink('link-22', 'database_path', 'link-22');">database_path</a></tt> <tt class="py-op">=</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt id="link-23" class="py-name"><a title="conf.confstatic.config_path" class="py-name" href="#" onclick="return doclink('link-23', 'config_path', 'link-21');">config_path</a></tt><tt class="py-op">,</tt> <tt class="py-string">"database"</tt><tt class="py-op">)</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line"> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line"><tt class="py-comment">##Fonction that returns url:  </tt> </tt>
+<a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#Fonction renvoyant l'url:</tt> </tt>
+<a name="L58"></a><tt class="py-lineno"> 58</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#### Styles ####</tt> </tt>
+<a name="get_style_url"></a><div id="get_style_url-def"><a name="L59"></a><tt class="py-lineno"> 59</tt> <a class="py-toggle" href="#" id="get_style_url-toggle" onclick="return toggle('get_style_url');">-</a><tt class="py-line"><tt class="py-comment"></tt><tt class="py-keyword">def</tt> <a class="py-def-name" href="conf.confstatic-module.html#get_style_url">get_style_url</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="get_style_url-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="get_style_url-expanded"><a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">  <tt class="py-keyword">import</tt> <tt class="py-name">conf_general</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line">  <tt class="py-keyword">if</tt> <tt id="link-24" class="py-name"><a title="conf.confstatic.generating" class="py-name" href="#" onclick="return doclink('link-24', 'generating', 'link-3');">generating</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-string">"styles/"</tt><tt class="py-op">+</tt><tt class="py-name">conf_general</tt><tt class="py-op">.</tt><tt class="py-name">style</tt><tt class="py-op">+</tt><tt class="py-string">"/style.css"</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">  <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-string">"../styles/"</tt><tt class="py-op">+</tt><tt class="py-name">conf_general</tt><tt class="py-op">.</tt><tt class="py-name">style</tt><tt class="py-op">+</tt><tt class="py-string">"/style.css"</tt> </tt>
+</div><a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">     </tt>
+<a name="get_favicon_url"></a><div id="get_favicon_url-def"><a name="L66"></a><tt class="py-lineno"> 66</tt> <a class="py-toggle" href="#" id="get_favicon_url-toggle" onclick="return toggle('get_favicon_url');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="conf.confstatic-module.html#get_favicon_url">get_favicon_url</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="get_favicon_url-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="get_favicon_url-expanded"><a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">  <tt class="py-keyword">if</tt> <tt id="link-25" class="py-name"><a title="conf.confstatic.generating" class="py-name" href="#" onclick="return doclink('link-25', 'generating', 'link-3');">generating</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-string">"styles/favicon.png"</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">  <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-string">"../styles/favicon.png"</tt> </tt>
+</div><a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line"> </tt>
+<a name="get_pictures_url"></a><div id="get_pictures_url-def"><a name="L72"></a><tt class="py-lineno"> 72</tt> <a class="py-toggle" href="#" id="get_pictures_url-toggle" onclick="return toggle('get_pictures_url');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="conf.confstatic-module.html#get_pictures_url">get_pictures_url</a><tt class="py-op">(</tt><tt class="py-param">pict</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="get_pictures_url-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="get_pictures_url-expanded"><a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">  <tt class="py-keyword">if</tt> <tt id="link-26" class="py-name"><a title="conf.confstatic.generating" class="py-name" href="#" onclick="return doclink('link-26', 'generating', 'link-3');">generating</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-string">"perso/pictures/"</tt><tt class="py-op">+</tt><tt class="py-name">urllib</tt><tt class="py-op">.</tt><tt class="py-name">quote</tt><tt class="py-op">(</tt><tt class="py-name">pict</tt><tt class="py-op">)</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">  <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt id="link-27" class="py-name" targets="Variable conf.confstatic.perso_url=conf.confstatic-module.html#perso_url"><a title="conf.confstatic.perso_url" class="py-name" href="#" onclick="return doclink('link-27', 'perso_url', 'link-27');">perso_url</a></tt><tt class="py-op">+</tt><tt class="py-string">"/pictures/"</tt><tt class="py-op">+</tt><tt class="py-name">urllib</tt><tt class="py-op">.</tt><tt class="py-name">quote</tt><tt class="py-op">(</tt><tt class="py-name">pict</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line"> </tt>
+<a name="get_pages_url"></a><div id="get_pages_url-def"><a name="L78"></a><tt class="py-lineno"> 78</tt> <a class="py-toggle" href="#" id="get_pages_url-toggle" onclick="return toggle('get_pages_url');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="conf.confstatic-module.html#get_pages_url">get_pages_url</a><tt class="py-op">(</tt><tt class="py-param">page</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="get_pages_url-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="get_pages_url-expanded"><a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">  <tt class="py-keyword">if</tt> <tt id="link-28" class="py-name"><a title="conf.confstatic.generating" class="py-name" href="#" onclick="return doclink('link-28', 'generating', 'link-3');">generating</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-string">"perso/pages/"</tt><tt class="py-op">+</tt><tt class="py-name">urllib</tt><tt class="py-op">.</tt><tt class="py-name">quote</tt><tt class="py-op">(</tt><tt id="link-29" class="py-name" targets="Variable cgibin.handler.page=cgibin.handler-module.html#page"><a title="cgibin.handler.page" class="py-name" href="#" onclick="return doclink('link-29', 'page', 'link-29');">page</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L81"></a><tt class="py-lineno"> 81</tt>  <tt class="py-line">  <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt id="link-30" class="py-name"><a title="conf.confstatic.perso_url" class="py-name" href="#" onclick="return doclink('link-30', 'perso_url', 'link-27');">perso_url</a></tt><tt class="py-op">+</tt><tt class="py-string">"/pages/"</tt><tt class="py-op">+</tt><tt class="py-name">urllib</tt><tt class="py-op">.</tt><tt class="py-name">quote</tt><tt class="py-op">(</tt><tt id="link-31" class="py-name"><a title="cgibin.handler.page" class="py-name" href="#" onclick="return doclink('link-31', 'page', 'link-29');">page</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line">     </tt>
+<a name="get_docs_url"></a><div id="get_docs_url-def"><a name="L84"></a><tt class="py-lineno"> 84</tt> <a class="py-toggle" href="#" id="get_docs_url-toggle" onclick="return toggle('get_docs_url');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="conf.confstatic-module.html#get_docs_url">get_docs_url</a><tt class="py-op">(</tt><tt class="py-param">docs</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="get_docs_url-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="get_docs_url-expanded"><a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line">  <tt class="py-keyword">if</tt> <tt id="link-32" class="py-name"><a title="conf.confstatic.generating" class="py-name" href="#" onclick="return doclink('link-32', 'generating', 'link-3');">generating</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-string">"perso/docs/"</tt><tt class="py-op">+</tt><tt class="py-name">urllib</tt><tt class="py-op">.</tt><tt class="py-name">quote</tt><tt class="py-op">(</tt><tt class="py-name">docs</tt><tt class="py-op">)</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">  <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt id="link-33" class="py-name" targets="Variable conf.confstatic.docs_url=conf.confstatic-module.html#docs_url"><a title="conf.confstatic.docs_url" class="py-name" href="#" onclick="return doclink('link-33', 'docs_url', 'link-33');">docs_url</a></tt><tt class="py-op">+</tt><tt class="py-string">"/"</tt><tt class="py-op">+</tt><tt class="py-name">urllib</tt><tt class="py-op">.</tt><tt class="py-name">quote</tt><tt class="py-op">(</tt><tt class="py-name">docs</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">     </tt>
+<a name="get_latex_url"></a><div id="get_latex_url-def"><a name="L90"></a><tt class="py-lineno"> 90</tt> <a class="py-toggle" href="#" id="get_latex_url-toggle" onclick="return toggle('get_latex_url');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="conf.confstatic-module.html#get_latex_url">get_latex_url</a><tt class="py-op">(</tt><tt class="py-param">page</tt><tt class="py-op">,</tt><tt class="py-param">img</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="get_latex_url-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="get_latex_url-expanded"><a name="L91"></a><tt class="py-lineno"> 91</tt>  <tt class="py-line">  <tt class="py-keyword">if</tt> <tt id="link-34" class="py-name"><a title="conf.confstatic.generating" class="py-name" href="#" onclick="return doclink('link-34', 'generating', 'link-3');">generating</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-string">"latex/"</tt><tt class="py-op">+</tt><tt class="py-name">urllib</tt><tt class="py-op">.</tt><tt class="py-name">quote</tt><tt class="py-op">(</tt><tt id="link-35" class="py-name"><a title="cgibin.handler.page" class="py-name" href="#" onclick="return doclink('link-35', 'page', 'link-29');">page</a></tt><tt class="py-op">)</tt><tt class="py-op">+</tt><tt class="py-string">"/"</tt><tt class="py-op">+</tt><tt class="py-name">img</tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line">  <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt id="link-36" class="py-name" targets="Variable conf.confstatic.latex_url=conf.confstatic-module.html#latex_url"><a title="conf.confstatic.latex_url" class="py-name" href="#" onclick="return doclink('link-36', 'latex_url', 'link-36');">latex_url</a></tt><tt class="py-op">+</tt><tt class="py-string">"/"</tt><tt class="py-op">+</tt><tt id="link-37" class="py-name"><a title="cgibin.handler.page" class="py-name" href="#" onclick="return doclink('link-37', 'page', 'link-29');">page</a></tt><tt class="py-op">+</tt><tt class="py-string">"/"</tt><tt class="py-op">+</tt><tt class="py-name">img</tt> </tt>
+</div><a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line"> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line"><tt class="py-comment">##Modules</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#Modules</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt id="link-38" class="py-name" targets="Variable conf.confstatic.module_wiki_name=conf.confstatic-module.html#module_wiki_name"><a title="conf.confstatic.module_wiki_name" class="py-name" href="#" onclick="return doclink('link-38', 'module_wiki_name', 'link-38');">module_wiki_name</a></tt> <tt class="py-op">=</tt> <tt class="py-string">"Wiki"</tt> </tt>
+<a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line"><tt id="link-39" class="py-name" targets="Variable conf.confstatic.module_menu_name=conf.confstatic-module.html#module_menu_name"><a title="conf.confstatic.module_menu_name" class="py-name" href="#" onclick="return doclink('link-39', 'module_menu_name', 'link-39');">module_menu_name</a></tt> <tt class="py-op">=</tt> <tt class="py-string">"Menu"</tt> </tt>
+<a name="L100"></a><tt class="py-lineno">100</tt>  <tt class="py-line"><tt id="link-40" class="py-name" targets="Variable conf.confstatic.module_credits_name=conf.confstatic-module.html#module_credits_name"><a title="conf.confstatic.module_credits_name" class="py-name" href="#" onclick="return doclink('link-40', 'module_credits_name', 'link-40');">module_credits_name</a></tt> <tt class="py-op">=</tt> <tt class="py-string">"Credits"</tt> </tt>
+<a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line"><tt id="link-41" class="py-name" targets="Variable conf.confstatic.default_active_modules=conf.confstatic-module.html#default_active_modules"><a title="conf.confstatic.default_active_modules" class="py-name" href="#" onclick="return doclink('link-41', 'default_active_modules', 'link-41');">default_active_modules</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-string">"Wiki"</tt><tt class="py-op">,</tt><tt class="py-string">"Menu"</tt><tt class="py-op">]</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line"><tt id="link-42" class="py-name" targets="Variable conf.confstatic.default_latex_dpi=conf.confstatic-module.html#default_latex_dpi"><a title="conf.confstatic.default_latex_dpi" class="py-name" href="#" onclick="return doclink('link-42', 'default_latex_dpi', 'link-42');">default_latex_dpi</a></tt><tt class="py-op">=</tt><tt class="py-string">"200"</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line"> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line"><tt class="py-comment">##Pages</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#Pages</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt id="link-43" class="py-name" targets="Variable conf.confstatic.overview_path=conf.confstatic-module.html#overview_path"><a title="conf.confstatic.overview_path" class="py-name" href="#" onclick="return doclink('link-43', 'overview_path', 'link-43');">overview_path</a></tt><tt class="py-op">=</tt><tt class="py-string">"overview.txt"</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line"><tt id="link-44" class="py-name" targets="Variable conf.confstatic.wikisyntax_page_name=conf.confstatic-module.html#wikisyntax_page_name"><a title="conf.confstatic.wikisyntax_page_name" class="py-name" href="#" onclick="return doclink('link-44', 'wikisyntax_page_name', 'link-44');">wikisyntax_page_name</a></tt> <tt class="py-op">=</tt> <tt class="py-string">"WikiSyntax"</tt> </tt>
+<a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line"><tt id="link-45" class="py-name" targets="Variable conf.confstatic.wikisyntax_page_wiki=conf.confstatic-module.html#wikisyntax_page_wiki"><a title="conf.confstatic.wikisyntax_page_wiki" class="py-name" href="#" onclick="return doclink('link-45', 'wikisyntax_page_wiki', 'link-45');">wikisyntax_page_wiki</a></tt> <tt class="py-op">=</tt> <tt class="py-string">u"""</tt> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line"><tt class="py-string">Voici la syntaxe de base vous permettant de r&#233;diger des pages dans le panneau</tt> </tt>
+<a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line"><tt class="py-string">d'administration.</tt> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L112"></a><tt class="py-lineno">112</tt>  <tt class="py-line"><tt class="py-string">== Syntaxe g&#233;n&#233;rale ==</tt> </tt>
+<a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line"><tt class="py-string">=== Paragraphes ===</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line"><tt class="py-string">Un paragraphe occupe plusieurs lignes, on change de paragraphe en sautant une</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line"><tt class="py-string">ligne. Exemple :</tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line"><tt class="py-string">&lt;pre&gt;</tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line"><tt class="py-string">Ceci est un paragraphe.</tt> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line"><tt class="py-string">Ceci en est un autre.</tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line"><tt class="py-string">&lt;/pre&gt;</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line"><tt class="py-string">=== Les titres ===</tt> </tt>
+<a name="L125"></a><tt class="py-lineno">125</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L126"></a><tt class="py-lineno">126</tt>  <tt class="py-line"><tt class="py-string">Il existe diff&#233;rents niveaux de titre.</tt> </tt>
+<a name="L127"></a><tt class="py-lineno">127</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L128"></a><tt class="py-lineno">128</tt>  <tt class="py-line"><tt class="py-string">* &lt;nowiki&gt;= Titre niveau 1 =&lt;/nowiki&gt;</tt> </tt>
+<a name="L129"></a><tt class="py-lineno">129</tt>  <tt class="py-line"><tt class="py-string">* &lt;nowiki&gt;== Titre niveau 2 ==&lt;/nowiki&gt;</tt> </tt>
+<a name="L130"></a><tt class="py-lineno">130</tt>  <tt class="py-line"><tt class="py-string">* &lt;nowiki&gt;=== Titre niveau 3 ===&lt;/nowiki&gt;</tt> </tt>
+<a name="L131"></a><tt class="py-lineno">131</tt>  <tt class="py-line"><tt class="py-string">* &lt;nowiki&gt;==== Titre niveau 4 ====&lt;/nowiki&gt;</tt> </tt>
+<a name="L132"></a><tt class="py-lineno">132</tt>  <tt class="py-line"><tt class="py-string">* &lt;nowiki&gt;===== Titre niveau 5 =====&lt;/nowiki&gt;</tt> </tt>
+<a name="L133"></a><tt class="py-lineno">133</tt>  <tt class="py-line"><tt class="py-string">* &lt;nowiki&gt;====== Titre niveau 6 ======&lt;/nowiki&gt;</tt> </tt>
+<a name="L134"></a><tt class="py-lineno">134</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L135"></a><tt class="py-lineno">135</tt>  <tt class="py-line"><tt class="py-string">== Faire r&#233;f&#233;rence &#224; du contenu ==</tt> </tt>
+<a name="L136"></a><tt class="py-lineno">136</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L137"></a><tt class="py-lineno">137</tt>  <tt class="py-line"><tt class="py-string">=== Les liens ===</tt> </tt>
+<a name="L138"></a><tt class="py-lineno">138</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L139"></a><tt class="py-lineno">139</tt>  <tt class="py-line"><tt class="py-string">* Pour un lien vers une page du site, utilisez &lt;nowiki&gt;[[NomDeLaPage]]&lt;/nowiki&gt;,</tt> </tt>
+<a name="L140"></a><tt class="py-lineno">140</tt>  <tt class="py-line"><tt class="py-string">par exemple &lt;nowiki&gt;[[Accueil]]&lt;/nowiki&gt;.</tt> </tt>
+<a name="L141"></a><tt class="py-lineno">141</tt>  <tt class="py-line"><tt class="py-string">* Pour les liens externes, employez la syntaxe suivante :</tt> </tt>
+<a name="L142"></a><tt class="py-lineno">142</tt>  <tt class="py-line"><tt class="py-string">&lt;nowiki&gt;[http://graal.ens-lyon.fr/comfort]&lt;/nowiki&gt;.</tt> </tt>
+<a name="L143"></a><tt class="py-lineno">143</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L144"></a><tt class="py-lineno">144</tt>  <tt class="py-line"><tt class="py-string">Les deux types de liens sont disponibles sous une forme &#233;tendue qui permet de</tt> </tt>
+<a name="L145"></a><tt class="py-lineno">145</tt>  <tt class="py-line"><tt class="py-string">choisir le titre du lien : ainsi, &lt;nowiki&gt;[http://graal.ens-lyon.fr/comfort|Site</tt> </tt>
+<a name="L146"></a><tt class="py-lineno">146</tt>  <tt class="py-line"><tt class="py-string">officiel]&lt;/nowiki&gt; donne [http://graal.ens-lyon.fr/comfort|Site officiel].</tt> </tt>
+<a name="L147"></a><tt class="py-lineno">147</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L148"></a><tt class="py-lineno">148</tt>  <tt class="py-line"><tt class="py-string">=== Les images ===</tt> </tt>
+<a name="L149"></a><tt class="py-lineno">149</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L150"></a><tt class="py-lineno">150</tt>  <tt class="py-line"><tt class="py-string">Utilisez la syntaxe suivante :</tt> </tt>
+<a name="L151"></a><tt class="py-lineno">151</tt>  <tt class="py-line"><tt class="py-string">&lt;pre&gt;</tt> </tt>
+<a name="L152"></a><tt class="py-lineno">152</tt>  <tt class="py-line"><tt class="py-string">&lt;nowiki&gt;[[Image:url|thumb|position|taille|l&#233;gende]]&lt;/nowiki&gt;</tt> </tt>
+<a name="L153"></a><tt class="py-lineno">153</tt>  <tt class="py-line"><tt class="py-string">&lt;/pre&gt;</tt> </tt>
+<a name="L154"></a><tt class="py-lineno">154</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L155"></a><tt class="py-lineno">155</tt>  <tt class="py-line"><tt class="py-string">Les param&#232;tres sont les suivants :</tt> </tt>
+<a name="L156"></a><tt class="py-lineno">156</tt>  <tt class="py-line"><tt class="py-string">* url : l'adresse de l'image ;</tt> </tt>
+<a name="L157"></a><tt class="py-lineno">157</tt>  <tt class="py-line"><tt class="py-string">* thumb : &#233;quivalent &#224; 180px de taille ;</tt> </tt>
+<a name="L158"></a><tt class="py-lineno">158</tt>  <tt class="py-line"><tt class="py-string">* position : left, center, ou right, pour positionner l'image ;</tt> </tt>
+<a name="L159"></a><tt class="py-lineno">159</tt>  <tt class="py-line"><tt class="py-string">* l&#233;gende : texte alternatif.</tt> </tt>
+<a name="L160"></a><tt class="py-lineno">160</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L161"></a><tt class="py-lineno">161</tt>  <tt class="py-line"><tt class="py-string">La taille peut prendre les formats suivants :</tt> </tt>
+<a name="L162"></a><tt class="py-lineno">162</tt>  <tt class="py-line"><tt class="py-string">* 300px ou 300 : l'image fera 300 pixels suivant sa plus grande dimension ;</tt> </tt>
+<a name="L163"></a><tt class="py-lineno">163</tt>  <tt class="py-line"><tt class="py-string">* 640x480px : l'image fera 640 pixels de large et 480 de haut.</tt> </tt>
+<a name="L164"></a><tt class="py-lineno">164</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L165"></a><tt class="py-lineno">165</tt>  <tt class="py-line"><tt class="py-string">=== Liens vers le contenu personnel stock&#233; dans "perso" ===</tt> </tt>
+<a name="L166"></a><tt class="py-lineno">166</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L167"></a><tt class="py-lineno">167</tt>  <tt class="py-line"><tt class="py-string">* &lt;nowiki&gt;[[Page:url|nom du lien]]&lt;/nowiki&gt; pour les pages HTML ou autres stock&#233;es</tt> </tt>
+<a name="L168"></a><tt class="py-lineno">168</tt>  <tt class="py-line"><tt class="py-string">dans "perso/pages". L'url est le chemin relatif &#224; partir de perso/pages, ainsi</tt> </tt>
+<a name="L169"></a><tt class="py-lineno">169</tt>  <tt class="py-line"><tt class="py-string">si votre fichier est "perso/pages/mavie.html" url vaudra "mavie.html"</tt> </tt>
+<a name="L170"></a><tt class="py-lineno">170</tt>  <tt class="py-line"><tt class="py-string">* &lt;nowiki&gt;[[Picture:url|nom du lien]]&lt;/nowiki&gt; pour les images stock&#233;es dans</tt> </tt>
+<a name="L171"></a><tt class="py-lineno">171</tt>  <tt class="py-line"><tt class="py-string">"perso/pictures"</tt> </tt>
+<a name="L172"></a><tt class="py-lineno">172</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L173"></a><tt class="py-lineno">173</tt>  <tt class="py-line"><tt class="py-string">== Mise en forme ==</tt> </tt>
+<a name="L174"></a><tt class="py-lineno">174</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L175"></a><tt class="py-lineno">175</tt>  <tt class="py-line"><tt class="py-string">=== Exposants et indices ===</tt> </tt>
+<a name="L176"></a><tt class="py-lineno">176</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L177"></a><tt class="py-lineno">177</tt>  <tt class="py-line"><tt class="py-string">&lt;nowiki&gt;&lt;sup&gt;Votre texte en exposant&lt;/sup&gt;&lt;/nowiki&gt; et &lt;nowiki&gt;&lt;sub&gt;Votre texte </tt> </tt>
+<a name="L178"></a><tt class="py-lineno">178</tt>  <tt class="py-line"><tt class="py-string">en indice&lt;/sub&gt;&lt;/nowiki&gt;.</tt> </tt>
+<a name="L179"></a><tt class="py-lineno">179</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L180"></a><tt class="py-lineno">180</tt>  <tt class="py-line"><tt class="py-string">=== Taille du texte ===</tt> </tt>
+<a name="L181"></a><tt class="py-lineno">181</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L182"></a><tt class="py-lineno">182</tt>  <tt class="py-line"><tt class="py-string">&lt;nowiki&gt;&lt;big&gt;Donne du texte plus gros&lt;/big&gt; ou &lt;small&gt;plus </tt> </tt>
+<a name="L183"></a><tt class="py-lineno">183</tt>  <tt class="py-line"><tt class="py-string">petit&lt;/small&gt;&lt;/nowiki&gt;.</tt> </tt>
+<a name="L184"></a><tt class="py-lineno">184</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L185"></a><tt class="py-lineno">185</tt>  <tt class="py-line"><tt class="py-string">=== Tableaux ===</tt> </tt>
+<a name="L186"></a><tt class="py-lineno">186</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L187"></a><tt class="py-lineno">187</tt>  <tt class="py-line"><tt class="py-string">Comme un exemple est toujours plus parlant, le code suivant :</tt> </tt>
+<a name="L188"></a><tt class="py-lineno">188</tt>  <tt class="py-line"><tt class="py-string">&lt;pre&gt;</tt> </tt>
+<a name="L189"></a><tt class="py-lineno">189</tt>  <tt class="py-line"><tt class="py-string">&lt;nowiki&gt;{|&lt;/nowiki&gt;</tt> </tt>
+<a name="L190"></a><tt class="py-lineno">190</tt>  <tt class="py-line"><tt class="py-string">&lt;nowiki&gt;|+titre du tableau&lt;/nowiki&gt;</tt> </tt>
+<a name="L191"></a><tt class="py-lineno">191</tt>  <tt class="py-line"><tt class="py-string">&lt;nowiki&gt;|-&lt;/nowiki&gt;</tt> </tt>
+<a name="L192"></a><tt class="py-lineno">192</tt>  <tt class="py-line"><tt class="py-string">&lt;nowiki&gt;|premi&#232;re cellule de la ligne&lt;/nowiki&gt;</tt> </tt>
+<a name="L193"></a><tt class="py-lineno">193</tt>  <tt class="py-line"><tt class="py-string">&lt;nowiki&gt;|une autre cellule sur la m&#234;me ligne&lt;/nowiki&gt;</tt> </tt>
+<a name="L194"></a><tt class="py-lineno">194</tt>  <tt class="py-line"><tt class="py-string">&lt;nowiki&gt;|-&lt;/nowiki&gt;</tt> </tt>
+<a name="L195"></a><tt class="py-lineno">195</tt>  <tt class="py-line"><tt class="py-string">&lt;nowiki&gt;|cellule1&lt;/nowiki&gt;</tt> </tt>
+<a name="L196"></a><tt class="py-lineno">196</tt>  <tt class="py-line"><tt class="py-string">&lt;nowiki&gt;|cellule2&lt;/nowiki&gt;</tt> </tt>
+<a name="L197"></a><tt class="py-lineno">197</tt>  <tt class="py-line"><tt class="py-string">&lt;nowiki&gt;|}&lt;/nowiki&gt;</tt> </tt>
+<a name="L198"></a><tt class="py-lineno">198</tt>  <tt class="py-line"><tt class="py-string">&lt;/pre&gt;</tt> </tt>
+<a name="L199"></a><tt class="py-lineno">199</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L200"></a><tt class="py-lineno">200</tt>  <tt class="py-line"><tt class="py-string">donne le r&#233;sulat suivant :</tt> </tt>
+<a name="L201"></a><tt class="py-lineno">201</tt>  <tt class="py-line"><tt class="py-string">{|</tt> </tt>
+<a name="L202"></a><tt class="py-lineno">202</tt>  <tt class="py-line"><tt class="py-string">|+titre du tableau</tt> </tt>
+<a name="L203"></a><tt class="py-lineno">203</tt>  <tt class="py-line"><tt class="py-string">|-</tt> </tt>
+<a name="L204"></a><tt class="py-lineno">204</tt>  <tt class="py-line"><tt class="py-string">|premi&#232;re cellule de la ligne</tt> </tt>
+<a name="L205"></a><tt class="py-lineno">205</tt>  <tt class="py-line"><tt class="py-string">|une autre cellule sur la m&#234;me ligne</tt> </tt>
+<a name="L206"></a><tt class="py-lineno">206</tt>  <tt class="py-line"><tt class="py-string">|-</tt> </tt>
+<a name="L207"></a><tt class="py-lineno">207</tt>  <tt class="py-line"><tt class="py-string">|cellule1</tt> </tt>
+<a name="L208"></a><tt class="py-lineno">208</tt>  <tt class="py-line"><tt class="py-string">|cellule2</tt> </tt>
+<a name="L209"></a><tt class="py-lineno">209</tt>  <tt class="py-line"><tt class="py-string">|}</tt> </tt>
+<a name="L210"></a><tt class="py-lineno">210</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L211"></a><tt class="py-lineno">211</tt>  <tt class="py-line"><tt class="py-string">La syntaxe permettant d'ajouter une cellule admet une version &#233;tendue :</tt> </tt>
+<a name="L212"></a><tt class="py-lineno">212</tt>  <tt class="py-line"><tt class="py-string">&lt;pre&gt;&lt;nowiki&gt;| options | texte&lt;/nowiki&gt;&lt;/pre&gt; o&#249; les options sont les suivantes.</tt> </tt>
+<a name="L213"></a><tt class="py-lineno">213</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L214"></a><tt class="py-lineno">214</tt>  <tt class="py-line"><tt class="py-string">* align=XXX o&#249; XXX vaut middle, left, right : pour centrer le texte dans la</tt> </tt>
+<a name="L215"></a><tt class="py-lineno">215</tt>  <tt class="py-line"><tt class="py-string">cellule</tt> </tt>
+<a name="L216"></a><tt class="py-lineno">216</tt>  <tt class="py-line"><tt class="py-string">* valign=XXX o&#249; XXX vaut top, middle, bottom : pour centrer verticalement le</tt> </tt>
+<a name="L217"></a><tt class="py-lineno">217</tt>  <tt class="py-line"><tt class="py-string">texte</tt> </tt>
+<a name="L218"></a><tt class="py-lineno">218</tt>  <tt class="py-line"><tt class="py-string">* colspan = X : la case s'&#233;tend sur X colonnes</tt> </tt>
+<a name="L219"></a><tt class="py-lineno">219</tt>  <tt class="py-line"><tt class="py-string">* rowspan = X : la case s'&#233;tend sur X lignes</tt> </tt>
+<a name="L220"></a><tt class="py-lineno">220</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L221"></a><tt class="py-lineno">221</tt>  <tt class="py-line"><tt class="py-string">=== Listes ===</tt> </tt>
+<a name="L222"></a><tt class="py-lineno">222</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L223"></a><tt class="py-lineno">223</tt>  <tt class="py-line"><tt class="py-string">&lt;pre&gt;</tt> </tt>
+<a name="L224"></a><tt class="py-lineno">224</tt>  <tt class="py-line"><tt class="py-string">&lt;nowiki&gt;* liste&lt;/nowiki&gt;</tt> </tt>
+<a name="L225"></a><tt class="py-lineno">225</tt>  <tt class="py-line"><tt class="py-string">&lt;nowiki&gt;* non&lt;/nowiki&gt;</tt> </tt>
+<a name="L226"></a><tt class="py-lineno">226</tt>  <tt class="py-line"><tt class="py-string">&lt;nowiki&gt;* num&#233;rot&#233;e&lt;/nowiki&gt;</tt> </tt>
+<a name="L227"></a><tt class="py-lineno">227</tt>  <tt class="py-line"><tt class="py-string">&lt;/pre&gt;</tt> </tt>
+<a name="L228"></a><tt class="py-lineno">228</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L229"></a><tt class="py-lineno">229</tt>  <tt class="py-line"><tt class="py-string">Ou bien :</tt> </tt>
+<a name="L230"></a><tt class="py-lineno">230</tt>  <tt class="py-line"><tt class="py-string">&lt;pre&gt;</tt> </tt>
+<a name="L231"></a><tt class="py-lineno">231</tt>  <tt class="py-line"><tt class="py-string">&lt;nowiki&gt;# liste&lt;/nowiki&gt;</tt> </tt>
+<a name="L232"></a><tt class="py-lineno">232</tt>  <tt class="py-line"><tt class="py-string">&lt;nowiki&gt;# num&#233;rot&#233;e&lt;/nowiki&gt;</tt> </tt>
+<a name="L233"></a><tt class="py-lineno">233</tt>  <tt class="py-line"><tt class="py-string">&lt;/pre&gt;</tt> </tt>
+<a name="L234"></a><tt class="py-lineno">234</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L235"></a><tt class="py-lineno">235</tt>  <tt class="py-line"><tt class="py-string">On obtient :</tt> </tt>
+<a name="L236"></a><tt class="py-lineno">236</tt>  <tt class="py-line"><tt class="py-string">* liste</tt> </tt>
+<a name="L237"></a><tt class="py-lineno">237</tt>  <tt class="py-line"><tt class="py-string">* non</tt> </tt>
+<a name="L238"></a><tt class="py-lineno">238</tt>  <tt class="py-line"><tt class="py-string">* num&#233;rot&#233;e</tt> </tt>
+<a name="L239"></a><tt class="py-lineno">239</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L240"></a><tt class="py-lineno">240</tt>  <tt class="py-line"><tt class="py-string">et :</tt> </tt>
+<a name="L241"></a><tt class="py-lineno">241</tt>  <tt class="py-line"><tt class="py-string"># liste</tt> </tt>
+<a name="L242"></a><tt class="py-lineno">242</tt>  <tt class="py-line"><tt class="py-string"># num&#233;rot&#233;e</tt> </tt>
+<a name="L243"></a><tt class="py-lineno">243</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L244"></a><tt class="py-lineno">244</tt>  <tt class="py-line"><tt class="py-string">=== Texte pr&#233;format&#233; ===</tt> </tt>
+<a name="L245"></a><tt class="py-lineno">245</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L246"></a><tt class="py-lineno">246</tt>  <tt class="py-line"><tt class="py-string">Il suffit d'ajouter un espace en d&#233;but de ligne.</tt> </tt>
+<a name="L247"></a><tt class="py-lineno">247</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L248"></a><tt class="py-lineno">248</tt>  <tt class="py-line"><tt class="py-string">== Balises diverses ==</tt> </tt>
+<a name="L249"></a><tt class="py-lineno">249</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L250"></a><tt class="py-lineno">250</tt>  <tt class="py-line"><tt class="py-string">Diverses balises fonctionnement comment en html :</tt> </tt>
+<a name="L251"></a><tt class="py-lineno">251</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L252"></a><tt class="py-lineno">252</tt>  <tt class="py-line"><tt class="py-string">* &lt;nowiki&gt;&lt;math size="XXX" packages="YYY"&gt;x^2&lt;/math&gt;&lt;/nowiki&gt; permet d'ins&#233;rer du code LaTeX dans </tt> </tt>
+<a name="L253"></a><tt class="py-lineno">253</tt>  <tt class="py-line"><tt class="py-string">votre document avec XXX la taille en dpi et YYY la liste des paquets s&#233;par&#233;s par </tt> </tt>
+<a name="L254"></a><tt class="py-lineno">254</tt>  <tt class="py-line"><tt class="py-string">des espaces. Taille par d&#233;faut : 200.</tt> </tt>
+<a name="L255"></a><tt class="py-lineno">255</tt>  <tt class="py-line"><tt class="py-string">* &lt;nowiki&gt;&lt;nowiki&gt;syntaxe wiki d&#233;sactiv&#233;e entre ces balises&lt;/nowiki&gt;&lt;/nowiki&gt;</tt> </tt>
+<a name="L256"></a><tt class="py-lineno">256</tt>  <tt class="py-line"><tt class="py-string">* &lt;nowiki&gt;&lt;h2&gt; jusqu'&#224; &lt;h6&gt;&lt;/nowiki&gt; fonctionnement comme &lt;nowiki&gt;== jusqu'&#224; </tt> </tt>
+<a name="L257"></a><tt class="py-lineno">257</tt>  <tt class="py-line"><tt class="py-string">======&lt;/nowiki&gt;</tt> </tt>
+<a name="L258"></a><tt class="py-lineno">258</tt>  <tt class="py-line"><tt class="py-string">* &lt;nowiki&gt;&lt;sup&gt; et &lt;sub&gt; pour les exposants&lt;/nowiki&gt;</tt> </tt>
+<a name="L259"></a><tt class="py-lineno">259</tt>  <tt class="py-line"><tt class="py-string">* &lt;nowiki&gt;&lt;ref&gt;note de bas de page&lt;/ref&gt;&lt;/nowiki&gt;</tt> </tt>
+<a name="L260"></a><tt class="py-lineno">260</tt>  <tt class="py-line"><tt class="py-string">* &lt;nowiki&gt;&lt;pre&gt;texte pr&#233;format&#233;&lt;/pre&gt;&lt;/nowiki&gt;</tt> </tt>
+<a name="L261"></a><tt class="py-lineno">261</tt>  <tt class="py-line"><tt class="py-string">* &lt;nowiki&gt;&lt;i&gt;&lt;/i&gt; &lt;b&gt;&lt;/b&gt; &lt;u&gt;&lt;/u&gt; &lt;s&gt;&lt;/s&gt;&lt;/nowiki&gt; donnent respectivement du texte en italique, </tt> </tt>
+<a name="L262"></a><tt class="py-lineno">262</tt>  <tt class="py-line"><tt class="py-string">gras, soulign&#233;, barr&#233;.</tt> </tt>
+<a name="L263"></a><tt class="py-lineno">263</tt>  <tt class="py-line"><tt class="py-string">* &lt;nowiki&gt;&lt;br /&gt;&lt;/nowiki&gt; va &#224; la ligne</tt> </tt>
+<a name="L264"></a><tt class="py-lineno">264</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L265"></a><tt class="py-lineno">265</tt>  <tt class="py-line"><tt class="py-string">"""</tt> </tt>
+<a name="L266"></a><tt class="py-lineno">266</tt>  <tt class="py-line"><tt id="link-46" class="py-name" targets="Variable conf.confstatic.default_page_name=conf.confstatic-module.html#default_page_name"><a title="conf.confstatic.default_page_name" class="py-name" href="#" onclick="return doclink('link-46', 'default_page_name', 'link-46');">default_page_name</a></tt> <tt class="py-op">=</tt> <tt class="py-string">"Accueil"</tt> </tt>
+<a name="L267"></a><tt class="py-lineno">267</tt>  <tt class="py-line"><tt id="link-47" class="py-name" targets="Variable conf.confstatic.default_page_wiki=conf.confstatic-module.html#default_page_wiki"><a title="conf.confstatic.default_page_wiki" class="py-name" href="#" onclick="return doclink('link-47', 'default_page_wiki', 'link-47');">default_page_wiki</a></tt> <tt class="py-op">=</tt> <tt class="py-string">u"""</tt> </tt>
+<a name="L268"></a><tt class="py-lineno">268</tt>  <tt class="py-line"><tt class="py-string">Bonjour et bienvenue sur CoMFoRT, un syst&#232;me de gestion de contenu vous</tt> </tt>
+<a name="L269"></a><tt class="py-lineno">269</tt>  <tt class="py-line"><tt class="py-string">permettant de cr&#233;er de mani&#232;re simple et efficace votre site personnel.</tt> </tt>
+<a name="L270"></a><tt class="py-lineno">270</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L271"></a><tt class="py-lineno">271</tt>  <tt class="py-line"><tt class="py-string">Bien que ce logiciel soit principalement destin&#233; aux sites web de chercheurs,</tt> </tt>
+<a name="L272"></a><tt class="py-lineno">272</tt>  <tt class="py-line"><tt class="py-string">nous esp&#233;rons qu'il vous donnera enti&#232;rement satisfaction, quel que soit votre</tt> </tt>
+<a name="L273"></a><tt class="py-lineno">273</tt>  <tt class="py-line"><tt class="py-string">domaine d'activit&#233;.</tt> </tt>
+<a name="L274"></a><tt class="py-lineno">274</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L275"></a><tt class="py-lineno">275</tt>  <tt class="py-line"><tt class="py-string">== Fonctionnement du logiciel ==</tt> </tt>
+<a name="L276"></a><tt class="py-lineno">276</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L277"></a><tt class="py-lineno">277</tt>  <tt class="py-line"><tt class="py-string">Avec CoMFoRT, vous commencez par travailler sur une ''version locale'' : c'est</tt> </tt>
+<a name="L278"></a><tt class="py-lineno">278</tt>  <tt class="py-line"><tt class="py-string">le site que vous visualisez actuellement. C'est cette version que vous</tt> </tt>
+<a name="L279"></a><tt class="py-lineno">279</tt>  <tt class="py-line"><tt class="py-string">modifierez, &#224; laquelle vous ajouterez du contenu.  Vous pouvez &#224; tout moment</tt> </tt>
+<a name="L280"></a><tt class="py-lineno">280</tt>  <tt class="py-line"><tt class="py-string">avoir un aper&#231;u du site en revenant sur cette page.  Lorsque le site vous semble</tt> </tt>
+<a name="L281"></a><tt class="py-lineno">281</tt>  <tt class="py-line"><tt class="py-string">satisfaisant, nous en cr&#233;erons une copie que nous enverrons sur votre espace de</tt> </tt>
+<a name="L282"></a><tt class="py-lineno">282</tt>  <tt class="py-line"><tt class="py-string">stockage de pages web : c'est la ''version statique'', une version fig&#233;e, sorte</tt> </tt>
+<a name="L283"></a><tt class="py-lineno">283</tt>  <tt class="py-line"><tt class="py-string">d'instantan&#233; de la version locale.</tt> </tt>
+<a name="L284"></a><tt class="py-lineno">284</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L285"></a><tt class="py-lineno">285</tt>  <tt class="py-line"><tt class="py-string">Les points qui vont suivre vous indiqueront les endroits cl&#233; de CoMFoRT</tt> </tt>
+<a name="L286"></a><tt class="py-lineno">286</tt>  <tt class="py-line"><tt class="py-string">permettant une prise en main la plus rapide possible.</tt> </tt>
+<a name="L287"></a><tt class="py-lineno">287</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L288"></a><tt class="py-lineno">288</tt>  <tt class="py-line"><tt class="py-string">== Prise en main ==</tt> </tt>
+<a name="L289"></a><tt class="py-lineno">289</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L290"></a><tt class="py-lineno">290</tt>  <tt class="py-line"><tt class="py-string">=== Gestion des pages ===</tt> </tt>
+<a name="L291"></a><tt class="py-lineno">291</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L292"></a><tt class="py-lineno">292</tt>  <tt class="py-line"><tt class="py-string">Il faut commencer par d&#233;finir les pages que vous voulez ajouter &#224; votre site.</tt> </tt>
+<a name="L293"></a><tt class="py-lineno">293</tt>  <tt class="py-line"><tt class="py-string">Une page existe d&#233;j&#224; : c'est cette page d'accueil. Vous pouvez en ajouter</tt> </tt>
+<a name="L294"></a><tt class="py-lineno">294</tt>  <tt class="py-line"><tt class="py-string">d'autres en cliquant sur le lien ci-dessous "Panneau d'administration", puis en</tt> </tt>
+<a name="L295"></a><tt class="py-lineno">295</tt>  <tt class="py-line"><tt class="py-string">cliquant sur '''Gestion des pages'''.</tt> </tt>
+<a name="L296"></a><tt class="py-lineno">296</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L297"></a><tt class="py-lineno">297</tt>  <tt class="py-line"><tt class="py-string">Chaque page que vous cr&#233;ez est d&#233;finie par son identifiant, ainsi que son</tt> </tt>
+<a name="L298"></a><tt class="py-lineno">298</tt>  <tt class="py-line"><tt class="py-string">titre. L'identifiant servira &#224; g&#233;n&#233;rer le nom du fichier. Le titre permet de</tt> </tt>
+<a name="L299"></a><tt class="py-lineno">299</tt>  <tt class="py-line"><tt class="py-string">vous y retrouver dans l'administration.</tt> </tt>
+<a name="L300"></a><tt class="py-lineno">300</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L301"></a><tt class="py-lineno">301</tt>  <tt class="py-line"><tt class="py-string">==== Les modules ====</tt> </tt>
+<a name="L302"></a><tt class="py-lineno">302</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L303"></a><tt class="py-lineno">303</tt>  <tt class="py-line"><tt class="py-string">Chaque page contient ce qu'on appelle des modules. Chaque module permet de</tt> </tt>
+<a name="L304"></a><tt class="py-lineno">304</tt>  <tt class="py-line"><tt class="py-string">g&#233;n&#233;rer du contenu r&#233;pondant &#224; un besoin particulier. Par exemple, le module</tt> </tt>
+<a name="L305"></a><tt class="py-lineno">305</tt>  <tt class="py-line"><tt class="py-string">"News" permet de g&#233;rer des nouvelles. Si vous l'activez sur la page MaPage, les</tt> </tt>
+<a name="L306"></a><tt class="py-lineno">306</tt>  <tt class="py-line"><tt class="py-string">news seront affich&#233;es sur la page MaPage. Il en va de m&#234;me pour les autres</tt> </tt>
+<a name="L307"></a><tt class="py-lineno">307</tt>  <tt class="py-line"><tt class="py-string">modules.</tt> </tt>
+<a name="L308"></a><tt class="py-lineno">308</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L309"></a><tt class="py-lineno">309</tt>  <tt class="py-line"><tt class="py-string">Chaque module poss&#232;de sa propre page de configuration, accessible depuis le</tt> </tt>
+<a name="L310"></a><tt class="py-lineno">310</tt>  <tt class="py-line"><tt class="py-string">panneau d'administration. Ainsi, pour ajouter une news, il vous suffit de</tt> </tt>
+<a name="L311"></a><tt class="py-lineno">311</tt>  <tt class="py-line"><tt class="py-string">cliquer sur le lien "Panneau d'administration" en bas de page, puis "Configurer</tt> </tt>
+<a name="L312"></a><tt class="py-lineno">312</tt>  <tt class="py-line"><tt class="py-string">le module news".</tt> </tt>
+<a name="L313"></a><tt class="py-lineno">313</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L314"></a><tt class="py-lineno">314</tt>  <tt class="py-line"><tt class="py-string">==== Le module Wiki ====</tt> </tt>
+<a name="L315"></a><tt class="py-lineno">315</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L316"></a><tt class="py-lineno">316</tt>  <tt class="py-line"><tt class="py-string">Ce module est plus particulier : il vous permet de mettre le texte de votre</tt> </tt>
+<a name="L317"></a><tt class="py-lineno">317</tt>  <tt class="py-line"><tt class="py-string">choix dans la page. La syntaxe wiki est la m&#234;me que celle de Wikipedia. Un</tt> </tt>
+<a name="L318"></a><tt class="py-lineno">318</tt>  <tt class="py-line"><tt class="py-string">bouton sp&#233;cial "&#201;diter wiki" vous permet de modifier le contenu de chaque page.</tt> </tt>
+<a name="L319"></a><tt class="py-lineno">319</tt>  <tt class="py-line"><tt class="py-string">C'est ainsi que nous avons saisi le texte que vous &#234;tes en train de lire. Vous</tt> </tt>
+<a name="L320"></a><tt class="py-lineno">320</tt>  <tt class="py-line"><tt class="py-string">pouvez le modifier en utilisant le raccourci en bas de page "Modifier cette</tt> </tt>
+<a name="L321"></a><tt class="py-lineno">321</tt>  <tt class="py-line"><tt class="py-string">page".</tt> </tt>
+<a name="L322"></a><tt class="py-lineno">322</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L323"></a><tt class="py-lineno">323</tt>  <tt class="py-line"><tt class="py-string">Vous pouvez retrouver le d&#233;tail de la syntaxe Wiki utilis&#233;e par ce logiciel sur</tt> </tt>
+<a name="L324"></a><tt class="py-lineno">324</tt>  <tt class="py-line"><tt class="py-string">la page [[WikiSyntax]].</tt> </tt>
+<a name="L325"></a><tt class="py-lineno">325</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L326"></a><tt class="py-lineno">326</tt>  <tt class="py-line"><tt class="py-string">=== Le menu ===</tt> </tt>
+<a name="L327"></a><tt class="py-lineno">327</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L328"></a><tt class="py-lineno">328</tt>  <tt class="py-line"><tt class="py-string">Un module est plus important que tous les autres : c'est le menu. Allez dans le</tt> </tt>
+<a name="L329"></a><tt class="py-lineno">329</tt>  <tt class="py-line"><tt class="py-string">panneau de configuration, puis cliquez sur "Configurer le module Menu". Vous</tt> </tt>
+<a name="L330"></a><tt class="py-lineno">330</tt>  <tt class="py-line"><tt class="py-string">pouvez ajouter des boutons au choix dans le menu : la cible de chaque bouton est</tt> </tt>
+<a name="L331"></a><tt class="py-lineno">331</tt>  <tt class="py-line"><tt class="py-string">une page du site, et le titre de chaque bouton est personnalisable. Une bonne</tt> </tt>
+<a name="L332"></a><tt class="py-lineno">332</tt>  <tt class="py-line"><tt class="py-string">id&#233;e est d'ajouter un bouton "Accueil" pointant vers la page d'accueil (celle-l&#224;</tt> </tt>
+<a name="L333"></a><tt class="py-lineno">333</tt>  <tt class="py-line"><tt class="py-string">m&#234;me que vous lisez).</tt> </tt>
+<a name="L334"></a><tt class="py-lineno">334</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L335"></a><tt class="py-lineno">335</tt>  <tt class="py-line"><tt class="py-string">=== La configuration g&#233;n&#233;rale ===</tt> </tt>
+<a name="L336"></a><tt class="py-lineno">336</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L337"></a><tt class="py-lineno">337</tt>  <tt class="py-line"><tt class="py-string">Il vous sera ensuite utile d'aller configurer les param&#232;tres g&#233;n&#233;raux de votre</tt> </tt>
+<a name="L338"></a><tt class="py-lineno">338</tt>  <tt class="py-line"><tt class="py-string">site. Vous pourrez par exemple changer votre style : CoMFoRT est livr&#233; avec de</tt> </tt>
+<a name="L339"></a><tt class="py-lineno">339</tt>  <tt class="py-line"><tt class="py-string">nombreux styles diff&#233;rents. Par exemple, le style "lite" fournit un effet</tt> </tt>
+<a name="L340"></a><tt class="py-lineno">340</tt>  <tt class="py-line"><tt class="py-string">int&#233;ressant pour les News. Vous pouvez essayer la combinaison suivante : page</tt> </tt>
+<a name="L341"></a><tt class="py-lineno">341</tt>  <tt class="py-line"><tt class="py-string">d'accueil avec les modules Menu, News, Wiki (dans cet ordre) et le style lite.</tt> </tt>
+<a name="L342"></a><tt class="py-lineno">342</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L343"></a><tt class="py-lineno">343</tt>  <tt class="py-line"><tt class="py-string">==== Les param&#232;tres FTP ====</tt> </tt>
+<a name="L344"></a><tt class="py-lineno">344</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L345"></a><tt class="py-lineno">345</tt>  <tt class="py-line"><tt class="py-string">Lorsque nous publierons la version statique de votre site, nous aurons besoin</tt> </tt>
+<a name="L346"></a><tt class="py-lineno">346</tt>  <tt class="py-line"><tt class="py-string">des informations concernant votre espace de stockage. Exemple typique de</tt> </tt>
+<a name="L347"></a><tt class="py-lineno">347</tt>  <tt class="py-line"><tt class="py-string">param&#232;tres :</tt> </tt>
+<a name="L348"></a><tt class="py-lineno">348</tt>  <tt class="py-line"><tt class="py-string">* h&#244;te : perso.ens-lyon.fr</tt> </tt>
+<a name="L349"></a><tt class="py-lineno">349</tt>  <tt class="py-line"><tt class="py-string">* nom d'utilisateur : votrelogin</tt> </tt>
+<a name="L350"></a><tt class="py-lineno">350</tt>  <tt class="py-line"><tt class="py-string">* mot de passe : votremotdepasse</tt> </tt>
+<a name="L351"></a><tt class="py-lineno">351</tt>  <tt class="py-line"><tt class="py-string">* racine : comfort</tt> </tt>
+<a name="L352"></a><tt class="py-lineno">352</tt>  <tt class="py-line"><tt class="py-string">en supposant que vous avez cr&#233;&#233; un dossier "comfort" dans votre espace</tt> </tt>
+<a name="L353"></a><tt class="py-lineno">353</tt>  <tt class="py-line"><tt class="py-string">personnel.</tt> </tt>
+<a name="L354"></a><tt class="py-lineno">354</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L355"></a><tt class="py-lineno">355</tt>  <tt class="py-line"><tt class="py-string">=== La publication du site ===</tt> </tt>
+<a name="L356"></a><tt class="py-lineno">356</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L357"></a><tt class="py-lineno">357</tt>  <tt class="py-line"><tt class="py-string">Une fois que votre site vous convient, il est temps de l'envoyer vers votre</tt> </tt>
+<a name="L358"></a><tt class="py-lineno">358</tt>  <tt class="py-line"><tt class="py-string">espace personnel : c'est le r&#244;le du bouton "synchroniser" dans l'interface</tt> </tt>
+<a name="L359"></a><tt class="py-lineno">359</tt>  <tt class="py-line"><tt class="py-string">d'administration.</tt> </tt>
+<a name="L360"></a><tt class="py-lineno">360</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L361"></a><tt class="py-lineno">361</tt>  <tt class="py-line"><tt class="py-string">=== Termin&#233; ? ===</tt> </tt>
+<a name="L362"></a><tt class="py-lineno">362</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L363"></a><tt class="py-lineno">363</tt>  <tt class="py-line"><tt class="py-string">N'oubliez pas d'&#233;teindre le serveur local via le bouton arr&#234;ter de l'interface</tt> </tt>
+<a name="L364"></a><tt class="py-lineno">364</tt>  <tt class="py-line"><tt class="py-string">d'administration.</tt> </tt>
+<a name="L365"></a><tt class="py-lineno">365</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L366"></a><tt class="py-lineno">366</tt>  <tt class="py-line"><tt class="py-string">== Utiliser votre contenu dans CoMFoRT (images, pages...) ==</tt> </tt>
+<a name="L367"></a><tt class="py-lineno">367</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L368"></a><tt class="py-lineno">368</tt>  <tt class="py-line"><tt class="py-string">Vous pouvez ajouter du contenu cr&#233;&#233; par vous dans votre site : des images, des</tt> </tt>
+<a name="L369"></a><tt class="py-lineno">369</tt>  <tt class="py-line"><tt class="py-string">pages que vous ne voulez pas que CoMFoRT g&#233;n&#232;re, des documents PDF... Il suffit</tt> </tt>
+<a name="L370"></a><tt class="py-lineno">370</tt>  <tt class="py-line"><tt class="py-string">de les mettre dans l'un des trois dossiers suivants :</tt> </tt>
+<a name="L371"></a><tt class="py-lineno">371</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L372"></a><tt class="py-lineno">372</tt>  <tt class="py-line"><tt class="py-string">* ~/.comfort/perso/pages pour les pages HTML (ou PHP, peu importe) ;</tt> </tt>
+<a name="L373"></a><tt class="py-lineno">373</tt>  <tt class="py-line"><tt class="py-string">* ~/.comfort/perso/pictures pour les images ;</tt> </tt>
+<a name="L374"></a><tt class="py-lineno">374</tt>  <tt class="py-line"><tt class="py-string">* ~/.comfort/perso/docs pour les documents PDF par exemple.</tt> </tt>
+<a name="L375"></a><tt class="py-lineno">375</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L376"></a><tt class="py-lineno">376</tt>  <tt class="py-line"><tt class="py-string">Ces fichiers seront automatiquement envoy&#233;s sur le serveur avec votre site</tt> </tt>
+<a name="L377"></a><tt class="py-lineno">377</tt>  <tt class="py-line"><tt class="py-string">lorsque vous demanderez une synchronisation. Pour faire r&#233;f&#233;rence &#224; l'un de ces</tt> </tt>
+<a name="L378"></a><tt class="py-lineno">378</tt>  <tt class="py-line"><tt class="py-string">fichiers depuis le Wiki, utilisez : &lt;nowiki&gt;[Picture:nomdevotreimage.ext], [Page:votrepage.php], [Doc:votrefichier.pdf]&lt;/nowiki&gt;</tt> </tt>
+<a name="L379"></a><tt class="py-lineno">379</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L380"></a><tt class="py-lineno">380</tt>  <tt class="py-line"><tt class="py-string">Pour r&#233;f&#233;rencer une image externe, utilisez :</tt> </tt>
+<a name="L381"></a><tt class="py-lineno">381</tt>  <tt class="py-line"><tt class="py-string">&lt;nowiki&gt;[[Image:http://www.votresite.com/image.jpg]]&lt;/nowiki&gt;</tt> </tt>
+<a name="L382"></a><tt class="py-lineno">382</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L383"></a><tt class="py-lineno">383</tt>  <tt class="py-line"><tt class="py-string">== &#201;tendre CoMFoRT ==</tt> </tt>
+<a name="L384"></a><tt class="py-lineno">384</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L385"></a><tt class="py-lineno">385</tt>  <tt class="py-line"><tt class="py-string">CoMFoRT a &#233;t&#233; d&#232;s le d&#233;part pr&#233;vu pour &#234;tre facilement extensible. Nous serions</tt> </tt>
+<a name="L386"></a><tt class="py-lineno">386</tt>  <tt class="py-line"><tt class="py-string">heureux d'accueillir tout type de contributions. Voici par o&#249; commencer. </tt> </tt>
+<a name="L387"></a><tt class="py-lineno">387</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L388"></a><tt class="py-lineno">388</tt>  <tt class="py-line"><tt class="py-string">=== Une feuille de style ? Rien de plus simple ! ===</tt> </tt>
+<a name="L389"></a><tt class="py-lineno">389</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L390"></a><tt class="py-lineno">390</tt>  <tt class="py-line"><tt class="py-string">Pour ajouter une feuille de style, il vous suffit de cr&#233;er un dossier portant</tt> </tt>
+<a name="L391"></a><tt class="py-lineno">391</tt>  <tt class="py-line"><tt class="py-string">son nom dans "styles", &#224; la racine de votre installation, et un fichier</tt> </tt>
+<a name="L392"></a><tt class="py-lineno">392</tt>  <tt class="py-line"><tt class="py-string">style.css. Les styles sont largement document&#233;s, comme "blue", et vous trouverez</tt> </tt>
+<a name="L393"></a><tt class="py-lineno">393</tt>  <tt class="py-line"><tt class="py-string">tous les s&#233;lecteurs dont vous pouvez avoir besoin dans "blue" ou "lite".</tt> </tt>
+<a name="L394"></a><tt class="py-lineno">394</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L395"></a><tt class="py-lineno">395</tt>  <tt class="py-line"><tt class="py-string">=== Un module ? Easy too ! ===</tt> </tt>
+<a name="L396"></a><tt class="py-lineno">396</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L397"></a><tt class="py-lineno">397</tt>  <tt class="py-line"><tt class="py-string">Vous pouvez cr&#233;er un module correspondant &#224; vos besoins en cr&#233;ant un fichier</tt> </tt>
+<a name="L398"></a><tt class="py-lineno">398</tt>  <tt class="py-line"><tt class="py-string">themodule_NomDeVotreModule.py dans le dossier "modules". Il devra contenir une</tt> </tt>
+<a name="L399"></a><tt class="py-lineno">399</tt>  <tt class="py-line"><tt class="py-string">classe TheModule h&#233;ritant de ComfortModule, ainsi que des interfaces</tt> </tt>
+<a name="L400"></a><tt class="py-lineno">400</tt>  <tt class="py-line"><tt class="py-string">correspondant &#224; ce que fait le module : IModuleAdminPage s'il a une page dans le</tt> </tt>
+<a name="L401"></a><tt class="py-lineno">401</tt>  <tt class="py-line"><tt class="py-string">panneau d'administration, IModuleContentProvider s'il g&#233;n&#232;re du contenu,</tt> </tt>
+<a name="L402"></a><tt class="py-lineno">402</tt>  <tt class="py-line"><tt class="py-string">IModuleDB s'il utilise la base de donn&#233;es. Vous devez impl&#233;menter les fonctions</tt> </tt>
+<a name="L403"></a><tt class="py-lineno">403</tt>  <tt class="py-line"><tt class="py-string">d&#233;finies par l'interface si vous h&#233;ritez de celle-ci : voir module_interfaces.py</tt> </tt>
+<a name="L404"></a><tt class="py-lineno">404</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L405"></a><tt class="py-lineno">405</tt>  <tt class="py-line"><tt class="py-string">La documentation g&#233;n&#233;r&#233;e automatiquement est &#233;galement un excellent point de</tt> </tt>
+<a name="L406"></a><tt class="py-lineno">406</tt>  <tt class="py-line"><tt class="py-string">d&#233;part : elle contient en effet des diagrammes d'h&#233;ritage permettant de voir</tt> </tt>
+<a name="L407"></a><tt class="py-lineno">407</tt>  <tt class="py-line"><tt class="py-string">facilement comment penser un module. Elle est livr&#233;e dans l'archive que vous</tt> </tt>
+<a name="L408"></a><tt class="py-lineno">408</tt>  <tt class="py-line"><tt class="py-string">avez t&#233;l&#233;charg&#233;e.</tt> </tt>
+<a name="L409"></a><tt class="py-lineno">409</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L410"></a><tt class="py-lineno">410</tt>  <tt class="py-line"><tt class="py-string">Le module "News" par exemple vous fournira un bon exemple de gestion de</tt> </tt>
+<a name="L411"></a><tt class="py-lineno">411</tt>  <tt class="py-line"><tt class="py-string">formulaire d'administration et de g&#233;n&#233;ration de contenu, le tout gr&#226;ce &#224; la base</tt> </tt>
+<a name="L412"></a><tt class="py-lineno">412</tt>  <tt class="py-line"><tt class="py-string">de donn&#233;es.</tt> </tt>
+<a name="L413"></a><tt class="py-lineno">413</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L414"></a><tt class="py-lineno">414</tt>  <tt class="py-line"><tt class="py-string">=== Tenez-nous au courant ! ===</tt> </tt>
+<a name="L415"></a><tt class="py-lineno">415</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L416"></a><tt class="py-lineno">416</tt>  <tt class="py-line"><tt class="py-string">Postez vos modifications sur [http://graal.ens-lyon.fr/comfort/] !</tt> </tt>
+<a name="L417"></a><tt class="py-lineno">417</tt>  <tt class="py-line"><tt class="py-string"></tt> </tt>
+<a name="L418"></a><tt class="py-lineno">418</tt>  <tt class="py-line"><tt class="py-string">"""</tt> </tt>
+<a name="L419"></a><tt class="py-lineno">419</tt>  <tt class="py-line"><tt id="link-48" class="py-name" targets="Variable conf.confstatic.pages_database_prefix=conf.confstatic-module.html#pages_database_prefix"><a title="conf.confstatic.pages_database_prefix" class="py-name" href="#" onclick="return doclink('link-48', 'pages_database_prefix', 'link-48');">pages_database_prefix</a></tt> <tt class="py-op">=</tt> <tt class="py-string">"pages"</tt> </tt>
+<a name="L420"></a><tt class="py-lineno">420</tt>  <tt class="py-line"><tt class="py-comment">##So that menu filters only relevant pages</tt> </tt>
+<a name="L421"></a><tt class="py-lineno">421</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#Pour que le menu filtre seulement les pages int&#233;ressantes</tt> </tt>
+<a name="L422"></a><tt class="py-lineno">422</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt id="link-49" class="py-name" targets="Variable conf.confstatic.pages_perso_extensions=conf.confstatic-module.html#pages_perso_extensions"><a title="conf.confstatic.pages_perso_extensions" class="py-name" href="#" onclick="return doclink('link-49', 'pages_perso_extensions', 'link-49');">pages_perso_extensions</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-string">"html"</tt><tt class="py-op">,</tt><tt class="py-string">"xhtml"</tt><tt class="py-op">,</tt><tt class="py-string">"xml"</tt><tt class="py-op">,</tt><tt class="py-string">"php"</tt><tt class="py-op">,</tt><tt class="py-string">"py"</tt><tt class="py-op">]</tt> </tt>
+<a name="L423"></a><tt class="py-lineno">423</tt>  <tt class="py-line"> </tt>
+<a name="L424"></a><tt class="py-lineno">424</tt>  <tt class="py-line"><tt class="py-comment">##Internationalization</tt> </tt>
+<a name="L425"></a><tt class="py-lineno">425</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#Internationalisation</tt> </tt>
+<a name="L426"></a><tt class="py-lineno">426</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt id="link-50" class="py-name" targets="Variable conf.confstatic.possible_languages=conf.confstatic-module.html#possible_languages"><a title="conf.confstatic.possible_languages" class="py-name" href="#" onclick="return doclink('link-50', 'possible_languages', 'link-50');">possible_languages</a></tt><tt class="py-op">=</tt><tt class="py-op">[</tt><tt class="py-op">(</tt><tt class="py-string">"fra"</tt><tt class="py-op">,</tt><tt class="py-string">"fran&#231;ais"</tt><tt class="py-op">)</tt><tt class="py-op">,</tt><tt class="py-op">(</tt><tt class="py-string">"eng"</tt><tt class="py-op">,</tt><tt class="py-string">"english"</tt><tt class="py-op">)</tt><tt class="py-op">]</tt> </tt>
+<a name="L427"></a><tt class="py-lineno">427</tt>  <tt class="py-line"> </tt>
+<a name="L428"></a><tt class="py-lineno">428</tt>  <tt class="py-line"><tt class="py-comment">##Path to FOP</tt> </tt>
+<a name="L429"></a><tt class="py-lineno">429</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#Chemin pour FOP</tt> </tt>
+<a name="L430"></a><tt class="py-lineno">430</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-keyword">if</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">name</tt> <tt class="py-op">==</tt> <tt class="py-string">'posix'</tt><tt class="py-op">:</tt> </tt>
+<a name="L431"></a><tt class="py-lineno">431</tt>  <tt class="py-line">  <tt id="link-51" class="py-name" targets="Variable conf.confstatic.fop_path=conf.confstatic-module.html#fop_path"><a title="conf.confstatic.fop_path" class="py-name" href="#" onclick="return doclink('link-51', 'fop_path', 'link-51');">fop_path</a></tt> <tt class="py-op">=</tt> <tt class="py-string">"templates/fop/fop"</tt> </tt>
+<a name="L432"></a><tt class="py-lineno">432</tt>  <tt class="py-line"><tt class="py-keyword">elif</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">name</tt> <tt class="py-op">==</tt> <tt class="py-string">'mac'</tt><tt class="py-op">:</tt> </tt>
+<a name="L433"></a><tt class="py-lineno">433</tt>  <tt class="py-line">  <tt id="link-52" class="py-name"><a title="conf.confstatic.fop_path" class="py-name" href="#" onclick="return doclink('link-52', 'fop_path', 'link-51');">fop_path</a></tt> <tt class="py-op">=</tt> <tt class="py-string">"templates/fop/fop"</tt> </tt>
+<a name="L434"></a><tt class="py-lineno">434</tt>  <tt class="py-line"><tt class="py-keyword">elif</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">name</tt> <tt class="py-op">==</tt> <tt class="py-string">'nt'</tt><tt class="py-op">:</tt> </tt>
+<a name="L435"></a><tt class="py-lineno">435</tt>  <tt class="py-line">  <tt id="link-53" class="py-name"><a title="conf.confstatic.fop_path" class="py-name" href="#" onclick="return doclink('link-53', 'fop_path', 'link-51');">fop_path</a></tt> <tt class="py-op">=</tt> <tt class="py-string">"templates\\fop\\fop.bat"</tt> </tt>
+<a name="L436"></a><tt class="py-lineno">436</tt>  <tt class="py-line"> </tt>
+<a name="L437"></a><tt class="py-lineno">437</tt>  <tt class="py-line"><tt id="link-54" class="py-name" targets="Variable conf.confstatic.nt_python_path=conf.confstatic-module.html#nt_python_path"><a title="conf.confstatic.nt_python_path" class="py-name" href="#" onclick="return doclink('link-54', 'nt_python_path', 'link-54');">nt_python_path</a></tt> <tt class="py-op">=</tt> <tt class="py-string">'c:\\Python25\\'</tt> </tt>
+<a name="L438"></a><tt class="py-lineno">438</tt>  <tt class="py-line"><tt id="link-55" class="py-name" targets="Variable conf.confstatic.nt_has_java=conf.confstatic-module.html#nt_has_java"><a title="conf.confstatic.nt_has_java" class="py-name" href="#" onclick="return doclink('link-55', 'nt_has_java', 'link-55');">nt_has_java</a></tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> </tt>
+<a name="L439"></a><tt class="py-lineno">439</tt>  <tt class="py-line"> </tt>
+<a name="dblatex_path"></a><div id="dblatex_path-def"><a name="L440"></a><tt class="py-lineno">440</tt> <a class="py-toggle" href="#" id="dblatex_path-toggle" onclick="return toggle('dblatex_path');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="conf.confstatic-module.html#dblatex_path">dblatex_path</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="dblatex_path-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="dblatex_path-expanded"><a name="L441"></a><tt class="py-lineno">441</tt>  <tt class="py-line">  <tt class="py-keyword">if</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">name</tt> <tt class="py-op">==</tt> <tt class="py-string">'nt'</tt><tt class="py-op">:</tt> </tt>
+<a name="L442"></a><tt class="py-lineno">442</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt id="link-56" class="py-name"><a title="conf.confstatic.nt_python_path" class="py-name" href="#" onclick="return doclink('link-56', 'nt_python_path', 'link-54');">nt_python_path</a></tt><tt class="py-op">+</tt><tt class="py-string">"Scripts\\dblatex"</tt> </tt>
+<a name="L443"></a><tt class="py-lineno">443</tt>  <tt class="py-line">  <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L444"></a><tt class="py-lineno">444</tt>  <tt class="py-line">    <tt class="py-name">dirs</tt> <tt class="py-op">=</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">getenv</tt><tt class="py-op">(</tt><tt class="py-string">"PATH"</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">split</tt><tt class="py-op">(</tt><tt class="py-string">":"</tt><tt class="py-op">)</tt> </tt>
+<a name="L445"></a><tt class="py-lineno">445</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt id="link-57" class="py-name" targets="Variable db.test.d=db.test-module.html#d,Variable db.test_xml.d=db.test_xml-module.html#d"><a title="db.test.d
+db.test_xml.d" class="py-name" href="#" onclick="return doclink('link-57', 'd', 'link-57');">d</a></tt> <tt class="py-keyword">in</tt> <tt class="py-name">dirs</tt><tt class="py-op">:</tt> </tt>
+<a name="L446"></a><tt class="py-lineno">446</tt>  <tt class="py-line">      <tt id="link-58" class="py-name" targets="Variable cgibin.admin.p=cgibin.admin-module.html#p,Variable cgibin.adminvalid.p=cgibin.adminvalid-module.html#p,Variable cgibin.handler.p=cgibin.handler-module.html#p,Variable cgibin.please_install.p=cgibin.please_install-module.html#p"><a title="cgibin.admin.p
+cgibin.adminvalid.p
+cgibin.handler.p
+cgibin.please_install.p" class="py-name" href="#" onclick="return doclink('link-58', 'p', 'link-58');">p</a></tt> <tt class="py-op">=</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt id="link-59" class="py-name"><a title="db.test.d
+db.test_xml.d" class="py-name" href="#" onclick="return doclink('link-59', 'd', 'link-57');">d</a></tt><tt class="py-op">,</tt> <tt class="py-string">"dblatex"</tt><tt class="py-op">)</tt> </tt>
+<a name="L447"></a><tt class="py-lineno">447</tt>  <tt class="py-line">      <tt class="py-keyword">if</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">isfile</tt><tt class="py-op">(</tt><tt id="link-60" class="py-name"><a title="cgibin.admin.p
+cgibin.adminvalid.p
+cgibin.handler.p
+cgibin.please_install.p" class="py-name" href="#" onclick="return doclink('link-60', 'p', 'link-58');">p</a></tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L448"></a><tt class="py-lineno">448</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt id="link-61" class="py-name"><a title="cgibin.admin.p
+cgibin.adminvalid.p
+cgibin.handler.p
+cgibin.please_install.p" class="py-name" href="#" onclick="return doclink('link-61', 'p', 'link-58');">p</a></tt> </tt>
+<a name="L449"></a><tt class="py-lineno">449</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-string">""</tt> </tt>
+</div><a name="L450"></a><tt class="py-lineno">450</tt>  <tt class="py-line"> </tt>
+<a name="scp_path"></a><div id="scp_path-def"><a name="L451"></a><tt class="py-lineno">451</tt> <a class="py-toggle" href="#" id="scp_path-toggle" onclick="return toggle('scp_path');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="conf.confstatic-module.html#scp_path">scp_path</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="scp_path-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="scp_path-expanded"><a name="L452"></a><tt class="py-lineno">452</tt>  <tt class="py-line">  <tt class="py-keyword">if</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">name</tt> <tt class="py-op">==</tt> <tt class="py-string">'nt'</tt><tt class="py-op">:</tt> </tt>
+<a name="L453"></a><tt class="py-lineno">453</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-string">""</tt> </tt>
+<a name="L454"></a><tt class="py-lineno">454</tt>  <tt class="py-line">  <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L455"></a><tt class="py-lineno">455</tt>  <tt class="py-line">    <tt class="py-name">dirs</tt> <tt class="py-op">=</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">getenv</tt><tt class="py-op">(</tt><tt class="py-string">"PATH"</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">split</tt><tt class="py-op">(</tt><tt class="py-string">":"</tt><tt class="py-op">)</tt> </tt>
+<a name="L456"></a><tt class="py-lineno">456</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt id="link-62" class="py-name"><a title="db.test.d
+db.test_xml.d" class="py-name" href="#" onclick="return doclink('link-62', 'd', 'link-57');">d</a></tt> <tt class="py-keyword">in</tt> <tt class="py-name">dirs</tt><tt class="py-op">:</tt> </tt>
+<a name="L457"></a><tt class="py-lineno">457</tt>  <tt class="py-line">      <tt id="link-63" class="py-name"><a title="cgibin.admin.p
+cgibin.adminvalid.p
+cgibin.handler.p
+cgibin.please_install.p" class="py-name" href="#" onclick="return doclink('link-63', 'p', 'link-58');">p</a></tt> <tt class="py-op">=</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt id="link-64" class="py-name"><a title="db.test.d
+db.test_xml.d" class="py-name" href="#" onclick="return doclink('link-64', 'd', 'link-57');">d</a></tt><tt class="py-op">,</tt> <tt class="py-string">"scp"</tt><tt class="py-op">)</tt> </tt>
+<a name="L458"></a><tt class="py-lineno">458</tt>  <tt class="py-line">      <tt class="py-keyword">if</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">isfile</tt><tt class="py-op">(</tt><tt id="link-65" class="py-name"><a title="cgibin.admin.p
+cgibin.adminvalid.p
+cgibin.handler.p
+cgibin.please_install.p" class="py-name" href="#" onclick="return doclink('link-65', 'p', 'link-58');">p</a></tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L459"></a><tt class="py-lineno">459</tt>  <tt class="py-line">        <tt class="py-keyword">return</tt> <tt id="link-66" class="py-name"><a title="cgibin.admin.p
+cgibin.adminvalid.p
+cgibin.handler.p
+cgibin.please_install.p" class="py-name" href="#" onclick="return doclink('link-66', 'p', 'link-58');">p</a></tt> </tt>
+<a name="L460"></a><tt class="py-lineno">460</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-string">""</tt> </tt>
+</div><a name="L461"></a><tt class="py-lineno">461</tt>  <tt class="py-line"> </tt>
+<a name="get_user_server_port"></a><div id="get_user_server_port-def"><a name="L462"></a><tt class="py-lineno">462</tt> <a class="py-toggle" href="#" id="get_user_server_port-toggle" onclick="return toggle('get_user_server_port');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="conf.confstatic-module.html#get_user_server_port">get_user_server_port</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="get_user_server_port-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="get_user_server_port-expanded"><a name="L463"></a><tt class="py-lineno">463</tt>  <tt class="py-line">  <tt class="py-keyword">if</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">name</tt> <tt class="py-op">==</tt> <tt class="py-string">'nt'</tt><tt class="py-op">:</tt> </tt>
+<a name="L464"></a><tt class="py-lineno">464</tt>  <tt class="py-line">    <tt class="py-comment"># sous windows, y a des uid ou pas ? quelqu'un sait ?</tt> </tt>
+<a name="L465"></a><tt class="py-lineno">465</tt>  <tt class="py-line"><tt class="py-comment"></tt>    <tt class="py-comment"># &#224; d&#233;faut, on fait un exp&#232;ce de hash md5 du home (oui, c'est nul)</tt> </tt>
+<a name="L466"></a><tt class="py-lineno">466</tt>  <tt class="py-line"><tt class="py-comment"></tt>    <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L467"></a><tt class="py-lineno">467</tt>  <tt class="py-line">      <tt class="py-keyword">import</tt> <tt class="py-name">hashlib</tt> </tt>
+<a name="L468"></a><tt class="py-lineno">468</tt>  <tt class="py-line">    <tt class="py-keyword">except</tt> <tt class="py-name">ImportError</tt><tt class="py-op">:</tt> </tt>
+<a name="L469"></a><tt class="py-lineno">469</tt>  <tt class="py-line">      <tt class="py-keyword">import</tt> <tt class="py-name">md5</tt> <tt class="py-keyword">as</tt> <tt class="py-name">hashlib</tt> </tt>
+<a name="L470"></a><tt class="py-lineno">470</tt>  <tt class="py-line">    <tt class="py-name">uid</tt> <tt class="py-op">=</tt> <tt class="py-name">ord</tt><tt class="py-op">(</tt><tt class="py-name">hashlib</tt><tt class="py-op">.</tt><tt class="py-name">md5</tt><tt class="py-op">(</tt><tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">expanduser</tt><tt class="py-op">(</tt><tt class="py-string">"~"</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">digest</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-number">7</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> <tt class="py-op">%</tt> <tt class="py-number">79</tt> <tt class="py-op">+</tt> <tt class="py-number">1</tt>  <tt class="py-comment"># que quelqu'un fasse plus crade s'il peut ! ! !</tt> </tt>
+<a name="L471"></a><tt class="py-lineno">471</tt>  <tt class="py-line">  <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L472"></a><tt class="py-lineno">472</tt>  <tt class="py-line">    <tt class="py-name">uid</tt> <tt class="py-op">=</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">getuid</tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">-</tt><tt class="py-number">999</tt> </tt>
+<a name="L473"></a><tt class="py-lineno">473</tt>  <tt class="py-line">  <tt class="py-keyword">return</tt> <tt class="py-number">8000</tt><tt class="py-op">+</tt><tt class="py-name">uid</tt> </tt>
+</div><a name="L474"></a><tt class="py-lineno">474</tt>  <tt class="py-line"> </tt>
+<a name="L475"></a><tt class="py-lineno">475</tt>  <tt class="py-line"> </tt>
+<a name="L476"></a><tt class="py-lineno">476</tt>  <tt class="py-line"><tt class="py-keyword">if</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">getenv</tt><tt class="py-op">(</tt><tt class="py-string">"SERVER_SOFTWARE"</tt><tt class="py-op">)</tt> <tt class="py-keyword">and</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">getenv</tt><tt class="py-op">(</tt><tt class="py-string">"SERVER_SOFTWARE"</tt><tt class="py-op">)</tt><tt class="py-op">.</tt><tt class="py-name">startswith</tt><tt class="py-op">(</tt><tt class="py-string">"Apache"</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L477"></a><tt class="py-lineno">477</tt>  <tt class="py-line">  <tt id="link-67" class="py-name" targets="Variable conf.confstatic.config_url=conf.confstatic-module.html#config_url"><a title="conf.confstatic.config_url" class="py-name" href="#" onclick="return doclink('link-67', 'config_url', 'link-67');">config_url</a></tt> <tt class="py-op">=</tt> <tt class="py-string">"http://localhost/.comfort/"</tt> </tt>
+<a name="L478"></a><tt class="py-lineno">478</tt>  <tt class="py-line"><tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L479"></a><tt class="py-lineno">479</tt>  <tt class="py-line">  <tt id="link-68" class="py-name"><a title="conf.confstatic.config_url" class="py-name" href="#" onclick="return doclink('link-68', 'config_url', 'link-67');">config_url</a></tt> <tt class="py-op">=</tt> <tt class="py-string">'http://localhost:'</tt><tt class="py-op">+</tt><tt class="py-name">str</tt><tt class="py-op">(</tt><tt id="link-69" class="py-name" targets="Function conf.confstatic.get_user_server_port()=conf.confstatic-module.html#get_user_server_port"><a title="conf.confstatic.get_user_server_port" class="py-name" href="#" onclick="return doclink('link-69', 'get_user_server_port', 'link-69');">get_user_server_port</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">)</tt><tt class="py-op">+</tt><tt class="py-string">'/'</tt> </tt>
+<a name="L480"></a><tt class="py-lineno">480</tt>  <tt class="py-line"> </tt>
+<a name="L481"></a><tt class="py-lineno">481</tt>  <tt class="py-line"><tt class="py-comment">##Paths</tt> </tt>
+<a name="L482"></a><tt class="py-lineno">482</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#Chemins</tt> </tt>
+<a name="L483"></a><tt class="py-lineno">483</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt id="link-70" class="py-name" targets="Variable conf.confstatic.l2p_path=conf.confstatic-module.html#l2p_path"><a title="conf.confstatic.l2p_path" class="py-name" href="#" onclick="return doclink('link-70', 'l2p_path', 'link-70');">l2p_path</a></tt><tt class="py-op">=</tt><tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt class="py-string">"l2p"</tt><tt class="py-op">,</tt><tt class="py-string">"l2p"</tt><tt class="py-op">)</tt> </tt>
+<a name="L484"></a><tt class="py-lineno">484</tt>  <tt class="py-line"><tt id="link-71" class="py-name" targets="Variable conf.confstatic.latex_path=conf.confstatic-module.html#latex_path"><a title="conf.confstatic.latex_path" class="py-name" href="#" onclick="return doclink('link-71', 'latex_path', 'link-71');">latex_path</a></tt><tt class="py-op">=</tt><tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt id="link-72" class="py-name"><a title="conf.confstatic.config_path" class="py-name" href="#" onclick="return doclink('link-72', 'config_path', 'link-21');">config_path</a></tt><tt class="py-op">,</tt><tt class="py-string">"latex"</tt><tt class="py-op">)</tt> </tt>
+<a name="L485"></a><tt class="py-lineno">485</tt>  <tt class="py-line"><tt id="link-73" class="py-name"><a title="conf.confstatic.latex_url" class="py-name" href="#" onclick="return doclink('link-73', 'latex_url', 'link-36');">latex_url</a></tt><tt class="py-op">=</tt><tt id="link-74" class="py-name"><a title="conf.confstatic.config_url" class="py-name" href="#" onclick="return doclink('link-74', 'config_url', 'link-67');">config_url</a></tt><tt class="py-op">+</tt><tt class="py-string">"latex"</tt> </tt>
+<a name="L486"></a><tt class="py-lineno">486</tt>  <tt class="py-line"><tt id="link-75" class="py-name" targets="Variable conf.confstatic.perso_path=conf.confstatic-module.html#perso_path"><a title="conf.confstatic.perso_path" class="py-name" href="#" onclick="return doclink('link-75', 'perso_path', 'link-75');">perso_path</a></tt> <tt class="py-op">=</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt id="link-76" class="py-name"><a title="conf.confstatic.config_path" class="py-name" href="#" onclick="return doclink('link-76', 'config_path', 'link-21');">config_path</a></tt><tt class="py-op">,</tt><tt class="py-string">"perso"</tt><tt class="py-op">)</tt> </tt>
+<a name="L487"></a><tt class="py-lineno">487</tt>  <tt class="py-line"><tt id="link-77" class="py-name"><a title="conf.confstatic.perso_url" class="py-name" href="#" onclick="return doclink('link-77', 'perso_url', 'link-27');">perso_url</a></tt><tt class="py-op">=</tt><tt id="link-78" class="py-name"><a title="conf.confstatic.config_url" class="py-name" href="#" onclick="return doclink('link-78', 'config_url', 'link-67');">config_url</a></tt><tt class="py-op">+</tt><tt class="py-string">"perso"</tt> </tt>
+<a name="L488"></a><tt class="py-lineno">488</tt>  <tt class="py-line"><tt id="link-79" class="py-name" targets="Variable conf.confstatic.pages_path=conf.confstatic-module.html#pages_path"><a title="conf.confstatic.pages_path" class="py-name" href="#" onclick="return doclink('link-79', 'pages_path', 'link-79');">pages_path</a></tt><tt class="py-op">=</tt><tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt id="link-80" class="py-name"><a title="conf.confstatic.perso_path" class="py-name" href="#" onclick="return doclink('link-80', 'perso_path', 'link-75');">perso_path</a></tt><tt class="py-op">,</tt><tt class="py-string">"pages"</tt><tt class="py-op">)</tt> </tt>
+<a name="L489"></a><tt class="py-lineno">489</tt>  <tt class="py-line"><tt id="link-81" class="py-name" targets="Variable conf.confstatic.pages_url=conf.confstatic-module.html#pages_url"><a title="conf.confstatic.pages_url" class="py-name" href="#" onclick="return doclink('link-81', 'pages_url', 'link-81');">pages_url</a></tt><tt class="py-op">=</tt><tt id="link-82" class="py-name"><a title="conf.confstatic.config_url" class="py-name" href="#" onclick="return doclink('link-82', 'config_url', 'link-67');">config_url</a></tt><tt class="py-op">+</tt><tt class="py-string">"pages"</tt> </tt>
+<a name="L490"></a><tt class="py-lineno">490</tt>  <tt class="py-line"><tt id="link-83" class="py-name" targets="Variable conf.confstatic.docs_path=conf.confstatic-module.html#docs_path"><a title="conf.confstatic.docs_path" class="py-name" href="#" onclick="return doclink('link-83', 'docs_path', 'link-83');">docs_path</a></tt> <tt class="py-op">=</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt id="link-84" class="py-name"><a title="conf.confstatic.perso_path" class="py-name" href="#" onclick="return doclink('link-84', 'perso_path', 'link-75');">perso_path</a></tt><tt class="py-op">,</tt> <tt class="py-string">"docs"</tt><tt class="py-op">)</tt> </tt>
+<a name="L491"></a><tt class="py-lineno">491</tt>  <tt class="py-line"><tt id="link-85" class="py-name"><a title="conf.confstatic.docs_url" class="py-name" href="#" onclick="return doclink('link-85', 'docs_url', 'link-33');">docs_url</a></tt><tt class="py-op">=</tt><tt id="link-86" class="py-name"><a title="conf.confstatic.config_url" class="py-name" href="#" onclick="return doclink('link-86', 'config_url', 'link-67');">config_url</a></tt><tt class="py-op">+</tt><tt class="py-string">"docs"</tt> </tt>
+<a name="L492"></a><tt class="py-lineno">492</tt>  <tt class="py-line"><tt id="link-87" class="py-name" targets="Variable conf.confstatic.pictures_path=conf.confstatic-module.html#pictures_path"><a title="conf.confstatic.pictures_path" class="py-name" href="#" onclick="return doclink('link-87', 'pictures_path', 'link-87');">pictures_path</a></tt> <tt class="py-op">=</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt id="link-88" class="py-name"><a title="conf.confstatic.perso_path" class="py-name" href="#" onclick="return doclink('link-88', 'perso_path', 'link-75');">perso_path</a></tt><tt class="py-op">,</tt> <tt class="py-string">"pictures"</tt><tt class="py-op">)</tt> </tt>
+<a name="L493"></a><tt class="py-lineno">493</tt>  <tt class="py-line"><tt id="link-89" class="py-name" targets="Variable conf.confstatic.pictures_url=conf.confstatic-module.html#pictures_url"><a title="conf.confstatic.pictures_url" class="py-name" href="#" onclick="return doclink('link-89', 'pictures_url', 'link-89');">pictures_url</a></tt><tt class="py-op">=</tt><tt id="link-90" class="py-name"><a title="conf.confstatic.config_url" class="py-name" href="#" onclick="return doclink('link-90', 'config_url', 'link-67');">config_url</a></tt><tt class="py-op">+</tt><tt class="py-string">"pictures"</tt> </tt>
+<a name="L494"></a><tt class="py-lineno">494</tt>  <tt class="py-line"> </tt>
+<a name="L495"></a><tt class="py-lineno">495</tt>  <tt class="py-line"><tt class="py-comment">##Static pages generation</tt> </tt>
+<a name="L496"></a><tt class="py-lineno">496</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#Generation statique des pages</tt> </tt>
+<a name="L497"></a><tt class="py-lineno">497</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt id="link-91" class="py-name" targets="Variable conf.confstatic.generate_path=conf.confstatic-module.html#generate_path"><a title="conf.confstatic.generate_path" class="py-name" href="#" onclick="return doclink('link-91', 'generate_path', 'link-91');">generate_path</a></tt><tt class="py-op">=</tt><tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">path</tt><tt class="py-op">.</tt><tt class="py-name">join</tt><tt class="py-op">(</tt><tt id="link-92" class="py-name"><a title="conf.confstatic.config_path" class="py-name" href="#" onclick="return doclink('link-92', 'config_path', 'link-21');">config_path</a></tt><tt class="py-op">,</tt> <tt class="py-string">"generate"</tt><tt class="py-op">)</tt> </tt>
+<a name="L498"></a><tt class="py-lineno">498</tt>  <tt class="py-line"><tt id="link-93" class="py-name" targets="Variable conf.confstatic.generate_url=conf.confstatic-module.html#generate_url"><a title="conf.confstatic.generate_url" class="py-name" href="#" onclick="return doclink('link-93', 'generate_url', 'link-93');">generate_url</a></tt><tt class="py-op">=</tt><tt id="link-94" class="py-name"><a title="conf.confstatic.config_url" class="py-name" href="#" onclick="return doclink('link-94', 'config_url', 'link-67');">config_url</a></tt><tt class="py-op">+</tt><tt class="py-string">"generate"</tt> </tt>
+<a name="L499"></a><tt class="py-lineno">499</tt>  <tt class="py-line"><tt class="py-comment">##Pay attention to synchronize.py:     os.chdir('..')</tt> </tt>
+<a name="L500"></a><tt class="py-lineno">500</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">##and to template_manager --&gt; generate_pdf</tt> </tt>
+<a name="L501"></a><tt class="py-lineno">501</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#attention &#224; synchronize.py:     os.chdir('..')</tt> </tt>
+<a name="L502"></a><tt class="py-lineno">502</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#et &#224; template_manager --&gt; generate_pdf</tt> </tt>
+<a name="L503"></a><tt class="py-lineno">503</tt>  <tt class="py-line"><tt class="py-comment"></tt> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://graal.ens-lyon.fr/comfort/">CoMFoRT</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sun May 25 15:42:43 2008
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

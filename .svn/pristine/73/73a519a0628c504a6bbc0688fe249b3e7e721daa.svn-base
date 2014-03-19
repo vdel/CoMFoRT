@@ -1,0 +1,1733 @@
+# English translations for Projet package.
+# Copyright (C) 2008 THE Projet'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Projet package.
+# Automatically generated, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Projet 2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-08-27 11:17+0200\n"
+"PO-Revision-Date: 2008-05-11 14:51+0200\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: src/cgi-bin/admin.py:96 src/cgi-bin/adminvalid.py:96
+#: src/cgi-bin/handler.py:151
+#, fuzzy, python-format
+msgid "Erreur d'initialisation de la base de données : %s"
+msgstr "Error in the database initialization: %s"
+
+#: src/cgi-bin/check_db.py:88
+msgid "Mon site perso"
+msgstr "My personal website"
+
+#: src/cgi-bin/handler.py:183
+#, fuzzy, python-format
+msgid "Erreur d'initialisation du moteur de templates : %s"
+msgstr "Error initializing templates engine : %s"
+
+#: src/cgi-bin/handler.py:203
+#, fuzzy
+msgid ""
+"Vous n'avez pas FOP d'installé : veuillez vous référer au guide "
+"d'installation pour apprendre à générer des fichiers PDF"
+msgstr ""
+"FOP is not installed on your machine : please refer to the installation "
+"guide  to learn how to handle PDF files."
+
+#: src/cgi-bin/kill.py:83
+#, fuzzy
+msgid "Arrêt du serveur"
+msgstr "Stop"
+
+#: src/cgi-bin/kill.py:84
+msgid "Serveur arrêté"
+msgstr ""
+
+#: src/cgi-bin/kill.py:85
+#, fuzzy
+msgid "Merci d'avoir utilisé CoMFoRT. Le serveur est désormais arrêté."
+msgstr "The local server is now stopped."
+
+#: src/cgi-bin/please_install.py:79
+#, fuzzy, python-format
+msgid "Veuillez installer %s !<br />"
+msgstr "Please install %s !"
+
+#: src/conf/utils.py:89
+#, python-format
+msgid "Si vous n'êtes pas redirigé, cliquez <a href=\"%s\">ici</a>."
+msgstr "If you are not redirected, click <a href=\"%s\">here</a>."
+
+#: src/interface/forms.py:78
+#, fuzzy
+msgid "Veuillez remplir tous les champs  concernant le serveur FTP."
+msgstr "Please fill all the fields  concerning the FTP servor."
+
+#: src/interface/forms.py:79
+msgid ""
+"Je ne sais pas comment vous avez pu réussir ça mais vous n'avez pas spécifié "
+"un mode de transfert correct. Soit vous êtes un hacker qui s'amuse, soit "
+"vous devriez remplir un rapport de bug."
+msgstr ""
+
+#: src/interface/forms.py:80
+#, fuzzy
+msgid "Veuillez remplir tous les champs concernant le serveur SSH."
+msgstr "Please fill all the fields  concerning the FTP servor."
+
+#: src/interface/forms.py:149
+#, fuzzy
+msgid "Général"
+msgstr "General management"
+
+#: src/interface/forms.py:150 src/modules/themodule_Publi.py:682
+msgid "Pages"
+msgstr "Pages"
+
+#: src/interface/forms.py:151
+#, fuzzy
+msgid "Édition du wiki"
+msgstr "Edit the wiki"
+
+#: src/interface/forms.py:152 src/modules/themodule_Educ.py:91
+#: src/modules/themodule_Educ.py:94
+#, fuzzy
+msgid "Enseignements"
+msgstr "Teachings"
+
+#: src/interface/forms.py:153 src/modules/themodule_Calendars.py:160
+msgid "Calendrier"
+msgstr "Time table"
+
+#: src/interface/forms.py:154 src/modules/themodule_News.py:77
+#: src/modules/themodule_News.py:80
+msgid "News"
+msgstr "News"
+
+#: src/interface/forms.py:155 src/modules/themodule_Publi.py:345
+#, fuzzy
+msgid "Publications"
+msgstr "Publications"
+
+#: src/interface/forms.py:156 src/modules/themodule_Coord.py:83
+#, fuzzy
+msgid "Coordonnées"
+msgstr "Ordered list"
+
+#: src/interface/forms.py:157
+msgid "Menu"
+msgstr "Menu"
+
+#: src/interface/forms.py:158 src/interface/forms.py:1147
+msgid "Synchronisation"
+msgstr "Synchronization"
+
+#: src/interface/forms.py:159
+msgid "Modification d'une page"
+msgstr "Page Modification"
+
+#: src/interface/forms.py:163 src/interface/forms.py:215
+msgid "Configuration du site"
+msgstr "Website configuration"
+
+#: src/interface/forms.py:188
+#, fuzzy
+msgid "Aller à la page courante"
+msgstr "Return to the current page"
+
+#: src/interface/forms.py:191
+msgid "Aller à l'accueil du site"
+msgstr "Go to the home page"
+
+#: src/interface/forms.py:193
+msgid "Arrêter le serveur"
+msgstr ""
+
+#: src/interface/forms.py:201
+#, fuzzy
+msgid "CoMFoRT - Panneau d'administration"
+msgstr "Administration pannel"
+
+#: src/interface/forms.py:210
+msgid "Configuration générale"
+msgstr "General Configuration"
+
+#: src/interface/forms.py:216
+#, fuzzy
+msgid "Paramètres généraux du site : titre, langue, style, ..."
+msgstr ""
+"General website parameters : title, language, database, style and FTP server."
+
+#: src/interface/forms.py:219 src/interface/forms.py:541
+msgid "Gestion des pages"
+msgstr "Page management"
+
+#: src/interface/forms.py:228
+msgid "Configuration des modules"
+msgstr "Module configuration"
+
+#: src/interface/forms.py:241
+msgid "Travail en local"
+msgstr "Local work"
+
+#: src/interface/forms.py:242
+msgid "Vous travaillez actuellement sur une copie locale du site"
+msgstr "You are currently working on a local copy of your website"
+
+#: src/interface/forms.py:247 src/interface/forms.py:1240
+msgid "Synchroniser"
+msgstr "Synchronize"
+
+#: src/interface/forms.py:248
+msgid "Synchroniser les données de votre machine avec celles sur internet"
+msgstr "Synchronize the data on your machine with the online data"
+
+#: src/interface/forms.py:253 src/modules/themodule_Credits.py:67
+#: src/modules/themodule_Credits.py:79
+msgid "Crédits"
+msgstr ""
+
+#: src/interface/forms.py:285
+msgid "Installation"
+msgstr "Installation"
+
+#: src/interface/forms.py:292 src/interface/forms.py:697
+#: src/interface/forms.py:1166 src/interface/forms.py:1169
+#: src/interface/forms.py:1172
+msgid "Erreur"
+msgstr "Error"
+
+#: src/interface/forms.py:298 src/interface/forms.py:394
+msgid "Paramètres du site"
+msgstr "Website parameters"
+
+#: src/interface/forms.py:300 src/interface/forms.py:396
+msgid "Titre du site"
+msgstr "Website title"
+
+#: src/interface/forms.py:307 src/interface/forms.py:404
+msgid "Langue du site"
+msgstr "Website language"
+
+#: src/interface/forms.py:311 src/interface/forms.py:451
+#: src/interface/forms.py:453
+msgid "Pas de génération de PDF"
+msgstr "No PDF generation"
+
+#: src/interface/forms.py:313 src/interface/forms.py:456
+#: src/interface/forms.py:458
+msgid "Avec FOP"
+msgstr "With FOP"
+
+#: src/interface/forms.py:315
+msgid "Impossible de trouver FOP : pas de génération de PDF avec FOP. "
+msgstr "Impossible to find FOP: no  PDF generation with FOP"
+
+#: src/interface/forms.py:316 src/interface/forms.py:321
+msgid "Veuillez vous référer à la documentation pour l'installer."
+msgstr "Please refer to the documentation to install it."
+
+#: src/interface/forms.py:318 src/interface/forms.py:461
+#: src/interface/forms.py:463
+msgid "Via LaTeX"
+msgstr "Via LaTeX"
+
+#: src/interface/forms.py:320
+msgid "Impossible de trouver DBLatex : pas de génération de PDF avec DBLatex. "
+msgstr "Impossible to find DBLatex: no PDF generation with DBLatex."
+
+#: src/interface/forms.py:322 src/interface/forms.py:464
+msgid "Génération pdf ?"
+msgstr "PDF generation?"
+
+#: src/interface/forms.py:349 src/interface/forms.py:1208
+#: src/interface/forms.py:1212
+msgid "FTP"
+msgstr ""
+
+#: src/interface/forms.py:351 src/interface/forms.py:1216
+#: src/interface/forms.py:1220
+msgid "SSH"
+msgstr ""
+
+#: src/interface/forms.py:352 src/interface/forms.py:1223
+#, fuzzy
+msgid "Synchronisation distante"
+msgstr "Synchronization"
+
+#: src/interface/forms.py:358 src/interface/forms.py:1227
+msgid "Paramètres FTP"
+msgstr "FTP parameters"
+
+#: src/interface/forms.py:360 src/interface/forms.py:1229
+msgid "Serveur FTP"
+msgstr "FTP servor"
+
+#: src/interface/forms.py:361 src/interface/forms.py:480
+#: src/interface/forms.py:1230
+msgid "Login utilisateur"
+msgstr "User login"
+
+#: src/interface/forms.py:362 src/interface/forms.py:1232
+msgid "Dossier racine du site"
+msgstr "Website root folder"
+
+#: src/interface/forms.py:363
+msgid ""
+"Par mesure de sécurité, le mot de passe FTP sera redemandé à chaque "
+"synchronisation (il pourra alors être enregistré par le gestionnaire de mot "
+"de passe de votre navigateur si vous ne désirez pas le ressaisir à chaque "
+"fois)."
+msgstr ""
+
+#: src/interface/forms.py:367 src/interface/forms.py:1236
+#, fuzzy
+msgid "Paramètres SSH"
+msgstr "FTP parameters"
+
+#: src/interface/forms.py:368
+msgid ""
+"Par mesure de sécurité, l'adresse du serveur SSH sera redemandée à chaque "
+"synchronisation (il pourra alors être enregistré par le gestionnaire de mot "
+"de passe de votre navigateur si vous ne désirez pas le ressaisir à chaque "
+"fois)."
+msgstr ""
+
+#: src/interface/forms.py:370
+msgid "Finir l'installation"
+msgstr "Complete the installation"
+
+#: src/interface/forms.py:383 src/interface/forms.py:1201
+msgid "Paramètres généraux"
+msgstr "General parameters"
+
+#: src/interface/forms.py:414
+msgid "Style de l'admin"
+msgstr "Admin Style"
+
+#: src/interface/forms.py:423 src/interface/forms.py:437
+#: src/interface/forms.py:724 src/interface/forms.py:738
+#, fuzzy
+msgid "Autres styles"
+msgstr "Other styles"
+
+#: src/interface/forms.py:447
+msgid "Feuille de style à utiliser"
+msgstr "Stylesheet to use"
+
+#: src/interface/forms.py:477
+msgid "Paramètres base de données"
+msgstr "Database parameters"
+
+#: src/interface/forms.py:479
+msgid "Serveur de la base de données"
+msgstr "Database servor"
+
+#: src/interface/forms.py:481 src/interface/forms.py:1231
+msgid "Mot de passe"
+msgstr "Password"
+
+#: src/interface/forms.py:482
+msgid "Nom de la base de données"
+msgstr "Database name"
+
+#: src/interface/forms.py:484 src/interface/forms.py:829
+#: src/interface/forms.py:988 src/interface/valid_forms.py:344
+#: src/modules/themodule_Menu.py:439
+msgid "Appliquer"
+msgstr "Apply"
+
+#: src/interface/forms.py:550
+msgid "Liste des pages"
+msgstr "List of pages"
+
+#: src/interface/forms.py:551
+msgid "Voici la liste des pages du site:"
+msgstr "Here is the list of the website pages :"
+
+#: src/interface/forms.py:558
+#, fuzzy
+msgid ""
+"Erreur imprévue: Il n'y a aucune page  personnelle. Veuillez créer une page "
+"nommée \""
+msgstr ""
+"Unexpected error: there is no personal page. Please create a page named \""
+
+#: src/interface/forms.py:569
+msgid "Configurer"
+msgstr "Configurate"
+
+#: src/interface/forms.py:572
+msgid "Éditer Wiki"
+msgstr "Edit the Wiki"
+
+#: src/interface/forms.py:578 src/interface/forms.py:627
+#: src/interface/valid_forms.py:178 src/modules/themodule_Coord.py:240
+#: src/modules/themodule_Educ.py:412 src/modules/themodule_Educ.py:720
+#: src/modules/themodule_Menu.py:363 src/modules/themodule_News.py:202
+#: src/modules/themodule_Publi.py:696 src/modules/themodule_Publi.py:929
+msgid "Supprimer"
+msgstr "Delete"
+
+#: src/interface/forms.py:589
+msgid "Créer une nouvelle page"
+msgstr "Create a new page"
+
+#: src/interface/forms.py:607
+msgid "Suppression d'une page"
+msgstr "Delete a page"
+
+#: src/interface/forms.py:616
+msgid "Confirmation de suppression de la page"
+msgstr "Confirm the deletion of the page"
+
+#: src/interface/forms.py:618
+msgid "Confirmez-vous la suppression de la page"
+msgstr "Do you confirm the deletion of the page"
+
+#: src/interface/forms.py:618
+msgid "Attention cette opération est irréversible!"
+msgstr "Be careful, this operation is irreversible!"
+
+#: src/interface/forms.py:630
+msgid "Annuler"
+msgstr "Cancel"
+
+#: src/interface/forms.py:666
+#, fuzzy
+msgid "Ajout d'une page"
+msgstr "New page"
+
+#: src/interface/forms.py:668
+#, fuzzy
+msgid "Modification de la page"
+msgstr "Modify a page"
+
+#: src/interface/forms.py:677 src/interface/forms.py:860
+msgid ""
+"Pour que cette page fonctionne correctement, vous devez activer le "
+"JavaScript."
+msgstr "For this page to work correctly, you must activate JavaScript."
+
+#: src/interface/forms.py:692
+msgid "Veuillez indiquer un ID non vide pour la page."
+msgstr "Please give a non void ID for this page."
+
+#: src/interface/forms.py:693
+msgid "Le nouvel ID est déjà utilisé."
+msgstr "The new ID is already in use."
+
+#: src/interface/forms.py:694
+msgid ""
+"L'identifiant utilisé contient des caractères accentués ou non-"
+"alphanumériques"
+msgstr ""
+
+#: src/interface/forms.py:706
+msgid "Paramètres de la page"
+msgstr "Page parameters"
+
+#: src/interface/forms.py:714 src/interface/forms.py:752
+msgid "Identifiant propre à la page"
+msgstr "Page identifier"
+
+#: src/interface/forms.py:715 src/interface/forms.py:753
+msgid "Titre de la page"
+msgstr "Page title"
+
+#: src/interface/forms.py:748
+#, fuzzy
+msgid "Feuille de style propre à cette page"
+msgstr "Stylesheet to use"
+
+#: src/interface/forms.py:766 src/modules/themodule_Menu.py:314
+msgid "Ajouter un bouton au menu"
+msgstr "Add a new button to the menu"
+
+#: src/interface/forms.py:770
+msgid "Modules de la page"
+msgstr "Page modules"
+
+#: src/interface/forms.py:771
+#, fuzzy
+msgid ""
+"Voici la liste des modules apparaîssant sur la page. Ils sont  classés par "
+"ordre d'apparition:"
+msgstr ""
+"Here is the list of the available modules. They are sorted by order of "
+"appearance on the page:"
+
+#: src/interface/forms.py:774
+msgid "Module"
+msgstr "Module"
+
+#: src/interface/forms.py:774
+msgid "Activation du module"
+msgstr "Module activation"
+
+#: src/interface/forms.py:774
+msgid "Action"
+msgstr "Action"
+
+#: src/interface/forms.py:791 src/modules/themodule_Menu.py:346
+msgid "Monter"
+msgstr "Bring up"
+
+#: src/interface/forms.py:795 src/modules/themodule_Menu.py:353
+msgid "Descendre"
+msgstr "Bring down"
+
+#: src/interface/forms.py:802
+msgid "module inactif"
+msgstr "Inactive module"
+
+#: src/interface/forms.py:821
+msgid "Wiki activé"
+msgstr "Wiki activated"
+
+#: src/interface/forms.py:823
+#, fuzzy
+msgid "Éditer le  texte de la page."
+msgstr "Edit the text of the page."
+
+#: src/interface/forms.py:826
+#, fuzzy
+msgid ""
+"Le module wiki est désactivé: vous ne pouvez pas éditer le texte de la page."
+msgstr ""
+"The wiki module is desactivated: you cannot edit the text of this page."
+
+#: src/interface/forms.py:828
+#, fuzzy
+msgid "Activer le  wiki pour cette page."
+msgstr "Activate the wiki for this page."
+
+#: src/interface/forms.py:851
+#, fuzzy
+msgid "Édition de la page \""
+msgstr "Modify a page"
+
+#: src/interface/forms.py:872 src/interface/forms.py:987
+msgid "Aperçu"
+msgstr "Preview"
+
+#: src/interface/forms.py:882
+msgid "Texte wiki"
+msgstr "Wiki text"
+
+#: src/interface/forms.py:895 src/interface/forms.py:1106
+#, fuzzy
+msgid "Texte italique"
+msgstr "Italic text"
+
+#: src/interface/forms.py:896 src/interface/forms.py:1105
+#, fuzzy
+msgid "Texte gras"
+msgstr "Bold text"
+
+#: src/interface/forms.py:897 src/interface/forms.py:1107
+msgid "Texte souligné"
+msgstr "Underlined text"
+
+#: src/interface/forms.py:898 src/interface/forms.py:1108
+msgid "Texte barré"
+msgstr "Crossed text"
+
+#: src/interface/forms.py:899
+#, fuzzy
+msgid "Titre de second niveau"
+msgstr "Second level title"
+
+#: src/interface/forms.py:900 src/interface/forms.py:1110
+msgid "Lien interne"
+msgstr "Internal link"
+
+#: src/interface/forms.py:901 src/interface/forms.py:1111
+#: src/interface/forms.py:1120
+msgid "Lien externe"
+msgstr "External link"
+
+#: src/interface/forms.py:902
+#, fuzzy
+msgid "Image"
+msgstr "Image"
+
+#: src/interface/forms.py:903
+msgid "Formule mathématique (LaTeX)"
+msgstr "Math formula (LaTeX)"
+
+#: src/interface/forms.py:904
+msgid "Texte préformaté"
+msgstr "Preformated text"
+
+#: src/interface/forms.py:905
+msgid "Tableau"
+msgstr "Table"
+
+#: src/interface/forms.py:906
+msgid "Liste non ordonnée"
+msgstr "Non-ordered list"
+
+#: src/interface/forms.py:907
+msgid "Liste ordonnée"
+msgstr "Ordered list"
+
+#: src/interface/forms.py:908
+#, fuzzy
+msgid "Note de bas de page"
+msgstr "Footnote"
+
+#: src/interface/forms.py:917
+msgid "--- Insérer un lien vers une page ---"
+msgstr "--- Insert a link to a page ---"
+
+#: src/interface/forms.py:918
+msgid "** Page externe à CoMFoRT **"
+msgstr "** External page not included in CoMFoRT **"
+
+#: src/interface/forms.py:919
+msgid "Insérer un lien vers une page externe..."
+msgstr "Insert a link to an external page..."
+
+#: src/interface/forms.py:920
+msgid "** Pages gérées par CoMFoRT **"
+msgstr "** Pages managed by CoMFoRT **"
+
+#: src/interface/forms.py:924
+#, fuzzy
+msgid "** Pages personnelles (perso/pages) **"
+msgstr "** Personal pages (perso/pages) **"
+
+#: src/interface/forms.py:935
+msgid "--- Insérer une image ---"
+msgstr "--- Insert an image ---"
+
+#: src/interface/forms.py:936
+msgid "** Image externe à CoMFoRT **"
+msgstr "** Image outside of CoMFoRT **"
+
+#: src/interface/forms.py:937
+msgid "Insérer une image externe..."
+msgstr "Insert an external image..."
+
+#: src/interface/forms.py:938
+msgid "** Images personnelles (perso/pictures) **"
+msgstr "** Personal images (perso/pictures) **"
+
+#: src/interface/forms.py:949
+msgid "--- Insérer un lien vers une image ---"
+msgstr "--- Insert a link to an image ---"
+
+#: src/interface/forms.py:960
+msgid "--- Insérer un lien vers un document ---"
+msgstr "--- Insert a link to a document ---"
+
+#: src/interface/forms.py:971
+msgid "--- Insérer le contenu d'un module ---"
+msgstr "--- Insert a module content ---"
+
+#: src/interface/forms.py:1109
+#, fuzzy
+msgid "Texte de titre"
+msgstr "Website title"
+
+#: src/interface/forms.py:1112
+msgid "exemple.jpg"
+msgstr "example.jpg"
+
+#: src/interface/forms.py:1114
+msgid "Entrez votre formule ici"
+msgstr "Type your formula here"
+
+#: src/interface/forms.py:1115
+msgid "Entrez le texte non formaté ici"
+msgstr "Type the non-formated text here"
+
+#: src/interface/forms.py:1117
+msgid "* élément A\\n* élément B\\n* élément C"
+msgstr " element A\\n * element B\\n* element C"
+
+#: src/interface/forms.py:1118
+msgid "# élément 1\\n# élément 2\\n# élément 3"
+msgstr "# element 1\\n# element 2\\n# element 3"
+
+#: src/interface/forms.py:1119
+msgid "référence ou citation"
+msgstr "reference or quotation"
+
+#: src/interface/forms.py:1121
+msgid "Exemple.jpg"
+msgstr "Example.jpg"
+
+#: src/interface/forms.py:1238
+#, fuzzy
+msgid "Serveur SSH"
+msgstr "FTP servor"
+
+#: src/interface/forms.py:1242
+msgid "(Attention : ceci peut prendre plusieurs minutes.)"
+msgstr ""
+
+#: src/interface/forms.py:1255
+msgid "Réussite de la synchronisation"
+msgstr "Successful synchronization"
+
+#: src/interface/forms.py:1257
+msgid "La synchronisation a été effectuée avec succès, votre site est à jour."
+msgstr ""
+"The synchronisation has been done successfully, your website is up to date."
+
+#: src/interface/forms.py:1261
+msgid "Échec de la synchronisation"
+msgstr "Synchronisation failure"
+
+#: src/interface/forms.py:1263
+#, python-format
+msgid "La synchronisation a échoué : « %s »."
+msgstr ""
+
+#: src/interface/forms.py:1265
+#, fuzzy
+msgid ""
+"Des fichiers plus récents se trouvent sur le serveur, la synchronisation va "
+"les mettre à la place des fichiers locaux qui ont été modifiés. Êtes-vous "
+"sûr de vouloir effectuer la synchronisation ?"
+msgstr ""
+"More recent files are on the servor, the synchronization is going to replace "
+"them with local files. Are you sure you want to do the synchronization?"
+
+#: src/interface/forms.py:1271
+msgid "Oui"
+msgstr "Yes"
+
+#: src/interface/forms.py:1274
+msgid "Non"
+msgstr "No"
+
+#: src/interface/forms.py:1276
+#, fuzzy
+msgid "Peut être que les paramètres de configuration sont erronés."
+msgstr ""
+"The synchronization has failed: ' %s ' the configuration parameters may be "
+"erroneous."
+
+#: src/interface/generate.py:93
+#, python-format
+msgid "Error initializing templates engine : %s"
+msgstr "Error initializing templates engine : %s"
+
+#: src/interface/generate.py:120
+msgid ""
+"Copie des fichiers latex, de style, ainsi que vos pages personnelles et vos "
+"images"
+msgstr ""
+
+#: src/interface/generate.py:158
+#, fuzzy, python-format
+msgid "Génération de la page %s: "
+msgstr "PDF generation?"
+
+#: src/interface/synchronize.py:105
+#, fuzzy, python-format
+msgid "Le dossier local '%s' n'existe pas et impossible de le créer."
+msgstr ""
+"The local folder '%s' does not exist and it is impossible to create it."
+
+#: src/interface/synchronize.py:125
+msgid "Impossible de se connecter au serveur FTP."
+msgstr "Impossible to connect to the FTP servor."
+
+#: src/interface/synchronize.py:136
+#, python-format
+msgid "Le dossier racine du site '%s' n'existe pas et impossible de le créer."
+msgstr "The root folder '%s' does not exist and it is impossible to create it."
+
+#: src/interface/synchronize.py:159
+#, python-format
+msgid "Le dossier '%s' n'existe pas et impossible de le créer."
+msgstr "The folder '%s' does not exist and it is impossible to create it."
+
+#: src/interface/synchronize.py:168
+#, fuzzy, python-format
+msgid "Envoi du fichier '%s'"
+msgstr "Sending of the file:  '%s'<br />"
+
+#: src/interface/synchronize.py:179 src/interface/synchronize.py:224
+#, python-format
+msgid "Impossible d'envoyer le fichier '%s'."
+msgstr "Impossible to send the file '%s'."
+
+#: src/interface/synchronize.py:188
+#, fuzzy, python-format
+msgid "Récupération du fichier '%s'"
+msgstr "Recovery of the file '%s'<br />"
+
+#: src/interface/synchronize.py:199 src/interface/synchronize.py:238
+#, fuzzy, python-format
+msgid "Impossible de récupérer le fichier '%s'."
+msgstr "Impossible to recover the file '%s'."
+
+#: src/interface/synchronize.py:219
+#, python-format
+msgid "Envoi du fichier '%s'<br />"
+msgstr "Sending of the file:  '%s'<br />"
+
+#: src/interface/synchronize.py:233
+#, python-format
+msgid "Récupération du fichier '%s'<br />"
+msgstr "Recovery of the file '%s'<br />"
+
+#: src/interface/synchronize.py:346
+#, fuzzy
+msgid "Génération dut site"
+msgstr "PDF generation?"
+
+#: src/interface/synchronize.py:353
+#, fuzzy
+msgid "Connection au serveur FTP"
+msgstr "Impossible to connect to the FTP servor."
+
+#: src/interface/synchronize.py:360
+msgid "Conflit entre les fichiers locaux et distants."
+msgstr ""
+
+#: src/interface/synchronize.py:361
+#, fuzzy
+msgid "Récupération des fichiers distants plus récents"
+msgstr "Recovery of the file '%s'<br />"
+
+#: src/interface/synchronize.py:364
+#, fuzzy
+msgid "Envoi des fichiers locaux"
+msgstr "Sending of the file:  '%s'<br />"
+
+#: src/modules/module_manager.py:92
+msgid "les propriétés de modules_mode sont déjà définies"
+msgstr "the modules_mode properties are already set"
+
+#: src/modules/module_manager.py:94
+#, fuzzy
+msgid "mode inconnu"
+msgstr "unknown mode"
+
+#: src/modules/module_manager.py:104
+#, python-format
+msgid "pas de module à la clé %s"
+msgstr "no module at key %s"
+
+#: src/modules/module_manager.py:108
+#, fuzzy, python-format
+msgid "il y a déjà un module à la position %s"
+msgstr "there is already a module at position %s "
+
+#: src/modules/module_manager.py:111
+msgid "vous devez avant tout définir un mode"
+msgstr "you must first set a mode"
+
+#: src/modules/module_manager.py:119
+#, python-format
+msgid "Module inconnu : %s"
+msgstr "Unknown module: %s"
+
+#: src/modules/module_manager.py:122
+#, fuzzy, python-format
+msgid "Le mode courant est %s ;"
+msgstr "The current mode is %s"
+
+#: src/modules/module_manager.py:122
+#, fuzzy, python-format
+msgid " ce mode de module est %s - incompatible"
+msgstr "this module mode is %s - incompatible"
+
+#: src/modules/themodule_Calendars.py:154
+msgid "Permet de gérer les événements publics à venir de votre agenda."
+msgstr "Allows you to create future public events in your agenda."
+
+#: src/modules/themodule_Calendars.py:157
+msgid "Événements à venir"
+msgstr "Upcoming events"
+
+#: src/modules/themodule_Calendars.py:229
+msgid "Gestion des événements"
+msgstr "Events management"
+
+#: src/modules/themodule_Calendars.py:239
+msgid "Opérations sur les événements"
+msgstr "Operations concerning the events"
+
+#: src/modules/themodule_Calendars.py:246
+msgid "Liste actuelle"
+msgstr "Current list"
+
+#: src/modules/themodule_Calendars.py:252
+msgid "Importer un calendrier ics"
+msgstr "Import an ics calendar"
+
+#: src/modules/themodule_Calendars.py:271
+msgid "Options d'affichage"
+msgstr "Viewing options"
+
+#: src/modules/themodule_Calendars.py:275
+msgid "Opérations de maintenance"
+msgstr "Maintenance operations"
+
+#: src/modules/themodule_Calendars.py:283
+msgid "Édition d'un élément"
+msgstr "Edition of an element"
+
+#: src/modules/themodule_Calendars.py:287
+#: src/modules/themodule_Calendars.py:317
+#: src/modules/themodule_Calendars.py:347
+msgid "Début"
+msgstr "Beginning"
+
+#: src/modules/themodule_Calendars.py:288
+#: src/modules/themodule_Calendars.py:317
+#: src/modules/themodule_Calendars.py:347
+msgid "Fin"
+msgstr "End"
+
+#: src/modules/themodule_Calendars.py:289
+#: src/modules/themodule_Calendars.py:317
+#: src/modules/themodule_Calendars.py:347 src/modules/themodule_Educ.py:522
+#: src/modules/themodule_Educ.py:636 src/modules/themodule_Educ.py:688
+#: src/modules/themodule_Educ.py:709 src/modules/themodule_Educ.py:783
+#: src/modules/themodule_Educ.py:836 src/modules/themodule_News.py:236
+msgid "Description"
+msgstr "Description"
+
+#: src/modules/themodule_Calendars.py:290
+msgid "Modifier"
+msgstr "Modify"
+
+#: src/modules/themodule_Calendars.py:292
+msgid "Effacer"
+msgstr "Erase"
+
+#: src/modules/themodule_Calendars.py:296
+msgid "Retour"
+msgstr "Go back"
+
+#: src/modules/themodule_Calendars.py:302
+#, fuzzy
+msgid "Import d'un fichier vcalendar"
+msgstr "Import an ics calendar"
+
+#: src/modules/themodule_Calendars.py:304
+#, fuzzy
+msgid "Fichier à importer"
+msgstr "File to upload"
+
+#: src/modules/themodule_Calendars.py:305
+#: src/modules/themodule_Calendars.py:331 src/modules/themodule_Publi.py:753
+#: src/modules/themodule_Publi.py:764 src/modules/themodule_Publi.py:865
+msgid "Importer"
+msgstr "Import"
+
+#: src/modules/themodule_Calendars.py:312
+#, fuzzy
+msgid "Choix des évènements à importer"
+msgstr "List of the events"
+
+#: src/modules/themodule_Calendars.py:340
+msgid "Liste des événements"
+msgstr "List of the events"
+
+#: src/modules/themodule_Calendars.py:356 src/modules/themodule_Coord.py:243
+#: src/modules/themodule_Educ.py:415 src/modules/themodule_News.py:205
+#: src/modules/themodule_Publi.py:699 src/modules/themodule_Publi.py:932
+msgid "Éditer"
+msgstr "Edit"
+
+#: src/modules/themodule_Calendars.py:362
+msgid "Ajouter"
+msgstr "Add"
+
+#: src/modules/themodule_Coord.py:172
+#, fuzzy
+msgid "Module coordonnées"
+msgstr "Ordered list"
+
+#: src/modules/themodule_Coord.py:183
+#, fuzzy
+msgid "Opérations sur les jeux de coordonnées"
+msgstr "Operations concerning the news"
+
+#: src/modules/themodule_Coord.py:190 src/modules/themodule_Educ.py:352
+#: src/modules/themodule_Menu.py:310 src/modules/themodule_News.py:161
+#: src/modules/themodule_Publi.py:569
+msgid "Gestion générale"
+msgstr "General management"
+
+#: src/modules/themodule_Coord.py:194 src/modules/themodule_Coord.py:266
+#, fuzzy
+msgid "Ajouter un jeu de coordonnées"
+msgstr "Add a news"
+
+#: src/modules/themodule_Coord.py:210
+#, fuzzy
+msgid "Coordonnées enregistrées"
+msgstr "News saved"
+
+#: src/modules/themodule_Coord.py:217
+#, fuzzy
+msgid "Il n'y a aucun jeu de coordonnées"
+msgstr "There is no news"
+
+#: src/modules/themodule_Coord.py:220 src/modules/themodule_Coord.py:222
+#: src/modules/themodule_News.py:190 src/modules/themodule_Publi.py:655
+#: src/modules/themodule_Publi.py:657 src/modules/themodule_Publi.py:914
+#: src/modules/themodule_Publi.py:916
+msgid "Il y a "
+msgstr "There is/are "
+
+#: src/modules/themodule_Coord.py:220
+#, fuzzy
+msgid " jeu de coordonnées"
+msgstr "Ordered list"
+
+#: src/modules/themodule_Coord.py:222
+#, fuzzy
+msgid " jeux de coordonnées"
+msgstr "Ordered list"
+
+#: src/modules/themodule_Coord.py:226 src/modules/themodule_News.py:233
+#: src/modules/themodule_News.py:263 src/modules/themodule_Publi.py:789
+#: src/modules/themodule_Publi.py:889 src/modules/themodule_Publi.py:1061
+msgid "Titre"
+msgstr "Title"
+
+#: src/modules/themodule_Coord.py:227
+msgid "Tel1"
+msgstr ""
+
+#: src/modules/themodule_Coord.py:228
+msgid "Tel2"
+msgstr ""
+
+#: src/modules/themodule_Coord.py:229
+msgid "mail"
+msgstr ""
+
+#: src/modules/themodule_Coord.py:230
+msgid "fax"
+msgstr ""
+
+#: src/modules/themodule_Coord.py:231
+msgid "labo"
+msgstr ""
+
+#: src/modules/themodule_Coord.py:285 src/modules/themodule_Coord.py:345
+#, fuzzy
+msgid "Titre du jeu de coordonnées"
+msgstr " list in the database"
+
+#: src/modules/themodule_Coord.py:287 src/modules/themodule_Coord.py:347
+#, fuzzy
+msgid "Nom"
+msgstr "No"
+
+#: src/modules/themodule_Coord.py:289 src/modules/themodule_Coord.py:349
+msgid "Prenom"
+msgstr ""
+
+#: src/modules/themodule_Coord.py:291 src/modules/themodule_Coord.py:351
+msgid "Telephone 1"
+msgstr ""
+
+#: src/modules/themodule_Coord.py:293 src/modules/themodule_Coord.py:353
+msgid "Telephone 2"
+msgstr ""
+
+#: src/modules/themodule_Coord.py:295 src/modules/themodule_Coord.py:355
+msgid "Fax"
+msgstr ""
+
+#: src/modules/themodule_Coord.py:298 src/modules/themodule_Coord.py:358
+msgid "Adresse perso"
+msgstr ""
+
+#: src/modules/themodule_Coord.py:300 src/modules/themodule_Coord.py:360
+msgid "Adresse travail"
+msgstr ""
+
+#: src/modules/themodule_Coord.py:303 src/modules/themodule_Coord.py:363
+msgid "Mail"
+msgstr ""
+
+#: src/modules/themodule_Coord.py:305 src/modules/themodule_Coord.py:365
+msgid "Laboratoire"
+msgstr ""
+
+#: src/modules/themodule_Coord.py:307 src/modules/themodule_Coord.py:367
+msgid "URL du laboratoire"
+msgstr ""
+
+#: src/modules/themodule_Coord.py:312
+#, fuzzy
+msgid "Ajouter le jeu de coordonnées"
+msgstr "Database name"
+
+#: src/modules/themodule_Coord.py:323
+#, fuzzy
+msgid "Édition d'un jeu de coordonnées"
+msgstr "Edition of a news"
+
+#: src/modules/themodule_Coord.py:371
+#, fuzzy
+msgid "Éditer le jeu de coordonnées"
+msgstr "Database name"
+
+#: src/modules/themodule_Credits.py:64 src/modules/themodule_Credits.py:76
+msgid "Voir les contributeurs du projet"
+msgstr ""
+
+#: src/modules/themodule_Credits.py:88
+msgid "Ont participé à ce projet, par ordre alphabétique :"
+msgstr ""
+
+#: src/modules/themodule_Educ.py:337
+msgid "Gestion des enseignements"
+msgstr "Teaching management"
+
+#: src/modules/themodule_Educ.py:346
+msgid "Opérations sur les enseignements"
+msgstr "Operations concerning the teachings"
+
+#: src/modules/themodule_Educ.py:356
+msgid "Ajouter un enseignement"
+msgstr "Add a teaching"
+
+#: src/modules/themodule_Educ.py:360
+msgid "Effacer tous les enseignements"
+msgstr "Erase all the teachings"
+
+#: src/modules/themodule_Educ.py:364
+msgid "Affichages alternatifs"
+msgstr ""
+
+#: src/modules/themodule_Educ.py:383
+msgid "Liste des enseignements"
+msgstr "List of the teachings"
+
+#: src/modules/themodule_Educ.py:392
+msgid "Il n'y a aucun enseignement enregistré"
+msgstr "There is no teaching saved"
+
+#: src/modules/themodule_Educ.py:398 src/modules/themodule_Educ.py:403
+#: src/modules/themodule_Educ.py:479 src/modules/themodule_Educ.py:558
+msgid "Intitulé du cours"
+msgstr "Course title"
+
+#: src/modules/themodule_Educ.py:398 src/modules/themodule_Educ.py:403
+#: src/modules/themodule_Educ.py:620
+msgid "Établissement"
+msgstr "Institution"
+
+#: src/modules/themodule_Educ.py:398 src/modules/themodule_Educ.py:403
+#: src/modules/themodule_Publi.py:675 src/modules/themodule_Publi.py:791
+msgid "Type"
+msgstr "Type"
+
+#: src/modules/themodule_Educ.py:399 src/modules/themodule_Educ.py:404
+#: src/modules/themodule_Publi.py:673 src/modules/themodule_Publi.py:797
+#: src/modules/themodule_Publi.py:892
+msgid "Année"
+msgstr "Year"
+
+#: src/modules/themodule_Educ.py:399 src/modules/themodule_Educ.py:404
+msgid "Niveau (L3/M1/etc.)"
+msgstr "Level (L3/M1/etc.)"
+
+#: src/modules/themodule_Educ.py:399 src/modules/themodule_Educ.py:404
+#: src/modules/themodule_Educ.py:1038
+msgid "Documents"
+msgstr "Documents"
+
+#: src/modules/themodule_Educ.py:399 src/modules/themodule_Educ.py:423
+#: src/modules/themodule_Educ.py:630 src/modules/themodule_Educ.py:837
+#: src/modules/themodule_Educ.py:949 src/modules/themodule_Educ.py:1048
+msgid "Bibliographie"
+msgstr "Bibliography"
+
+#: src/modules/themodule_Educ.py:400 src/modules/themodule_Educ.py:404
+#: src/modules/themodule_Educ.py:710 src/modules/themodule_News.py:194
+#: src/modules/themodule_Publi.py:684 src/modules/themodule_Publi.py:921
+msgid "Actions"
+msgstr "Actions"
+
+#: src/modules/themodule_Educ.py:420
+msgid "Gestion des documents"
+msgstr "Documents management"
+
+#: src/modules/themodule_Educ.py:464
+msgid "Ajout d'un enseignement"
+msgstr "Add a teaching"
+
+#: src/modules/themodule_Educ.py:486 src/modules/themodule_Educ.py:488
+#: src/modules/themodule_Educ.py:565 src/modules/themodule_Educ.py:567
+msgid "Nouvel établissement"
+msgstr "New institution"
+
+#: src/modules/themodule_Educ.py:508
+msgid "Etablissement"
+msgstr "Institution"
+
+#: src/modules/themodule_Educ.py:513 src/modules/themodule_Educ.py:625
+msgid "Année (ex: \"2007-2008\")"
+msgstr "Year (ex: \"2007-2008\")"
+
+#: src/modules/themodule_Educ.py:515 src/modules/themodule_Educ.py:626
+msgid "Niveau"
+msgstr "Level"
+
+#: src/modules/themodule_Educ.py:517
+msgid "Type de l'enseignement"
+msgstr "Type of the teaching"
+
+#: src/modules/themodule_Educ.py:524
+msgid "Ajouter l'enseignement"
+msgstr "Add the teaching"
+
+#: src/modules/themodule_Educ.py:535
+msgid "Édition d'un enseignement"
+msgstr "Edition of a teaching"
+
+#: src/modules/themodule_Educ.py:627
+msgid "Type d'enseignement"
+msgstr "Teaching type"
+
+#: src/modules/themodule_Educ.py:638
+msgid "Éditer l'enseignement"
+msgstr "Edit the teaching"
+
+#: src/modules/themodule_Educ.py:648
+msgid "Effacement de tous les enseignements"
+msgstr "Erase all the teaching"
+
+#: src/modules/themodule_Educ.py:687 src/modules/themodule_Educ.py:782
+msgid "Titre du fichier"
+msgstr "File title"
+
+#: src/modules/themodule_Educ.py:689 src/modules/themodule_Educ.py:784
+msgid "Fichier à uploader"
+msgstr "File to upload"
+
+#: src/modules/themodule_Educ.py:695 src/modules/themodule_Educ.py:842
+msgid "Ajouter le document"
+msgstr "Add the document"
+
+#: src/modules/themodule_Educ.py:709
+msgid "Nom du document"
+msgstr "Document name"
+
+#: src/modules/themodule_Educ.py:709
+msgid "Nom du fichier"
+msgstr "Filename"
+
+#: src/modules/themodule_Educ.py:724 src/modules/themodule_Menu.py:359
+msgid "Editer"
+msgstr "Edit"
+
+#: src/modules/themodule_Educ.py:790
+msgid "Appliquer les modifications"
+msgstr "Apply the modifications"
+
+#: src/modules/themodule_Educ.py:855
+msgid "Message d'avertissement"
+msgstr ""
+
+#: src/modules/themodule_Educ.py:857
+msgid ""
+"ATTENTION: VOUS DEVEZ AVOIR LE MODULE WIKI POUR UTILISER CETTE "
+"FONCTIONNALITE<br/><br/> vous pouvez sur cette page choisir parmis les "
+"différents affichages alternatifs proposés à l'affichage sur une unique "
+"page. Cela signifie que le module Educ va créer pour vous un certain nombre "
+"de pages wiki nécessaires. Celles-ci n'apparaitront pas de base dans le "
+"menu. Elles seront accessibles via le menu Gestion des Pages de "
+"l'administration pour toute personnalisation. De plus, le code à insérer "
+"pour afficher les enseignements vous sera indiqué ici. Vous devrez l'insérer "
+"dans la page wiki de votre choix."
+msgstr ""
+
+#: src/modules/themodule_Educ.py:860
+#, fuzzy
+msgid "Gestion des affichages alternatifs"
+msgstr "Gestion des images"
+
+#: src/modules/themodule_Educ.py:870
+#, fuzzy
+msgid "Génerer les pages"
+msgstr "Page management"
+
+#: src/modules/themodule_Educ.py:876
+#, fuzzy
+msgid "Pages générées"
+msgstr "General management"
+
+#: src/modules/themodule_Educ.py:883
+msgid "Voici le code wiki à insérer dans votre la page souhaitée"
+msgstr ""
+
+#: src/modules/themodule_Educ.py:890
+#, fuzzy
+msgid "générée"
+msgstr "General management"
+
+#: src/modules/themodule_Educ.py:939
+#, fuzzy
+msgid "Documents :"
+msgstr "Documents"
+
+#: src/modules/themodule_Educ.py:968 src/modules/themodule_Educ.py:1067
+msgid "de"
+msgstr "of"
+
+#: src/modules/themodule_Menu.py:294
+msgid "Gestion du menu"
+msgstr "Menu management"
+
+#: src/modules/themodule_Menu.py:303
+#, fuzzy
+msgid "Opérations sur le menu"
+msgstr "Operations concerning the news"
+
+#: src/modules/themodule_Menu.py:325
+msgid "Liste des boutons du menu"
+msgstr "List of the buttons of the menu"
+
+#: src/modules/themodule_Menu.py:333
+msgid "Le menu est vide."
+msgstr "The menu is empty."
+
+#: src/modules/themodule_Menu.py:335
+msgid "Voici la liste des boutons du menu:"
+msgstr "Here is the list of the buttons of the menu:"
+
+#: src/modules/themodule_Menu.py:400
+msgid "Nouveau bouton"
+msgstr "New button"
+
+#: src/modules/themodule_Menu.py:416
+#, fuzzy
+msgid "Pages personnelles"
+msgstr "Personal pages"
+
+#: src/modules/themodule_Menu.py:428
+msgid "Modification du bouton"
+msgstr "Modification of the button"
+
+#: src/modules/themodule_Menu.py:430
+#, fuzzy
+msgid "Ajout d'un bouton"
+msgstr "Add a publication"
+
+#: src/modules/themodule_Menu.py:435
+msgid "Nom du bouton"
+msgstr "Name of the button"
+
+#: src/modules/themodule_Menu.py:436
+msgid "Lien"
+msgstr "Link"
+
+#: src/modules/themodule_News.py:143
+msgid "Administration des news"
+msgstr "News administration"
+
+#: src/modules/themodule_News.py:154
+msgid "Opérations sur les news"
+msgstr "Operations concerning the news"
+
+#: src/modules/themodule_News.py:165 src/modules/themodule_News.py:222
+msgid "Ajouter une news"
+msgstr "Add a news"
+
+#: src/modules/themodule_News.py:181
+msgid "News enregistrées"
+msgstr "News saved"
+
+#: src/modules/themodule_News.py:188
+msgid "Il n'y a aucune news"
+msgstr "There is no news"
+
+#: src/modules/themodule_News.py:190
+msgid " news dans la base de données"
+msgstr " news in the database"
+
+#: src/modules/themodule_News.py:194
+msgid "Titre de la news"
+msgstr "Title of the news"
+
+#: src/modules/themodule_News.py:194 src/modules/themodule_News.py:234
+#: src/modules/themodule_News.py:264
+msgid "Date"
+msgstr "Date"
+
+#: src/modules/themodule_News.py:238
+msgid "Ajouter la news"
+msgstr "Add the news"
+
+#: src/modules/themodule_News.py:249
+msgid "Édition d'une news"
+msgstr "Edition of a news"
+
+#: src/modules/themodule_News.py:265
+msgid "Texte"
+msgstr "Text"
+
+#: src/modules/themodule_News.py:267
+msgid "Éditer la news"
+msgstr "Edit the news"
+
+#: src/modules/themodule_Publi.py:431 src/modules/themodule_Publi.py:802
+msgid "Terminé"
+msgstr ""
+
+#: src/modules/themodule_Publi.py:543
+msgid "Gestion des publications"
+msgstr "Publications management"
+
+#: src/modules/themodule_Publi.py:562
+msgid "Opérations sur les publications"
+msgstr "Operations concerning the publications"
+
+#: src/modules/themodule_Publi.py:573
+msgid "Importer une/des publication(s) sauce BiBTeX"
+msgstr "Import some publication(s) alla BiBTeX"
+
+#: src/modules/themodule_Publi.py:577
+msgid "Ajouter une publication par formulaire"
+msgstr "Add a publication with a form"
+
+#: src/modules/themodule_Publi.py:581
+#, fuzzy
+msgid "GoogleImport"
+msgstr "GoogleImport"
+
+#: src/modules/themodule_Publi.py:585
+msgid "Gérer les listes de publication"
+msgstr "Manage the publication lists"
+
+#: src/modules/themodule_Publi.py:589
+msgid "Ajouter une liste"
+msgstr "Add a list"
+
+#: src/modules/themodule_Publi.py:611 src/modules/themodule_Publi.py:617
+#: src/modules/themodule_Publi.py:622
+msgid "Publications enregistrées"
+msgstr "Publications saved"
+
+#: src/modules/themodule_Publi.py:652
+msgid "Il n'y a aucune publication"
+msgstr "There is no publication"
+
+#: src/modules/themodule_Publi.py:655
+msgid " publication dans la base de données"
+msgstr " publication in the database"
+
+#: src/modules/themodule_Publi.py:657
+msgid " publications dans la base de données"
+msgstr " publications in the database"
+
+#: src/modules/themodule_Publi.py:667
+msgid "Titre de la publication"
+msgstr "Publication title"
+
+#: src/modules/themodule_Publi.py:669 src/modules/themodule_Publi.py:793
+#: src/modules/themodule_Publi.py:890
+msgid "Auteur(s)"
+msgstr "Author(s)"
+
+#: src/modules/themodule_Publi.py:671 src/modules/themodule_Publi.py:795
+#: src/modules/themodule_Publi.py:891
+msgid "Journal"
+msgstr "Diary"
+
+#: src/modules/themodule_Publi.py:684
+msgid "Publié chez"
+msgstr "Published at"
+
+#: src/modules/themodule_Publi.py:692
+#, fuzzy
+msgid "Ajouter PDF"
+msgstr "Add PDF"
+
+#: src/modules/themodule_Publi.py:740
+msgid "Importation de publications"
+msgstr "Publication importation"
+
+#: src/modules/themodule_Publi.py:761
+#, fuzzy
+msgid "Ou bien du code BiBTeX à importer"
+msgstr "or BiBTeX code to import"
+
+#: src/modules/themodule_Publi.py:777
+msgid "Ajout d'une publication"
+msgstr "Add a publication"
+
+#: src/modules/themodule_Publi.py:799
+msgid "Résumé"
+msgstr "Summary"
+
+#: src/modules/themodule_Publi.py:803
+#, fuzzy
+msgid "Ajouter une autre publication"
+msgstr "Add the publication"
+
+#: src/modules/themodule_Publi.py:814
+#, fuzzy
+msgid "Importation des publications via Google Scholar"
+msgstr "Import publications via Google Scholar"
+
+#: src/modules/themodule_Publi.py:824
+msgid "Rechercher"
+msgstr "Search"
+
+#: src/modules/themodule_Publi.py:851
+#, fuzzy
+msgid "Ajout du PDF relatif à une publication"
+msgstr "Add a publication"
+
+#: src/modules/themodule_Publi.py:877
+msgid "Édition d'une publication"
+msgstr "Edition of a publication"
+
+#: src/modules/themodule_Publi.py:894
+msgid "Éditer la publication"
+msgstr "Edit the publication"
+
+#: src/modules/themodule_Publi.py:904
+msgid "Listes de publications enregistrées"
+msgstr "Saved publications lists"
+
+#: src/modules/themodule_Publi.py:911
+msgid "Il n'y a aucune liste, on en crée une ?"
+msgstr "There is no list, do you want to create one?"
+
+#: src/modules/themodule_Publi.py:914
+msgid " liste dans la base de données"
+msgstr " list in the database"
+
+#: src/modules/themodule_Publi.py:916
+msgid " listes dans la base de données"
+msgstr " lists in the database"
+
+#: src/modules/themodule_Publi.py:919
+msgid "Nom de la liste"
+msgstr "List name"
+
+#: src/modules/themodule_Publi.py:920
+msgid "Nombre de publications"
+msgstr "Number of publications"
+
+#: src/modules/themodule_Publi.py:935
+msgid "Exporter (BiBTeX)"
+msgstr "Export (BiBTeX)"
+
+#: src/modules/themodule_Publi.py:964
+msgid "Code BiBTeX"
+msgstr "BiBTeX code"
+
+#: src/modules/themodule_Publi.py:999
+msgid "Oui, on efface tout !"
+msgstr "Yes, we erase everything!"
+
+#: src/modules/themodule_Publi.py:1010
+msgid "Ajout d'une liste de publications"
+msgstr "Add a publication list"
+
+#: src/modules/themodule_Publi.py:1067
+#, fuzzy
+msgid "Ajouter la liste"
+msgstr "Add a list"
+
+#: src/templates/template_manager.py:222
+#, python-format
+msgid ""
+"Impossible de lancer FOP. Code de retour d'erreur : %d.\n"
+"Voici la sortie standard :\n"
+"%s\n"
+"Voici la sortie d'erreur :\n"
+"%s\n"
+"\n"
+"Le fichier xml %s a été gardé (à joindre à tout rapport de bug)\n"
+msgstr ""
+
+#: src/templates/template_manager.py:252
+#, fuzzy, python-format
+msgid ""
+"Erreur au lancement de DBLatex. Les raisons possibles sont :\n"
+"  - utilisation d'un GIF animé (déconseillé) ;\n"
+"  - oubli d'un sous-titre.\n"
+"  - mauvais droits (supprimez /tmp/comfortlog (ou\n"
+"    c:\\Windows\\TEMP\\comfortlog), rechargez la page, et regardez le "
+"contenu du\n"
+"    fichier\n"
+"Si vous ne pouvez pas faire autrement, utilisez FOP (à changer dans la "
+"configuration).\n"
+"Code de retour d'erreur : %d.\n"
+"Sortie standard :\n"
+"%s\n"
+"Sortie d'erreur :\n"
+"%s\n"
+"\n"
+"Le fichier XML cité ci-dessus a été conservé, donnez-le nous pour tout "
+"rapport\n"
+"de bug"
+msgstr ""
+"Error at the DBLatex launching. The possible reasons are:\n"
+"  - animated GIF use (not recommended);\n"
+"  - subtitle forgiven.\n"
+"  - bad permissions (delete /tmp/comfortlog (or\n"
+"    c:\\Windows\\TEMP\\comfortlog), reload the page, and read the content "
+"of\n"
+"    the file\n"
+"If you cannot do differently, use FOP (you must change it in the "
+"configuration)The command was %s"
+
+#: src/templates/template_manager.py:352
+msgid "Version PDF"
+msgstr "PDF version"
+
+#: src/templates/template_manager.py:381
+msgid "Modifier cette page"
+msgstr "Modify this page"
+
+#: src/templates/template_manager.py:381
+msgid "Panneau d'administration"
+msgstr "Administration pannel"
+
+#, fuzzy
+#~ msgid "Impossible de lancer FOP, erreur %s\n"
+#~ msgstr "Impossible to launch FOP, error: %s"
+
+#~ msgid "FOP a un bug bizarre, essayez de recharger la page à tout hasard"
+#~ msgstr ""
+#~ "FOP has a strange bug, please try to reload the page (you may be lucky)"
+
+#, fuzzy
+#~ msgid "Paramètres FTP (si choisi)"
+#~ msgstr "FTP parameters"
+
+#~ msgid "Arrêter le serveur local permettant de visualiser le site"
+#~ msgstr "Stop the local server which allows you to visualize your website"
+
+#, fuzzy
+#~ msgid "Veuillez remplir tous les champs concernant  le serveur FTP."
+#~ msgstr "Please fill in all the fields concerning the FTP servor."
+
+#~ msgid "Changement du mot de passe administrateur"
+#~ msgstr "Administrator password modification"
+
+#~ msgid "Veuillez indiquez un mot de passe."
+#~ msgstr "Please type a password."
+
+#~ msgid "L'ancien mot de passe est incorrect."
+#~ msgstr "The previous password is incorrect."
+
+#, fuzzy
+#~ msgid "Le nouveau mot de passe et la confirmation sont différents."
+#~ msgstr "The new password and the confirmation are different."
+
+#~ msgid "Ancien mot de passe"
+#~ msgstr "Old password"
+
+#~ msgid "Nouveau mot de passe"
+#~ msgstr "New password"
+
+#~ msgid "Confirmation mot de passe"
+#~ msgstr "Password confirmation"
+
+#~ msgid "Éditer une page"
+#~ msgstr "Edit a page"
+
+#~ msgid "Confirmation de synchronisation"
+#~ msgstr "Synchronization confirmation"
+
+#~ msgid "Non initialisé."
+#~ msgstr "Not initialized."
+
+#~ msgid "Options"
+#~ msgstr "Options"
+
+#~ msgid "Modification d'un bouton du menu"
+#~ msgstr "Modification of a button of the menu"
+
+#~ msgid "Nouvelles"
+#~ msgstr "News"
+
+#, fuzzy
+#~ msgid "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Retour à l'accueil du site"
+#~ msgstr "Return to homepage"
+
+#~ msgid "Error initializing database : %s"
+#~ msgstr "Error initializing database : %s"
+
+#~ msgid "modules_mode property already set"
+#~ msgstr "modules_mode property already set"
+
+#~ msgid "unknown mode"
+#~ msgstr "unknown mode"
+
+#~ msgid "must set mode first"
+#~ msgstr "must set mode first"
+
+#~ msgid "Unknown module : %s"
+#~ msgstr "Unknown module : %s"
+
+#~ msgid "Erreur au lancement de DBLatex"
+#~ msgstr "Error at the launching of DBLatex"
+
+#~ msgid "Configuration du module"
+#~ msgstr "Configuration du module"
+
+#~ msgid "Précédent"
+#~ msgstr "Précédent"
+
+#~ msgid ""
+#~ "Impossible d'uploader l'image: une image portant le même nom est déjà sur "
+#~ "le site.\n"
+#~ "Modifiez le nom du fichier et réessayez."
+#~ msgstr ""
+#~ "Impossible d'uploader l'image: une image portant le même nom est déjà sur "
+#~ "le site.\n"
+#~ "Modifiez le nom du fichier et réessayez."
+
+#~ msgid "Liste des images"
+#~ msgstr "Liste des images"
+
+#~ msgid "Voici la liste des images disponibles:"
+#~ msgstr "Voici la liste des images disponibles:"
+
+#~ msgid "Il n'y a aucune image."
+#~ msgstr "Il n'y a aucune image."
+
+#~ msgid "Uploader une image"
+#~ msgstr "Uploader une image"
+
+#~ msgid "Uploader l'image"
+#~ msgstr "Uploader l'image"
+
+#~ msgid "Suppression d'une image"
+#~ msgstr "Suppression d'une image"
+
+#~ msgid "Confirmation de suppression"
+#~ msgstr "Confirmation de suppression"
+
+#~ msgid "Confirmez-vous la suppression de l'image"
+#~ msgstr "Confirmez-vous la suppression de l'image"
+
+#~ msgid " n'existe pas"
+#~ msgstr " n'existe pas"
+
+#~ msgid " doit être mis à jour"
+#~ msgstr " doit être mis à jour"
+
+#~ msgid " crée un conflit"
+#~ msgstr " crée un conflit"

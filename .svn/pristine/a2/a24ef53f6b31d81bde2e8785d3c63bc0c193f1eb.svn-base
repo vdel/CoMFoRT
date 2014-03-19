@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>interface.forms.Formulaire</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://graal.ens-lyon.fr/comfort/">CoMFoRT</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="interface-module.html">Package&nbsp;interface</a> ::
+        <a href="interface.forms-module.html">Module&nbsp;forms</a> ::
+        Class&nbsp;Formulaire
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="interface.forms.Formulaire-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class Formulaire</h1><p class="nomargin-top"><span class="codelink"><a href="interface.forms-pysrc.html#Formulaire">source&nbsp;code</a></span></p>
+<p>Permet de g&#233;n&#233;rer tous les formulaires de l'administration</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="__init__"></a><span class="summary-sig-name">__init__</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">mm</span>,
+        <span class="summary-sig-arg">db</span>,
+        <span class="summary-sig-arg">params</span>,
+        <span class="summary-sig-arg">fields</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="interface.forms-pysrc.html#Formulaire.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="explore_dir_perso"></a><span class="summary-sig-name">explore_dir_perso</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">options</span>,
+        <span class="summary-sig-arg">root</span>,
+        <span class="summary-sig-arg">prefix</span>,
+        <span class="summary-sig-arg">extension_list</span>)</span><br />
+      Cr&#233;e les options du &lt;select&gt; HTML avec les pages persos</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="interface.forms-pysrc.html#Formulaire.explore_dir_perso">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="interface.forms.Formulaire-class.html#get_pages" class="summary-sig-name">get_pages</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Renvoit la table &quot;pages_perso&quot;...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="interface.forms-pysrc.html#Formulaire.get_pages">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="interface.forms.Formulaire-class.html#get_page" class="summary-sig-name">get_page</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">page_id</span>)</span><br />
+      Renvoit le i&#232;me &#233;l&#233;ment de la table &quot;pages_perso&quot;...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="interface.forms-pysrc.html#Formulaire.get_page">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_module_priority"></a><span class="summary-sig-name">get_module_priority</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">page</span>,
+        <span class="summary-sig-arg">module</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="interface.forms-pysrc.html#Formulaire.get_module_priority">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="gen_nav"></a><span class="summary-sig-name">gen_nav</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">page</span>=<span class="summary-sig-default">False</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="interface.forms-pysrc.html#Formulaire.gen_nav">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="gen_form_main"></a><span class="summary-sig-name">gen_form_main</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Page principale contenant les liens vers les formulaires.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="interface.forms-pysrc.html#Formulaire.gen_form_main">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="interface.forms.Formulaire-class.html#gen_form_install" class="summary-sig-name">gen_form_install</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Formulaire d'installation...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="interface.forms-pysrc.html#Formulaire.gen_form_install">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="interface.forms.Formulaire-class.html#gen_form_general" class="summary-sig-name">gen_form_general</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Formulaire pour les param&#232;tres principaux...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="interface.forms-pysrc.html#Formulaire.gen_form_general">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="gen_form_pages"></a><span class="summary-sig-name">gen_form_pages</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Formulaire de gestion des pages</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="interface.forms-pysrc.html#Formulaire.gen_form_pages">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="interface.forms.Formulaire-class.html#gen_form_delpage" class="summary-sig-name">gen_form_delpage</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Formulaire pour confirmer la suppression d'une page...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="interface.forms-pysrc.html#Formulaire.gen_form_delpage">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="interface.forms.Formulaire-class.html#gen_form_modpage" class="summary-sig-name">gen_form_modpage</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Formulaire pour modifier une page...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="interface.forms-pysrc.html#Formulaire.gen_form_modpage">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="interface.forms.Formulaire-class.html#gen_form_editpage" class="summary-sig-name">gen_form_editpage</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Formulaire d'&#233;dition du wiki...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="interface.forms-pysrc.html#Formulaire.gen_form_editpage">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="interface.forms.Formulaire-class.html#gen_form_synchronize" class="summary-sig-name">gen_form_synchronize</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Formulaire pour (&#233;ventuellement) confirmer la synchronisation
+Validation &#224; effectuer: (via admin.py?id=synchronize)</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="interface.forms-pysrc.html#Formulaire.gen_form_synchronize">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="generate"></a><span class="summary-sig-name">generate</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="interface.forms-pysrc.html#Formulaire.generate">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="get_pages"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_pages</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="interface.forms-pysrc.html#Formulaire.get_pages">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Renvoit la table &quot;pages_perso&quot;
+Champs:
+- page_id : string
+- page_title : string
+- page_wiki : string
+- pour chaque module M --&gt; M_priority : int
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_page"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_page</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">page_id</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="interface.forms-pysrc.html#Formulaire.get_page">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Renvoit le i&#232;me &#233;l&#233;ment de la table &quot;pages_perso&quot;
+Champs:
+- page_id : string
+- page_title : string
+- page_wiki : string
+- pour chaque module M --&gt; M_priority : int
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="gen_form_install"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">gen_form_install</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="interface.forms-pysrc.html#Formulaire.gen_form_install">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Formulaire d'installation
+Validation &#224; effectuer: (via adminvalid.py?id=x)
+- id=install:
+  *** Champs envoy&#233;s par POST ***
+  *** A stocker dans ../conf/conf_general.py ***
+  - title
+  - language
+  *** A stocker dans ../conf/conf_private.py ***
+  - transfer_mode
+  - server_ftp  (si transfer_mode == 'FTP')
+  - user_ftp    (si transfer_mode == 'FTP')
+  - root_ftp    (si transfer_mode == 'FTP')
+Erreur pouvant survenir: (via admin.py?id=install&amp;amp;err=x)
+- err=incompleteFTP: Un des champs concernant la bdd est vide      
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="gen_form_general"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">gen_form_general</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="interface.forms-pysrc.html#Formulaire.gen_form_general">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Formulaire pour les param&#232;tres principaux
+Validation &#224; effectuer: (via adminvalid.py?id=x)
+- id=general:
+  *** Champs envoy&#233;s par POST ***
+  *** A stocker dans ../conf/conf_general.py ***
+  - title
+  - language
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="gen_form_delpage"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">gen_form_delpage</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="interface.forms-pysrc.html#Formulaire.gen_form_delpage">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Formulaire pour confirmer la suppression d'une page
+Validation a effectuer: (via adminvalid.py?id=x) 
+- id=page_del: Supprimer le boutton page_id
+  *** Champs envoy&#233;s par POST ***
+  *** A stocker dans la BDD, table: &quot;pages&quot; ***
+  - page_id
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="gen_form_modpage"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">gen_form_modpage</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="interface.forms-pysrc.html#Formulaire.gen_form_modpage">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Formulaire pour modifier une page
+Validation a effectuer: (via adminvalid.py?id=x) 
+- id=page_edit: Mettre a jour la page page_id
+  *** Champs envoy&#233;s par POST ***
+  *** A stocker dans la BDD, table: &quot;pages&quot; ***
+  - page_id
+  - page_title
+  - new_page: 0 ou 1
+  - action: up, down, edit_wiki ou active_wiki
+  - module: le module concern&#233; par l'action
+Erreur pouvant survenir: (via admin.py?id=modpage&amp;amp;err=x)
+- err=existsID : une image portant le m&#234;me nom existe d&#233;j&#224;
+- err=emptyID : ID vide: c'est interdit
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="gen_form_editpage"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">gen_form_editpage</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="interface.forms-pysrc.html#Formulaire.gen_form_editpage">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Formulaire d'&#233;dition du wiki
+Validation a effectuer: (via adminvalid.py?id=x&amp;amp;page='page')
+*** A stocker dans la BDD, table: &quot;pages&quot; ***
+- id=page_wiki: Sauve le texte dans la BD
+  *** Champs envoyes par POST ***
+  - page_id
+  - page_wiki
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="gen_form_synchronize"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">gen_form_synchronize</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="interface.forms-pysrc.html#Formulaire.gen_form_synchronize">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Formulaire pour (&#233;ventuellement) confirmer la synchronisation
+Validation &#224; effectuer: (via admin.py?id=synchronize)
+
+                 ! ! ! ATTENTION ! ! !
+L'action effectu&#233;e apr&#232;s ce formulaire (la synchronisation)
+est inhabituellement longue, elle ne peut donc &#234;tre effectu&#233;e
+par adminvalid sans retour utilisateur, d'o&#249; l'appel &#224; admin.py.
+Ne pas suivre cet exemple !
+
+Erreur pouvant survenir: (via admin.py?id=install&amp;amp;err=x)
+- err=incompleteTransferMode: Un des champs concernant la bdd est vide      
+- err=incompleteFTP: Un des champs concernant la bdd est vide      
+- err=incompleteSSH: Un des champs concernant la bdd est vide      
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://graal.ens-lyon.fr/comfort/">CoMFoRT</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sun May 25 15:42:35 2008
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

@@ -1,0 +1,299 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>l2p - create PNG images from LaTeX expressions</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:root@localhost" />
+</head>
+
+<body style="background-color: white">
+
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+
+<ul>
+
+	<li><a href="#name">NAME</a></li>
+	<li><a href="#synopsis">SYNOPSIS</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<li><a href="#examples">EXAMPLES</a></li>
+	<li><a href="#options">OPTIONS</a></li>
+	<li><a href="#colors">COLORS</a></li>
+	<li><a href="#bugs">BUGS</a></li>
+	<li><a href="#acks">ACKS</a></li>
+	<li><a href="#copyright">COPYRIGHT</a></li>
+	<li><a href="#author">AUTHOR</a></li>
+</ul>
+<!-- INDEX END -->
+
+<hr />
+<p>
+</p>
+<h1><a name="name">NAME</a></h1>
+<p>l2p - create PNG images from LaTeX expressions</p>
+<p>
+</p>
+<hr />
+<h1><a name="synopsis">SYNOPSIS</a></h1>
+<p><strong>l2p</strong> [options...] -i '$<em>latex_expression</em>$'</p>
+<p>or</p>
+<p><strong>l2p</strong> [options...] [<em>expression_file</em>]</p>
+<p><em>expression_file</em> contains an expression or expressions in (La)TeX
+format - one per line.  If neither <em>expression_file</em> nor an 
+<strong>-i</strong> option is given, the expression is read from standard input.</p>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>Convert expressions in LaTeX format into PNGs</p>
+<p>
+</p>
+<hr />
+<h1><a name="examples">EXAMPLES</a></h1>
+<dl>
+<dt>
+<dd>
+<p>l2p -i '$4x^2-7=\cos{2 \pi x}$' -o 'eqn4.png'</p>
+</dd>
+<dd>
+<p>Produce a PNG image, named 'eqn4.png', of the equation described by the
+LaTeX expression '$4x^2 - 7 = \cos{2 \pi x}$'.</p>
+</dd>
+</li>
+<dt>
+<dd>
+<p>l2p -o big_equation.png big_hairy_equation</p>
+</dd>
+<dd>
+<p>Produce a PNG image, called big_equation.png, from the LaTeX expression
+contained in the file big_hairy_equation (specifically, it contains
+'$x=2$'.) Note that this file is NOT a full LaTeX document - use the
+<strong>-F</strong> option for that.</p>
+</dd>
+</li>
+<dt>
+<dd>
+<p>l2p -d 250 -i '$\nabla \cdot \mathbf{D} = \rho$'</p>
+</dd>
+<dd>
+<p>Produce a PNG image from the LaTeX code given with the <strong>-i</strong> argument
+(which happens to be one of Maxwell's equations), at 250 dots per inch.
+Since we did not specify an output file name with the <strong>-o</strong> option, the
+image will be 'eqn.png' (the default).</p>
+</dd>
+</li>
+<dt>
+<dd>
+<p>l2p -p amssymb -i '$\mho$' -o mho.png</p>
+</dd>
+<dd>
+<p>Produce a PNG image of the Mho symbol (an upside-down capital omega),
+saving the image in the file 'mho.png'.  We include the amssymb package,
+which defines that symbol.</p>
+</dd>
+</li>
+<dt>
+<dd>
+<p>l2p -B 20x30 -i '$\sum_{n=0}^{\infty}\frac{(-\phi^2)^n}{(2n)!}$' -o cosine.png</p>
+</dd>
+<dd>
+<p>Produce an image of the indicated infinite summation, padded with a
+border that is 20 pixels on each side horizontally, and 30 pixels each
+side vertically.  The color of this border region will be the same as
+the rest of the image background.</p>
+</dd>
+</li>
+</dl>
+<p>
+</p>
+<hr />
+<h1><a name="options">OPTIONS</a></h1>
+<p>Many options have arguments that may contain characters, like '#' or
+spaces, that the shell considers special.  Be sure to surround all
+such arguments with single or double quotes, so that the shell
+understands what is meant.  (If unsure, it's always safe to use the
+quotes.)</p>
+<dl>
+<dt><strong><a name="item__2di__22_24latex_24_22"><strong>-i ``$latex$''</strong></a></strong>
+
+<dd>
+<p>Argument is an equation/expression in (La)TeX format.  In most cases,
+you will want to enclose the argument in quotes to protect it from shell
+expansion.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2db__22rrggbb_22"><strong>-b ``rrggbb''</strong></a></strong>
+
+<dd>
+<p>Background color.  There are several ways to specify the color.  See the
+section <a href="#colors">COLORS</a>, below, for details.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dd_dpi"><strong>-d dpi</strong></a></strong>
+
+<dd>
+<p>Pixel density at which the equation is rendered, in dots per inch
+(default 300).</p>
+</dd>
+<dd>
+<p>An image with a DPI of 600 will have twice as many pixels in each of the
+x and y directions than an image with a DPI of 300.  The effect is
+different in the normal context of printing, where a higher DPI will
+leave the text with the same physical size, but with a finer resolution.
+This is because the physical size of a pixel is not really variable; so
+to have double the resolution, a symbol in an image must be double the
+size.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2df__22rrggbb_22"><strong>-f ``rrggbb''</strong></a></strong>
+
+<dd>
+<p>Foreground color.  There are several ways to specify the color.  See the
+section <a href="#colors">COLORS</a>, below, for details.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dh"><strong>-h</strong></a></strong>
+
+<dd>
+<p>Show a help summary.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2do_output_2epng"><strong>-o output.png</strong></a></strong>
+
+<dd>
+<p>Name of output file.  Default is 'eqn.png'.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dp_packagename_5b_2cpackagename2_5b_2c_2e_2e_2e_"><strong>-p packagename[,packagename2[,...]]]</strong></a></strong>
+
+<dd>
+<p>Use additional LaTeX/TeX packages.  You can specify several, separated
+by commas.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2db__22widthxheight__5bcolor_5d_22"><strong>-B ``WIDTHxHEIGHT [color]''</strong></a></strong>
+
+<dd>
+<p>or: <strong>-B ``SIZE [color]''</strong></p>
+</dd>
+<dd>
+<p>Pad the resulting image with a border of the indicated size, in pixels.</p>
+</dd>
+<dd>
+<p>You can optionally specify a color for the border region.  By default,
+the border will be the same color as the rest of the background. (See
+<a href="#colors">COLORS</a> below for the format.)</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dc"><strong>-C</strong></a></strong>
+
+<dd>
+<p>Suppress automatic removal (cleanup) of temporary files.  This will be
+useful if something goes wrong, or if you want to use the intermediate
+DVI or Postscript renditions.  <strong>l2p</strong> will tell you which directory
+contains these files.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2df"><strong>-F</strong></a></strong>
+
+<dd>
+<p>Supplied expression is a full LaTeX document, rather than just an
+expression fragment. Negates the <strong>-f</strong>, <strong>-b</strong>, <strong>-p</strong>, <strong>-B</strong> and <strong>-T</strong>
+options.</p>
+</dd>
+<dd>
+<p><strong>Note</strong>:  <strong>l2p</strong> currently only converts full LaTeX documents
+that are relatively simple: only one page in length, and with no external
+dependencies (such as included graphics).  If you need to convert a more
+complex document, you can generate a DVI file with latex like normal,
+then convert the DVI into a series of PNG images using <strong>convert</strong> from
+the ImageMagick distribution.  See <em>convert(1)</em>, or
+<a href="http://imagemagick.org/script/convert.php">http://imagemagick.org/script/convert.php</a> for more information.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dt"><strong>-T</strong></a></strong>
+
+<dd>
+<p>Create an image with a transparent background.</p>
+</dd>
+</li>
+<dt><strong><a name="item__2dv"><strong>-V</strong></a></strong>
+
+<dd>
+<p>Show version information.</p>
+</dd>
+</li>
+</dl>
+<p>
+</p>
+<hr />
+<h1><a name="colors">COLORS</a></h1>
+<p>Some options, such as <strong>-b</strong> and <strong>-f</strong>, take an argument specifying a
+color in RGB format.  <strong>l2p</strong> will decipher most representations, such
+as:</p>
+<dl>
+<dt>
+<dd>
+<p>A hexidecimal triplet.  For example, '-f ``FF0000'' -b ``#ffffff''' gives a
+red foreground on a white background.  Case is not important, and the
+``#'' is optional.</p>
+</dd>
+</li>
+<dt>
+<dd>
+<p>Three decimal whole numbers, in the range of 0 to 255.  These must be
+separated by spaces or punctuation (comma, semicolon or colon).  For
+example, '-b ``0 127 255'' -f ``0,0,0''' is black on a nice bluish
+background.</p>
+</dd>
+</li>
+<dt>
+<dd>
+<p>Three fractions between 0 and 1, inclusive.  At least one of the three
+numbers must contain a decimal point (to distinguish this format from
+the others), and they are separated by space or punctuation.  For
+example, ``0.87 .78 .41'' is the same as the hex triplet ``DEC769'', and ``0,
+1.0, 0'' is the color green.  (Remember that decimal point.  ``0, 1, 0''
+will give you a nearly black color.)</p>
+</dd>
+</li>
+</dl>
+<p>Note that you may need to put single or double quotes around the color
+string, to ensure the shell interprets it correctly.</p>
+<p>
+</p>
+<hr />
+<h1><a name="bugs">BUGS</a></h1>
+<p>Error handling is imperfect.  Among other things, If a needed 
+LaTeX package is not included, <strong>l2p</strong> will silently produce a
+broken image.</p>
+<p>On certain platforms, images produced with the <strong>-T</strong> option (transparent
+background) may leave pixels at the edges of symbols a mixture of the
+text color and some background color.  This may not look good if the
+resulting image is put on a differently colored background.  A
+workaround is to give a background color hint with the <strong>-b</strong> option;
+the edge pixels will then be a mixture of specified foreground and
+background colors.</p>
+<p>
+</p>
+<hr />
+<h1><a name="acks">ACKS</a></h1>
+<p>Thanks to Jesse Merriman (<a href="http://www.jessemerriman.com/">http://www.jessemerriman.com/</a>) for
+providing a patch that improved transparent background support.
+Integrated in version 1.1.</p>
+<p>
+</p>
+<hr />
+<h1><a name="copyright">COPYRIGHT</a></h1>
+<p>This software is in the public domain.</p>
+<p>
+</p>
+<hr />
+<h1><a name="author">AUTHOR</a></h1>
+<p>Aaron Maxwell (<a href="mailto:amax@redsymbol.net">amax@redsymbol.net</a>)  Comments, feature requests, and
+patches are welcome.</p>
+
+</body>
+
+</html>

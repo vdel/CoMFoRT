@@ -1,0 +1,209 @@
+@charset "utf-8";
+@import url(../common/wiki.css);
+@import url(../common/menu.css);
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #9f9f9f;
+  font-family: "Dejavu Sans", "Bitstream Vera Sans", "tahoma", sans-serif;
+}
+
+/* voir les remarques ci-dessous avec sélecteurs > */
+html > body {
+  padding-top: 142px;
+}
+
+#ie6hack {
+  background-image: url(images/a1.gif);
+  background-repeat: repeat-x;
+  color: #FFFFFF;
+  height: 104px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+#ie6hack div div, #ie6hack .sitename {
+  top: 0;
+  left: 30%;
+  width: 40%;
+}
+
+/* marche pas sous IE (fait exprès) */
+#ie6hack > div > div, #ie6hack > .sitename {
+  height: 100px;
+  position: fixed;
+}
+
+#ie6hack h1 {
+  padding: 0;
+  margin: 0;
+  text-transform: lowercase;
+  color: #dadada;
+  font-family: "trebuchet ms", helvetica, sans-serif;
+  letter-spacing: -0.08em;
+}
+
+/* même remarque */
+#ie6hack > div > div > h1 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#ie6hack .sitename {
+  padding-top: 1em;
+  text-transform: lowercase;
+  font-weight: bold;
+}
+
+div#Menu {
+  height: 38px;
+  position: fixed;
+  top: 104px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#Menu ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+#Menu li {
+  display: inline;
+  width: 11em;
+}
+
+/* IE, encore et toujours */
+#Menu > div > ul > li {
+  width: auto;
+}
+
+#Menu li li {
+  background-color: white;
+  border-bottom: 1px dashed #9f9f9f;
+  border-left: 1px dashed #9f9f9f;
+  width: 100%;
+}
+
+#Menu li li a {
+  height: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#Menu li:hover ul, #Menu .sfhover ul {
+  margin-left: -1px;
+}
+
+#Menu a {
+  display: block;
+  height: 28px;
+  text-decoration: none;
+  color: #636363;
+  padding: 0 10px;
+  font-weight: bold;
+  padding-top: 10px; /* moche... mais comment centrer verticalement ? */
+  border-right: 1px dashed #9f9f9f;
+}
+
+#Menu a:hover {
+  background-image: url(images/bbg1.gif);
+  background-repeat: repeat-x;
+  background-color: #cbde6f;
+  color: white;
+}
+
+#Menu p { display: none; }
+
+/* contenu */
+
+h1, h2, h3, h4, h5, h6 {
+  color: #81ac1e;
+}
+
+.sect1 {
+  background-image: url(images/a2.gif);
+  background-repeat: repeat-x;
+  margin: 0;
+  padding: 10px 20px;
+  font-size: 90%;
+}
+
+div.titlepage h2 {
+  clear: none !important;
+  margin-top: 0;
+}
+
+#News, #Coord, #Calendrier {
+  float: left;
+  clear: left;
+  width: 25%;
+  margin: 10px 20px;
+  padding: 10px;
+  background: #ffffe9 url(images/a4.gif) repeat-x;
+  border: 1px dashed #9f9f9f;
+}
+
+#News h2, #Coord h2, #Calendrier h2 {
+  text-transform: lowercase;
+  color: #636363;
+  font-family: "trebuchet ms", helvetica, sans-serif;
+  margin: 0;
+  font-size: 120%;
+}
+
+#News h3, #Coord h3, #Calendrier h3 {
+  font-size: 100%;
+  text-transform: lowercase;
+}
+
+/* footer */
+
+.feet {
+  background-image: url(images/a2.gif);
+  background-repeat: repeat-x;
+  /*clear:both;*/
+  padding-top: 10px;
+  text-align: center;
+  font-size: 80%;
+}
+
+/* général */
+
+.titlepage a { display: none; }
+
+a {
+  color: #93B300;
+  text-decoration: underline;
+  padding: 2px;
+}
+
+a:hover {
+  background-image: url(images/bbg1.gif);
+  background-repeat: repeat-x;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+dt {
+  background: url(images/x1.gif) no-repeat 0 0.4em;
+  padding-left: 10px;
+}
+
+dt:hover {
+  background: url(images/x2.gif) no-repeat 0 0.4em;
+  padding-left: 10px;
+}
+
+table {
+  border-collapse: collapse;
+  border: 1px solid #9f9f9f;
+}

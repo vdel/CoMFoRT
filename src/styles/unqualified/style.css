@@ -1,0 +1,165 @@
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+@import url(../common/wiki.css);
+
+
+/* General appearance */
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: block;
+  margin: 20px 20px 10px 20px;
+  background:  #FAFAFA url(images/bg01.jpg) repeat-x top left;
+  font-size: 13px;
+  color: #707070;
+  font-weight: normal;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+p, ul, ol {
+  line-height: 200%;
+}
+
+/* Site name */
+
+.sitename {
+  color: #858585;
+  padding: 0 0 10px;
+  font-size: 120%;
+}
+
+/* Titles */
+
+.title {
+  margin: 0;
+  border-bottom: 2px solid #484848;
+  color: #555555; 
+}
+
+
+div.titlepage h1 {
+  text-transform: lowercase;
+  letter-spacing: -1px;
+  font-size: 24px;
+}
+
+div.titlepage h2 {
+  text-transform: lowercase;  letter-spacing: -1px;
+  font-size: 24px;
+}
+
+div.titlepage h3 {
+  font-size: 1em;
+}
+
+
+/* Links to other web pages */
+
+a {
+  color: #82DA62;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #A2FA82;
+}
+
+
+
+/* Menu */
+
+#Menu {  float: right;
+}
+
+#Menu p { display: block; }
+
+#Menu ul {  margin: 0px;
+  padding: 20px 0px 80px 0px;
+  list-style: none;
+}
+
+#Menu li {
+  display: inline;
+}
+
+#Menu a {
+  display: block;
+  float: left;
+  margin-left: 20px;
+  text-decoration: none;
+  text-transform: lowercase;
+  font-size: 1.36em;
+  color: #FFFFFF;
+}
+
+#Menu a:hover, .active a {
+  border-bottom: 3px solid #FFFFFF;
+}
+
+/* Footer */
+
+.feet {
+  clear: both;
+  margin-top: 30px;
+  text-align: center;
+  padding: 5px 20px;
+  height: 22px;
+  background: #000000;
+}
+
+/* Tables */
+
+table {
+  border-style: solid;
+  border-color: #FAFAFA;
+  margin: 10px 10px 10px 10px;
+  border-collapse: collapse;
+}
+
+/* Sidebar, we might be able to do that one day! */
+
+#sidebar {
+  float: right;
+  width: 240px;
+}
+
+#sidebar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#sidebar li {
+}
+
+#sidebar li ul {
+  padding: 15px 0;
+}
+
+#sidebar li li {
+  padding-left: 20px;
+  border-bottom: 1px dotted #7B9418;
+}
+
+#sidebar h2 {
+  margin: 0;
+  padding: 5px 0 0 20px;
+  background: url(images/img06.jpg) no-repeat left 80%;
+}
+
+#sidebar a {
+  text-decoration: none;
+}
+
+#sidebar a:hover {
+}
+
+

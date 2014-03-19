@@ -1,0 +1,486 @@
+\documentclass{article}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+
+
+\title{\Huge CoMFoRT \\
+       \huge User Manual}
+\author{L3IF second Project}
+\date{May 2008}
+
+\begin{document}
+
+  \maketitle
+  \clearpage
+  \tableofcontents
+  \clearpage
+
+\part*{}
+\section{Installation}
+
+    \paragraph{}
+    CoMFoRT works on Linux, Mac OS or Windows. The installer isn't ready yet, so not much to say about it but it will certainly be easy to work. Please note that when you install our CMS you will also be installing Python, if you haven't already downloaded it on to your machine, as it is necessary for CoMFoRT to work. 
+    %Il est possible d'installer CoMFoRT sous Linux, Mac ou
+%  Windows. L'installation n'étant pas encore prête, je peux pas encore
+%  en dire grand chose mais \c ca sera super à n'en point douter !! \`A
+%  noter que Python s'installera en même tempsq ue notre cms si il n'est
+%  pas déjà présent sur la machine... Il est un petit peu essentiel. 
+  \subsection{Linux}
+    \paragraph{}
+    We will certainly create a Debian package, which will be installed in the same way as any other.
+    %Un paquet Debian sans aucun doute. Il s'installe comme tout paquet debian...
+  \subsection{Mac OS}
+    \paragraph{}\c 
+    It will certainly be similar to linux. 
+    %Ca va marcher comme sous Linux à peu près...
+  \subsection{Windows}
+
+    \paragraph{}
+    Launch the installer and everything will be installed nearly automatically. 
+    %Lancer le programme d'installation et tout se fera à peu près tout seul... 
+
+%\section{Gestion des pages}
+\section{Page management}
+\subsection{Create/Delete pages}
+%  \subsection{Créer/Supprimer des pages}
+     \paragraph{}
+     In the beginning, the website only has one page : the homepage. You may add as many pages as you want, the only constraint being that they must each have a unique name. \\
+     By default, the only active modules on a new page are the menu module and the wiki module. 
+    % Au départ, le site ne comporte qu'une unique page : la
+  %   page d'accueil. Il est possible de rajouter autant de pages que
+ %    l'on veut, la seule contrainte étant que chacune d'entre elles doit
+ %    avoir un nom différent. Par défaut, seuls les modules menu et wiki
+   %  sont actifs sur une nouvelle page. 
+\subsubsection{Creation}
+%    \subsubsection{Création} 
+Using the administration interface, you can create as many pages as you like. When you create a page, you configure it as you like (name, placement, etc...) and the page can always be modified later on. 
+  %  On peut créer autant de pages que voulu à
+  %   partir de la page administrateur. Lors de la création, on paramètre
+ %    la page à volonté (nom, emplacement, etc ), on peut toutefois la
+  %   modifier à volonté par la suite. 
+\subsubsection{Removal}
+%    \subsubsection{Suppression}
+To remove a page, go to your administration interface and delete the page that you want. 
+Please note that the homepage can not be deleted. 
+  %  Pour supprimer une page, aller dans
+  %   l'interface administrateur et supprimer la page de son choix. \`A
+   %  noter que la page d'accueil ne peut pas être supprimée. 
+\subsubsection{Insertion of a page generated elsewhere}
+%    \subsubsection{Insertion d'une page générée en dehors de CoMFoRT}
+It is possible to add a page that was created independantly from our CMS, to do this you need to add it in the folder with the rest of the generated pages, and it will be uploaded to the server along with the other ones. 
+  %  Il est
+    % possible d'ajouter une page générée indépendamment de notre CMS,
+   %  pour cela il suffit de l'ajouter dans le dossier avec les autres
+    % pages générées, elle sera alors téléchargée vers le serveur avec
+ %    les autres. 
+\subsection{Modify a page}
+%  \subsection{Modifier une page}
+\subsubsection{Modification}
+%     \subsubsection{Modification}
+Each page can be entirely configured. It is possible, and it is something that we have tried to make as intuitive as possible, to modify a page by activating or deactivating some modules. 
+
+   %  Chaque page est entièrement paramétrable. Il
+   %  est possible, et c'est quelque chose que nous avons voulu le plus
+  %   intuitif possible, de modifier une page en activant ou désactivant
+   %  certains modules.(voir aussi \ref{Modules}) 
+\subsubsection{Going online}
+%     \subsubsection{Mise en ligne}
+Every new modification to your website is done locally, and once your website is locally updated, it can be generated and sent to the server. Before this operation, no modification is saved nor published online. 
+%     Toutes les modifications apportées sont
+%     faites en local, une fois le site mis-à-jour en local, il ne reste
+  %   plus qu'à le générer et l'envoyer sur le serveur. Avant cette
+  %   opération, aucune modification n'est enregistrée, ni publiée. 
+
+\section{Publications management}
+%\section{Gestion des publications}
+
+CoMFoRT being oriented for researchers, it offers an efficient publications management. 
+
+%CoMFoRT étant orienté vers les chercheurs, il propose une gestion
+%efficace des publications. 
+\subsection{Import}
+%  \subsection{Import}
+There are several ways to import information on your publications  : 
+%  Il vous permet d'importer les informations sur vos publications de
+  %différente façons : 
+   \begin{itemize}
+    \item{You can of course furnish them manually by entering the information in a form.
+    %Vous pouvez bien entendu les fournir "à la main" via un formulaire
+    }
+    \item{But you can also provide a BibTeX file, and CoMFoRT will then extract the relevant information.
+    %Mais vous pouvez aussi fournir un fichier BibTeX, et CoMFoRT se
+	% charge alors d'extraire les informations utiles.
+	} 
+    \item{(upcoming feature) You can also import your publication information automatically providing only your name. CoMFoRT will then use Google Scholar to fetch all publications with that name, and will ask you to select yours among them.
+    %(A venir) Et finalement, vous pouvez également importer les
+	% informations sur vos publications de manière automatique en
+	% fournissant uniquement votre nom. CoMFoRT se charge alors d'aller
+	% chercher les informations via Google Scholar, et vous demande
+	% alors uniquement de sélectionner quelles publications sont bien
+	 %les votre.
+	 } 
+   \end{itemize}
+\subsection{Export}
+%  \subsection{Export}
+You can also export in BibTeX format the list of the publications you added to your website, and even select only a part of those publications (for example last year's). 
+This will allow you for example to import all the necessary information about your publications to the CNRS's HAL website or to the INRIA. 
+
+  %Vous pouvez également exporter en BibTeX la liste des publications que
+ % vous avec rajoutez au site, et même sélectionner juste une partie de ces
+ % publications (par exemple celle de l'année écoulée). Cela vous permet
+  %par exemple d'importer toutes les informations nécessaire sur vos
+  %publications sur le site HAL du CNRS ou de l'INRIA. 
+\subsection{Publications list management}
+%  \subsection{Gestion de la liste des publications}
+You can also organize your publications by grouping them in a list form. 
+
+
+  %Vous pouvez également gérer vos publications en les groupant sous forme
+  %de liste. 
+\section{Wiki module}
+% \section{Module wiki}
+\subsection{Why a wiki module?}
+%    \subsection{Pourquoi un module wiki}
+The wiki module is  module which is there to help users express themselves in the way that they choose. It comes as a complement to other modules and can be used to fill functionalities that could not be filled  by any of the other modules. There can only be one wiki module by page, though. 
+  %  Le module wiki est un module
+%    dont le rôle premier est de permettre à l'utilisateur de
+    %s'exprimer comme il le désire. Il vient en complément des autres
+    %modules et il peut servir à remplir des fonctions que ne remplirait
+    %pas un des autres modules. Il ne peut cependant n'y avoir qu'un seul
+   % module wiki par page. 
+\subsection{Syntax}
+%    \subsection{Syntaxe}
+The syntax used by our wiki module, is a part of the syntax used by wikipedia.
+   % On utilise comme syntaxe, dans le module wiki, un
+    %sous-ensemble de la syntaxe de wikipédia.  
+\subsubsection{Possible syntax}
+%   \subsubsection{Syntaxe supportée :}
+     \paragraph{Paragraphs }
+     To begin a new paragraph, start a new line by leaving one blank. 
+     % pour passer au paragraphe
+	%	suivant, il faut sauter une ligne.
+ 		
+     \paragraph{Titles}  ==, ===, ====, ===== and ======.
+	
+		 Ex: \verb|== Title ==|
+     \paragraph{Formatting} 
+     	\begin{itemize}
+	 \item \textbf{italic : } \verb|''|
+	       Ex: \verb|''italic''|
+	 \item \textbf{bold : } \verb|'''|
+	       Ex: \verb|'''bold'''|
+	 \item \textbf{italic + bold :} \verb|'''''|
+	       Ex: \verb|'''''italic AND bold'''''|
+	\end{itemize}
+     \paragraph{Text size :}
+		\verb|<small>text</small>| Makes the text smaller and  \verb|<big>| does the opposite . 
+     \paragraph{Links :} 
+      For a link to an internal element in CoMFoRT, the syntax is \verbl[[link]]|, and \verb|[link]| for an external element. 
+     %Pour un lien vers un élément interne à
+	%	CoMFoRT, la syntaxe est \verb|[[lien]]|, pour un élément
+	%	externe \verb|[lien]|. 
+		
+		 \subparagraph{Hypertext linking :}
+		 \verb?[[url | text]]?
+		 The equivalent to this is \verbl<a href="url">text</a>
+		 %      \verb?[[url|texte]]? 
+		  %     équivalent à 
+	%	       \verb|<a href="url">texte</a>|
+	The text can be ommitted, in which case, the text will be the same as the url. It is the same for external links with \verb|[]|
+		 %      le champ texte peut être omis, dans ce cas, il vaut url
+		   %    idem pour les liens externes avec \verb|[]|.
+		   	   
+		 \subparagraph{Image:}
+\begin{verbatim}
+[[Image:url|thumb|position|size|legend]]
+\end{verbatim}
+Thumb, position, size and legend are optional.
+		   %    Les champs thumb, position, taille et légende peuvent
+		   %    être omis. 
+		       \begin{itemize}
+			\item \verb|url|: image url
+			\item \verb|position|: can be left, center or right
+			\item size : syntax :  
+			      \begin{itemize}
+			       \item \verb|300px|: 
+			       The image is 300 pixels high or large (depending on the largest dimension of the image)
+			       %l'image fait 300
+				   %  pixels de large ou de 
+				 %    haut (suivant la dimension la
+				  %   plus grande de l'image) 
+			       \item \verb|300|: same
+			       \item \verb|300x200px|: The image is 300 pixels large, 200 pixels high
+			      \end{itemize}
+			\item \verb|legend|: Text shown if the image cannot be loaded
+			\item \verb|thumb| : if given, the equivalent of making the size 180px. 
+			%texte affiché si l'image
+		%	      ne peut pas être chargée 
+		%	\item \verb|thumb|: si précisé, équivalent à
+		%	      indiquer pour la taille: 180px 
+			      \verb?[[Image:hello.gif|thumb]]? is equivalent to 
+			      \verb?[[Image:hello.gif|180px]]?
+		%	      \verb?[[Image:coucou.gif|thumb]]? équivalent
+		%	      \verb?[[Image:coucou.gif|180px]]?
+		It is the same for external images with \verb|[]|
+		%	      idem pour les images externes avec \verb|[]|.
+		       \end{itemize}
+		       
+		 \subparagraph{Link to a personal page : }
+		 %\subparagraph{Lien vers une page perso:}
+		 \verb?[[Page:url|text]]? works the same as hypertext links : the url is the relative path in perso/pages
+		%       \verb?[[Page:url|texte]]? idem que les liens
+		   %    hypertextes: url est 
+		    %   l'url est le chemin relatif dans perso/pages
+		\subparagraph{Link to a personal image :}
+		% \subparagraph{Lien vers une image perso:}
+		
+		\verb?[[Picture:url|text]]? same as for hypertext links : the url is the relative path in perso/pictures.
+		   %    \verb?[[Picture:url|texte]]? idem que les liens
+		     %  hypertextes: url est l'url est le 
+		     %  chemin relatif dans perso/pictures
+		 \subparagraph{Link to a personal document :}
+		 
+		\verb?[[Doc:url|text]]? same as for hypertext links : the url is the relative path to the document in perso/docs.
+	%	       \verb?[[Doc:url|texte]]? idem que les liens
+		%       hypertextes: url est l'url est le 
+		%       chemin relatif dans perso/docs
+		
+		
+
+		
+     \paragraph{Exponents} \verb|{{exponent}}| or
+	%	\verb?{	{exposant}}? ou 
+	  \verb|<sup>exponent</sup>|
+     \paragraph{Subscript:} \verb|{{subscript}}| or \verb?{{ind|subscript}}? ou
+	  \verb|<sub>subscript<sub>|
+     \paragraph{Tables} 
+         \begin{verbatim}
+         {| :  beginning of table
+         | + title : add a title to the table
+         |- : add a new line
+         | text : add a new cell in the current line containing text 
+         | options | text : same as above with the following options added : 
+          *align ="left"|"center"|"right"
+          *valign = "top"|"middle"|"bottom"
+
+         * colspan = x : the cell extends over x columns
+         * rowspan=x : the cell extends over x rows
+
+    |} : end of the table
+	 \end{verbatim}
+     \paragraph{Lists :} 
+
+	
+	\subparagraph{Non-ordered lists}
+	At the beginning of a line : * creates a bullet	
+ %   \subparagraph{Les listes non ordonnées:}
+ %   En début de ligne:  * crée une nouvelle puce
+     Example:
+                 \begin{verbatim}
+                 * bullet number 1
+                 * bullet number 2
+                 * bullet number 3
+	
+                  \end{verbatim}
+                  \subparagraph{Ordered lists}
+	%	 \subparagraph{ Les listes ordonnées:}
+	At the beginning of a line : \# creates a new item for a numbered list. 
+	Example : 
+%		       En début de ligne:  \# crée un nouvel item pour
+%		       une liste numérotée. Exemple:
+	  \begin{verbatim}
+	  # item 1
+	  # item 2
+	  
+	  displays -->   1. item 1
+	               2. item 2
+	  \end{verbatim}
+		 \subparagraph{ We can mix these two types of lists:}
+		       
+		 Exemple 1:
+                   \begin{verbatim}
+    * bullet 1
+    * bullet 2
+    # item 1
+    # item 2
+  
+    displays -->   * bullet  1
+                 * bullet 2
+                   1. item 1
+                   2. item 2
+		   \end{verbatim}
+  
+		       Exemple 2:
+                   \begin{verbatim}
+    * a list
+    # item 1
+    ## item 11
+    ** hello
+    ### item 111
+    ## item 12
+    # item 2
+
+    displays -->   * a list
+                      1. item 1
+                         a. item 11
+                            * coucou
+                         b. item 12
+                      2. item 2
+		   \end{verbatim}
+		   
+
+
+		   
+		   
+	\paragraph{Preformatted text :} add a space at the beginning of a line. 	
+   %  \paragraph{Texte préformaté :} ajouter un espace en début de ligne.
+     \paragraph{markup :} 
+		\begin{itemize}
+		\item math : inserts LaTeX in the wiki
+%		 \item math: insère du latex dans le wiki
+		       
+		       \verb|<math size="x" packages="p">LaTeX code</math>|
+		     \begin{itemize}
+		     \item \verb|x| : the LaTeX size (default is 200)
+		%	\item \verb|x|: la taille du latex (par défaut: 200)
+		\item \verb|p| : packages to use under the form : "package1 package2 package3... "
+	%		\item \verb|p|: les paquets à utiliser sous la forme 
+			  %    "paquet1 paquet2 paquet3..."
+		       \end{itemize}
+		       \item nowiki: \verb|<nowiki>text</nowiki> inserts text into the wiki and it will be printed as-is.
+	%	 \item nowiki: \verb|<nowiki>text</nowiki>| insère text
+	%	       tel quel dans le wiki sans le modifier.
+	\item h2,h3,h4,h5 and h6  : \verb|<h2>Title</h2> |  is equivalent to 
+	%	 \item h2, h3, h4, h5 et h6:  \verb|<h2>Titre</h2>| équivaut à
+		       \verb|==title==|
+		       same for h3 and ===, etc...
+		%       idem pour h3 et ===, etc...
+		\item ul, ol and li  : for lists, same as in XHTML
+	%	 \item ul, ol et li: balises pour les listes, idem qu'en XHTML
+	\item ref : \verb|<ref>reference</ref> inserts a footnote with "reference" in the footnote's text
+	%	 \item ref: \verb|<ref>référence</ref>| insère une note
+	%	       de bas de page avec comme texte "référence" 
+	\item sup and sub : see exposant and indice paragraphs
+	\item pre : \verb|<pre>text</pre>| inserts pre-formatted text, same as putting a space at the beginning of a line.
+	%	       idem que espace en début de ligne
+	\item i, b,u,s and highlight : italics, bold, underlined, crossed-out and highlighted text.
+	%	       sous-ligné, barré et sur-ligné
+	\item \verb|</br>| new line
+	%	 \item \verb|</br>| va à la ligne
+	\item \verb|<module />|
+	%	 \item \verb|<module />|:
+		       
+		       \verb|<module id="mod" params="key1=value1&key2=value2..." />| 
+		       
+		       inserts the content of the "mod" module, called with the
+	%	       insère le contenu du module "mod" appelé avec les
+		       arguments  .
+		  
+		       \verb|{key1: value1, key2: value2, ...}|
+		\end{itemize}
+	
+	\subsubsection{Non-implemented syntax:}	
+%	\subsubsection{Syntaxe non prise en charge:}
+	 \begin{itemize}
+	 \item the \verb|:| at the start of a line, is supposed to do tabulations
+%	  \item le \verb|:| en début de ligne, censé faire des tabulations
+\item the \verb|</hr>|: insert a seperator
+%	  \item le \verb|</hr>| : insère un séparateur
+\item \verb|center| : centered text
+	%  \item \verb|center|: du texte centré
+	\item \verb|!| at the beginning of a line in a table has the same effect as \verb?|?
+%	  \item le \verb|!| en début de ligne dans un tableau: même effet que le
+%	  \verb?|?
+	 \end{itemize}
+	 \section{Other Modules}
+	 \subsection{News}
+	 \subsection{Calendar}
+	 \subsection{Teachings}
+% \section{Autres modules}
+%  \subsection{News}
+%  \subsection{Calendrier}
+%  \subsection{Enseignements}
+
+
+
+\section{Personalizing your website}
+%\section{Personnalisation du site}
+\subsection{Themes}
+%  \subsection{Thèmes}
+
+    \paragraph{}
+    CoMFoRT offers a default theme. It is nevertheless easy to choose another one. We offer a pre-defined library of themes. It is also possible to import a theme, to create new ones or to modify pre-existing ones.
+%    CoMFoRT propose un thème par défaut. Il est toutefois
+%    possible d'en choisir un autre facilement. Ainsi il est proposé une
+%    bibliothèque de thèmes prédéfinis. Il est aussi possible d'en
+%    importer, d'en créer de nouveaux ou de modifier des pré-existants. 
+\paragraph{Creating/adding a theme}
+      \begin{itemize}
+      \item Create a folder in /src/styles
+\item Put a css stylesheet in the this folder as well as the images used by you css. For the theme creation, we suggest you take inspiration from pre-existing stylesheets.
+%	\item Mettre dans ce dossier la feuille de style css
+%	      correspondante et les éventuelles images utilisées par le
+%	      fichier css. Pour la création de thème, il est suggéré de
+%	      s'inspirer des feuilles de style  pré-existantes. 
+   \end{itemize}
+
+  \subsection{Modules}
+    \label{Modules}
+    \subsubsection{Module activation}
+  % \subsubsection{Activation des modules}
+  By default, only menu and wiki modules are active on a page. To activate others, you need to go to the administration page and activate the desired modules for that page. 
+  The other available modules are : news, teachings, publications, calendar.
+%    Par défaut, seuls les modules menu
+%    et wiki sont activés sur une page. Pour en activer d'autres, il faut
+%    se rendre dans la page d'administration et activer les modules
+   % désirés suivant les pages. Les autres modules disponibles sont :
+ %   news , enseignements , publications , agenda . 
+ \subsubsection{Module organization}
+ %   \subsubsection{Agencement des modules}
+ The order modules appear on a the administration pas is the order in which the modules will appear in CoMFoRT. You can change this to your liking by making a module go up or down.
+ %   L'ordre des modules sur la page
+ %   administrateur est l'ordre dans lequel seront affichés tout les
+%    modules dans CoMFoRT. C'est réglable : on peut monter/descendre un
+ %   module. 
+   
+\subsection{Adding a module}
+ % \subsection{Ajout d'un module}
+ \paragraph{How to add a module}
+%    \paragraph{Comment ajouter un module}
+To add a module, you can use exisiting modules as inspiration In modules\_interfaces.py, you will find several interfaces which you can choose to implement : 
+%    Pour ajouter un module, vous pouvez vous baser sur les modules déjà
+%    existants. Dans modules\_interfaces.py, vous trouverez différentes
+%    interfaces que vous pouvez choisir d'implémenter : 
+    \subparagraph{|ModuleAdminPage} for modules using a configuration page in the administration interface. You may for example use the "News" module as a basis to become familiar with writing administrative forms, and using the returned values, as well as insertion in the database.
+  %    \subparagraph{IModuleAdminPage} pour les modules utilisant une
+  %    page de configuration dans la partie administration. Vous pourrez
+   %   par exemple vous baser sur le modules "News" pour vous
+%      familiariser avec l'écriture de formulaires pour l'administration,
+  %    et la gestion des valeurs de retour ainsi que l'insertion dans la
+ %     base de données... 
+ 
+ \subparagraph{|ModuleDB} for modules using the database (the setup\_db method allows to use the db object to which you can send requests)
+  %    \subparagraph{IModuleDB} pour les modules utilisant la base de
+  %    données (la méthode setup\_db permet de récupérer l'objet db sur
+  %    lequel on peut effectuer les requêtes).  
+  \subparagraph{|ModuleContentProvider} for modules furnishing content.
+ %     \subparagraph{IModuleContentProvider} pour les modules fournissant
+     % du contenu 
+     \subparagraph{} the other interfaces are not yet used.
+  %    \subparagraph{} les autres interfaces ne sont pas encore utilisées
+  %    à l'heure actuelle.
+      Adding a module consists in adding a file "themodule\_NameOfYourModule.py" in the modules folder, this file containing a class "TheModule" which inherits from the interfaces that the module uses.
+  %  Ajouter un module consiste à ajouter un fichier
+  %  "themodule\_NomDeVotreModule.py" dans le dossier modules, ce fichier
+%    contenant une classe "TheModule" qui hérite des interfaces correspondant
+ %   à ce que fait le module. 
+
+ \section{Contact Information}
+ The L3IF 07-08 class of ENS Lyon has a mailing list for this project which you can use to ask any questions about particularities of this project, and also allow your contributions to be useful to other users.
+%  La classe de L3IF 07-08 a, dans le cadre du projet, une mailing-list
+ % qui reste à votre disposition pour vous éclairer quant aux différentes
+%  particularités du projet, ainsi que pour faire profiter les autres
+  %utilisateurs de vos contributions.  
+
+
+\end{document}

@@ -1,0 +1,38 @@
+\select@language {french}
+\contentsline {chapter}{\numberline {1}Installation}{2}
+\contentsline {paragraph}{}{2}
+\contentsline {section}{\numberline {1.1}Linux}{2}
+\contentsline {section}{\numberline {1.2}Windows}{2}
+\contentsline {paragraph}{}{2}
+\contentsline {chapter}{\numberline {2}Introduction \IeC {\`a} CoMFoRT}{3}
+\contentsline {chapter}{\numberline {3}Gestion des pages}{4}
+\contentsline {section}{\numberline {3.1}Cr\IeC {\'e}er/Supprimer des pages}{4}
+\contentsline {paragraph}{}{4}
+\contentsline {paragraph}{Parenth\IeC {\`e}se sur les modules}{4}
+\contentsline {paragraph}{Cr\IeC {\'e}ation}{5}
+\contentsline {paragraph}{Suppression}{5}
+\contentsline {paragraph}{Insertion d'une page g\IeC {\'e}n\IeC {\'e}r\IeC {\'e}e en dehors de CoMFoRT}{5}
+\contentsline {section}{\numberline {3.2}Modifier une page}{5}
+\contentsline {paragraph}{Modification}{5}
+\contentsline {paragraph}{Mise en ligne}{5}
+\contentsline {chapter}{\numberline {4}Gestion des publications}{6}
+\contentsline {section}{\numberline {4.1}Import}{6}
+\contentsline {section}{\numberline {4.2}Export}{6}
+\contentsline {section}{\numberline {4.3}Gestion de la liste des publications}{6}
+\contentsline {chapter}{\numberline {5}Personnalisation du site}{7}
+\contentsline {section}{\numberline {5.1}Th\IeC {\`e}mes}{7}
+\contentsline {paragraph}{}{7}
+\contentsline {paragraph}{Cr\IeC {\'e}er/Ajouter un th\IeC {\`e}me}{7}
+\contentsline {section}{\numberline {5.2}Modules}{7}
+\contentsline {paragraph}{Activation des modules}{7}
+\contentsline {paragraph}{Agencement des modules}{7}
+\contentsline {section}{\numberline {5.3}Module wiki}{8}
+\contentsline {paragraph}{Pourquoi un module wiki}{8}
+\contentsline {paragraph}{Syntaxe}{8}
+\contentsline {section}{\numberline {5.4}Les autres modules}{10}
+\contentsline {paragraph}{Les news et le calendrier}{10}
+\contentsline {paragraph}{Le menu}{11}
+\contentsline {paragraph}{Enseignement}{11}
+\contentsline {section}{\numberline {5.5}Ajout d'un module}{11}
+\contentsline {paragraph}{Comment ajouter un module}{11}
+\contentsline {section}{\numberline {5.6}Contacts}{11}

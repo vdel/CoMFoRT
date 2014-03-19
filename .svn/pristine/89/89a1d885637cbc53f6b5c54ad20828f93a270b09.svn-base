@@ -1,0 +1,171 @@
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+Adapted by Anne-Laure Mouly for CoMFoRT project
+*/
+
+@import url(../common/wiki.css);
+
+body {
+  margin: 0;
+  padding: 0;
+        background: #000000 url(images/img01.jpg) repeat-x top center;
+  font-size: 13px;
+  color: #8C8C8C;
+}
+
+body, th, td, input, textarea, select, option {
+  text-transform: lowercase;
+  font-family: "Trebuchet MS", "Times New Roman", Arial, Times, serif;
+}
+
+div.titlepage h1, h2, h3 {
+  font-weight: normal;
+  color: #F8FBEC;
+}
+
+div.titlepage h1 {
+  letter-spacing: -2px;
+  font-size: 3em;
+}
+
+div.titlepage h2 {
+  letter-spacing: -1px;
+  font-size: 2em;
+}
+
+div.titlepage h3 {
+  font-size: 1em;
+}
+
+p, ul, ol {
+  line-height: 200%;
+}
+
+blockquote {
+  padding-left: 1em;
+}
+
+blockquote p, blockquote ul, blockquote ol {
+  line-height: normal;
+  font-style: italic;
+}
+
+a {
+  color: #9BDB18;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #E6B715;
+}
+
+#wrapper {
+}
+/* Header */
+
+.sitename {
+  width: 760px;
+  height: 120px;
+  margin: 30 auto;
+        color: #9CBC1E;
+        font-size: 320%;
+}
+
+
+/* Page */
+
+.article {
+  width: 760px;
+  margin: 0 auto;
+}
+
+/* Content */
+
+.sect1,.footnotes {
+  float: right;
+  width: 600px;
+  margin: 0;
+}
+
+.post {
+  padding: 0 0 20px 0;
+}
+
+.title {
+  margin: 0;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #B7D24D;
+}
+
+.byline {
+  margin: 0;
+  color: #646464;
+}
+
+.meta {
+  text-align: left;
+  color: #646464;
+  padding: 10px 10px;
+  height: 48px;
+  background: url(images/img06.gif) no-repeat left top;
+}
+
+.meta .more {
+  padding-left: 20px;
+}
+
+.meta .comments {
+  padding-left: 20px;
+}
+
+.meta a {
+  color: #003300;
+}
+
+/* Sidebar */
+
+#Menu {
+  float: left;
+  width: 100px;
+  margin: 0;
+  padding: 10px 0 0 40px;
+  height: 40px;
+  background: url(images/img04.gif) no-repeat left 60%;
+}
+
+.itemizedlist ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.itemizedlist li {
+  border-bottom: 1px dotted #000000;
+  padding-left: 15px;
+}
+
+#Menu a {
+  text-decoration: none;
+}
+
+#Menu a:hover {
+}
+
+/* Footer */
+
+.feet {
+  clear: both;
+  width: 760px;
+  height: 40px;
+  margin: 0 auto;
+  padding: 20px 0 0 0;
+  background: url(images/img05.gif) no-repeat left top;
+  text-align: center;
+  font-size: smaller;
+  color: #52640A;
+}
+.feet a {
+  color: #003300;
+}

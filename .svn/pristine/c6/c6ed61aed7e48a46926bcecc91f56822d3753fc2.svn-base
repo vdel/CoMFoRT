@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=CoMFoRT Interface
+Name[fr]=Interface de CoMFoRT
+Comment=Launch administration interface of your CoMFoRT site
+Comment[fr]=Lance l'interface d'administration de votre site CoMFoRT
+Exec=comfort
+Icon=comfort
+Terminal=false
+Type=Application
+Categories=Network;

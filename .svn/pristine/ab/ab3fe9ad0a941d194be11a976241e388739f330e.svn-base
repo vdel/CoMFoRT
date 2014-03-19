@@ -1,0 +1,16 @@
+Source: comfort
+Section: unknown
+Priority: extra
+Maintainer: Pierre ROUX <pierre.roux2@laposte.net>
+Build-Depends: cdbs, debhelper (>= 6)
+Standards-Version: 3.7.3
+Homepage: http://graal.ens-lyon.fr/comfort/
+
+Package: comfort
+Architecture: all
+Depends: ${shlibs:Depends}, python (>= 2.5), python-lxml
+Suggests: perl, dblatex, texlive-latex-base, imagemagick
+Description: Content Management For Researchers and Teachers
+ CoMFoRT is a CMS (Content Management System) specially designed for
+ researchers and teachers offering fonctionalities like publications or
+ teachings easy management.

@@ -1,0 +1,248 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <title>Mon site perso</title>
+    <link rel="stylesheet" href="../styles/officiels_serious/style.css" type="text/css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.72.0" />
+  
+    <link rel="shortcut icon" href="../styles/favicon.png" type="image/x-icon" />
+    <link rel="icon" href="../styles/favicon.png" type="image/x-icon" /></head>
+  <body>
+    <div class="article" lang="en" xml:lang="en">
+      <div class="titlepage" id="ie6hack"><div class="sitename">Ma vie, mes oeuvres</div>
+        <div>
+          <div>
+            <h1 class="title"><a></a>Mon site perso</h1>
+          </div>
+        </div>
+        <hr />
+      </div>
+      <div id="Menu" class="sect1" lang="en" xml:lang="en">
+        <div class="titlepage"></div>
+        <div class="itemizedlist">
+          <ul type="disc">
+            <li>
+              <a href="handler.py?page=Accueil.html" target="_top">Accueil</a>
+            </li>
+            <li>
+              <a href="handler.py?page=WikiSyntax.html" target="_top">WikiSyntax</a>
+            </li>
+            <li>
+              <a href="handler.py?page=Page Test.html" target="_top">Pouet</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="Wiki0" class="sect1" lang="en" xml:lang="en">
+        <div class="titlepage"></div>
+        <p>Bonjour et bienvenue sur CoMFoRT, un syst&#232;me de gestion de contenu vous permettant de cr&#233;er de mani&#232;re simple et efficace votre site personnel.</p>
+        <p>Bien que ce logiciel soit principalement destin&#233; aux sites web de chercheurs, nous esp&#233;rons qu'il vous donnera enti&#232;rement satisfaction, quel que soit votre domaine d'activit&#233;.</p>
+      </div>
+      <div id="Wiki1" class="sect1" lang="en" xml:lang="en">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h2 class="title" style="clear: both"><a></a> Fonctionnement du logiciel </h2>
+            </div>
+          </div>
+        </div>
+        <p>Avec CoMFoRT, vous commencez par travailler sur une <span class="emphasis"><em>version locale</em></span> : c'est le site que vous visualisez actuellement. C'est cette version que vous modifierez, &#224; laquelle vous ajouterez du contenu.  Vous pouvez &#224; tout moment avoir un aper&#231;u du site en revenant sur cette page.  Lorsque le site vous semble satisfaisant, nous en cr&#233;erons une copie que nous enverrons sur votre espace de stockage de pages web : c'est la <span class="emphasis"><em>version statique</em></span>, une version fig&#233;e, sorte d'instantan&#233; de la version locale.</p>
+        <p>Les points qui vont suivre vous indiqueront les endroits cl&#233; de CoMFoRT permettant une prise en main la plus rapide possible.</p>
+      </div>
+      <div id="Wiki2" class="sect1" lang="en" xml:lang="en">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h2 class="title" style="clear: both"><a></a> Prise en main </h2>
+            </div>
+          </div>
+        </div>
+        <div class="sect2" lang="en" xml:lang="en">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h3 class="title"><a></a> Gestion des pages </h3>
+              </div>
+            </div>
+          </div>
+          <p>Il faut commencer par d&#233;finir les pages que vous voulez ajouter &#224; votre site. Une page existe d&#233;j&#224; : c'est cette page d'accueil. Vous pouvez en ajouter d'autres en cliquant sur le lien ci-dessous "Panneau d'administration", puis en cliquant sur <span class="strong"><strong>Gestion des pages</strong></span>.</p>
+          <p>Chaque page que vous cr&#233;ez est d&#233;finie par son identifiant, ainsi que son titre. L'identifiant servira &#224; g&#233;n&#233;rer le nom du fichier. Le titre permet de vous y retrouver dans l'administration.</p>
+          <div class="sect3" lang="en" xml:lang="en">
+            <div class="titlepage">
+              <div>
+                <div>
+                  <h4 class="title"><a></a> Les modules </h4>
+                </div>
+              </div>
+            </div>
+            <p>Chaque page contient ce qu'on appelle des modules. Chaque module permet de g&#233;n&#233;rer du contenu r&#233;pondant &#224; un besoin particulier. Par exemple, le module "News" permet de g&#233;rer des nouvelles. Si vous l'activez sur la page MaPage, les news seront affich&#233;es sur la page MaPage. Il en va de m&#234;me pour les autres modules.</p>
+            <p>Chaque module poss&#232;de sa propre page de configuration, accessible depuis le panneau d'administration. Ainsi, pour ajouter une news, il vous suffit de cliquer sur le lien "Panneau d'administration" en bas de page, puis "Configurer le module news".</p>
+          </div>
+          <div class="sect3" lang="en" xml:lang="en">
+            <div class="titlepage">
+              <div>
+                <div>
+                  <h4 class="title"><a></a> Le module Wiki </h4>
+                </div>
+              </div>
+            </div>
+            <p>Ce module est plus particulier : il vous permet de mettre le texte de votre choix dans la page. La syntaxe wiki est la m&#234;me que celle de Wikipedia. Un bouton sp&#233;cial "&#201;diter wiki" vous permet de modifier le contenu de chaque page. C'est ainsi que nous avons saisi le texte que vous &#234;tes en train de lire. Vous pouvez le modifier en utilisant le raccourci en bas de page "Modifier cette page".</p>
+            <p>Vous pouvez retrouver le d&#233;tail de la syntaxe Wiki utilis&#233;e par ce logiciel sur la page <a href="handler.py?page=WikiSyntax.html" target="_top">WikiSyntax</a>.</p>
+          </div>
+        </div>
+        <div class="sect2" lang="en" xml:lang="en">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h3 class="title"><a></a> Le menu </h3>
+              </div>
+            </div>
+          </div>
+          <p>Un module est plus important que tous les autres : c'est le menu. Allez dans le panneau de configuration, puis cliquez sur "Configurer le module Menu". Vous pouvez ajouter des boutons au choix dans le menu : la cible de chaque bouton est une page du site, et le titre de chaque bouton est personnalisable. Une bonne id&#233;e est d'ajouter un bouton "Accueil" pointant vers la page d'accueil (celle-l&#224; m&#234;me que vous lisez).</p>
+        </div>
+        <div class="sect2" lang="en" xml:lang="en">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h3 class="title"><a></a> La configuration g&#233;n&#233;rale </h3>
+              </div>
+            </div>
+          </div>
+          <p>Il vous sera ensuite utile d'aller configurer les param&#232;tres g&#233;n&#233;raux de votre site. Vous pourrez par exemple changer votre style : CoMFoRT est livr&#233; avec de nombreux styles diff&#233;rents. Par exemple, le style "lite" fournit un effet int&#233;ressant pour les News. Vous pouvez essayer la combinaison suivante : page d'accueil avec les modules Menu, News, Wiki (dans cet ordre) et le style lite.</p>
+          <div class="sect3" lang="en" xml:lang="en">
+            <div class="titlepage">
+              <div>
+                <div>
+                  <h4 class="title"><a></a> Les param&#232;tres FTP </h4>
+                </div>
+              </div>
+            </div>
+            <p>Lorsque nous publierons la version statique de votre site, nous aurons besoin des informations concernant votre espace de stockage. Exemple typique de param&#232;tres :</p>
+            <div class="itemizedlist">
+              <ul type="disc">
+                <li>
+                  <p> h&#244;te : perso.ens-lyon.fr</p>
+                </li>
+                <li>
+                  <p> nom d'utilisateur : votrelogin</p>
+                </li>
+                <li>
+                  <p> mot de passe : votremotdepasse</p>
+                </li>
+                <li>
+                  <p> racine : comfort en supposant que vous avez cr&#233;&#233; un dossier "comfort" dans votre espace personnel.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="sect2" lang="en" xml:lang="en">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h3 class="title"><a></a> La publication du site </h3>
+              </div>
+            </div>
+          </div>
+          <p>Une fois que votre site vous convient, il est temps de l'envoyer vers votre espace personnel : c'est le r&#244;le du bouton "synchroniser" dans l'interface d'administration.</p>
+        </div>
+        <div class="sect2" lang="en" xml:lang="en">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h3 class="title"><a></a> Termin&#233; ? </h3>
+              </div>
+            </div>
+          </div>
+          <p>N'oubliez pas d'&#233;teindre le serveur local via le bouton arr&#234;ter de l'interface d'administration.</p>
+        </div>
+      </div>
+      <div id="Wiki11" class="sect1" lang="en" xml:lang="en">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h2 class="title" style="clear: both"><a></a> Utiliser votre contenu dans CoMFoRT (images, pages...) </h2>
+            </div>
+          </div>
+        </div>
+        <p>Vous pouvez ajouter du contenu cr&#233;&#233; par vous dans votre site : des images, des pages que vous ne voulez pas que CoMFoRT g&#233;n&#232;re, des documents PDF... Il suffit de les mettre dans l'un des trois dossiers suivants :</p>
+        <div class="itemizedlist">
+          <ul type="disc">
+            <li>
+              <p> ~/.comfort/perso/pages pour les pages HTML (ou PHP, peu importe) ;</p>
+            </li>
+            <li>
+              <p> ~/.comfort/perso/pictures pour les images ;</p>
+            </li>
+            <li>
+              <p> ~/.comfort/perso/docs pour les documents PDF par exemple.</p>
+              <p>Ces fichiers seront automatiquement envoy&#233;s sur le serveur avec votre site lorsque vous demanderez une synchronisation. Pour faire r&#233;f&#233;rence &#224; l'un de ces fichiers depuis le Wiki, utilisez : [Picture:nomdevotreimage.ext], [Page:votrepage.php], [Doc:votrefichier.pdf]</p>
+              <p>Pour r&#233;f&#233;rencer une image externe, utilisez : [[Image:http://www.votresite.com/image.jpg]]</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div id="Wiki12" class="sect1" lang="en" xml:lang="en">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h2 class="title" style="clear: both"><a></a> &#201;tendre CoMFoRT </h2>
+            </div>
+          </div>
+        </div>
+        <p>CoMFoRT a &#233;t&#233; d&#232;s le d&#233;part pr&#233;vu pour &#234;tre facilement extensible. Nous serions heureux d'accueillir tout type de contributions. Voici par o&#249; commencer. </p>
+        <div class="sect2" lang="en" xml:lang="en">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h3 class="title"><a></a> Une feuille de style ? Rien de plus simple ! </h3>
+              </div>
+            </div>
+          </div>
+          <p>Pour ajouter une feuille de style, il vous suffit de cr&#233;er un dossier portant son nom dans "styles", &#224; la racine de votre installation, et un fichier style.css. Les styles sont largement document&#233;s, comme "blue", et vous trouverez tous les s&#233;lecteurs dont vous pouvez avoir besoin dans "blue" ou "lite".</p>
+        </div>
+        <div class="sect2" lang="en" xml:lang="en">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h3 class="title"><a></a> Un module ? Easy too ! </h3>
+              </div>
+            </div>
+          </div>
+          <p>Vous pouvez cr&#233;er un module correspondant &#224; vos besoins en cr&#233;ant un fichier themodule_NomDeVotreModule.py dans le dossier "modules". Il devra contenir une classe TheModule h&#233;ritant de ComfortModule, ainsi que des interfaces correspondant &#224; ce que fait le module : IModuleAdminPage s'il a une page dans le panneau d'administration, IModuleContentProvider s'il g&#233;n&#232;re du contenu, IModuleDB s'il utilise la base de donn&#233;es. Vous devez impl&#233;menter les fonctions d&#233;finies par l'interface si vous h&#233;ritez de celle-ci : voir module_interfaces.py</p>
+          <p>La documentation g&#233;n&#233;r&#233;e automatiquement est &#233;galement un excellent point de d&#233;part : elle contient en effet des diagrammes d'h&#233;ritage permettant de voir facilement comment penser un module. Elle est livr&#233;e dans l'archive que vous avez t&#233;l&#233;charg&#233;e.</p>
+          <p>Le module "News" par exemple vous fournira un bon exemple de gestion de formulaire d'administration et de g&#233;n&#233;ration de contenu, le tout gr&#226;ce &#224; la base de donn&#233;es.</p>
+        </div>
+        <div class="sect2" lang="en" xml:lang="en">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h3 class="title"><a></a> Tenez-nous au courant ! </h3>
+              </div>
+            </div>
+          </div>
+          <p>Postez vos modifications sur <a href="http://graal.ens-lyon.fr/comfort/" target="_top">http://graal.ens-lyon.fr/comfort/</a> !</p>
+        </div>
+      </div>
+      <div id="Calendrier" class="sect1" lang="en" xml:lang="en">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h2 class="title" style="clear: both"><a></a>&#201;v&#233;nements &#224; venir</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    
+    <div class="feet">
+      
+      <div style="float: left; text-align:center; width:50%;"><a href="admin.py?id=modpage&amp;page_id=Accueil">Modifier cette page</a></div>
+      <div style="float: left; text-align:center; width:50%;"><a href="admin.py">Panneau d'administration</a></div>
+        
+      
+      <div class="spacer">&nbsp;</div>
+    </div>
+    </body>
+</html>

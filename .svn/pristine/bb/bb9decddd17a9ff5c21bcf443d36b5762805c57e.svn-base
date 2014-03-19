@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>modules.module_manager</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://graal.ens-lyon.fr/comfort/">CoMFoRT</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="modules-module.html">Package&nbsp;modules</a> ::
+        Module&nbsp;module_manager
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="modules.module_manager-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="modules.module_manager-module.html">Module modules.module_manager</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno">  1</tt>  <tt class="py-line"><tt class="py-comment"># -*- encoding: utf-8 -*-</tt> </tt>
+<a name="L2"></a><tt class="py-lineno">  2</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-keyword">from</tt> <tt class="py-name">UserDict</tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L3"></a><tt class="py-lineno">  3</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt id="link-0" class="py-name" targets="Module modules.module_interfaces=modules.module_interfaces-module.html"><a title="modules.module_interfaces" class="py-name" href="#" onclick="return doclink('link-0', 'module_interfaces', 'link-0');">module_interfaces</a></tt> </tt>
+<a name="L4"></a><tt class="py-lineno">  4</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">os</tt> </tt>
+<a name="L5"></a><tt class="py-lineno">  5</tt>  <tt class="py-line"> </tt>
+<a name="L6"></a><tt class="py-lineno">  6</tt>  <tt class="py-line"> </tt>
+<a name="L7"></a><tt class="py-lineno">  7</tt>  <tt class="py-line"><tt id="link-1" class="py-name" targets="Variable modules.module_manager.modes=modules.module_manager-module.html#modes"><a title="modules.module_manager.modes" class="py-name" href="#" onclick="return doclink('link-1', 'modes', 'link-1');">modes</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-string">'dynamic'</tt><tt class="py-op">,</tt> <tt class="py-string">'local'</tt><tt class="py-op">,</tt> <tt class="py-string">'both'</tt><tt class="py-op">]</tt> </tt>
+<a name="L8"></a><tt class="py-lineno">  8</tt>  <tt class="py-line"> </tt>
+<a name="L9"></a><tt class="py-lineno">  9</tt>  <tt class="py-line"><tt class="py-comment">## Some explanations:</tt> </tt>
+<a name="L10"></a><tt class="py-lineno"> 10</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">##  To use ModuleManager, one create an instance of ModuleManager, then choses</tt> </tt>
+<a name="L11"></a><tt class="py-lineno"> 11</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">##  the module that will be placed on that position like this:</tt> </tt>
+<a name="L12"></a><tt class="py-lineno"> 12</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">##  mm = module_manager.ModuleManager()</tt> </tt>
+<a name="L13"></a><tt class="py-lineno"> 13</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">##  mm[0] = 'dummy' </tt> </tt>
+<a name="L14"></a><tt class="py-lineno"> 14</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">##  The MM will then instanciate the class TheModule stocked in the file</tt> </tt>
+<a name="L15"></a><tt class="py-lineno"> 15</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">##  themodule_dummy.py (standard convention) located in its folder. As the</tt> </tt>
+<a name="L16"></a><tt class="py-lineno"> 16</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">##  interfaces are standard, blah, blah, blah</tt> </tt>
+<a name="L17"></a><tt class="py-lineno"> 17</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment"># Quelques explications :</tt> </tt>
+<a name="L18"></a><tt class="py-lineno"> 18</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#  On utilise le ModuleManager en en cr&#233;ant une instance, puis en choisissant le</tt> </tt>
+<a name="L19"></a><tt class="py-lineno"> 19</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#  module qui sera &#224; telle position de la fa&#231;on suivante :</tt> </tt>
+<a name="L20"></a><tt class="py-lineno"> 20</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#  mm = module_manager.ModuleManager()</tt> </tt>
+<a name="L21"></a><tt class="py-lineno"> 21</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#  mm[0] = 'dummy'</tt> </tt>
+<a name="L22"></a><tt class="py-lineno"> 22</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#  Le MM va ensuite instancier la classe TheModule stock&#233;e dans le fichier</tt> </tt>
+<a name="L23"></a><tt class="py-lineno"> 23</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#  themodule_dummy.py (convention standard) situ&#233;e dans son dossier. Comme les</tt> </tt>
+<a name="L24"></a><tt class="py-lineno"> 24</tt>  <tt class="py-line"><tt class="py-comment"></tt><tt class="py-comment">#  interfaces sont standard, blah, blah, blah</tt> </tt>
+<a name="L25"></a><tt class="py-lineno"> 25</tt>  <tt class="py-line"><tt class="py-comment"></tt> </tt>
+<a name="L26"></a><tt class="py-lineno"> 26</tt>  <tt class="py-line"> </tt>
+<a name="MMException"></a><div id="MMException-def"><a name="L27"></a><tt class="py-lineno"> 27</tt> <a class="py-toggle" href="#" id="MMException-toggle" onclick="return toggle('MMException');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="modules.module_manager.MMException-class.html">MMException</a><tt class="py-op">(</tt><tt class="py-base-class">Exception</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="MMException-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="MMException-expanded"><a name="L28"></a><tt class="py-lineno"> 28</tt>  <tt class="py-line">  <tt class="py-keyword">pass</tt> </tt>
+</div><a name="L29"></a><tt class="py-lineno"> 29</tt>  <tt class="py-line"> </tt>
+<a name="L30"></a><tt class="py-lineno"> 30</tt>  <tt class="py-line"> </tt>
+<a name="_ModuleManager"></a><div id="_ModuleManager-def"><a name="L31"></a><tt class="py-lineno"> 31</tt> <a class="py-toggle" href="#" id="_ModuleManager-toggle" onclick="return toggle('_ModuleManager');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="modules.module_manager._ModuleManager-class.html">_ModuleManager</a><tt class="py-op">(</tt><tt class="py-base-class">object</tt><tt class="py-op">,</tt> <tt class="py-base-class">IterableUserDict</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="_ModuleManager-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="_ModuleManager-expanded"><a name="L32"></a><tt class="py-lineno"> 32</tt>  <tt class="py-line"> </tt>
+<a name="_ModuleManager.__init__"></a><div id="_ModuleManager.__init__-def"><a name="L33"></a><tt class="py-lineno"> 33</tt> <a class="py-toggle" href="#" id="_ModuleManager.__init__-toggle" onclick="return toggle('_ModuleManager.__init__');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="modules.module_manager._ModuleManager-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="_ModuleManager.__init__-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="_ModuleManager.__init__-expanded"><a name="L34"></a><tt class="py-lineno"> 34</tt>  <tt class="py-line">    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__modules_mode</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L35"></a><tt class="py-lineno"> 35</tt>  <tt class="py-line">    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-2" class="py-name" targets="Variable cgibin.handler.page=cgibin.handler-module.html#page"><a title="cgibin.handler.page" class="py-name" href="#" onclick="return doclink('link-2', 'page', 'link-2');">page</a></tt> <tt class="py-op">=</tt> <tt class="py-string">""</tt>  <tt class="py-comment">##initialized by the template manager</tt> </tt>
+<a name="L36"></a><tt class="py-lineno"> 36</tt>  <tt class="py-line">                    <tt class="py-comment">#initialis&#233; par le template_manager</tt> </tt>
+<a name="L37"></a><tt class="py-lineno"> 37</tt>  <tt class="py-line"><tt class="py-comment"></tt>    <tt class="py-name">IterableUserDict</tt><tt class="py-op">.</tt><tt id="link-3" class="py-name" targets="Method db.db_interface.IDB.__init__()=db.db_interface.IDB-class.html#__init__,Method db.db_interface.IDBTable.__init__()=db.db_interface.IDBTable-class.html#__init__,Method db.db_manager.DBManager.__init__()=db.db_manager.DBManager-class.html#__init__,Method db.db_sql.SQL_DB.__init__()=db.db_sql.SQL_DB-class.html#__init__,Method db.db_sql.SQL_RecordSet.__init__()=db.db_sql.SQL_RecordSet-class.html#__init__,Method db.db_sql.SQL_Table.__init__()=db.db_sql.SQL_Table-class.html#__init__,Method db.db_xml.DBXML.__init__()=db.db_xml.DBXML-class.html#__init__,Method db.db_xml.DBXMLRecordSet.__init__()=db.db_xml.DBXMLRecordSet-class.html#__init__,Method db.db_xml.DBXMLTable.__init__()=db.db_xml.DBXMLTable-class.html#__init__,Method db.parser_minidom.xmlReader.__init__()=db.parser_minidom.xmlReader-class.html#__init__,Method db.parser_minidom.xmlWriter.__init__()=db.parser_minidom.xmlWriter-class.html#__init__,Method interface.class_forms.Content.__init__()=interface.class_forms.Content-class.html#__init__,Method interface.class_forms.Page.__init__()=interface.class_forms.Page-class.html#__init__,Method interface.forms.Formulaire.__init__()=interface.forms.Formulaire-class.html#__init__,Method interface.synchronize.SyncError.__init__()=interface.synchronize.SyncError-class.html#__init__,Method interface.synchronize._finder.__init__()=interface.synchronize._finder-class.html#__init__,Method interface.synchronize._transferer_FTP.__init__()=interface.synchronize._transferer_FTP-class.html#__init__,Method interface.valid_forms.Valideur.__init__()=interface.valid_forms.Valideur-class.html#__init__,Method modules.module_interfaces.ComfortModule.__init__()=modules.module_interfaces.ComfortModule-class.html#__init__,Method modules.module_manager._ModuleManager.__init__()=modules.module_manager._ModuleManager-class.html#__init__,Method modules.themodule_Publi.Bibtex_doc.__init__()=modules.themodule_Publi.Bibtex_doc-class.html#__init__,Method modules.themodule_Publi.Bibtex_entry.__init__()=modules.themodule_Publi.Bibtex_entry-class.html#__init__,Method modules.themodule_Wiki.Parser.__init__()=modules.themodule_Wiki.Parser-class.html#__init__,Method modules.themodule_Wiki.Reader.__init__()=modules.themodule_Wiki.Reader-class.html#__init__,Method modules.themodule_Wiki.Scanner.__init__()=modules.themodule_Wiki.Scanner-class.html#__init__,Method modules.themodule_Wiki.Token.__init__()=modules.themodule_Wiki.Token-class.html#__init__,Method modules.themodule_Wiki.WikiTree.__init__()=modules.themodule_Wiki.WikiTree-class.html#__init__,Method templates.template_manager.TemplateManager.__init__()=templates.template_manager.TemplateManager-class.html#__init__"><a title="db.db_interface.IDB.__init__
+db.db_interface.IDBTable.__init__
+db.db_manager.DBManager.__init__
+db.db_sql.SQL_DB.__init__
+db.db_sql.SQL_RecordSet.__init__
+db.db_sql.SQL_Table.__init__
+db.db_xml.DBXML.__init__
+db.db_xml.DBXMLRecordSet.__init__
+db.db_xml.DBXMLTable.__init__
+db.parser_minidom.xmlReader.__init__
+db.parser_minidom.xmlWriter.__init__
+interface.class_forms.Content.__init__
+interface.class_forms.Page.__init__
+interface.forms.Formulaire.__init__
+interface.synchronize.SyncError.__init__
+interface.synchronize._finder.__init__
+interface.synchronize._transferer_FTP.__init__
+interface.valid_forms.Valideur.__init__
+modules.module_interfaces.ComfortModule.__init__
+modules.module_manager._ModuleManager.__init__
+modules.themodule_Publi.Bibtex_doc.__init__
+modules.themodule_Publi.Bibtex_entry.__init__
+modules.themodule_Wiki.Parser.__init__
+modules.themodule_Wiki.Reader.__init__
+modules.themodule_Wiki.Scanner.__init__
+modules.themodule_Wiki.Token.__init__
+modules.themodule_Wiki.WikiTree.__init__
+templates.template_manager.TemplateManager.__init__" class="py-name" href="#" onclick="return doclink('link-3', '__init__', 'link-3');">__init__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L38"></a><tt class="py-lineno"> 38</tt>  <tt class="py-line">   </tt>
+<a name="_ModuleManager.get_mm"></a><div id="_ModuleManager.get_mm-def"><a name="L39"></a><tt class="py-lineno"> 39</tt> <a class="py-toggle" href="#" id="_ModuleManager.get_mm-toggle" onclick="return toggle('_ModuleManager.get_mm');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="modules.module_manager._ModuleManager-class.html#get_mm">get_mm</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="_ModuleManager.get_mm-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="_ModuleManager.get_mm-expanded"><a name="L40"></a><tt class="py-lineno"> 40</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__modules_mode</tt> </tt>
+</div><a name="L41"></a><tt class="py-lineno"> 41</tt>  <tt class="py-line"> </tt>
+<a name="_ModuleManager.set_mm"></a><div id="_ModuleManager.set_mm-def"><a name="L42"></a><tt class="py-lineno"> 42</tt> <a class="py-toggle" href="#" id="_ModuleManager.set_mm-toggle" onclick="return toggle('_ModuleManager.set_mm');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="modules.module_manager._ModuleManager-class.html#set_mm">set_mm</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">mm</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="_ModuleManager.set_mm-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="_ModuleManager.set_mm-expanded"><a name="L43"></a><tt class="py-lineno"> 43</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__modules_mode</tt> <tt class="py-keyword">is</tt> <tt class="py-keyword">not</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L44"></a><tt class="py-lineno"> 44</tt>  <tt class="py-line">      <tt class="py-keyword">raise</tt> <tt id="link-4" class="py-name" targets="Class modules.module_manager.MMException=modules.module_manager.MMException-class.html"><a title="modules.module_manager.MMException" class="py-name" href="#" onclick="return doclink('link-4', 'MMException', 'link-4');">MMException</a></tt><tt class="py-op">(</tt><tt id="link-5" class="py-name" targets="Variable modules.test._=modules.test-module.html#_"><a title="modules.test._" class="py-name" href="#" onclick="return doclink('link-5', '_', 'link-5');">_</a></tt><tt class="py-op">(</tt><tt class="py-string">"les propri&#233;t&#233;s de modules_mode sont d&#233;j&#224; d&#233;finies"</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L45"></a><tt class="py-lineno"> 45</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt id="link-6" class="py-name" targets="Variable cgibin.admin.mm=cgibin.admin-module.html#mm,Variable cgibin.adminvalid.mm=cgibin.adminvalid-module.html#mm,Variable cgibin.handler.mm=cgibin.handler-module.html#mm,Variable modules.test.mm=modules.test-module.html#mm"><a title="cgibin.admin.mm
+cgibin.adminvalid.mm
+cgibin.handler.mm
+modules.test.mm" class="py-name" href="#" onclick="return doclink('link-6', 'mm', 'link-6');">mm</a></tt> <tt class="py-keyword">not</tt> <tt class="py-keyword">in</tt> <tt id="link-7" class="py-name"><a title="modules.module_manager.modes" class="py-name" href="#" onclick="return doclink('link-7', 'modes', 'link-1');">modes</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L46"></a><tt class="py-lineno"> 46</tt>  <tt class="py-line">      <tt class="py-keyword">raise</tt> <tt id="link-8" class="py-name"><a title="modules.module_manager.MMException" class="py-name" href="#" onclick="return doclink('link-8', 'MMException', 'link-4');">MMException</a></tt><tt class="py-op">(</tt><tt id="link-9" class="py-name"><a title="modules.test._" class="py-name" href="#" onclick="return doclink('link-9', '_', 'link-5');">_</a></tt><tt class="py-op">(</tt><tt class="py-string">"mode inconnu"</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L47"></a><tt class="py-lineno"> 47</tt>  <tt class="py-line">    <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L48"></a><tt class="py-lineno"> 48</tt>  <tt class="py-line">      <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__modules_mode</tt> <tt class="py-op">=</tt> <tt id="link-10" class="py-name"><a title="cgibin.admin.mm
+cgibin.adminvalid.mm
+cgibin.handler.mm
+modules.test.mm" class="py-name" href="#" onclick="return doclink('link-10', 'mm', 'link-6');">mm</a></tt> </tt>
+</div><a name="L49"></a><tt class="py-lineno"> 49</tt>  <tt class="py-line"> </tt>
+<a name="L50"></a><tt class="py-lineno"> 50</tt>  <tt class="py-line">  <tt id="link-11" class="py-name" targets="Variable modules.module_manager._ModuleManager.modules_mode=modules.module_manager._ModuleManager-class.html#modules_mode"><a title="modules.module_manager._ModuleManager.modules_mode" class="py-name" href="#" onclick="return doclink('link-11', 'modules_mode', 'link-11');">modules_mode</a></tt> <tt class="py-op">=</tt> <tt class="py-name">property</tt><tt class="py-op">(</tt><tt id="link-12" class="py-name" targets="Method modules.module_manager._ModuleManager.get_mm()=modules.module_manager._ModuleManager-class.html#get_mm"><a title="modules.module_manager._ModuleManager.get_mm" class="py-name" href="#" onclick="return doclink('link-12', 'get_mm', 'link-12');">get_mm</a></tt><tt class="py-op">,</tt> <tt id="link-13" class="py-name" targets="Method modules.module_manager._ModuleManager.set_mm()=modules.module_manager._ModuleManager-class.html#set_mm"><a title="modules.module_manager._ModuleManager.set_mm" class="py-name" href="#" onclick="return doclink('link-13', 'set_mm', 'link-13');">set_mm</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L51"></a><tt class="py-lineno"> 51</tt>  <tt class="py-line"> </tt>
+<a name="_ModuleManager.__getitem__"></a><div id="_ModuleManager.__getitem__-def"><a name="L52"></a><tt class="py-lineno"> 52</tt> <a class="py-toggle" href="#" id="_ModuleManager.__getitem__-toggle" onclick="return toggle('_ModuleManager.__getitem__');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="modules.module_manager._ModuleManager-class.html#__getitem__">__getitem__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">key</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="_ModuleManager.__getitem__-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="_ModuleManager.__getitem__-expanded"><a name="L53"></a><tt class="py-lineno"> 53</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">key</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">:</tt> </tt>
+<a name="L54"></a><tt class="py-lineno"> 54</tt>  <tt class="py-line">      <tt class="py-keyword">return</tt> <tt class="py-name">IterableUserDict</tt><tt class="py-op">.</tt><tt id="link-14" class="py-name" targets="Method modules.module_manager._ModuleManager.__getitem__()=modules.module_manager._ModuleManager-class.html#__getitem__"><a title="modules.module_manager._ModuleManager.__getitem__" class="py-name" href="#" onclick="return doclink('link-14', '__getitem__', 'link-14');">__getitem__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">key</tt><tt class="py-op">)</tt> </tt>
+<a name="L55"></a><tt class="py-lineno"> 55</tt>  <tt class="py-line">    <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L56"></a><tt class="py-lineno"> 56</tt>  <tt class="py-line">      <tt class="py-keyword">raise</tt> <tt id="link-15" class="py-name"><a title="modules.module_manager.MMException" class="py-name" href="#" onclick="return doclink('link-15', 'MMException', 'link-4');">MMException</a></tt><tt class="py-op">(</tt><tt id="link-16" class="py-name"><a title="modules.test._" class="py-name" href="#" onclick="return doclink('link-16', '_', 'link-5');">_</a></tt><tt class="py-op">(</tt><tt class="py-string">"pas de module &#224; la cl&#233; %s"</tt><tt class="py-op">)</tt> <tt class="py-op">%</tt> <tt class="py-name">key</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L57"></a><tt class="py-lineno"> 57</tt>  <tt class="py-line"> </tt>
+<a name="_ModuleManager.__setitem__"></a><div id="_ModuleManager.__setitem__-def"><a name="L58"></a><tt class="py-lineno"> 58</tt> <a class="py-toggle" href="#" id="_ModuleManager.__setitem__-toggle" onclick="return toggle('_ModuleManager.__setitem__');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="modules.module_manager._ModuleManager-class.html#__setitem__">__setitem__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">key</tt><tt class="py-op">,</tt> <tt class="py-param">val</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="_ModuleManager.__setitem__-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="_ModuleManager.__setitem__-expanded"><a name="L59"></a><tt class="py-lineno"> 59</tt>  <tt class="py-line">    <tt class="py-keyword">if</tt> <tt class="py-name">key</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">:</tt> </tt>
+<a name="L60"></a><tt class="py-lineno"> 60</tt>  <tt class="py-line">      <tt class="py-keyword">raise</tt> <tt id="link-17" class="py-name"><a title="modules.module_manager.MMException" class="py-name" href="#" onclick="return doclink('link-17', 'MMException', 'link-4');">MMException</a></tt><tt class="py-op">(</tt><tt id="link-18" class="py-name"><a title="modules.test._" class="py-name" href="#" onclick="return doclink('link-18', '_', 'link-5');">_</a></tt><tt class="py-op">(</tt><tt class="py-string">"il y a d&#233;j&#224; un module &#224; la position %s"</tt><tt class="py-op">)</tt> <tt class="py-op">%</tt> <tt class="py-name">key</tt><tt class="py-op">)</tt> </tt>
+<a name="L61"></a><tt class="py-lineno"> 61</tt>  <tt class="py-line">      <tt class="py-comment">#IterableUserDict.__getitem__(self,key).__class__.__name__  </tt> </tt>
+<a name="L62"></a><tt class="py-lineno"> 62</tt>  <tt class="py-line"><tt class="py-comment"></tt>    <tt class="py-keyword">elif</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__modules_mode</tt> <tt class="py-keyword">is</tt> <tt class="py-name">None</tt><tt class="py-op">:</tt> </tt>
+<a name="L63"></a><tt class="py-lineno"> 63</tt>  <tt class="py-line">      <tt class="py-keyword">raise</tt> <tt id="link-19" class="py-name"><a title="modules.module_manager.MMException" class="py-name" href="#" onclick="return doclink('link-19', 'MMException', 'link-4');">MMException</a></tt><tt class="py-op">(</tt><tt id="link-20" class="py-name"><a title="modules.test._" class="py-name" href="#" onclick="return doclink('link-20', '_', 'link-5');">_</a></tt><tt class="py-op">(</tt><tt class="py-string">"vous devez avant tout d&#233;finir un mode"</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L64"></a><tt class="py-lineno"> 64</tt>  <tt class="py-line">    <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L65"></a><tt class="py-lineno"> 65</tt>  <tt class="py-line">      <tt class="py-name">instance</tt> <tt class="py-op">=</tt> <tt class="py-name">None</tt> </tt>
+<a name="L66"></a><tt class="py-lineno"> 66</tt>  <tt class="py-line">      <tt class="py-name">code</tt> <tt class="py-op">=</tt> <tt class="py-string">"import themodule_"</tt><tt class="py-op">+</tt><tt class="py-name">val</tt><tt class="py-op">+</tt><tt class="py-string">"\n"</tt> </tt>
+<a name="L67"></a><tt class="py-lineno"> 67</tt>  <tt class="py-line">      <tt class="py-name">code</tt> <tt class="py-op">+=</tt> <tt class="py-string">"instance = themodule_"</tt><tt class="py-op">+</tt><tt class="py-name">val</tt><tt class="py-op">+</tt><tt class="py-string">".TheModule(self)"</tt> </tt>
+<a name="L68"></a><tt class="py-lineno"> 68</tt>  <tt class="py-line">      <tt class="py-keyword">try</tt><tt class="py-op">:</tt> </tt>
+<a name="L69"></a><tt class="py-lineno"> 69</tt>  <tt class="py-line">        <tt class="py-keyword">exec</tt><tt class="py-op">(</tt><tt class="py-name">code</tt><tt class="py-op">)</tt> </tt>
+<a name="L70"></a><tt class="py-lineno"> 70</tt>  <tt class="py-line">      <tt class="py-keyword">except</tt> <tt class="py-name">ImportError</tt><tt class="py-op">:</tt> </tt>
+<a name="L71"></a><tt class="py-lineno"> 71</tt>  <tt class="py-line">        <tt class="py-keyword">raise</tt> <tt id="link-21" class="py-name"><a title="modules.module_manager.MMException" class="py-name" href="#" onclick="return doclink('link-21', 'MMException', 'link-4');">MMException</a></tt><tt class="py-op">(</tt><tt id="link-22" class="py-name"><a title="modules.test._" class="py-name" href="#" onclick="return doclink('link-22', '_', 'link-5');">_</a></tt><tt class="py-op">(</tt><tt class="py-string">"Module inconnu : %s"</tt><tt class="py-op">)</tt> <tt class="py-op">%</tt> <tt class="py-name">val</tt><tt class="py-op">)</tt> </tt>
+<a name="L72"></a><tt class="py-lineno"> 72</tt>  <tt class="py-line"> </tt>
+<a name="L73"></a><tt class="py-lineno"> 73</tt>  <tt class="py-line">      <tt class="py-keyword">if</tt> <tt class="py-name">instance</tt><tt class="py-op">.</tt><tt id="link-23" class="py-name" targets="Variable conf.confstatic.mode=conf.confstatic-module.html#mode,Variable modules.module_interfaces.ComfortModule.mode=modules.module_interfaces.ComfortModule-class.html#mode,Variable modules.themodule_Calendars.TheModule.mode=modules.themodule_Calendars.TheModule-class.html#mode,Variable modules.themodule_Coord.TheModule.mode=modules.themodule_Coord.TheModule-class.html#mode,Variable modules.themodule_Credits.TheModule.mode=modules.themodule_Credits.TheModule-class.html#mode,Variable modules.themodule_Dummy.TheModule.mode=modules.themodule_Dummy.TheModule-class.html#mode,Variable modules.themodule_Educ.TheModule.mode=modules.themodule_Educ.TheModule-class.html#mode,Variable modules.themodule_Menu.TheModule.mode=modules.themodule_Menu.TheModule-class.html#mode,Variable modules.themodule_News.TheModule.mode=modules.themodule_News.TheModule-class.html#mode,Variable modules.themodule_Publi.TheModule.mode=modules.themodule_Publi.TheModule-class.html#mode,Variable modules.themodule_Wiki.TheModule.mode=modules.themodule_Wiki.TheModule-class.html#mode"><a title="conf.confstatic.mode
+modules.module_interfaces.ComfortModule.mode
+modules.themodule_Calendars.TheModule.mode
+modules.themodule_Coord.TheModule.mode
+modules.themodule_Credits.TheModule.mode
+modules.themodule_Dummy.TheModule.mode
+modules.themodule_Educ.TheModule.mode
+modules.themodule_Menu.TheModule.mode
+modules.themodule_News.TheModule.mode
+modules.themodule_Publi.TheModule.mode
+modules.themodule_Wiki.TheModule.mode" class="py-name" href="#" onclick="return doclink('link-23', 'mode', 'link-23');">mode</a></tt> <tt class="py-op">!=</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__modules_mode</tt> <tt class="py-keyword">and</tt> <tt class="py-name">instance</tt><tt class="py-op">.</tt><tt id="link-24" class="py-name"><a title="conf.confstatic.mode
+modules.module_interfaces.ComfortModule.mode
+modules.themodule_Calendars.TheModule.mode
+modules.themodule_Coord.TheModule.mode
+modules.themodule_Credits.TheModule.mode
+modules.themodule_Dummy.TheModule.mode
+modules.themodule_Educ.TheModule.mode
+modules.themodule_Menu.TheModule.mode
+modules.themodule_News.TheModule.mode
+modules.themodule_Publi.TheModule.mode
+modules.themodule_Wiki.TheModule.mode" class="py-name" href="#" onclick="return doclink('link-24', 'mode', 'link-23');">mode</a></tt> <tt class="py-op">!=</tt> <tt class="py-string">'both'</tt><tt class="py-op">:</tt> </tt>
+<a name="L74"></a><tt class="py-lineno"> 74</tt>  <tt class="py-line">        <tt class="py-keyword">raise</tt> <tt id="link-25" class="py-name"><a title="modules.module_manager.MMException" class="py-name" href="#" onclick="return doclink('link-25', 'MMException', 'link-4');">MMException</a></tt><tt class="py-op">(</tt><tt class="py-op">(</tt><tt id="link-26" class="py-name"><a title="modules.test._" class="py-name" href="#" onclick="return doclink('link-26', '_', 'link-5');">_</a></tt><tt class="py-op">(</tt><tt class="py-string">"Le mode courant est %s ;"</tt><tt class="py-op">)</tt> <tt class="py-op">%</tt> <tt class="py-name">self</tt><tt class="py-op">.</tt><tt class="py-name">__modules_mode</tt><tt class="py-op">)</tt><tt class="py-op">+</tt><tt class="py-op">(</tt><tt id="link-27" class="py-name"><a title="modules.test._" class="py-name" href="#" onclick="return doclink('link-27', '_', 'link-5');">_</a></tt><tt class="py-op">(</tt><tt class="py-string">" ce mode de module est %s - incompatible"</tt><tt class="py-op">)</tt> <tt class="py-op">%</tt> <tt class="py-name">instance</tt><tt class="py-op">.</tt><tt id="link-28" class="py-name"><a title="conf.confstatic.mode
+modules.module_interfaces.ComfortModule.mode
+modules.themodule_Calendars.TheModule.mode
+modules.themodule_Coord.TheModule.mode
+modules.themodule_Credits.TheModule.mode
+modules.themodule_Dummy.TheModule.mode
+modules.themodule_Educ.TheModule.mode
+modules.themodule_Menu.TheModule.mode
+modules.themodule_News.TheModule.mode
+modules.themodule_Publi.TheModule.mode
+modules.themodule_Wiki.TheModule.mode" class="py-name" href="#" onclick="return doclink('link-28', 'mode', 'link-23');">mode</a></tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L75"></a><tt class="py-lineno"> 75</tt>  <tt class="py-line">      <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L76"></a><tt class="py-lineno"> 76</tt>  <tt class="py-line">        <tt class="py-name">instance</tt><tt class="py-op">.</tt><tt id="link-29" class="py-name" targets="Variable modules.module_interfaces.ComfortModule.position=modules.module_interfaces.ComfortModule-class.html#position"><a title="modules.module_interfaces.ComfortModule.position" class="py-name" href="#" onclick="return doclink('link-29', 'position', 'link-29');">position</a></tt> <tt class="py-op">=</tt> <tt class="py-name">key</tt> </tt>
+<a name="L77"></a><tt class="py-lineno"> 77</tt>  <tt class="py-line">        <tt class="py-name">instance</tt><tt class="py-op">.</tt><tt id="link-30" class="py-name" targets="Method modules.module_interfaces.ComfortModule.module_init()=modules.module_interfaces.ComfortModule-class.html#module_init,Method modules.themodule_Calendars.TheModule.module_init()=modules.themodule_Calendars.TheModule-class.html#module_init,Method modules.themodule_Coord.TheModule.module_init()=modules.themodule_Coord.TheModule-class.html#module_init,Method modules.themodule_Credits.TheModule.module_init()=modules.themodule_Credits.TheModule-class.html#module_init,Method modules.themodule_Dummy.TheModule.module_init()=modules.themodule_Dummy.TheModule-class.html#module_init,Method modules.themodule_Educ.TheModule.module_init()=modules.themodule_Educ.TheModule-class.html#module_init,Method modules.themodule_Menu.TheModule.module_init()=modules.themodule_Menu.TheModule-class.html#module_init,Method modules.themodule_News.TheModule.module_init()=modules.themodule_News.TheModule-class.html#module_init,Method modules.themodule_Publi.TheModule.module_init()=modules.themodule_Publi.TheModule-class.html#module_init,Method modules.themodule_Wiki.TheModule.module_init()=modules.themodule_Wiki.TheModule-class.html#module_init"><a title="modules.module_interfaces.ComfortModule.module_init
+modules.themodule_Calendars.TheModule.module_init
+modules.themodule_Coord.TheModule.module_init
+modules.themodule_Credits.TheModule.module_init
+modules.themodule_Dummy.TheModule.module_init
+modules.themodule_Educ.TheModule.module_init
+modules.themodule_Menu.TheModule.module_init
+modules.themodule_News.TheModule.module_init
+modules.themodule_Publi.TheModule.module_init
+modules.themodule_Wiki.TheModule.module_init" class="py-name" href="#" onclick="return doclink('link-30', 'module_init', 'link-30');">module_init</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L78"></a><tt class="py-lineno"> 78</tt>  <tt class="py-line"> </tt>
+<a name="L79"></a><tt class="py-lineno"> 79</tt>  <tt class="py-line">        <tt class="py-name">IterableUserDict</tt><tt class="py-op">.</tt><tt id="link-31" class="py-name" targets="Method modules.module_manager._ModuleManager.__setitem__()=modules.module_manager._ModuleManager-class.html#__setitem__"><a title="modules.module_manager._ModuleManager.__setitem__" class="py-name" href="#" onclick="return doclink('link-31', '__setitem__', 'link-31');">__setitem__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt><tt class="py-name">key</tt><tt class="py-op">,</tt><tt class="py-name">instance</tt><tt class="py-op">)</tt> </tt>
+</div><a name="L80"></a><tt class="py-lineno"> 80</tt>  <tt class="py-line"> </tt>
+<a name="_ModuleManager.forward_db_init"></a><div id="_ModuleManager.forward_db_init-def"><a name="L81"></a><tt class="py-lineno"> 81</tt> <a class="py-toggle" href="#" id="_ModuleManager.forward_db_init-toggle" onclick="return toggle('_ModuleManager.forward_db_init');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="modules.module_manager._ModuleManager-class.html#forward_db_init">forward_db_init</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">db</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="_ModuleManager.forward_db_init-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="_ModuleManager.forward_db_init-expanded"><a name="L82"></a><tt class="py-lineno"> 82</tt>  <tt class="py-line">    <tt class="py-docstring">"""Simple db initialisation function.</tt> </tt>
+<a name="L83"></a><tt class="py-lineno"> 83</tt>  <tt class="py-line"><tt class="py-docstring">    @param db: the database instance that is forwarded to every module</tt> </tt>
+<a name="L84"></a><tt class="py-lineno"> 84</tt>  <tt class="py-line"><tt class="py-docstring">    @type db: DBManager</tt> </tt>
+<a name="L85"></a><tt class="py-lineno"> 85</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L86"></a><tt class="py-lineno"> 86</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt class="py-name">key</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">:</tt> </tt>
+<a name="L87"></a><tt class="py-lineno"> 87</tt>  <tt class="py-line">      <tt class="py-name">m</tt> <tt class="py-op">=</tt> <tt class="py-name">IterableUserDict</tt><tt class="py-op">.</tt><tt id="link-32" class="py-name"><a title="modules.module_manager._ModuleManager.__getitem__" class="py-name" href="#" onclick="return doclink('link-32', '__getitem__', 'link-14');">__getitem__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">key</tt><tt class="py-op">)</tt> </tt>
+<a name="L88"></a><tt class="py-lineno"> 88</tt>  <tt class="py-line">      <tt class="py-keyword">if</tt> <tt class="py-name">isinstance</tt><tt class="py-op">(</tt><tt class="py-name">m</tt><tt class="py-op">,</tt> <tt id="link-33" class="py-name"><a title="modules.module_interfaces" class="py-name" href="#" onclick="return doclink('link-33', 'module_interfaces', 'link-0');">module_interfaces</a></tt><tt class="py-op">.</tt><tt id="link-34" class="py-name" targets="Class modules.module_interfaces.IModuleDB=modules.module_interfaces.IModuleDB-class.html"><a title="modules.module_interfaces.IModuleDB" class="py-name" href="#" onclick="return doclink('link-34', 'IModuleDB', 'link-34');">IModuleDB</a></tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L89"></a><tt class="py-lineno"> 89</tt>  <tt class="py-line">        <tt class="py-name">m</tt><tt class="py-op">.</tt><tt id="link-35" class="py-name" targets="Method modules.module_interfaces.IModuleDB.setup_db()=modules.module_interfaces.IModuleDB-class.html#setup_db,Method modules.themodule_Calendars.TheModule.setup_db()=modules.themodule_Calendars.TheModule-class.html#setup_db,Method modules.themodule_Coord.TheModule.setup_db()=modules.themodule_Coord.TheModule-class.html#setup_db,Method modules.themodule_Dummy.TheModule.setup_db()=modules.themodule_Dummy.TheModule-class.html#setup_db,Method modules.themodule_Educ.TheModule.setup_db()=modules.themodule_Educ.TheModule-class.html#setup_db,Method modules.themodule_Menu.TheModule.setup_db()=modules.themodule_Menu.TheModule-class.html#setup_db,Method modules.themodule_News.TheModule.setup_db()=modules.themodule_News.TheModule-class.html#setup_db,Method modules.themodule_Publi.TheModule.setup_db()=modules.themodule_Publi.TheModule-class.html#setup_db,Method modules.themodule_Wiki.TheModule.setup_db()=modules.themodule_Wiki.TheModule-class.html#setup_db"><a title="modules.module_interfaces.IModuleDB.setup_db
+modules.themodule_Calendars.TheModule.setup_db
+modules.themodule_Coord.TheModule.setup_db
+modules.themodule_Dummy.TheModule.setup_db
+modules.themodule_Educ.TheModule.setup_db
+modules.themodule_Menu.TheModule.setup_db
+modules.themodule_News.TheModule.setup_db
+modules.themodule_Publi.TheModule.setup_db
+modules.themodule_Wiki.TheModule.setup_db" class="py-name" href="#" onclick="return doclink('link-35', 'setup_db', 'link-35');">setup_db</a></tt><tt class="py-op">(</tt><tt id="link-36" class="py-name" targets="Variable cgibin.admin.db=cgibin.admin-module.html#db,Variable cgibin.adminvalid.db=cgibin.adminvalid-module.html#db,Variable cgibin.handler.db=cgibin.handler-module.html#db,Package db=db-module.html"><a title="cgibin.admin.db
+cgibin.adminvalid.db
+cgibin.handler.db
+db" class="py-name" href="#" onclick="return doclink('link-36', 'db', 'link-36');">db</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L90"></a><tt class="py-lineno"> 90</tt>  <tt class="py-line"> </tt>
+<a name="_ModuleManager.forward_lang"></a><div id="_ModuleManager.forward_lang-def"><a name="L91"></a><tt class="py-lineno"> 91</tt> <a class="py-toggle" href="#" id="_ModuleManager.forward_lang-toggle" onclick="return toggle('_ModuleManager.forward_lang');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="modules.module_manager._ModuleManager-class.html#forward_lang">forward_lang</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">l</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="_ModuleManager.forward_lang-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="_ModuleManager.forward_lang-expanded"><a name="L92"></a><tt class="py-lineno"> 92</tt>  <tt class="py-line">    <tt class="py-docstring">"""Same as forward_db_init for the lang.</tt> </tt>
+<a name="L93"></a><tt class="py-lineno"> 93</tt>  <tt class="py-line"><tt class="py-docstring">    @param l: the current lang used in the CMS</tt> </tt>
+<a name="L94"></a><tt class="py-lineno"> 94</tt>  <tt class="py-line"><tt class="py-docstring">    @type l: string</tt> </tt>
+<a name="L95"></a><tt class="py-lineno"> 95</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L96"></a><tt class="py-lineno"> 96</tt>  <tt class="py-line">    <tt class="py-keyword">for</tt> <tt class="py-name">key</tt> <tt class="py-keyword">in</tt> <tt class="py-name">self</tt><tt class="py-op">:</tt> </tt>
+<a name="L97"></a><tt class="py-lineno"> 97</tt>  <tt class="py-line">      <tt class="py-name">m</tt> <tt class="py-op">=</tt> <tt class="py-name">IterableUserDict</tt><tt class="py-op">.</tt><tt id="link-37" class="py-name"><a title="modules.module_manager._ModuleManager.__getitem__" class="py-name" href="#" onclick="return doclink('link-37', '__getitem__', 'link-14');">__getitem__</a></tt><tt class="py-op">(</tt><tt class="py-name">self</tt><tt class="py-op">,</tt> <tt class="py-name">key</tt><tt class="py-op">)</tt> </tt>
+<a name="L98"></a><tt class="py-lineno"> 98</tt>  <tt class="py-line">      <tt class="py-name">m</tt><tt class="py-op">.</tt><tt id="link-38" class="py-name" targets="Method modules.module_interfaces.ComfortModule.setup_lang()=modules.module_interfaces.ComfortModule-class.html#setup_lang"><a title="modules.module_interfaces.ComfortModule.setup_lang" class="py-name" href="#" onclick="return doclink('link-38', 'setup_lang', 'link-38');">setup_lang</a></tt><tt class="py-op">(</tt><tt id="link-39" class="py-name" targets="Variable db.testOrder.l=db.testOrder-module.html#l"><a title="db.testOrder.l" class="py-name" href="#" onclick="return doclink('link-39', 'l', 'link-39');">l</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L99"></a><tt class="py-lineno"> 99</tt>  <tt class="py-line"> </tt>
+<a name="_ModuleManager.get_available_modules"></a><div id="_ModuleManager.get_available_modules-def"><a name="L100"></a><tt class="py-lineno">100</tt> <a class="py-toggle" href="#" id="_ModuleManager.get_available_modules-toggle" onclick="return toggle('_ModuleManager.get_available_modules');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="modules.module_manager._ModuleManager-class.html#get_available_modules">get_available_modules</a><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="_ModuleManager.get_available_modules-collapsed" style="display:none;" pad="+++" indent="++++++"></div><div id="_ModuleManager.get_available_modules-expanded"><a name="L101"></a><tt class="py-lineno">101</tt>  <tt class="py-line">    <tt class="py-docstring">"""Returns a list of available modules (based on the directory listing).</tt> </tt>
+<a name="L102"></a><tt class="py-lineno">102</tt>  <tt class="py-line"><tt class="py-docstring">    This is a good example of pythonic programming style</tt> </tt>
+<a name="L103"></a><tt class="py-lineno">103</tt>  <tt class="py-line"><tt class="py-docstring">    @return: a list of available modules.</tt> </tt>
+<a name="L104"></a><tt class="py-lineno">104</tt>  <tt class="py-line"><tt class="py-docstring">    """</tt> </tt>
+<a name="L105"></a><tt class="py-lineno">105</tt>  <tt class="py-line">    <tt id="link-40" class="py-name"><a title="db.testOrder.l" class="py-name" href="#" onclick="return doclink('link-40', 'l', 'link-39');">l</a></tt> <tt class="py-op">=</tt> <tt class="py-name">os</tt><tt class="py-op">.</tt><tt class="py-name">listdir</tt><tt class="py-op">(</tt><tt class="py-string">"modules"</tt><tt class="py-op">)</tt> </tt>
+<a name="L106"></a><tt class="py-lineno">106</tt>  <tt class="py-line">    <tt id="link-41" class="py-name"><a title="db.testOrder.l" class="py-name" href="#" onclick="return doclink('link-41', 'l', 'link-39');">l</a></tt> <tt class="py-op">=</tt> <tt class="py-name">filter</tt><tt class="py-op">(</tt><tt class="py-keyword">lambda</tt> <tt class="py-name">f</tt><tt class="py-op">:</tt> <tt class="py-name">f</tt><tt class="py-op">.</tt><tt class="py-name">startswith</tt><tt class="py-op">(</tt><tt class="py-string">"themodule_"</tt><tt class="py-op">)</tt> <tt class="py-keyword">and</tt> <tt class="py-name">f</tt><tt class="py-op">.</tt><tt class="py-name">endswith</tt><tt class="py-op">(</tt><tt class="py-string">'.py'</tt><tt class="py-op">)</tt><tt class="py-op">,</tt> <tt id="link-42" class="py-name"><a title="db.testOrder.l" class="py-name" href="#" onclick="return doclink('link-42', 'l', 'link-39');">l</a></tt><tt class="py-op">[</tt><tt class="py-op">:</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L107"></a><tt class="py-lineno">107</tt>  <tt class="py-line">    <tt class="py-keyword">return</tt> <tt class="py-op">[</tt><tt class="py-name">f</tt><tt class="py-op">.</tt><tt class="py-name">split</tt><tt class="py-op">(</tt><tt class="py-string">'_'</tt><tt class="py-op">)</tt><tt class="py-op">[</tt><tt class="py-number">1</tt><tt class="py-op">]</tt><tt class="py-op">[</tt><tt class="py-op">:</tt><tt class="py-op">-</tt><tt class="py-number">3</tt><tt class="py-op">]</tt> <tt class="py-keyword">for</tt> <tt class="py-name">f</tt> <tt class="py-keyword">in</tt> <tt id="link-43" class="py-name"><a title="db.testOrder.l" class="py-name" href="#" onclick="return doclink('link-43', 'l', 'link-39');">l</a></tt><tt class="py-op">]</tt> </tt>
+</div><a name="L108"></a><tt class="py-lineno">108</tt>  <tt class="py-line"> </tt>
+<a name="L109"></a><tt class="py-lineno">109</tt>  <tt class="py-line">  <tt id="link-44" class="py-name" targets="Static Method modules.module_manager._ModuleManager.get_available_modules()=modules.module_manager._ModuleManager-class.html#get_available_modules"><a title="modules.module_manager._ModuleManager.get_available_modules" class="py-name" href="#" onclick="return doclink('link-44', 'get_available_modules', 'link-44');">get_available_modules</a></tt> <tt class="py-op">=</tt> <tt class="py-name">staticmethod</tt><tt class="py-op">(</tt><tt id="link-45" class="py-name"><a title="modules.module_manager._ModuleManager.get_available_modules" class="py-name" href="#" onclick="return doclink('link-45', 'get_available_modules', 'link-44');">get_available_modules</a></tt><tt class="py-op">)</tt> </tt>
+</div><a name="L110"></a><tt class="py-lineno">110</tt>  <tt class="py-line"> </tt>
+<a name="L111"></a><tt class="py-lineno">111</tt>  <tt class="py-line"> </tt>
+<a name="ModuleManager"></a><div id="ModuleManager-def"><a name="L112"></a><tt class="py-lineno">112</tt> <a class="py-toggle" href="#" id="ModuleManager-toggle" onclick="return toggle('ModuleManager');">-</a><tt class="py-line"><tt class="py-keyword">def</tt> <a class="py-def-name" href="modules.module_manager-module.html#ModuleManager">ModuleManager</a><tt class="py-op">(</tt><tt class="py-param">set</tt><tt class="py-op">=</tt><tt class="py-op">[</tt><tt class="py-name">False</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt class="py-param">instance</tt><tt class="py-op">=</tt><tt class="py-op">[</tt><tt class="py-name">None</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ModuleManager-collapsed" style="display:none;" pad="+++" indent="++++"></div><div id="ModuleManager-expanded"><a name="L113"></a><tt class="py-lineno">113</tt>  <tt class="py-line">  <tt class="py-docstring">"""That function tries to implement the singleton pattern : there is one and</tt> </tt>
+<a name="L114"></a><tt class="py-lineno">114</tt>  <tt class="py-line"><tt class="py-docstring">  only one instance of _ModuleManager per run of the program. Actually, this</tt> </tt>
+<a name="L115"></a><tt class="py-lineno">115</tt>  <tt class="py-line"><tt class="py-docstring">  behaviour is overridden in:</tt> </tt>
+<a name="L116"></a><tt class="py-lineno">116</tt>  <tt class="py-line"><tt class="py-docstring">  - interface/forms.py when the menu is loaded</tt> </tt>
+<a name="L117"></a><tt class="py-lineno">117</tt>  <tt class="py-line"><tt class="py-docstring">  - interface/generate.py when different pages are generated</tt> </tt>
+<a name="L118"></a><tt class="py-lineno">118</tt>  <tt class="py-line"><tt class="py-docstring">  - modules/themoduleWiki.py when the content of a &lt;module&gt; tag is generated.</tt> </tt>
+<a name="L119"></a><tt class="py-lineno">119</tt>  <tt class="py-line"><tt class="py-docstring">  (there is a new instance of _ModuleManager created per page)."""</tt> </tt>
+<a name="L120"></a><tt class="py-lineno">120</tt>  <tt class="py-line">  <tt class="py-keyword">if</tt> <tt class="py-keyword">not</tt> <tt class="py-name">set</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt><tt class="py-op">:</tt> </tt>
+<a name="L121"></a><tt class="py-lineno">121</tt>  <tt class="py-line">    <tt class="py-name">instance</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt id="link-46" class="py-name" targets="Class modules.module_manager._ModuleManager=modules.module_manager._ModuleManager-class.html"><a title="modules.module_manager._ModuleManager" class="py-name" href="#" onclick="return doclink('link-46', '_ModuleManager', 'link-46');">_ModuleManager</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L122"></a><tt class="py-lineno">122</tt>  <tt class="py-line">    <tt class="py-name">set</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> <tt class="py-op">=</tt> <tt class="py-name">True</tt> </tt>
+<a name="L123"></a><tt class="py-lineno">123</tt>  <tt class="py-line">  <tt class="py-keyword">return</tt> <tt class="py-name">instance</tt><tt class="py-op">[</tt><tt class="py-number">0</tt><tt class="py-op">]</tt> </tt>
+</div><a name="L124"></a><tt class="py-lineno">124</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://graal.ens-lyon.fr/comfort/">CoMFoRT</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sun May 25 15:42:44 2008
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

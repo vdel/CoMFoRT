@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>modules.module_interfaces</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://graal.ens-lyon.fr/comfort/">CoMFoRT</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="modules-module.html">Package&nbsp;modules</a> ::
+        Module&nbsp;module_interfaces
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="modules.module_interfaces-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="modules.module_interfaces-module.html">Module modules.module_interfaces</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-comment"># -*- encoding: utf-8 -*-</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"><tt class="py-comment"></tt> </tt>
+<a name="ImplementationError"></a><div id="ImplementationError-def"><a name="L3"></a><tt class="py-lineno"> 3</tt> <a class="py-toggle" href="#" id="ImplementationError-toggle" onclick="return toggle('ImplementationError');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="modules.module_interfaces.ImplementationError-class.html">ImplementationError</a><tt class="py-op">(</tt><tt class="py-base-class">Exception</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ImplementationError-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="ImplementationError-expanded"><a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line">  <tt class="py-keyword">pass</tt> </tt>
+</div><a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"> </tt>
+<a name="ComfortModule"></a><div id="ComfortModule-def"><a name="L6"></a><tt class="py-lineno"> 6</tt> <a class="py-toggle" href="#" id="ComfortModule-toggle" onclick="return toggle('ComfortModule');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="modules.module_interfaces.ComfortModule-class.html">ComfortModule</a><tt class="py-op">:</tt> </tt>
+</div><div id="ComfortModule-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="ComfortModule-expanded"><a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line">   </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line">  <tt id="link-0" class="py-name" targets="Variable modules.module_interfaces.ComfortModule.position=modules.module_interfaces.ComfortModule-class.html#position"><a title="modules.module_interfaces.ComfortModule.position" class="py-name" href="#" onclick="return doclink('link-0', 'position', 'link-0');">position</a></tt> <tt class="py-op">=</tt> <tt class="py-string">""</tt> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line">  <tt id="link-1" class="py-name" targets="Variable conf.confstatic.mode=conf.confstatic-module.html#mode,Variable modules.module_interfaces.ComfortModule.mode=modules.module_interfaces.ComfortModule-class.html#mode,Variable modules.themodule_Calendars.TheModule.mode=modules.themodule_Calendars.TheModule-class.html#mode,Variable modules.themodule_Coord.TheModule.mode=modules.themodule_Coord.TheModule-class.html#mode,Variable modules.themodule_Credits.TheModule.mode=modules.themodule_Credits.TheModule-class.html#mode,Variable modules.themodule_Dummy.TheModule.mode=modules.themodule_Dummy.TheModule-class.html#mode,Variable modules.themodule_Educ.TheModule.mode=modules.themodule_Educ.TheModule-class.html#mode,Variable modules.themodule_Menu.TheModule.mode=modules.themodule_Menu.TheModule-class.html#mode,Variable modules.themodule_News.TheModule.mode=modules.themodule_News.TheModule-class.html#mode,Variable modules.themodule_Publi.TheModule.mode=modules.themodule_Publi.TheModule-class.html#mode,Variable modules.themodule_Wiki.TheModule.mode=modules.themodule_Wiki.TheModule-class.html#mode"><a title="conf.confstatic.mode
+modules.module_interfaces.ComfortModule.mode
+modules.themodule_Calendars.TheModule.mode
+modules.themodule_Coord.TheModule.mode
+modules.themodule_Credits.TheModule.mode
+modules.themodule_Dummy.TheModule.mode
+modules.themodule_Educ.TheModule.mode
+modules.themodule_Menu.TheModule.mode
+modules.themodule_News.TheModule.mode
+modules.themodule_Publi.TheModule.mode
+modules.themodule_Wiki.TheModule.mode" class="py-name" href="#" onclick="return doclink('link-1', 'mode', 'link-1');">mode</a></tt> <tt class="py-op">=</tt> <tt class="py-string">""</tt> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"> </tt>
+<a name="ComfortModule.__init__"></a><div id="ComfortModule.__init__-def"><a name="L11"></a><tt class="py-lineno">11</tt> <a class="py-toggle" href="#" id="ComfortModule.__init__-toggle" onclick="return toggle('ComfortModule.__init__');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="modules.module_interfaces.ComfortModule-class.html#__init__">__init__</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">mm</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ComfortModule.__init__-collapsed" style="display:none;" pad="++" indent="++++++"></div><div id="ComfortModule.__init__-expanded"><a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line">    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-2" class="py-name" targets="Module modules.module_manager=modules.module_manager-module.html"><a title="modules.module_manager" class="py-name" href="#" onclick="return doclink('link-2', 'module_manager', 'link-2');">module_manager</a></tt> <tt class="py-op">=</tt> <tt id="link-3" class="py-name" targets="Variable cgibin.admin.mm=cgibin.admin-module.html#mm,Variable cgibin.adminvalid.mm=cgibin.adminvalid-module.html#mm,Variable cgibin.handler.mm=cgibin.handler-module.html#mm,Variable modules.test.mm=modules.test-module.html#mm"><a title="cgibin.admin.mm
+cgibin.adminvalid.mm
+cgibin.handler.mm
+modules.test.mm" class="py-name" href="#" onclick="return doclink('link-3', 'mm', 'link-3');">mm</a></tt> </tt>
+</div><a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line"> </tt>
+<a name="ComfortModule.module_init"></a><div id="ComfortModule.module_init-def"><a name="L14"></a><tt class="py-lineno">14</tt> <a class="py-toggle" href="#" id="ComfortModule.module_init-toggle" onclick="return toggle('ComfortModule.module_init');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="modules.module_interfaces.ComfortModule-class.html#module_init">module_init</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ComfortModule.module_init-collapsed" style="display:none;" pad="++" indent="++++++"></div><div id="ComfortModule.module_init-expanded"><a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line">    <tt class="py-keyword">raise</tt> <tt id="link-4" class="py-name" targets="Class db.db_interface.ImplementationError=db.db_interface.ImplementationError-class.html,Class modules.module_interfaces.ImplementationError=modules.module_interfaces.ImplementationError-class.html"><a title="db.db_interface.ImplementationError
+modules.module_interfaces.ImplementationError" class="py-name" href="#" onclick="return doclink('link-4', 'ImplementationError', 'link-4');">ImplementationError</a></tt> </tt>
+</div><a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line"> </tt>
+<a name="ComfortModule.module_title"></a><div id="ComfortModule.module_title-def"><a name="L17"></a><tt class="py-lineno">17</tt> <a class="py-toggle" href="#" id="ComfortModule.module_title-toggle" onclick="return toggle('ComfortModule.module_title');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="modules.module_interfaces.ComfortModule-class.html#module_title">module_title</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ComfortModule.module_title-collapsed" style="display:none;" pad="++" indent="++++++"></div><div id="ComfortModule.module_title-expanded"><a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line">    <tt class="py-keyword">raise</tt> <tt id="link-5" class="py-name"><a title="db.db_interface.ImplementationError
+modules.module_interfaces.ImplementationError" class="py-name" href="#" onclick="return doclink('link-5', 'ImplementationError', 'link-4');">ImplementationError</a></tt> </tt>
+</div><a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line"> </tt>
+<a name="ComfortModule.module_name"></a><div id="ComfortModule.module_name-def"><a name="L20"></a><tt class="py-lineno">20</tt> <a class="py-toggle" href="#" id="ComfortModule.module_name-toggle" onclick="return toggle('ComfortModule.module_name');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="modules.module_interfaces.ComfortModule-class.html#module_name">module_name</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ComfortModule.module_name-collapsed" style="display:none;" pad="++" indent="++++++"></div><div id="ComfortModule.module_name-expanded"><a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line">    <tt class="py-keyword">raise</tt> <tt id="link-6" class="py-name"><a title="db.db_interface.ImplementationError
+modules.module_interfaces.ImplementationError" class="py-name" href="#" onclick="return doclink('link-6', 'ImplementationError', 'link-4');">ImplementationError</a></tt> </tt>
+</div><a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line"> </tt>
+<a name="ComfortModule.setup_lang"></a><div id="ComfortModule.setup_lang-def"><a name="L23"></a><tt class="py-lineno">23</tt> <a class="py-toggle" href="#" id="ComfortModule.setup_lang-toggle" onclick="return toggle('ComfortModule.setup_lang');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="modules.module_interfaces.ComfortModule-class.html#setup_lang">setup_lang</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">l</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="ComfortModule.setup_lang-collapsed" style="display:none;" pad="++" indent="++++++"></div><div id="ComfortModule.setup_lang-expanded"><a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line">    <tt class="py-name">self</tt><tt class="py-op">.</tt><tt id="link-7" class="py-name" targets="Variable cgibin.kill.lang=cgibin.kill-module.html#lang"><a title="cgibin.kill.lang" class="py-name" href="#" onclick="return doclink('link-7', 'lang', 'link-7');">lang</a></tt> <tt class="py-op">=</tt> <tt id="link-8" class="py-name" targets="Variable db.testOrder.l=db.testOrder-module.html#l"><a title="db.testOrder.l" class="py-name" href="#" onclick="return doclink('link-8', 'l', 'link-8');">l</a></tt> </tt>
+</div></div><a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line"> </tt>
+<a name="IModuleAdminPage"></a><div id="IModuleAdminPage-def"><a name="L26"></a><tt class="py-lineno">26</tt> <a class="py-toggle" href="#" id="IModuleAdminPage-toggle" onclick="return toggle('IModuleAdminPage');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="modules.module_interfaces.IModuleAdminPage-class.html">IModuleAdminPage</a><tt class="py-op">:</tt> </tt>
+</div><div id="IModuleAdminPage-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="IModuleAdminPage-expanded"><a name="IModuleAdminPage.init_admin"></a><div id="IModuleAdminPage.init_admin-def"><a name="L27"></a><tt class="py-lineno">27</tt> <a class="py-toggle" href="#" id="IModuleAdminPage.init_admin-toggle" onclick="return toggle('IModuleAdminPage.init_admin');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="modules.module_interfaces.IModuleAdminPage-class.html#init_admin">init_admin</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="IModuleAdminPage.init_admin-collapsed" style="display:none;" pad="++" indent="++++++"></div><div id="IModuleAdminPage.init_admin-expanded"><a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line">    <tt class="py-keyword">raise</tt> <tt id="link-9" class="py-name"><a title="db.db_interface.ImplementationError
+modules.module_interfaces.ImplementationError" class="py-name" href="#" onclick="return doclink('link-9', 'ImplementationError', 'link-4');">ImplementationError</a></tt> </tt>
+</div><a name="IModuleAdminPage.handle_admin_request"></a><div id="IModuleAdminPage.handle_admin_request-def"><a name="L29"></a><tt class="py-lineno">29</tt> <a class="py-toggle" href="#" id="IModuleAdminPage.handle_admin_request-toggle" onclick="return toggle('IModuleAdminPage.handle_admin_request');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="modules.module_interfaces.IModuleAdminPage-class.html#handle_admin_request">handle_admin_request</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">db</tt><tt class="py-op">,</tt> <tt class="py-param">params</tt><tt class="py-op">,</tt> <tt class="py-param">fields</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="IModuleAdminPage.handle_admin_request-collapsed" style="display:none;" pad="++" indent="++++++"></div><div id="IModuleAdminPage.handle_admin_request-expanded"><a name="L30"></a><tt class="py-lineno">30</tt>  <tt class="py-line">    <tt class="py-keyword">raise</tt> <tt id="link-10" class="py-name"><a title="db.db_interface.ImplementationError
+modules.module_interfaces.ImplementationError" class="py-name" href="#" onclick="return doclink('link-10', 'ImplementationError', 'link-4');">ImplementationError</a></tt> </tt>
+</div><a name="IModuleAdminPage.generate_admin_xhtml"></a><div id="IModuleAdminPage.generate_admin_xhtml-def"><a name="L31"></a><tt class="py-lineno">31</tt> <a class="py-toggle" href="#" id="IModuleAdminPage.generate_admin_xhtml-toggle" onclick="return toggle('IModuleAdminPage.generate_admin_xhtml');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="modules.module_interfaces.IModuleAdminPage-class.html#generate_admin_xhtml">generate_admin_xhtml</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">page</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="IModuleAdminPage.generate_admin_xhtml-collapsed" style="display:none;" pad="++" indent="++++++"></div><div id="IModuleAdminPage.generate_admin_xhtml-expanded"><a name="L32"></a><tt class="py-lineno">32</tt>  <tt class="py-line">    <tt class="py-keyword">raise</tt> <tt id="link-11" class="py-name"><a title="db.db_interface.ImplementationError
+modules.module_interfaces.ImplementationError" class="py-name" href="#" onclick="return doclink('link-11', 'ImplementationError', 'link-4');">ImplementationError</a></tt> </tt>
+</div><a name="IModuleAdminPage.module_admin_info"></a><div id="IModuleAdminPage.module_admin_info-def"><a name="L33"></a><tt class="py-lineno">33</tt> <a class="py-toggle" href="#" id="IModuleAdminPage.module_admin_info-toggle" onclick="return toggle('IModuleAdminPage.module_admin_info');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="modules.module_interfaces.IModuleAdminPage-class.html#module_admin_info">module_admin_info</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="IModuleAdminPage.module_admin_info-collapsed" style="display:none;" pad="++" indent="++++++"></div><div id="IModuleAdminPage.module_admin_info-expanded"><a name="L34"></a><tt class="py-lineno">34</tt>  <tt class="py-line">    <tt class="py-keyword">raise</tt> <tt id="link-12" class="py-name"><a title="db.db_interface.ImplementationError
+modules.module_interfaces.ImplementationError" class="py-name" href="#" onclick="return doclink('link-12', 'ImplementationError', 'link-4');">ImplementationError</a></tt>     </tt>
+</div></div><a name="L35"></a><tt class="py-lineno">35</tt>  <tt class="py-line"> </tt>
+<a name="IModuleContentProvider"></a><div id="IModuleContentProvider-def"><a name="L36"></a><tt class="py-lineno">36</tt> <a class="py-toggle" href="#" id="IModuleContentProvider-toggle" onclick="return toggle('IModuleContentProvider');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="modules.module_interfaces.IModuleContentProvider-class.html">IModuleContentProvider</a><tt class="py-op">:</tt> </tt>
+</div><div id="IModuleContentProvider-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="IModuleContentProvider-expanded"><a name="IModuleContentProvider.init_content"></a><div id="IModuleContentProvider.init_content-def"><a name="L37"></a><tt class="py-lineno">37</tt> <a class="py-toggle" href="#" id="IModuleContentProvider.init_content-toggle" onclick="return toggle('IModuleContentProvider.init_content');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="modules.module_interfaces.IModuleContentProvider-class.html#init_content">init_content</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="IModuleContentProvider.init_content-collapsed" style="display:none;" pad="++" indent="++++++"></div><div id="IModuleContentProvider.init_content-expanded"><a name="L38"></a><tt class="py-lineno">38</tt>  <tt class="py-line">    <tt class="py-keyword">raise</tt> <tt id="link-13" class="py-name"><a title="db.db_interface.ImplementationError
+modules.module_interfaces.ImplementationError" class="py-name" href="#" onclick="return doclink('link-13', 'ImplementationError', 'link-4');">ImplementationError</a></tt> </tt>
+</div><a name="IModuleContentProvider.generate_content_xml"></a><div id="IModuleContentProvider.generate_content_xml-def"><a name="L39"></a><tt class="py-lineno">39</tt> <a class="py-toggle" href="#" id="IModuleContentProvider.generate_content_xml-toggle" onclick="return toggle('IModuleContentProvider.generate_content_xml');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="modules.module_interfaces.IModuleContentProvider-class.html#generate_content_xml">generate_content_xml</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">args</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="IModuleContentProvider.generate_content_xml-collapsed" style="display:none;" pad="++" indent="++++++"></div><div id="IModuleContentProvider.generate_content_xml-expanded"><a name="L40"></a><tt class="py-lineno">40</tt>  <tt class="py-line">    <tt class="py-keyword">raise</tt> <tt id="link-14" class="py-name"><a title="db.db_interface.ImplementationError
+modules.module_interfaces.ImplementationError" class="py-name" href="#" onclick="return doclink('link-14', 'ImplementationError', 'link-4');">ImplementationError</a></tt> </tt>
+</div></div><a name="L41"></a><tt class="py-lineno">41</tt>  <tt class="py-line"> </tt>
+<a name="IModuleRequestHandler"></a><div id="IModuleRequestHandler-def"><a name="L42"></a><tt class="py-lineno">42</tt> <a class="py-toggle" href="#" id="IModuleRequestHandler-toggle" onclick="return toggle('IModuleRequestHandler');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="modules.module_interfaces.IModuleRequestHandler-class.html">IModuleRequestHandler</a><tt class="py-op">:</tt> </tt>
+</div><div id="IModuleRequestHandler-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="IModuleRequestHandler-expanded"><a name="IModuleRequestHandler.handle_request"></a><div id="IModuleRequestHandler.handle_request-def"><a name="L43"></a><tt class="py-lineno">43</tt> <a class="py-toggle" href="#" id="IModuleRequestHandler.handle_request-toggle" onclick="return toggle('IModuleRequestHandler.handle_request');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="modules.module_interfaces.IModuleRequestHandler-class.html#handle_request">handle_request</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">request</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="IModuleRequestHandler.handle_request-collapsed" style="display:none;" pad="++" indent="++++++"></div><div id="IModuleRequestHandler.handle_request-expanded"><a name="L44"></a><tt class="py-lineno">44</tt>  <tt class="py-line">    <tt class="py-keyword">raise</tt> <tt id="link-15" class="py-name"><a title="db.db_interface.ImplementationError
+modules.module_interfaces.ImplementationError" class="py-name" href="#" onclick="return doclink('link-15', 'ImplementationError', 'link-4');">ImplementationError</a></tt> </tt>
+</div></div><a name="L45"></a><tt class="py-lineno">45</tt>  <tt class="py-line"> </tt>
+<a name="IModuleLogo"></a><div id="IModuleLogo-def"><a name="L46"></a><tt class="py-lineno">46</tt> <a class="py-toggle" href="#" id="IModuleLogo-toggle" onclick="return toggle('IModuleLogo');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="modules.module_interfaces.IModuleLogo-class.html">IModuleLogo</a><tt class="py-op">:</tt> </tt>
+</div><div id="IModuleLogo-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="IModuleLogo-expanded"><a name="IModuleLogo.get_logo"></a><div id="IModuleLogo.get_logo-def"><a name="L47"></a><tt class="py-lineno">47</tt> <a class="py-toggle" href="#" id="IModuleLogo.get_logo-toggle" onclick="return toggle('IModuleLogo.get_logo');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="modules.module_interfaces.IModuleLogo-class.html#get_logo">get_logo</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="IModuleLogo.get_logo-collapsed" style="display:none;" pad="++" indent="++++++"></div><div id="IModuleLogo.get_logo-expanded"><a name="L48"></a><tt class="py-lineno">48</tt>  <tt class="py-line">    <tt class="py-keyword">raise</tt> <tt id="link-16" class="py-name"><a title="db.db_interface.ImplementationError
+modules.module_interfaces.ImplementationError" class="py-name" href="#" onclick="return doclink('link-16', 'ImplementationError', 'link-4');">ImplementationError</a></tt> </tt>
+</div></div><a name="L49"></a><tt class="py-lineno">49</tt>  <tt class="py-line"> </tt>
+<a name="IModuleDB"></a><div id="IModuleDB-def"><a name="L50"></a><tt class="py-lineno">50</tt> <a class="py-toggle" href="#" id="IModuleDB-toggle" onclick="return toggle('IModuleDB');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="modules.module_interfaces.IModuleDB-class.html">IModuleDB</a><tt class="py-op">:</tt> </tt>
+</div><div id="IModuleDB-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="IModuleDB-expanded"><a name="IModuleDB.setup_db"></a><div id="IModuleDB.setup_db-def"><a name="L51"></a><tt class="py-lineno">51</tt> <a class="py-toggle" href="#" id="IModuleDB.setup_db-toggle" onclick="return toggle('IModuleDB.setup_db');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="modules.module_interfaces.IModuleDB-class.html#setup_db">setup_db</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">db</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="IModuleDB.setup_db-collapsed" style="display:none;" pad="++" indent="++++++"></div><div id="IModuleDB.setup_db-expanded"><a name="L52"></a><tt class="py-lineno">52</tt>  <tt class="py-line">    <tt class="py-keyword">raise</tt> <tt id="link-17" class="py-name"><a title="db.db_interface.ImplementationError
+modules.module_interfaces.ImplementationError" class="py-name" href="#" onclick="return doclink('link-17', 'ImplementationError', 'link-4');">ImplementationError</a></tt> </tt>
+</div></div><a name="L53"></a><tt class="py-lineno">53</tt>  <tt class="py-line"> </tt>
+<a name="IModuleSetupScreen"></a><div id="IModuleSetupScreen-def"><a name="L54"></a><tt class="py-lineno">54</tt> <a class="py-toggle" href="#" id="IModuleSetupScreen-toggle" onclick="return toggle('IModuleSetupScreen');">-</a><tt class="py-line"><tt class="py-keyword">class</tt> <a class="py-def-name" href="modules.module_interfaces.IModuleSetupScreen-class.html">IModuleSetupScreen</a><tt class="py-op">:</tt> </tt>
+</div><div id="IModuleSetupScreen-collapsed" style="display:none;" pad="++" indent="++++"></div><div id="IModuleSetupScreen-expanded"><a name="IModuleSetupScreen.show_window"></a><div id="IModuleSetupScreen.show_window-def"><a name="L55"></a><tt class="py-lineno">55</tt> <a class="py-toggle" href="#" id="IModuleSetupScreen.show_window-toggle" onclick="return toggle('IModuleSetupScreen.show_window');">-</a><tt class="py-line">  <tt class="py-keyword">def</tt> <a class="py-def-name" href="modules.module_interfaces.IModuleSetupScreen-class.html#show_window">show_window</a><tt class="py-op">(</tt><tt class="py-param">self</tt><tt class="py-op">,</tt> <tt class="py-param">cb_next</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+</div><div id="IModuleSetupScreen.show_window-collapsed" style="display:none;" pad="++" indent="++++++"></div><div id="IModuleSetupScreen.show_window-expanded"><a name="L56"></a><tt class="py-lineno">56</tt>  <tt class="py-line">    <tt class="py-keyword">raise</tt> <tt id="link-18" class="py-name"><a title="db.db_interface.ImplementationError
+modules.module_interfaces.ImplementationError" class="py-name" href="#" onclick="return doclink('link-18', 'ImplementationError', 'link-4');">ImplementationError</a></tt> </tt>
+</div></div><a name="L57"></a><tt class="py-lineno">57</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://graal.ens-lyon.fr/comfort/">CoMFoRT</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sun May 25 15:42:53 2008
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

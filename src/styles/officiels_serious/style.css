@@ -1,0 +1,248 @@
+/*  ------------------------------------------*/
+/*  Corps Principal                           */
+/*  ------------------------------------------*/
+
+@import url(../common/wiki.css);
+@import url(../common/menu.css);
+
+html {
+  background: #EEEEFF;
+  margin: 0;
+  padding: 0;
+  font: 100% Verdana, Geneva, Arial, Helvetica, "Bitstream Vera Sans", sans-serif;
+}
+
+body {
+  width: 700px;
+  margin: 8px auto;
+  padding: 5px;
+  font-size: 70%;
+  line-height: 150%;
+}
+
+.sitename {
+  font-family: "Bitstream Vera Sans", "Dejavu Sans", "Tahoma", "Arial", sans-serif;
+  background: #EEEEFF;
+  float:right;
+  font-size: 220%;
+  font-weight: bolder;
+  font-variant: small-caps;
+  /*background-image: url(bg.gif);*/
+  padding: 8px;
+  color:#545454;
+}
+
+.sitename:first-letter {
+  text-transform: uppercase;
+}
+
+
+/*  ------------------------------------------
+/*  Navigation
+/*  ------------------------------------------
+*/
+#Menu {
+  height: 25px;
+  width: 700px;
+  margin-bottom: 0px;
+  padding: 0;
+  list-style: none;
+  background: #EEEEFF url(nav.gif) no-repeat;
+  overflow: hidden;
+}
+
+#Menu a {
+  display: block;
+}
+
+#Menu a:hover {
+  color: #eef !important;
+}
+
+#Menu ul {
+  display: inline;
+}
+
+#Menu li {
+  margin: 2px 15px;
+  padding: 0px;
+  float: left;
+  display: inline;
+}
+
+#Menu li a:link, #Menu li a:visited {
+  color: #FFF;
+  text-decoration: none;
+  font-variant: small-caps;
+  font-weight: bold;
+}
+
+#Menu li li {
+  margin: 0;
+  width: 100%;
+  background-color: #545454;
+}
+
+#Menu li li a {
+  padding: 2px;
+  border: 1px solid #eef;
+  border-width: 0 1px 1px 1px;
+}
+
+#Menu li:hover ul, #Menu .sfhover ul {
+  /* les sous-menus ont 2px de padding et 1px de bordure */
+  margin-left: -3px;
+}
+
+/*  ------------------------------------------
+/*  Article
+/*  ------------------------------------------
+*/
+
+.sect1, .footnotes, .comfort {
+  margin: 0;
+  margin-top: -1px;
+  text-align:justify;
+  width: 690px;
+  background: #FFFFFF;
+  padding: 0 5px;
+  overflow: auto;
+}
+
+.sect1 .sect1 {
+  padding: 0;
+  width: auto;
+}
+
+div.article {
+  margin-top: 50px;
+  padding-bottom: 0px;
+}
+
+div.titlepage h1 {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #a10;
+  /*background-image: url(bg.gif);*/
+  background-color: #eeeeff;
+  padding: 5px;
+}
+
+div.titlepage h2 {
+  font: bold 1.5em Georgia, "Times New Roman", Times, serif;
+  color: #a10;
+  background: url(dot_bigred.gif) no-repeat 0 .1em;
+}
+
+#Menu p {
+  display: none;
+}
+
+/*  ------------------------------------------
+/*  Footer
+/*  ------------------------------------------
+*/
+
+.feet {
+  height: 26px;
+  clear: both;
+  background: url(nav.gif) no-repeat 0px 1px;
+  text-align: center;
+  line-height: 120%;
+  padding-top: 4px;
+}
+
+.feet a {color: white !important; }
+
+/*  ------------------------------------------
+/*  sections
+/*  ------------------------------------------
+*/
+
+div.sect2 {
+  margin-left: 1em;
+}
+
+div.sect3 {
+  margin-left: 2em;
+}
+
+div.sect4 {
+  margin-left: 3em;
+}
+
+div.sect5 {
+  margin-left: 5em;
+}
+
+div.titlepage h2 {
+  font-size:160%;
+  font-weight:bold;
+  margin-left:0px;
+  padding-left: 19px;
+}
+
+div.titlepage h3 {
+  font-size: 120%;
+  font-weight: bold;
+  margin-left: .2em;
+  margin-bottom: 0;
+  color: #a10;
+}
+
+div.titlepage h4 {
+  font-size: 110%;
+  font-weight: bold;
+  margin-left: .2em;
+  color: #a10;
+}
+
+div.titlepage h5 {
+  font-size: 100%;
+  font-weight: bold;
+  margin-left: .5em;
+  color: #a10;
+}
+
+div.titlepage h6 {
+  font-size: 100%;
+  font-weight: bold;
+  margin-left: 1em;
+  color: #a10;
+}
+
+/*  ------------------------------------------
+/*  Divers
+/*  ------------------------------------------
+*/
+
+ul {
+  list-style-image:url(puce.gif);
+}
+
+a {
+  color: #436976;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #436976;
+  text-decoration: none;
+}
+
+
+table {
+  border-style:solid; 
+  border-width:1px; 
+  border-color:#545454;
+  border-collapse:collapse;
+}
+
+.comfort {
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}

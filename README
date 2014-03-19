@@ -1,0 +1,5 @@
+CoMFoRT is a content management for researchers and teachers.
+
+To launch CoMFoRT :
+
+sudo make install; make test

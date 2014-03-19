@@ -1,0 +1,242 @@
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+Adapted by Anne-Laure Mouly for CoMFoRT project
+*/
+
+@import url(../common/wiki.css);
+
+/* General appearance */
+
+html {
+  margin: 0 0 0 0;
+  padding: 0;
+}
+
+body {
+  display: block;
+  margin: 0;
+  padding: 0;
+  background: #FFFFFF url(images/img01.gif) repeat-x;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  color: #666666;
+}
+
+#ie6hack {
+}
+
+div.title {
+  margin-top: -30px;
+  padding-bottom: 20px;
+}
+
+/* Section titles */
+
+div.titlepage h1, h2, h3, h4, h5, h6 {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  color: #000000;
+}
+
+div.titlepage h1 {
+  font-weight: normal;
+  font-size: 237%;
+  padding-left: 10px;
+}
+
+div.titlepage h2 {
+  background: url(images/img04.gif) no-repeat left bottom;
+  padding: 10px 0 10px 50px;
+  clear: none !important;
+}
+
+div.titlepage h3 {
+  background: url(images/img05.gif) no-repeat left bottom;
+  padding: 10px 0 10px 40px;
+  margin-bottom: 0;
+}
+
+div.titlepage h4 {
+  background: url(images/img08.gif) no-repeat left bottom;
+  padding: 10px 0 22px 45px;
+  margin-bottom: 0;
+}
+
+div.titlepage h5 {
+  background: url(images/img06.gif) no-repeat left bottom;
+  padding: 10px 0 20px 40px;
+  margin-bottom: 0;
+}
+
+div.titlepage h6 {
+  background: url(images/img09.gif) no-repeat left bottom;
+  padding: 10px 0 18px 40px;
+  margin-bottom: 0;
+}
+
+/* links */
+
+a {
+  border-bottom: 1px dotted #CCCCCC;
+  text-decoration: none;
+  color: #1777B1;
+}
+
+a:hover {
+  border-bottom: none;
+  color: #FF7400;
+}
+
+/* Images */
+
+img.left {
+  float: left;
+  margin: 6px 15px 0 0;
+}
+
+img.right {
+  float: right;
+  margin: 6px 0 0 15px;
+}
+
+
+/* Header */
+
+.sitename {
+  width: 760px;
+  height: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -50px;
+  background: url(images/img02.gif) no-repeat;
+  padding: 10px;
+  font-weight: bolder;
+  font-size: 130%;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+
+/* Content */
+.sect1, .footnotes {
+  /*float: right;
+  width: 740px;*/
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 20px;
+  text-align: justify;
+}
+
+.sect1 p, .sect1 ul, .sect1 ol { 
+  line-height: 1.8em;
+}
+
+
+
+/* Menu */
+
+#Menu {
+  float: right;
+  width: 200px;
+  padding: 0 20px 0 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  border-left: 1px dotted #DCDCDC;
+  margin-top: -5px;
+}
+
+#Menu ul {
+  margin: 0;
+  padding: 0;
+  margin-left: 1em;
+  list-style: none;
+  font-weight: bold;
+}
+
+#Menu li {
+  margin-top: 5px;
+}
+
+#Menu li li {
+  margin-top: auto;
+  font-style: italic;
+  font-weight: normal;
+}
+
+
+#Menu h2 {
+  height: 40px;
+  padding: 20px 0 0 40px;
+  text-transform: lowercase;
+  font-size: 167%;
+}
+
+#Menu a {
+  border: none;
+}
+
+#Menu a:hover {
+  border-bottom: 1px dotted #666666;
+}
+
+/* Lists */
+
+.itemizedlist {
+}
+
+.itemizedlist ul {
+  list-style: none;
+  margin-left: 1em;
+  padding-left: 1em;
+}
+
+.itemizedlist li {
+  margin-left: -10px;
+  padding-left: 10px;
+  background: url(images/img07.gif) no-repeat left 0.7em;
+}
+
+/* Footer */
+
+.feet {
+  clear: both;
+  height: 30px;
+  margin: 20px 0 0 0;
+  padding-left: 25px;
+  padding-top: 5px;
+  background: #000000;
+}
+
+
+.comfort a:hover {
+  border-bottom: 1px solid white;
+}
+
+/* Tables */
+table {
+  border-style:solid; 
+  border-width:1px; 
+  border-color:#ffffff;
+  border-collapse:collapse;
+}
+
+div.sect2 {
+  margin-left: 1em;
+}
+
+div.sect3 {
+  margin-left: 2em;
+}
+
+div.sect3 {
+  margin-left: 3em;
+}
+
+div.sect4 {
+  margin-left: 4em;
+}
+
+div.sect5 {
+  margin-left: 5em;
+}

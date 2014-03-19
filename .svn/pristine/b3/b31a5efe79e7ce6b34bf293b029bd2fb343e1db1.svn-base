@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>confstatic</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<h1 class="toc">Module confstatic</h1>
+<hr />
+  <h2 class="toc">Functions</h2>
+    <a target="mainFrame" href="conf.confstatic-module.html#build_url_for_generation"
+     >build_url_for_generation</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#build_url_standard"
+     >build_url_standard</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#dblatex_path"
+     >dblatex_path</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#get_docs_url"
+     >get_docs_url</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#get_favicon_url"
+     >get_favicon_url</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#get_latex_url"
+     >get_latex_url</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#get_pages_url"
+     >get_pages_url</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#get_pictures_url"
+     >get_pictures_url</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#get_style_url"
+     >get_style_url</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#get_user_server_port"
+     >get_user_server_port</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#scp_path"
+     >scp_path</a><br />  <h2 class="toc">Variables</h2>
+    <a target="mainFrame" href="conf.confstatic-module.html#build_url"
+     >build_url</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#config_path"
+     >config_path</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#config_url"
+     >config_url</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#database_path"
+     >database_path</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#default_active_modules"
+     >default_active_modules</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#default_latex_dpi"
+     >default_latex_dpi</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#default_page_name"
+     >default_page_name</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#default_page_wiki"
+     >default_page_wiki</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#docs_path"
+     >docs_path</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#docs_url"
+     >docs_url</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#fop_path"
+     >fop_path</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#generate_path"
+     >generate_path</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#generate_url"
+     >generate_url</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#generating"
+     >generating</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#gettext_domain"
+     >gettext_domain</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#gettext_localedir"
+     >gettext_localedir</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#l2p_path"
+     >l2p_path</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#latex_path"
+     >latex_path</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#latex_url"
+     >latex_url</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#mode"
+     >mode</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#module_credits_name"
+     >module_credits_name</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#module_menu_name"
+     >module_menu_name</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#module_wiki_name"
+     >module_wiki_name</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#nt_has_java"
+     >nt_has_java</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#nt_python_path"
+     >nt_python_path</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#overview_path"
+     >overview_path</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#pages_database_prefix"
+     >pages_database_prefix</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#pages_path"
+     >pages_path</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#pages_perso_extensions"
+     >pages_perso_extensions</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#pages_url"
+     >pages_url</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#perso_path"
+     >perso_path</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#perso_url"
+     >perso_url</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#pictures_path"
+     >pictures_path</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#pictures_url"
+     >pictures_url</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#possible_languages"
+     >possible_languages</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#wikisyntax_page_name"
+     >wikisyntax_page_name</a><br />    <a target="mainFrame" href="conf.confstatic-module.html#wikisyntax_page_wiki"
+     >wikisyntax_page_wiki</a><br /><hr />
+<span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

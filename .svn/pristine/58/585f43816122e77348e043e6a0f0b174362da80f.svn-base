@@ -1,0 +1,7 @@
+Pour générer la doc:
+% make
+et en bonus pour la voir tout de suite:
+% make show
+
+Pour un exemple du format des commentaires,
+voir le fichier "src/server/test.py".

@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* feuille de style commune pour faire la mise en forme des balises wiki
+ * standard */
+
+.underline {
+  text-decoration: underline;
+}
+
+.highlight {
+  background: yellow;
+}
+
+.strong {
+  font-weight: bold;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+.centered {
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+
+.bigtext {
+  font-size: larger;
+}
+
+.smalltext {
+  font-size: smaller;
+}
+
+hr { display: none; }
+
+.spacer {
+  height: 0;
+  clear: both;
+}
+
+.comfort {
+  width: 100%;
+  text-align: center;
+}

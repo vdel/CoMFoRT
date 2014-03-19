@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>interface.class_forms.Content</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://graal.ens-lyon.fr/comfort/">CoMFoRT</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="interface-module.html">Package&nbsp;interface</a> ::
+        <a href="interface.class_forms-module.html">Module&nbsp;class_forms</a> ::
+        Class&nbsp;Content
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="interface.class_forms.Content-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class Content</h1><p class="nomargin-top"><span class="codelink"><a href="interface.class_forms-pysrc.html#Content">source&nbsp;code</a></span></p>
+<center>
+<center>  <map id="uml_class_diagram_for_interfac" name="uml_class_diagram_for_interfac">
+<area shape="rect" href="interface.class_forms.Page&#45;class.html" title="conteneur pour une page html: s&#39;occupe de g&#233;n&#233;rer le header" alt="" coords="159,347,204,373"/>
+<area shape="rect" href="interface.class_forms.Content&#45;class.html#__init__" title="begin_tag: balise ouvrante commencant le code XHTML end_tag: balise &#160;fermante terminant le code XHTML" alt="" coords="17,36,345,55"/>
+<area shape="rect" href="interface.class_forms.Content&#45;class.html#add_text" title="Ajoute du texte" alt="" coords="17,55,345,73"/>
+<area shape="rect" href="interface.class_forms.Content&#45;class.html#add_single_tag" title="Ajoute une balise du type &lt;balise /&gt; contenant eventuellement des options &#160;options: doit &#234;tre une liste de couple" alt="" coords="17,73,345,92"/>
+<area shape="rect" href="interface.class_forms.Content&#45;class.html#add_simple_tag" title="Ajoute le texte &quot;text&quot; a l&#39;int&#233;rieur de la balise &quot;tag&quot;" alt="" coords="17,92,345,111"/>
+<area shape="rect" href="interface.class_forms.Content&#45;class.html#add_complex_tag" title="Rajoute une balise &quot;tag&quot; et renvoit son conteneur" alt="" coords="17,111,345,129"/>
+<area shape="rect" href="interface.class_forms.Content&#45;class.html#add_complex_option_tag" title="Rajoute une balise ouvrante et fermante de type &quot;tag&quot;." alt="" coords="17,129,345,148"/>
+<area shape="rect" href="interface.class_forms.Content&#45;class.html#add_br" title="Ajoute une balise br" alt="" coords="17,148,345,167"/>
+<area shape="rect" href="interface.class_forms.Content&#45;class.html#add_hr" title="Ajoute une balise hr" alt="" coords="17,167,345,185"/>
+<area shape="rect" href="interface.class_forms.Content&#45;class.html#add_img" title="Ajoute une image" alt="" coords="17,185,345,204"/>
+<area shape="rect" href="interface.class_forms.Content&#45;class.html#add_link" title="Ajoute un lien hyper&#45;texte addr: adresse du lien text: texte du lien" alt="" coords="17,204,345,223"/>
+<area shape="rect" href="interface.class_forms.Content&#45;class.html#add_input_maxlength" title="Ajoute une balise input de type &quot;input_type&quot;, de nom &quot;name&quot; , de valeur &#160;&quot;value&quot; et de taille max &quot;size&quot;" alt="" coords="17,223,345,241"/>
+<area shape="rect" href="interface.class_forms.Content&#45;class.html#add_input" title="Ajoute une balise input de type &quot;input_type&quot;, de nom &quot;name&quot; et de valeur &#160;&quot;value&quot;" alt="" coords="17,241,345,260"/>
+<area shape="rect" href="interface.class_forms.Content&#45;class.html#add_labeled_input" title="Raccourci pour ajouter &lt;p&gt; label : &lt;input type=&quot;..." alt="" coords="17,260,345,279"/>
+<area shape="rect" href="interface.class_forms.Content&#45;class.html#generate" title="G&#233;n&#232;re le code XHTML" alt="" coords="17,297,345,316"/>
+<area shape="rect" href="interface.class_forms.Content&#45;class.html" title="Classe de base pour stocker le contenu XHTML" alt="" coords="16,11,347,317"/>
+</map>
+  <img src="uml_class_diagram_for_interfac.gif" alt='' usemap="#uml_class_diagram_for_interfac" ismap="ismap" class="graph-without-title" />
+</center>
+</center>
+<hr />
+<p>Classe de base pour stocker le contenu XHTML</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="__init__"></a><span class="summary-sig-name">__init__</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">begin_tag</span>,
+        <span class="summary-sig-arg">end_tag</span>)</span><br />
+      begin_tag: balise ouvrante commencant le code XHTML end_tag: balise 
+      fermante terminant le code XHTML</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="interface.class_forms-pysrc.html#Content.__init__">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="add_text"></a><span class="summary-sig-name">add_text</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">text</span>)</span><br />
+      Ajoute du texte</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="interface.class_forms-pysrc.html#Content.add_text">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="add_single_tag"></a><span class="summary-sig-name">add_single_tag</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">tag</span>,
+        <span class="summary-sig-arg">options</span>)</span><br />
+      Ajoute une balise du type &lt;balise /&gt; contenant eventuellement 
+      des options options: doit &#234;tre une liste de couple</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="interface.class_forms-pysrc.html#Content.add_single_tag">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="add_simple_tag"></a><span class="summary-sig-name">add_simple_tag</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">tag</span>,
+        <span class="summary-sig-arg">text</span>)</span><br />
+      Ajoute le texte &quot;text&quot; a l'int&#233;rieur de la balise 
+      &quot;tag&quot;</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="interface.class_forms-pysrc.html#Content.add_simple_tag">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="add_complex_tag"></a><span class="summary-sig-name">add_complex_tag</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">tag</span>)</span><br />
+      Rajoute une balise &quot;tag&quot; et renvoit son conteneur</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="interface.class_forms-pysrc.html#Content.add_complex_tag">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="interface.class_forms.Content-class.html#add_complex_option_tag" class="summary-sig-name">add_complex_option_tag</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">tag</span>,
+        <span class="summary-sig-arg">options</span>)</span><br />
+      Rajoute une balise ouvrante et fermante de type &quot;tag&quot;.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="interface.class_forms-pysrc.html#Content.add_complex_option_tag">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="add_br"></a><span class="summary-sig-name">add_br</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Ajoute une balise br</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="interface.class_forms-pysrc.html#Content.add_br">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="add_hr"></a><span class="summary-sig-name">add_hr</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Ajoute une balise hr</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="interface.class_forms-pysrc.html#Content.add_hr">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="add_img"></a><span class="summary-sig-name">add_img</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">addr</span>,
+        <span class="summary-sig-arg">alt</span>)</span><br />
+      Ajoute une image</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="interface.class_forms-pysrc.html#Content.add_img">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="add_link"></a><span class="summary-sig-name">add_link</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">addr</span>,
+        <span class="summary-sig-arg">text</span>)</span><br />
+      Ajoute un lien hyper-texte addr: adresse du lien text: texte du lien</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="interface.class_forms-pysrc.html#Content.add_link">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="add_input_maxlength"></a><span class="summary-sig-name">add_input_maxlength</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">input_type</span>,
+        <span class="summary-sig-arg">name</span>,
+        <span class="summary-sig-arg">text</span>,
+        <span class="summary-sig-arg">size</span>)</span><br />
+      Ajoute une balise input de type &quot;input_type&quot;, de nom 
+      &quot;name&quot; , de valeur &quot;value&quot; et de taille max 
+      &quot;size&quot;</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="interface.class_forms-pysrc.html#Content.add_input_maxlength">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="add_input"></a><span class="summary-sig-name">add_input</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">input_type</span>,
+        <span class="summary-sig-arg">name</span>,
+        <span class="summary-sig-arg">text</span>)</span><br />
+      Ajoute une balise input de type &quot;input_type&quot;, de nom 
+      &quot;name&quot; et de valeur &quot;value&quot;</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="interface.class_forms-pysrc.html#Content.add_input">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="interface.class_forms.Content-class.html#add_labeled_input" class="summary-sig-name">add_labeled_input</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">input_type</span>,
+        <span class="summary-sig-arg">label</span>,
+        <span class="summary-sig-arg">name</span>,
+        <span class="summary-sig-arg">text</span>)</span><br />
+      Raccourci pour ajouter &lt;p&gt; label : &lt;input type=&quot;...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="interface.class_forms-pysrc.html#Content.add_labeled_input">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="interface.class_forms.Content-class.html#add_select" class="summary-sig-name">add_select</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">name</span>,
+        <span class="summary-sig-arg">options</span>)</span><br />
+      Ajoute une balise &quot;select&quot; de nom &quot;name&quot; avec les options &quot;options&quot;...</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="interface.class_forms-pysrc.html#Content.add_select">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="add_form"></a><span class="summary-sig-name">add_form</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">action</span>,
+        <span class="summary-sig-arg">method</span>,
+        <span class="summary-sig-arg">id</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
+      Rajoute une balise form d'action &quot;action&quot; utilisant la 
+      m&#233;thode &quot;method&quot; et renvoit le conteneur de la forme et 
+      renvoit son conteneur</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="interface.class_forms-pysrc.html#Content.add_form">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="add_textarea"></a><span class="summary-sig-name">add_textarea</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">name</span>,
+        <span class="summary-sig-arg">rows</span>,
+        <span class="summary-sig-arg">cols</span>)</span><br />
+      Ajoute une balise textarea et renvoit son conteneur</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="interface.class_forms-pysrc.html#Content.add_textarea">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="add_textarea_labeled"></a><span class="summary-sig-name">add_textarea_labeled</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">label</span>,
+        <span class="summary-sig-arg">name</span>,
+        <span class="summary-sig-arg">rows</span>,
+        <span class="summary-sig-arg">cols</span>)</span><br />
+      Ajoute une balise textarea avec label et renvoit son conteneur</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="interface.class_forms-pysrc.html#Content.add_textarea_labeled">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="add_table"></a><span class="summary-sig-name">add_table</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">border</span>,
+        <span class="summary-sig-arg">cellspacing</span>,
+        <span class="summary-sig-arg">cellpadding</span>)</span><br />
+      Ajoute un tableau et renvoit son conteneur</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="interface.class_forms-pysrc.html#Content.add_table">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="interface.class_forms.Content-class.html#add_line" class="summary-sig-name">add_line</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">l</span>)</span><br />
+      Ajoute une ligne l: c'est une liste des cases de la ligne.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="interface.class_forms-pysrc.html#Content.add_line">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="generate"></a><span class="summary-sig-name">generate</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      G&#233;n&#232;re le code XHTML</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="interface.class_forms-pysrc.html#Content.generate">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="add_complex_option_tag"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">add_complex_option_tag</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">tag</span>,
+        <span class="sig-arg">options</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="interface.class_forms-pysrc.html#Content.add_complex_option_tag">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Rajoute une balise ouvrante et fermante de type &quot;tag&quot;. La 
+  balise ouvrante contient des options. options: doit &#234;tre une liste de 
+  couple Renvoit le conteneur de la balise</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="add_labeled_input"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">add_labeled_input</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">input_type</span>,
+        <span class="sig-arg">label</span>,
+        <span class="sig-arg">name</span>,
+        <span class="sig-arg">text</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="interface.class_forms-pysrc.html#Content.add_labeled_input">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Raccourci pour ajouter &lt;p&gt; label : &lt;input type=&quot;... 
+  /&gt;&lt;/p&gt;</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="add_select"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">add_select</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">name</span>,
+        <span class="sig-arg">options</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="interface.class_forms-pysrc.html#Content.add_select">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Ajoute une balise &quot;select&quot; de nom &quot;name&quot; avec les options &quot;options&quot;
+options: doit &#234;tre une liste de couple (param de la balise option,texte)
+  param de la balise option: une liste de couples (parametre,valeur)
+    param&#232;tre: string
+    valeur: string
+  texte: string
+
+</pre>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="add_line"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">add_line</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">l</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="interface.class_forms-pysrc.html#Content.add_line">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Ajoute une ligne l: c'est une liste des cases de la ligne. Chaque case
+  est un triplet (balise,option,conteneur) balise: &quot;td&quot; ou 
+  &quot;th&quot; option: une liste de couple (param&#232;tre,valeur) conteneur: 
+  une classe Text,Br,Hr,Link,Image,Input</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://graal.ens-lyon.fr/comfort/">CoMFoRT</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sun May 25 15:42:35 2008
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>modules.module_interfaces.IModuleContentProvider</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://graal.ens-lyon.fr/comfort/">CoMFoRT</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="modules-module.html">Package&nbsp;modules</a> ::
+        <a href="modules.module_interfaces-module.html">Module&nbsp;module_interfaces</a> ::
+        Class&nbsp;IModuleContentProvider
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="modules.module_interfaces.IModuleContentProvider-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class IModuleContentProvider</h1><p class="nomargin-top"><span class="codelink"><a href="modules.module_interfaces-pysrc.html#IModuleContentProvider">source&nbsp;code</a></span></p>
+<center>
+<center>  <map id="uml_class_diagram_for_modules__3" name="uml_class_diagram_for_modules__3">
+<area shape="rect" href="modules.themodule_Calendars.TheModule&#45;class.html" title="modules.themodule_Calendars.TheModule" alt="" coords="16,104,221,130"/>
+<area shape="rect" href="modules.module_interfaces.IModuleContentProvider&#45;class.html#init_content" title="modules.module_interfaces.IModuleContentProvider.init_content" alt="" coords="840,36,1035,54"/>
+<area shape="rect" href="modules.module_interfaces.IModuleContentProvider&#45;class.html#generate_content_xml" title="modules.module_interfaces.IModuleContentProvider.generate_content_xml" alt="" coords="840,54,1035,73"/>
+<area shape="rect" href="modules.module_interfaces.IModuleContentProvider&#45;class.html" title="modules.module_interfaces.IModuleContentProvider" alt="" coords="839,10,1036,74"/>
+<area shape="rect" href="modules.themodule_Wiki.TheModule&#45;class.html" title="modules.themodule_Wiki.TheModule" alt="" coords="272,104,445,130"/>
+<area shape="rect" href="modules.themodule_News.TheModule&#45;class.html" title="modules.themodule_News.TheModule" alt="" coords="496,104,677,130"/>
+<area shape="rect" href="modules.themodule_Coord.TheModule&#45;class.html" title="modules.themodule_Coord.TheModule" alt="" coords="728,104,909,130"/>
+<area shape="rect" href="modules.themodule_Dummy.TheModule&#45;class.html" title="modules.themodule_Dummy.TheModule" alt="" coords="960,104,1152,130"/>
+<area shape="rect" href="modules.themodule_Menu.TheModule&#45;class.html" title="modules.themodule_Menu.TheModule" alt="" coords="1203,104,1384,130"/>
+<area shape="rect" href="modules.themodule_Educ.TheModule&#45;class.html" title="modules.themodule_Educ.TheModule" alt="" coords="1435,104,1613,130"/>
+<area shape="rect" href="modules.themodule_Publi.TheModule&#45;class.html" title="modules.themodule_Publi.TheModule" alt="" coords="1664,104,1840,130"/>
+</map>
+  <img src="uml_class_diagram_for_modules__3.gif" alt='' usemap="#uml_class_diagram_for_modules__3" ismap="ismap" class="graph-without-title" />
+</center>
+</center>
+<hr />
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Instance Methods</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-InstanceMethods"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="init_content"></a><span class="summary-sig-name">init_content</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="modules.module_interfaces-pysrc.html#IModuleContentProvider.init_content">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="generate_content_xml"></a><span class="summary-sig-name">generate_content_xml</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">args</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="modules.module_interfaces-pysrc.html#IModuleContentProvider.generate_content_xml">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://graal.ens-lyon.fr/comfort/">CoMFoRT</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sun May 25 15:42:37 2008
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

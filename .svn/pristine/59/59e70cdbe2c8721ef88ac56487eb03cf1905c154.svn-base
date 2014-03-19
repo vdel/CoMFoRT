@@ -1,0 +1,168 @@
+%déclaration des paquets divers et variés
+\usepackage[francais]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsopn} %amsopn pour les nouveaux opérateurs
+\usepackage{mathrsfs} %pour la police anglaise \mathscr{}
+\usepackage{array} %pour les nouveaux types de colonne à côté des graphiques (\begin{array}{b})
+\usepackage{palatino} %police plus sympa
+\usepackage{mathpazo} %police plus sympa
+\usepackage{calc} %faire des + - * / dans le code
+\usepackage[dvips,a4paper]{geometry} %changer les marges simplement
+\usepackage{enumerate} %pour les i) ii)
+\usepackage{xspace} %pour la fin des commandes \dl, \sev, pour pouvoir faire \dl. et \dl mot après.
+
+
+
+
+
+%latex mange trop de marges
+\geometry{lmargin=20mm,rmargin=20mm,tmargin=20mm,bmargin=23mm}
+
+%gestion de ma nouvelle hiérarchie : partie
+\renewcommand{\part}{\partie}
+\newcounter{partie}
+\newlength{\lligne}
+\newlength{\lmot}
+\renewcommand{\thepartie}{\Roman{partie}}
+\newcommand{\partiename}{Partie}
+\newcommand{\partiemark}[1]{\markboth{\thepartie.\quad#1}{\thepartie.\quad#1}}
+\newcommand{\partie}[1]{
+  \newpage
+  \stepcounter{partie}
+  \setcounter{section}{0}
+  %pour la table des matières
+  \addcontentsline{toc}{partie}{\bfseries\scshape\numberline{\thepartie}#1}
+  \partiemark{#1}
+  %UGLY HACK ! pour avoir des en-têtes corrects malgré tout
+  \renewcommand{\rightmark}{\thepartie.\quad#1}
+  %calcul de la largeur de la ligne à gauche de ``Partie 1''
+  \settowidth{\lmot}{\large\textsc{Partie \thepartie}}
+  %le \textwidth/2 est pour le style twocolumn, ne marche plus sans l'option ``twocolumn''
+  \setlength{\lligne}{(\columnwidth - \lmot -3em)/2}
+  %tracé effectif
+  \begin{center}
+  \rule[.5ex]{\lligne}{.05em}\quad{\large\textsc{Partie \thepartie}}\quad
+  \rule[.5ex]{\lligne}{.05em}
+  {\huge\textsc{#1}}
+  \hfil\rule[1.5ex]{\lligne + \lligne + 2em + \lmot}{.05em}
+  %\vspace{-2ex}
+  %il reste un bug : la deuxième ligne est un pixel trop à gauche
+  \end{center}
+}
+
+
+%le look du titre
+\makeatletter
+% Une commande sembleble à \rlap ou \llap, mais centrant son argument
+\def\clap#1{\hbox to 0pt{\hss #1\hss}}%
+% Une commande centrant son contenu (à utiliser en mode vertical)
+\def\ligne#1{%
+  \hbox to \hsize{%
+    \vbox{\centering #1}}}%
+% Une comande qui met son premier argument à gauche, le second au 
+% milieu et le dernier à droite, la première ligne ce chacune de ces
+% trois boites coïncidant
+\def\haut#1#2#3{%
+  \hbox to \hsize{%
+    \rlap{\vtop{\raggedright #1}}%
+    \hss
+    \clap{\vtop{\centering #2}}%
+    \hss
+    \llap{\vtop{\raggedleft #3}}}}%
+% Idem, mais cette fois-ci, c'est la dernière ligne
+\def\bas#1#2#3{%
+  \hbox to \hsize{%
+    \rlap{\vbox{\raggedright #1}}%
+    \hss
+    \clap{\vbox{\centering #2}}%
+    \hss
+    \llap{\vbox{\raggedleft #3}}}}%
+% La commande \maketitle
+\def\maketitle{%
+  \thispagestyle{empty}\vbox to \vsize{%
+    \haut{}{\large \@author}{}
+    \vfill
+    \begin{flushleft}
+      \huge \@title
+    \end{flushleft}
+    \par
+    \hrule height 1pt
+    \par
+    \begin{flushright}
+      \large \@subtitle \par
+    \end{flushright}
+    \vfill
+    \vfill
+    \bas{}{\@location, \@date}{}
+    }%
+  \clearpage
+  }
+% Les commandes permettant de définir la date, le lieu, etc.
+\def\date#1{\def\@date{#1}}
+\def\subtitle#1{\def\@subtitle{#1}}
+\def\title#1{\def\@title{#1}}
+\def\location#1{\def\@location{#1}}
+\def\author#1{\def\@author{#1}}
+% Valeurs par défaut
+\date{\today}
+\author{}
+\title{}
+\location{Paris}
+\subtitle{}
+\makeatother
+
+
+%le look des sections
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0em}%
+  {1.5\baselineskip}{.8\baselineskip}  %marge verticale avant et après le titre
+  {\Large\bfseries}} %avant \center\large\bfseries
+\makeatother
+\renewcommand{\sectionmark}[1]{\markboth{\thesection.\ #1}{\rightmark}}
+\renewcommand{\thesection}{\thepartie.\arabic{section}}
+
+
+%le look des subsections
+\makeatletter
+\renewcommand{\subsection}{\@startsection{subsection}{2}{1.7em} %avant: 0em
+  {1.2\baselineskip}{.4\baselineskip}
+  {\bfseries\sffamily}}
+\makeatother
+\renewcommand{\thesubsection}{\alph{subsection}.\!}
+
+
+%le look des subsubsections
+\makeatletter
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{2.4em}
+  {.5\baselineskip}{.125\baselineskip}
+  {\sffamily}}
+\makeatother
+\renewcommand{\thesubsubsection}{\Large$\star$}
+
+
+%pour la table des matières, personnalisation de l'affichage
+\makeatletter
+\newcommand\l@partie{\vspace{2em}\@dottedtocline{-1}{0em}{2.3em}}
+\renewcommand{\@dotsep}{1000}
+\renewcommand\l@section{\@dottedtocline{1}{.5em}{3.2em}}
+\renewcommand\l@subsection{\@dottedtocline{1}{2em}{1.7em}}
+\makeatother
+
+
+%les caractères jolis de fin de section
+\DeclareFontFamily{OT1}{sincos}{}
+\DeclareFontShape{OT1}{sincos}{m}{n}{<-> sincos}{}
+\newcommand{\sincos}{\fontencoding{OT1}\fontfamily{sincos}\fontseries{m}%
+  \fontshape{n}\fontsize{10}{12}\selectfont}
+
+
+%les en-têtes
+\pagestyle{plain}
+\makeatletter
+\renewcommand{\@evenfoot}{\hfil\itshape - \thepage\ -\hfil}
+\renewcommand{\@oddfoot}{\@evenfoot}
+\renewcommand{\@evenhead}{\textsc{\bfseries\large\rightmark}\ \hfil\ {\footnotesize\leftmark}}
+\renewcommand{\@oddhead}{{\footnotesize\leftmark}\ \hfil\ \textsc{\bfseries\large\rightmark}}
+\makeatother
+

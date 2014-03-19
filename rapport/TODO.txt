@@ -1,0 +1,8 @@
+Question mailing-list:
+* sur le schéma: Ajouter la BDD + Wiki2latex=l2p
+* réduire les marges?
+
+
+Rapport:
+* Améliorations envisagées: améliorer <module>, un menu sur plusieurs niveaux
+* liens cassés --> dire qu'il faut faire attention

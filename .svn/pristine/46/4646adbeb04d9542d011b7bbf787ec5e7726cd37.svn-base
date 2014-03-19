@@ -1,0 +1,6 @@
+Quelques indications sur les modules :
+- python test.py pour lancer les différents tests (avec exemples d'utilisation)
+- module_manager.py est commenté
+- ../cgi-bin/handler.py est aussi commenté
+- ../templates/template_manager.py montre comment parcourir la liste des
+  différents modules et comment instancier un module (WP1 : c'est pour vous !)

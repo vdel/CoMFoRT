@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>db.test</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://graal.ens-lyon.fr/comfort/">CoMFoRT</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="db-module.html">Package&nbsp;db</a> ::
+        Module&nbsp;test
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="db.test-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="db.test-module.html">Module db.test</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt id="link-0" class="py-name" targets="Module db.db_sql=db.db_sql-module.html"><a title="db.db_sql" class="py-name" href="#" onclick="return doclink('link-0', 'db_sql', 'link-0');">db_sql</a></tt> <tt class="py-keyword">import</tt> <tt class="py-op">*</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt id="link-1" class="py-name" targets="Variable db.encode.a=db.encode-module.html#a,Variable db.test.a=db.test-module.html#a,Variable db.test_xml.a=db.test_xml-module.html#a,Variable db.testdbm.a=db.testdbm-module.html#a"><a title="db.encode.a
+db.test.a
+db.test_xml.a
+db.testdbm.a" class="py-name" href="#" onclick="return doclink('link-1', 'a', 'link-1');">a</a></tt> <tt class="py-op">=</tt> <tt id="link-2" class="py-name" targets="Class db.db_interface.IDB=db.db_interface.IDB-class.html"><a title="db.db_interface.IDB" class="py-name" href="#" onclick="return doclink('link-2', 'IDB', 'link-2');">IDB</a></tt><tt class="py-op">(</tt><tt class="py-number">42</tt><tt class="py-op">)</tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"><tt id="link-3" class="py-name" targets="Variable db.test.d=db.test-module.html#d,Variable db.test_xml.d=db.test_xml-module.html#d"><a title="db.test.d
+db.test_xml.d" class="py-name" href="#" onclick="return doclink('link-3', 'd', 'link-3');">d</a></tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt> <tt class="py-string">"date"</tt> <tt class="py-op">:</tt> <tt class="py-string">"text"</tt> <tt class="py-op">,</tt> <tt class="py-string">"heure"</tt> <tt class="py-op">:</tt> <tt class="py-string">"text"</tt> <tt class="py-op">}</tt>  </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"><tt id="link-4" class="py-name"><a title="db.encode.a
+db.test.a
+db.test_xml.a
+db.testdbm.a" class="py-name" href="#" onclick="return doclink('link-4', 'a', 'link-1');">a</a></tt><tt class="py-op">.</tt><tt id="link-5" class="py-name" targets="Method db.db_interface.IDB.create()=db.db_interface.IDB-class.html#create,Method db.db_sql.SQL_DB.create()=db.db_sql.SQL_DB-class.html#create,Method db.db_xml.DBXML.create()=db.db_xml.DBXML-class.html#create"><a title="db.db_interface.IDB.create
+db.db_sql.SQL_DB.create
+db.db_xml.DBXML.create" class="py-name" href="#" onclick="return doclink('link-5', 'create', 'link-5');">create</a></tt><tt class="py-op">(</tt><tt class="py-string">"essai"</tt><tt class="py-op">,</tt><tt id="link-6" class="py-name"><a title="db.test.d
+db.test_xml.d" class="py-name" href="#" onclick="return doclink('link-6', 'd', 'link-3');">d</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"><tt id="link-7" class="py-name" targets="Method db.db_interface.IDB.table()=db.db_interface.IDB-class.html#table,Method db.db_sql.SQL_DB.table()=db.db_sql.SQL_DB-class.html#table,Method db.db_xml.DBXML.table()=db.db_xml.DBXML-class.html#table,Variable db.test.table=db.test-module.html#table,Variable db.test_xml.table=db.test_xml-module.html#table"><a title="db.db_interface.IDB.table
+db.db_sql.SQL_DB.table
+db.db_xml.DBXML.table
+db.test.table
+db.test_xml.table" class="py-name" href="#" onclick="return doclink('link-7', 'table', 'link-7');">table</a></tt> <tt class="py-op">=</tt> <tt id="link-8" class="py-name" targets="Class db.db_interface.IDBTable=db.db_interface.IDBTable-class.html"><a title="db.db_interface.IDBTable" class="py-name" href="#" onclick="return doclink('link-8', 'IDBTable', 'link-8');">IDBTable</a></tt><tt class="py-op">(</tt><tt id="link-9" class="py-name"><a title="db.encode.a
+db.test.a
+db.test_xml.a
+db.testdbm.a" class="py-name" href="#" onclick="return doclink('link-9', 'a', 'link-1');">a</a></tt><tt class="py-op">,</tt><tt class="py-string">"essai"</tt><tt class="py-op">)</tt> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"><tt id="link-10" class="py-name" targets="Variable db.test.r=db.test-module.html#r,Variable db.test_xml.r=db.test_xml-module.html#r"><a title="db.test.r
+db.test_xml.r" class="py-name" href="#" onclick="return doclink('link-10', 'r', 'link-10');">r</a></tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt> <tt class="py-string">"date"</tt> <tt class="py-op">:</tt> <tt class="py-string">"hier"</tt><tt class="py-op">,</tt> <tt class="py-string">"heure"</tt> <tt class="py-op">:</tt> <tt class="py-string">"aucune"</tt> <tt class="py-op">}</tt>  </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line"><tt id="link-11" class="py-name"><a title="db.db_interface.IDB.table
+db.db_sql.SQL_DB.table
+db.db_xml.DBXML.table
+db.test.table
+db.test_xml.table" class="py-name" href="#" onclick="return doclink('link-11', 'table', 'link-7');">table</a></tt><tt class="py-op">.</tt><tt id="link-12" class="py-name" targets="Method db.db_interface.IDBTable.insert()=db.db_interface.IDBTable-class.html#insert,Method db.db_sql.SQL_Table.insert()=db.db_sql.SQL_Table-class.html#insert,Method db.db_xml.DBXMLTable.insert()=db.db_xml.DBXMLTable-class.html#insert"><a title="db.db_interface.IDBTable.insert
+db.db_sql.SQL_Table.insert
+db.db_xml.DBXMLTable.insert" class="py-name" href="#" onclick="return doclink('link-12', 'insert', 'link-12');">insert</a></tt><tt class="py-op">(</tt><tt id="link-13" class="py-name"><a title="db.test.r
+db.test_xml.r" class="py-name" href="#" onclick="return doclink('link-13', 'r', 'link-10');">r</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"><tt id="link-14" class="py-name"><a title="db.db_interface.IDB.table
+db.db_sql.SQL_DB.table
+db.db_xml.DBXML.table
+db.test.table
+db.test_xml.table" class="py-name" href="#" onclick="return doclink('link-14', 'table', 'link-7');">table</a></tt><tt class="py-op">.</tt><tt id="link-15" class="py-name"><a title="db.db_interface.IDBTable.insert
+db.db_sql.SQL_Table.insert
+db.db_xml.DBXMLTable.insert" class="py-name" href="#" onclick="return doclink('link-15', 'insert', 'link-12');">insert</a></tt><tt class="py-op">(</tt><tt id="link-16" class="py-name"><a title="db.test.r
+db.test_xml.r" class="py-name" href="#" onclick="return doclink('link-16', 'r', 'link-10');">r</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"><tt id="link-17" class="py-name" targets="Variable db.test.cond1=db.test-module.html#cond1,Variable db.test_xml.cond1=db.test_xml-module.html#cond1"><a title="db.test.cond1
+db.test_xml.cond1" class="py-name" href="#" onclick="return doclink('link-17', 'cond1', 'link-17');">cond1</a></tt> <tt class="py-op">=</tt> <tt class="py-op">(</tt><tt class="py-string">"date"</tt><tt class="py-op">,</tt><tt class="py-string">"="</tt><tt class="py-op">,</tt><tt class="py-string">"hier"</tt><tt class="py-op">)</tt> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line"><tt id="link-18" class="py-name" targets="Variable db.test.d2=db.test-module.html#d2,Variable db.testOrder.d2=db.testOrder-module.html#d2,Variable db.test_xml.d2=db.test_xml-module.html#d2"><a title="db.test.d2
+db.testOrder.d2
+db.test_xml.d2" class="py-name" href="#" onclick="return doclink('link-18', 'd2', 'link-18');">d2</a></tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt><tt class="py-string">"date"</tt> <tt class="py-op">:</tt> <tt class="py-string">"today"</tt><tt class="py-op">,</tt> <tt class="py-string">"heure"</tt> <tt class="py-op">:</tt> <tt class="py-string">"aucune"</tt><tt class="py-op">}</tt> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line"><tt id="link-19" class="py-name"><a title="db.db_interface.IDB.table
+db.db_sql.SQL_DB.table
+db.db_xml.DBXML.table
+db.test.table
+db.test_xml.table" class="py-name" href="#" onclick="return doclink('link-19', 'table', 'link-7');">table</a></tt><tt class="py-op">.</tt><tt id="link-20" class="py-name"><a title="db.db_interface.IDBTable.insert
+db.db_sql.SQL_Table.insert
+db.db_xml.DBXMLTable.insert" class="py-name" href="#" onclick="return doclink('link-20', 'insert', 'link-12');">insert</a></tt><tt class="py-op">(</tt><tt id="link-21" class="py-name"><a title="db.test.d2
+db.testOrder.d2
+db.test_xml.d2" class="py-name" href="#" onclick="return doclink('link-21', 'd2', 'link-18');">d2</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line"><tt id="link-22" class="py-name" targets="Variable db.test.c1=db.test-module.html#c1,Variable db.test_xml.c1=db.test_xml-module.html#c1"><a title="db.test.c1
+db.test_xml.c1" class="py-name" href="#" onclick="return doclink('link-22', 'c1', 'link-22');">c1</a></tt> <tt class="py-op">=</tt> <tt id="link-23" class="py-name"><a title="db.db_interface.IDB.table
+db.db_sql.SQL_DB.table
+db.db_xml.DBXML.table
+db.test.table
+db.test_xml.table" class="py-name" href="#" onclick="return doclink('link-23', 'table', 'link-7');">table</a></tt><tt class="py-op">.</tt><tt id="link-24" class="py-name" targets="Method db.db_interface.IDBTable.select()=db.db_interface.IDBTable-class.html#select,Method db.db_sql.SQL_Table.select()=db.db_sql.SQL_Table-class.html#select,Method db.db_xml.DBXMLTable.select()=db.db_xml.DBXMLTable-class.html#select"><a title="db.db_interface.IDBTable.select
+db.db_sql.SQL_Table.select
+db.db_xml.DBXMLTable.select" class="py-name" href="#" onclick="return doclink('link-24', 'select', 'link-24');">select</a></tt><tt class="py-op">(</tt><tt class="py-op">[</tt><tt id="link-25" class="py-name"><a title="db.test.cond1
+db.test_xml.cond1" class="py-name" href="#" onclick="return doclink('link-25', 'cond1', 'link-17');">cond1</a></tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line"><tt id="link-26" class="py-name" targets="Variable db.test.c2=db.test-module.html#c2,Variable db.test_xml.c2=db.test_xml-module.html#c2"><a title="db.test.c2
+db.test_xml.c2" class="py-name" href="#" onclick="return doclink('link-26', 'c2', 'link-26');">c2</a></tt> <tt class="py-op">=</tt> <tt id="link-27" class="py-name"><a title="db.db_interface.IDB.table
+db.db_sql.SQL_DB.table
+db.db_xml.DBXML.table
+db.test.table
+db.test_xml.table" class="py-name" href="#" onclick="return doclink('link-27', 'table', 'link-7');">table</a></tt><tt class="py-op">.</tt><tt id="link-28" class="py-name"><a title="db.db_interface.IDBTable.select
+db.db_sql.SQL_Table.select
+db.db_xml.DBXMLTable.select" class="py-name" href="#" onclick="return doclink('link-28', 'select', 'link-24');">select</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line"><tt id="link-29" class="py-name" targets="Variable db.test.d3=db.test-module.html#d3,Variable db.testOrder.d3=db.testOrder-module.html#d3,Variable db.test_xml.d3=db.test_xml-module.html#d3"><a title="db.test.d3
+db.testOrder.d3
+db.test_xml.d3" class="py-name" href="#" onclick="return doclink('link-29', 'd3', 'link-29');">d3</a></tt> <tt class="py-op">=</tt> <tt class="py-op">{</tt> <tt class="py-string">"date"</tt> <tt class="py-op">:</tt> <tt class="py-string">"aujourdhui"</tt><tt class="py-op">}</tt> </tt>
+<a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line"><tt id="link-30" class="py-name"><a title="db.db_interface.IDB.table
+db.db_sql.SQL_DB.table
+db.db_xml.DBXML.table
+db.test.table
+db.test_xml.table" class="py-name" href="#" onclick="return doclink('link-30', 'table', 'link-7');">table</a></tt><tt class="py-op">.</tt><tt id="link-31" class="py-name" targets="Method db.db_interface.IDBTable.update()=db.db_interface.IDBTable-class.html#update,Method db.db_sql.SQL_Table.update()=db.db_sql.SQL_Table-class.html#update,Method db.db_xml.DBXMLTable.update()=db.db_xml.DBXMLTable-class.html#update"><a title="db.db_interface.IDBTable.update
+db.db_sql.SQL_Table.update
+db.db_xml.DBXMLTable.update" class="py-name" href="#" onclick="return doclink('link-31', 'update', 'link-31');">update</a></tt><tt class="py-op">(</tt><tt id="link-32" class="py-name"><a title="db.test.d3
+db.testOrder.d3
+db.test_xml.d3" class="py-name" href="#" onclick="return doclink('link-32', 'd3', 'link-29');">d3</a></tt><tt class="py-op">,</tt><tt class="py-op">[</tt><tt id="link-33" class="py-name"><a title="db.test.cond1
+db.test_xml.cond1" class="py-name" href="#" onclick="return doclink('link-33', 'cond1', 'link-17');">cond1</a></tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line"><tt id="link-34" class="py-name" targets="Variable db.test.c3=db.test-module.html#c3,Variable db.test_xml.c3=db.test_xml-module.html#c3"><a title="db.test.c3
+db.test_xml.c3" class="py-name" href="#" onclick="return doclink('link-34', 'c3', 'link-34');">c3</a></tt> <tt class="py-op">=</tt> <tt id="link-35" class="py-name"><a title="db.db_interface.IDB.table
+db.db_sql.SQL_DB.table
+db.db_xml.DBXML.table
+db.test.table
+db.test_xml.table" class="py-name" href="#" onclick="return doclink('link-35', 'table', 'link-7');">table</a></tt><tt class="py-op">.</tt><tt id="link-36" class="py-name"><a title="db.db_interface.IDBTable.select
+db.db_sql.SQL_Table.select
+db.db_xml.DBXMLTable.select" class="py-name" href="#" onclick="return doclink('link-36', 'select', 'link-24');">select</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line"><tt class="py-keyword">for</tt> <tt id="link-37" class="py-name" targets="Variable db.test_xml.h=db.test_xml-module.html#h"><a title="db.test_xml.h" class="py-name" href="#" onclick="return doclink('link-37', 'h', 'link-37');">h</a></tt> <tt class="py-keyword">in</tt> <tt id="link-38" class="py-name"><a title="db.test.c3
+db.test_xml.c3" class="py-name" href="#" onclick="return doclink('link-38', 'c3', 'link-34');">c3</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line">  <tt class="py-keyword">print</tt> <tt id="link-39" class="py-name"><a title="db.test_xml.h" class="py-name" href="#" onclick="return doclink('link-39', 'h', 'link-37');">h</a></tt> </tt>
+<a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line"><tt id="link-40" class="py-name"><a title="db.db_interface.IDB.table
+db.db_sql.SQL_DB.table
+db.db_xml.DBXML.table
+db.test.table
+db.test_xml.table" class="py-name" href="#" onclick="return doclink('link-40', 'table', 'link-7');">table</a></tt><tt class="py-op">.</tt><tt id="link-41" class="py-name" targets="Method db.db_interface.IDBTable.delete()=db.db_interface.IDBTable-class.html#delete,Method db.db_sql.SQL_Table.delete()=db.db_sql.SQL_Table-class.html#delete,Method db.db_xml.DBXMLTable.delete()=db.db_xml.DBXMLTable-class.html#delete"><a title="db.db_interface.IDBTable.delete
+db.db_sql.SQL_Table.delete
+db.db_xml.DBXMLTable.delete" class="py-name" href="#" onclick="return doclink('link-41', 'delete', 'link-41');">delete</a></tt><tt class="py-op">(</tt><tt class="py-op">[</tt><tt class="py-op">(</tt><tt class="py-string">"date"</tt><tt class="py-op">,</tt><tt class="py-string">"="</tt><tt class="py-op">,</tt><tt class="py-string">"today"</tt><tt class="py-op">)</tt><tt class="py-op">]</tt><tt class="py-op">)</tt> </tt>
+<a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line"><tt class="py-keyword">for</tt> <tt id="link-42" class="py-name"><a title="db.test_xml.h" class="py-name" href="#" onclick="return doclink('link-42', 'h', 'link-37');">h</a></tt> <tt class="py-keyword">in</tt> <tt id="link-43" class="py-name"><a title="db.db_interface.IDB.table
+db.db_sql.SQL_DB.table
+db.db_xml.DBXML.table
+db.test.table
+db.test_xml.table" class="py-name" href="#" onclick="return doclink('link-43', 'table', 'link-7');">table</a></tt><tt class="py-op">.</tt><tt id="link-44" class="py-name"><a title="db.db_interface.IDBTable.select
+db.db_sql.SQL_Table.select
+db.db_xml.DBXMLTable.select" class="py-name" href="#" onclick="return doclink('link-44', 'select', 'link-24');">select</a></tt><tt class="py-op">(</tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line">  <tt class="py-keyword">print</tt> <tt id="link-45" class="py-name"><a title="db.test_xml.h" class="py-name" href="#" onclick="return doclink('link-45', 'h', 'link-37');">h</a></tt> </tt>
+<a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            ><a class="navbar" target="_top" href="http://graal.ens-lyon.fr/comfort/">CoMFoRT</a></th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Sun May 25 15:42:54 2008
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

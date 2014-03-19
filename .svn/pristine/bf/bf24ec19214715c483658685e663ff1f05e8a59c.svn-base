@@ -1,0 +1,262 @@
+@charset "utf-8";
+
+/* feuille originale : Charles Bobant pour xulforum.org
+ * modifié par J. Protzenko
+ * modifié par K. Perrot
+ * © 2006
+ * */
+
+/* toutes les règles sont utiles sauf celles qui sont commentées */
+/* si c'est moche, voir avec moi (Jonathan) ;-) */
+
+@import url(../common/wiki.css);
+
+/* éléments généraux */
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: auto; margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color:black; 
+  background-color:white; 
+  background-image:url(bg.png);
+  text-align:justify;
+  color : #8B0000;
+}
+
+/* tout pour les liens */
+
+a:link { 
+  font-weight: bold; 
+  text-decoration: none; 
+  color: #B22222;
+}
+
+a:visited { 
+  font-weight: bold; 
+  text-decoration: none; 
+  color: #B22222;
+}
+
+a:hover, a:active { 
+  text-decoration: none; 
+  color: #FFFFFF;
+}
+
+/* le titre de la page (header) */
+
+div#ie6hack { 
+  margin: 0;
+  padding: 0;
+  width: 800px;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  border-style:solid;
+  border-color:#FF8C00;
+  border-width: 0 2px 0 2px;
+  background-color: #FF8C00;
+}
+
+.sitename {
+  float: right;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 200%;
+  margin: 3px;
+}
+
+/* le menu */
+
+#Menu p { /* pour ie6 */
+  display: none;
+}
+
+#Menu {
+  margin: 0;
+  padding: 0;
+  width: 800px;
+  text-align:center;
+  margin-left: auto;
+  margin-right: auto;
+  border-style:solid;
+  border-color:#FF8C00;
+  border-width: 0 2px 0 2px;
+  background-color: #FFA500;
+  padding-top: 5px;
+}
+
+#Menu a {
+  color: #B22222;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  background-color: #FFA500;
+  font-family : Verdana, Arial, Helvetica, Geneva, sans-serif;
+  padding: .5em;
+}
+
+#Menu li {
+  display: inline;
+}
+
+#Menu ul {
+  padding: 0;
+  margin: 0;
+  margin-bottom: .5em;
+}
+
+#Menu a:hover {
+  color:white;
+  background-color: #B22222;
+  text-decoration: none;
+
+  font-family : Verdana, Arial, Helvetica, Geneva, sans-serif;
+  padding: .5em;
+} 
+
+/* style du corps de la page */
+
+.sect1, .footnotes {
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  border-style:solid;
+  border-color:#FF8C00;
+  border-width: 0 2px 0 2px;
+  background-color: #FFE4B5;
+  font-size:70%;
+  font-family : Verdana, Arial, Helvetica, Geneva, sans-serif;
+}
+
+/* le footer */
+
+.feet {  margin: 0;
+  padding: 0;
+  width: 800px;
+
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border-style:solid;
+  border-color:#FF8C00;
+  border-width: 0 2px 2px 2px;
+  background-color: #FF8C00;
+  font-family : Verdana, Arial, Helvetica, Geneva, sans-serif;
+  font-size: 70%;
+}
+
+
+/* style des titres */
+
+h1.title { /* titre de la page */
+  margin: 0;
+  padding: 0;
+  background-color: #FF8C00;
+  font-weight: bold; 
+  text-align:justify;
+  font-size:120%;
+  font-family : Verdana, Arial, Helvetica, Geneva, sans-serif;
+  color : #8B0000;
+  padding: 1em 1%;
+}
+
+div.titlepage h2 { /* titre niveau 1 (sect1) */
+  font-weight: bold; 
+  text-align:justify;
+  font-size:150%;
+  font-family : Verdana, Arial, Helvetica, Geneva, sans-serif;
+  color : #8B0000;
+  padding-left: 1em;
+}
+
+div.titlepage h3 { /* titre niveau 2 (sect2) */
+  font-weight: bold;
+  font-size: 120%;
+  font-family : Verdana, Arial, Helvetica, Geneva, sans-serif;
+  color : #8B0000;
+  padding-left: .5em;
+}
+
+div.titlepage h4 { /* titre niveau 3 (sect3) */
+  font-weight: bold;
+  font-size: 110%;
+  font-family : Verdana, Arial, Helvetica, Geneva, sans-serif;
+  color : #8B0000;
+  padding-left: .5em;
+}
+
+div.titlepage h5 { /* titre niveau 4 (sect4) */
+  font-weight: bold;
+  font-size: 100%;
+  font-family : Verdana, Arial, Helvetica, Geneva, sans-serif;
+  color : #8B0000;
+  padding-left: .5em;
+}
+
+div.titlepage h5 { /* titre niveau 5 (sect5) */
+  font-weight: bold;
+  font-size: 90%;
+  font-family : Verdana, Arial, Helvetica, Geneva, sans-serif;
+  color : #8B0000;
+  padding-left: .5em;
+}
+
+/* style des paragraphes et sous-sections */
+
+/* .sect1 est l'élément qui constitue le corps de la page, on ne peut donc pas
+ * lui appliquer la règle qui suit directement */
+.sect1 p {
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
+
+div.sect2 {
+  margin-left: 1em;
+  margin-bottom: .5em;
+}
+
+div.sect3 {
+  margin-left: 2em;
+  margin-bottom: .3em;
+}
+
+div.sect3 {
+  margin-left: 3em;
+  margin-bottom: .2em;
+}
+
+div.sect4 {
+  margin-left: 4em;
+  margin-bottom: .2em;
+}
+
+div.sect5 {
+  margin-left: 5em;
+  margin-bottom: .2em;
+}
+
+/* styles particuliers : tableaux, code... */
+
+table {
+  text-align: left;
+  border-style:solid; 
+  border-width:1px; 
+  border-color:#FF8C00;
+  border-collapse:collapse;
+}
+
+.code {
+  font-family: Courier,Monospaced,Terminal,monospace;
+  background-color: #ff9;
+}

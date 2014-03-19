@@ -1,0 +1,245 @@
+@charset "utf-8";
+@import url(../common/wiki.css);
+@import url(../common/menu.css);
+
+/* général */
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  font-family:"Lucida Grande",Verdana,Lucida,Helvetica,Arial,sans-serif;
+  font-size:80%;
+  color: #111;
+}
+
+/* le titre */
+
+div#ie6hack {
+  background-color: white;
+  color: #436976;
+  text-transform: lowercase;
+  height:35px;
+  padding:3px 0pt 2px 2px;
+}
+
+div#ie6hack h1 {
+  padding: 0;
+  margin: 0;
+}
+
+div#ie6hack h1:before { content: "[["; color: #dee7ec; }
+div#ie6hack h1:after { content: "]]"; color: #dee7ec; }
+
+/* le nouveau bloc pour le nom du site */
+
+.sitename {
+  color: #dee7ec;
+  letter-spacing: 2pt;
+  float:right;
+  font-size: 220%;
+  font-weight: bolder;
+  font-variant: small-caps;
+}
+
+.sitename:first-letter {
+  text-transform: uppercase;
+}
+
+/* menu */
+
+#Menu {
+  background:#dee7ec;
+  border-bottom:1px solid #8cacbb;
+  border-top:1px solid #8cacbb;
+  height: 30px;
+  margin: 0;
+}
+
+#Menu p { display: none; }
+
+#Menu li {
+  display: inline;
+  border: 0;
+  padding: 0;
+}
+
+#Menu ul {
+  padding-left: 1em;
+  margin: 0;
+  padding: 0;
+}
+
+#Menu a {
+  display: block;
+  color: black;
+  margin: 3px 5px;
+  padding: 3px 5px;
+  text-decoration: none;
+  text-align: center;
+  background-color:white;
+  border:1px solid #8CACBB;
+}
+
+#Menu li ul {
+  background-color: #dee7ec;
+  border:1px solid #8cacbb;
+  border-top-width: 0;
+}
+
+#Menu li li {
+  width: 100%;
+}
+
+/* corps de page */
+
+.sect1, .footnotes {
+  margin-left:1em;
+  margin-right:2em;
+  margin-top:4px;
+  text-align:justify;
+  clear: left;
+}
+
+.footnotes {
+  font-size: 80%;
+}
+
+/* titre niveau 1 */
+
+div.titlepage h2 {
+  font-size:160%;
+  font-weight:bold;
+  margin-left:0px;
+  border-bottom: 1px solid #8CACBB;
+  /* parce que docbook ajoute des clear:both en inline */
+  clear: left !important;
+  color: #436976;
+}
+
+div.titlepage h3 {
+  font-size: 120%;
+  font-weight: bold;
+  margin-left: .2em;
+  border-bottom: 1px solid #8CACBB;
+  color: #436976;
+}
+
+div.titlepage h4 {
+  font-size: 110%;
+  font-weight: bold;
+  margin-left: .2em;
+  border-bottom: 1px solid #8CACBB;
+  color: #436976;
+}
+
+div.titlepage h5 {
+  font-size: 100%;
+  font-weight: bold;
+  margin-left: .5em;
+  border-bottom: 1px solid #8CACBB;
+  color: #436976;
+}
+
+div.titlepage h6 {
+  font-size: 100%;
+  font-weight: bold;
+  margin-left: 1em;
+  color: #436976;
+}
+
+/* sections */
+
+div.sect2 {
+  margin-left: 1em;
+}
+
+div.sect3 {
+  margin-left: 2em;
+}
+
+div.sect4 {
+  margin-left: 3em;
+}
+
+div.sect5 {
+  margin-left: 5em;
+}
+
+/* footer */
+
+.feet {
+  background-color:#F5F5F5;
+  color:#666666;
+  font-size:80%;
+  margin: 0;
+}
+
+/* divers */
+
+ul {
+  list-style-image:url(bullet.png);
+}
+
+a {
+  color: #436976;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #436976;
+  text-decoration: none;
+}
+
+table {
+  border-style: solid;
+  border-color: #8cacbb;
+  margin: 10px 10px 10px 10px;
+  border-collapse: collapse;
+}
+
+/* la mise en forme spéciale pour faire flotter les news à droite */
+
+#News {
+  float: right;
+  width: 250px;
+  background-color: white;
+  /*border: 1px solid #8CACBB;*/
+  font-size: 80%;
+  color: #436976;
+  padding: 1em;
+}
+
+#News h2 {
+  font-size: 100%;
+  color: black;
+  background-color:#DEE7EC;
+  border:1px solid #8CACBB;
+  font-weight: bold;
+  padding: 3px;
+  margin-bottom: 2px;
+}
+
+#News .sect2 {
+  margin-left: 0;
+}
+
+#News .titlepage h3 {
+  font-size: 100%;
+  margin-left: 0;
+}
+
+.comfort {
+  font-size : 70% !important;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}

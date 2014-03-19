@@ -1,0 +1,18 @@
+ATTENTION 
+-> par rapport à l'API initiale l'ordre des args de select est inchangé, cond vient après order
+
+-> il faut faire une end_transaction d'un objet table si vous voulez le supprimer par la suite à partir
+  de l'objet IDB
+-> une end_transaction n'effectue aucun commit, il faut donc penser à le faire si vous utilisez end_transaction
+
+-> la fermeture normale du fichier engendrera une sauvegarde automatique de la base, pour éviter cela
+  utiliser end_transaction
+
+-> Si vous ne faites pas d'utilisation de begin et end_transaction la table n'est pas protégée d'office par sqlite
+  des modifications concurrentes sont donc possible sans garantie sur le résultat d'un commit
+  Il faut donc pour une transaction sûre vérifier qu'un begin_transaction() retourne 1 avant de commencer
+  et veiller à faire un end_transaction() à la fin de l'utilisation de la table pour en libérer l'accès.
+
+-> cette libération de l'accès se fait automatiquement en cas d'une suppresion de l'objet IDBTable 
+  (méthod __del__) . Si la table était toujours connectée à la base de donnée et qu'elle disposait de l'accès à la base
+  alors une sauvegarde est faite et la connexion est fermée. 

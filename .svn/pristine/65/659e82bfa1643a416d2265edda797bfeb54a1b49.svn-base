@@ -1,0 +1,69 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ASCII" />
+    <title>Blah blih bluh !</title>
+    <meta name="generator" content="DocBook XSL Stylesheets V1.72.0" />
+  </head>
+  <body>
+    <div class="article" lang="en" xml:lang="en">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h1 class="title"><a id="id2522282"></a>Blah blih bluh !</h1>
+          </div>
+        </div>
+        <hr />
+      </div>
+      <div class="sect1" lang="en" xml:lang="en">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h2 class="title" style="clear: both"><a id="id3292868"></a>Section n&#176;1</h2>
+            </div>
+          </div>
+        </div>
+        <p>Coin coin coin, corner corner corner.
+</p>
+        <div class="itemizedlist">
+          <ul type="disc">
+            <li>item a</li>
+            <li>item b</li>
+          </ul>
+        </div>
+      </div>
+      <div class="sect1" lang="en" xml:lang="en">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h2 class="title" style="clear: both"><a id="id3293213"></a>La section num&#233;ro deux</h2>
+            </div>
+          </div>
+        </div>
+        <p>Hmm... 
+</p>
+        <div class="itemizedlist">
+          <ul type="disc">
+            <li>
+              <a href="http://google.com" target="_top">Page 1</a>
+            </li>
+            <li>
+              <a href="test.html" target="_top">Page 2</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="sect1" lang="en" xml:lang="en">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h2 class="title" style="clear: both"><a id="id2521265"></a>Ah !</h2>
+            </div>
+          </div>
+        </div>
+        <p>Essayez vos fantaisies docbookiennes ici.
+python test.py &gt; test.html
+</p>
+      </div>
+    </div>
+  </body>
+</html>
